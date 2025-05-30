@@ -14,3 +14,4 @@ res://scenes/test_3d.tscn
 res://scenes/main_menu.tscn
 res://scenes/options.tscn
 res://scripts/ui/button.gd
+res://scenes/ui/button.tscn
