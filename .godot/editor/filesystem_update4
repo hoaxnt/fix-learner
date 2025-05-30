@@ -15,3 +15,11 @@ res://scenes/main_menu.tscn
 res://scenes/options.tscn
 res://scripts/ui/button.gd
 res://scenes/ui/button.tscn
+res://scenes/levels/levels.tscn
+res://scenes/levels/list.tscn
+res://scenes/lessons/list.tscn
+res://assets/GUI/fonts.txt
+res://assets/GUI/readme.txt
+res://scenes/options/options.tscn
+res://scenes/lessons/test_3d.tscn
+res://scenes/ui/play.tscn
