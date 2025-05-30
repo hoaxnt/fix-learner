@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddif7cqy25o5e"]
+
+[ext_resource type="Script" uid="uid://c35uhpw2bpekn" path="res://Scripts/UI/Button.gd" id="1_8ld8g"]
+
+[sub_resource type="Animation" id="Animation_56wre"]
+resource_name = "Popup"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8ld8g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ld8g"]
+_data = {
+&"Popup": SubResource("Animation_56wre"),
+&"RESET": SubResource("Animation_8ld8g")
+}
+
+[node name="Button" type="Button"]
+offset_right = 42.0
+offset_bottom = 31.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Text"
+script = ExtResource("1_8ld8g")
+id = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8ld8g")
+}
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://df1t7b7dt47s6"]
+
+[ext_resource type="FontFile" uid="uid://b0vg1kvpftpym" path="res://assets/fonts/canvas.ttf" id="1_3hjwc"]
+
+[node name="TitleLabel" type="Label"]
+offset_right = 53.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0.705882, 0.847059, 1)
+theme_override_fonts/font = ExtResource("1_3hjwc")
+theme_override_font_sizes/font_size = 30
+text = "Label"
+horizontal_alignment = 1
+vertical_alignment = 1
