@@ -13,13 +13,14 @@ func _on_pressed():
 	await anim.animation_finished
 	match pending_id:
 				"new_game":    
-						load_scene("res://Scenes/NewGame.tscn")
+						load_scene("res://scenes/lessons/list.tscn")
 				"options":
-						load_scene("res://Scenes/Options.tscn")
+						load_scene("res://scenes/options/options.tscn")
 				"back":
-						load_scene("res://Scenes/MainMenu.tscn")
+						load_scene("res://scenes/main_menu.tscn")
+				# test 3d scene
 				"3d":
-						load_scene("res://Scenes/Test3D.tscn")
+						load_scene("res://scenes/lessons/test_3d.tscn")
 						
 func load_scene(path: String):
 		var scene = load(path)
