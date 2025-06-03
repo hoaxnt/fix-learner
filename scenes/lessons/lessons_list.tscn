@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://cyiog4ny3kxqm"]
+
+[ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_so1ax"]
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_oood6"]
+[ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="4_m5hl7"]
+[ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="5_y4i7q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c24rk"]
+texture = ExtResource("4_m5hl7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12pgh"]
+texture = ExtResource("5_y4i7q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72g8v"]
+texture = ExtResource("5_y4i7q")
+
+[node name="Lessons" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_so1ax")
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("3_oood6")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_12pgh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_72g8v")
+text = "Back"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316667
+anchor_top = 0.47963
+anchor_right = 0.344792
+anchor_bottom = 0.500926
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Button"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564062
+anchor_top = 0.468519
+anchor_right = 0.596875
+anchor_bottom = 0.489815
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Button2"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

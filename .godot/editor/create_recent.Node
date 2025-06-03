@@ -1,3 +1,4 @@
+Button
 HBoxContainer
 MarginContainer
 ColorRect
@@ -5,7 +6,6 @@ Control
 Label
 VBoxContainer
 Panel
-Button
 RichTextLabel
 TextureRect
 CharacterBody3D
