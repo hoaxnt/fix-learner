@@ -1,8 +1,7 @@
 extends Button
 
 func _on_play_pressed() -> void:
-	load_scene("res://scenes/lessons/list.tscn")
-	print("play")
+	load_scene("res://scenes/lessons/lessons_list.tscn")
 
 func _on_sound_pressed() -> void:
 	print("sound")
