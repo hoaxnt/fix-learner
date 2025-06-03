@@ -1,9 +1,10 @@
-Button
-HBoxContainer
 MarginContainer
+HBoxContainer
+Label
+GridContainer
+Button
 ColorRect
 Control
-Label
 VBoxContainer
 Panel
 RichTextLabel
@@ -11,4 +12,3 @@ TextureRect
 CharacterBody3D
 StaticBody3D
 CollisionShape3D
-RigidBody3D

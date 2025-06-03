@@ -1,11 +1,5 @@
+res://scenes/ui/title_label.tscn
 res://scenes/main_menu.tscn
-res://scripts/ui/button.gd
-res://scenes/lessons/list.tscn
-res://scenes/options/options.tscn
-res://scenes/ui/play.tscn
-res://scenes/lessons/test_3d.tscn
-res://scripts/main_menu.gd
-res://scripts/ui/main_menu.gd
-res://scripts/lessons/list.gd
 res://scenes/lessons/lessons_list.tscn
+res://scenes/ui/play.tscn
 res://scripts/lessons/lessons_list.gd
