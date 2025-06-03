@@ -1,0 +1,8 @@
+res://scenes/main_menu.tscn
+res://scripts/ui/button.gd
+res://scenes/lessons/list.tscn
+res://scenes/options/options.tscn
+res://scenes/ui/play.tscn
+res://scenes/lessons/test_3d.tscn
+res://scripts/main_menu.gd
+res://scripts/ui/main_menu.gd

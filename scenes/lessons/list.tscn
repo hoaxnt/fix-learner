@@ -18,7 +18,6 @@ layout_mode = 1
 offset_right = 59.0
 theme_override_font_sizes/font_size = 50
 text = "     Back     "
-id = "back"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -69,4 +68,3 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "  3D  "
-id = "3d"

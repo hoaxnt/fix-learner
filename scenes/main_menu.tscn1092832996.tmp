@@ -104,5 +104,5 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_tbmy8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rtw2f")
 script = ExtResource("4_8ln24")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" to="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" method="_on_play_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/Sound" to="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" method="_on_sound_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/Sound" to="." method="_on_sound_pressed"]
