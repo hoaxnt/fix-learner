@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://it6m241pfkbe"]
+[gd_scene load_steps=11 format=3 uid="uid://it6m241pfkbe"]
 
 [ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bw7n5ummgpnbg" path="res://assets/ui/buttons/square_medium/SoundOn/Default@3x.png" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://q8ad0q1jw077" path="res://scripts/ui/main_menu.gd" id="4_8ln24"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("1_ekxnf")
@@ -80,6 +81,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_wu84c")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_oa1go")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8ln24")
 text = "PLAY"
+script = ExtResource("4_8ln24")
 
 [node name="Control" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -100,3 +102,7 @@ custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_tbmy8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rtw2f")
+script = ExtResource("4_8ln24")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" to="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" method="_on_play_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/Sound" to="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer/Play" method="_on_sound_pressed"]
