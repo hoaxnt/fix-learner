@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyiog4ny3kxqm"]
+[gd_scene load_steps=9 format=3 uid="uid://cyiog4ny3kxqm"]
 
 [ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_so1ax"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_oood6"]
@@ -14,6 +14,8 @@ texture = ExtResource("5_y4i7q")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72g8v"]
 texture = ExtResource("5_y4i7q")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3udm4"]
+
 [node name="Lessons" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -22,6 +24,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_so1ax")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0235294, 0.678431, 0.980392, 0.909804)
 metadata/_edit_lock_ = true
 
 [node name="Back" type="Button" parent="."]
@@ -49,6 +61,7 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_3udm4")
 text = "Button"
 metadata/_edit_use_anchors_ = true
 
