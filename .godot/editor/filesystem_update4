@@ -1,6 +1,0 @@
-res://scenes/lessons/lessons_list.tscn
-res://scripts/lessons/lessons_list.gd
-res://scenes/main_menu.tscn
-res://scenes/ui/play.tscn
-res://scenes/animations/fade.tscn
-res://scripts/animations/fade.gd
