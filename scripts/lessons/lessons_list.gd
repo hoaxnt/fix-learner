@@ -8,7 +8,7 @@ func _ready():
 #		make sure the child is a button
 		if child is Button:
 			child.pressed.connect(func() : _on_pressed(child.name))
-
+			
 func _on_pressed(button_name):
 	print("Name: ", button_name)
 
