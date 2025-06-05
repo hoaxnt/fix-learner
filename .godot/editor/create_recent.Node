@@ -1,14 +1,14 @@
+ColorRect
+Sprite2D
 VBoxContainer
 MarginContainer
 HBoxContainer
 Label
 GridContainer
 Button
-ColorRect
 Control
 Panel
 RichTextLabel
 TextureRect
 CharacterBody3D
 StaticBody3D
-CollisionShape3D
