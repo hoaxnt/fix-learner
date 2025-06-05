@@ -1,7 +1,20 @@
-[gd_scene format=3 uid="uid://dasgvja33k476"]
+[gd_scene load_steps=4 format=3 uid="uid://dasgvja33k476"]
+
+[ext_resource type="Texture2D" uid="uid://ck7deho5uut2o" path="res://assets/images/background.jpg" id="1_q3wx6"]
+[ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/images/prof.png" id="2_rpv65"]
+[ext_resource type="Texture2D" uid="uid://dyat1d7hwljlx" path="res://assets/ui/panel/body/titled.png" id="3_nxb0u"]
 
 [node name="Lesson1" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_q3wx6")
+metadata/_edit_lock_ = true
+
+[node name="Prof" type="Sprite2D" parent="."]
+texture = ExtResource("2_rpv65")
+
+[node name="Dialogue" type="Sprite2D" parent="."]
+texture = ExtResource("3_nxb0u")
+
+[node name="Camera2D" type="Camera2D" parent="."]

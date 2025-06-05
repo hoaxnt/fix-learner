@@ -26,4 +26,3 @@ func load_scene(path: String):
 		var scene = load(path)
 		get_tree().change_scene_to_packed(scene)
 	
-	
