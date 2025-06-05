@@ -1,5 +1,7 @@
-ColorRect
 Sprite2D
+AnimatedSprite2D
+Camera2D
+ColorRect
 VBoxContainer
 MarginContainer
 HBoxContainer
@@ -10,5 +12,3 @@ Control
 Panel
 RichTextLabel
 TextureRect
-CharacterBody3D
-StaticBody3D
