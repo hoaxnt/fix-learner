@@ -4,10 +4,12 @@ extends Node2D
 @onready var dialogue = $CanvasLayer/UI/DialogueBox/MarginContainer/VBoxContainer/Dialogue
 @onready var prof = $Prof
 @onready var tool_preview = $ToolPreview
-@onready var choices_box = $CanvasLayer/UI/ChoicesBox
 @onready var background = $Background
 @onready var ui = $CanvasLayer/UI
 @onready var quiz_ui = $CanvasLayer/QuizUI
+@onready var answer_1 = $CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer1
+@onready var answer_2 = $CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer2
+@onready var answer_3 = $CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer3
 
 var is_quiz_done = false
 
@@ -54,10 +56,12 @@ func _on_pressed() -> void:
 				tool_preview.texture = new_texture
 			else:
 				tool_preview.texture = null
-				choices_box.visible = true
+				answer_1.visible = true
+				answer_2.visible = true
+				answer_3.visible = true
 	else:
-		print("END")
-
+		if is_quiz_done == true:
+			get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lesson_1.tscn")
 
 func _on_yes_pressed() -> void:
 	background.texture = load("res://assets/images/background.jpg")
@@ -65,7 +69,7 @@ func _on_yes_pressed() -> void:
 	prof.visible = false
 	tool_preview.visible = false
 	quiz_ui.visible = true
-	choices_box.visible = false
+	answer_1.visible = true
 
 
 func _on_review_pressed() -> void:
