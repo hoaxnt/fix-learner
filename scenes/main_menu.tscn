@@ -64,7 +64,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 25
 theme_override_fonts/font = ExtResource("2_8ln24")
 theme_override_font_sizes/font_size = 145
-text = "FIX LEARNER"
+text = "FIX IT or BREAK IT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
