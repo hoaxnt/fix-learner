@@ -10,7 +10,7 @@ func _ready():
 func _on_pressed(button_name):
 	match button_name:
 		"1": get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lo_1/lo_1.tscn")
-		"2": get_tree().change_scene_to_file("res://scenes/lessons/lesson_2/lo_2/lo_2.tscn")
+		"2": get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lo_2/lo_2.tscn")
 	
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

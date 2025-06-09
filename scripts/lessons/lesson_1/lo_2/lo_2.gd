@@ -9,9 +9,7 @@ var dialogue_data = [
 		"I’m [Teacher Name], your guide and mentor as you begin your journey into the world of computer hardware and electronics.",
 		"Before we dive in, let me share some essential information to power up your knowledge!",
 		"In this lesson, you'll explore specifications of materials and components like wires, resistors, and integrated circuits",
-		"So lets get started!",
-#		Item description
-		"It conduct material insulated with plastic, used to transmit electrical current from one component to another in a circuit."
+		"So lets get started!"
 ]
 
 var index := 0
@@ -24,4 +22,5 @@ func _on_pressed() -> void:
 	if index < dialogue_data.size():
 			dialogue.text = dialogue_data[index]
 	else:
-			prof.position = Vector2(-730.0, 0.0)
+			prof.visible = false
+			dialogue_box.visible = false

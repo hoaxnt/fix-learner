@@ -109,4 +109,3 @@ text = "2"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="VBoxContainer/L0/2" to="." method="_on__pressed"]

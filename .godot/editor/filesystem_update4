@@ -4,3 +4,4 @@ res://scenes/lessons/lesson_1/lesson_1.tscn
 res://scripts/lessons/lessons_list.gd
 res://scripts/lessons/lesson_1/lesson_1.gd
 res://scenes/lessons/lesson_1/lo_1/lo_1.tscn
+res://scripts/lessons/lesson_1/lo_1/lo_1.gd
