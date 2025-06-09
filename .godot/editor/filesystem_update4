@@ -6,3 +6,4 @@ res://scripts/lessons/lesson_1/lesson_1.gd
 res://scenes/lessons/lesson_1/lo_1/lo_1.tscn
 res://scripts/lessons/lesson_1/lo_1/lo_1.gd
 res://scenes/lessons/lesson_1/lo_1/quiz.tscn
+res://scenes/lessons/lesson_1/lo_1/quiz.gd

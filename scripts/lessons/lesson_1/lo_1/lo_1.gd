@@ -9,6 +9,8 @@ extends Node2D
 @onready var ui = $CanvasLayer/UI
 @onready var quiz_ui = $CanvasLayer/QuizUI
 
+var is_quiz_done = false
+
 var dialogue_data = [
 		"Hi there, students of computer system servicing!",
 		"I’m [Teacher Name], your guide and mentor as you begin your journey into the world of computer hardware and electronics.",
@@ -63,10 +65,7 @@ func _on_yes_pressed() -> void:
 	prof.visible = false
 	tool_preview.visible = false
 	quiz_ui.visible = true
-	
-	
-	
-	pass # Replace with function body.
+	choices_box.visible = false
 
 
 func _on_review_pressed() -> void:
