@@ -258,7 +258,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer1" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer2" to="." method="_on_review_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer3" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer1" to="." method="_on_answer_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer3" to="." method="_on_answer_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/DialogueBox/Next" to="." method="_on_pressed"]

@@ -12,6 +12,7 @@ extends Node2D
 @onready var answer_3 = $CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer3
 
 var is_quiz_done = false
+var score = 0
 
 var dialogue_data = [
 		"Hi there, students of computer system servicing!",
@@ -63,18 +64,23 @@ func _on_pressed() -> void:
 		if is_quiz_done == true:
 			get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lesson_1.tscn")
 
-func _on_yes_pressed() -> void:
+func _on_answer_1_pressed() -> void:
 	background.texture = load("res://assets/images/background.jpg")
 	ui.visible = false
 	prof.visible = false
 	tool_preview.visible = false
 	quiz_ui.visible = true
-	answer_1.visible = true
+	answer_1.visible = false
+	answer_2.visible = false
+	answer_3.visible = false
+	
+	if score < 5 and is_quiz_done:
+		get_tree().reload_current_scene()
 
 
-func _on_review_pressed() -> void:
+func _on_answer_2_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _on_no_pressed() -> void:
+func _on_answer_3_pressed() -> void:
 	pass # Replace with function body.
