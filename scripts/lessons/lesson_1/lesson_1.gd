@@ -1,24 +1,17 @@
-extends Node2D
+extends Control
 
-@onready var dialogue_box = $CanvasLayer/UI/DialogueBox
-@onready var dialogue = $CanvasLayer/UI/DialogueBox/MarginContainer/VBoxContainer/Dialogue
-
-var dialogue_data = [
-		"Hi there, students of computer system servicing!",
-		"I’m [Teacher Name], your guide and mentor as you begin your journey into the world of computer hardware and electronics.",
-		"Before we dive in, let me share some essential information to power up your knowledge!",
-		"In this lesson, you'll explore specifications of materials and components like wires, resistors, and integrated circuits",
-		"So lets get started!"
-]
-
-var index := 0
-
-func _ready() -> void:
-	dialogue.text = dialogue_data[index]
-
-func _on_pressed() -> void:
-	index += 1
-	if index < dialogue_data.size():
-			dialogue.text = dialogue_data[index]
-	else:
-			dialogue_box.visible = false
+func _ready():
+	var lo_list = get_node("VBoxContainer/L0")
+	for child in lo_list.get_children():
+		if child is Button:
+			child.pressed.connect(func() : _on_pressed(child.name))
+	pass
+	
+func _on_pressed(button_name):
+	match button_name:
+		"1": get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lo_1/lo_1.tscn")
+		"2": get_tree().change_scene_to_file("res://scenes/lessons/lesson_2/lo_2/lo_2.tscn")
+	
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	print("back")
