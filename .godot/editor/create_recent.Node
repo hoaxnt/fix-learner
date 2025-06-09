@@ -1,14 +1,15 @@
+HBoxContainer
+TextureRect
+VBoxContainer
 Label
 Button
 GridContainer
 MarginContainer
-VBoxContainer
 Control
 RichTextLabel
 Sprite2D
 ScrollContainer
 VScrollBar
 NinePatchRect
-TextureRect
 CanvasLayer
 AnimatedSprite2D
