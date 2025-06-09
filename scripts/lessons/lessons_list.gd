@@ -23,7 +23,6 @@ func _on_pressed(button_name):
 		"10": get_tree().change_scene_to_file("res://scenes/lessons/lesson_10/lesson_10.tscn")
 		"11": get_tree().change_scene_to_file("res://scenes/lessons/lesson_11/lesson_11.tscn")
 
-
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	print("back")
