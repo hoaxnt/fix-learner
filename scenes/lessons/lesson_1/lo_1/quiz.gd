@@ -5,6 +5,7 @@ extends Control
 @onready var prof = $"../../Prof"
 @onready var dialogue_box = $CanvasLayer/UI/DialogueBox
 @onready var dialogue = $"../UI/DialogueBox/MarginContainer/VBoxContainer/Dialogue"
+@onready var answer_1 = $"../UI/ChoicesBox/VBoxContainer/Answer1"
 
 var index = 0
 var score = 0
@@ -130,8 +131,11 @@ func quiz_done():
 	self.visible = false
 	var parent = get_parent().get_parent()
 	parent.is_quiz_done = true
+	parent.score = score
 	
 	if score < 5:
+		answer_1.visible = true
+		answer_1.text = "Let's try again"
 		dialogue.text = "Nice try! You earned %d points don't worry, give it another shot and you'll get there!" % (score)
 	else:
 		dialogue.text = "Great job! You earned %d points looks like you're ready to move on to the next topic!" % (score)
