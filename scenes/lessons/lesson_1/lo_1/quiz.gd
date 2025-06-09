@@ -129,8 +129,7 @@ func quiz_done():
 	prof.visible = true
 	self.visible = false
 	var parent = get_parent().get_parent()
-	print(parent.score, parent.name)
-	
+	parent.is_quiz_done = true
 	
 	if score < 5:
 		dialogue.text = "Nice try! You earned %d points don't worry, give it another shot and you'll get there!" % (score)

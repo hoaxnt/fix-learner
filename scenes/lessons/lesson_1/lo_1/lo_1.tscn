@@ -59,7 +59,6 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="ChoicesBox" type="MarginContainer" parent="CanvasLayer/UI"]
-visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -78,7 +77,8 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Yes" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+[node name="Answer1" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_uxdue")
@@ -88,7 +88,8 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4dojl")
 text = "Yes, I'm ready"
 
-[node name="Review" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+[node name="Answer2" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_uxdue")
@@ -98,7 +99,8 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4dojl")
 text = "Let's review again"
 
-[node name="No" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+[node name="Answer3" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_uxdue")
@@ -256,7 +258,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Yes" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Review" to="." method="_on_review_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer1" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer2" to="." method="_on_review_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Answer3" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/DialogueBox/Next" to="." method="_on_pressed"]
