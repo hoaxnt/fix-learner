@@ -5,6 +5,9 @@ extends Node2D
 @onready var prof = $Prof
 @onready var tool_preview = $ToolPreview
 @onready var choices_box = $CanvasLayer/UI/ChoicesBox
+@onready var background = $Background
+@onready var ui = $CanvasLayer/UI
+@onready var quiz_ui = $CanvasLayer/QuizUI
 
 var dialogue_data = [
 		"Hi there, students of computer system servicing!",
@@ -24,13 +27,10 @@ var dialogue_data = [
 		"Okay, it's quiz time! Are you ready?"
 ]
 
-var textures = {
-	
-}
-
 var index := 0
 
 func _ready() -> void:
+	#quiz_ui.visible = false
 	tool_preview.visible = false
 	dialogue.text = dialogue_data[index]
 
@@ -53,6 +53,25 @@ func _on_pressed() -> void:
 			else:
 				tool_preview.texture = null
 				choices_box.visible = true
-				print("❌ Could not load texture:", image_path)
 	else:
 		print("END")
+
+
+func _on_yes_pressed() -> void:
+	background.texture = load("res://assets/images/background.jpg")
+	ui.visible = false
+	prof.visible = false
+	tool_preview.visible = false
+	quiz_ui.visible = true
+	
+	
+	
+	pass # Replace with function body.
+
+
+func _on_review_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_no_pressed() -> void:
+	pass # Replace with function body.

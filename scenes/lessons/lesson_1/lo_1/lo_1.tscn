@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://dasgvja33k476"]
+[gd_scene load_steps=18 format=3 uid="uid://dasgvja33k476"]
 
 [ext_resource type="Script" uid="uid://b8cupksdsvolc" path="res://scripts/lessons/lesson_1/lo_1/lo_1.gd" id="1_hdleh"]
-[ext_resource type="Texture2D" uid="uid://ck7deho5uut2o" path="res://assets/images/background.jpg" id="2_2fny7"]
+[ext_resource type="Texture2D" uid="uid://byo2g1nyeml87" path="res://assets/images/classroom.jpg" id="2_hwltj"]
 [ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson_1/lo_1/tool_3.png" id="3_2fny7"]
-[ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/images/prof.png" id="3_4dojl"]
+[ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/models/prof.png" id="3_4dojl"]
 [ext_resource type="Texture2D" uid="uid://dyat1d7hwljlx" path="res://assets/ui/panel/body/titled.png" id="4_hwltj"]
 [ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="5_2fny7"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="5_gdfq6"]
 [ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="6_hwltj"]
 [ext_resource type="FontFile" uid="uid://c5ncwdnfodc8e" path="res://assets/fonts/Rubik-Regular.ttf" id="6_uxdue"]
+[ext_resource type="Texture2D" uid="uid://cuutqor4l6tiv" path="res://assets/ui/button/square_medium/square.png" id="10_gdfq6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdfq6"]
 texture = ExtResource("6_hwltj")
@@ -25,12 +26,16 @@ texture = ExtResource("5_2fny7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_imsk6"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqlwo"]
+texture = ExtResource("10_gdfq6")
+
 [node name="LO1" type="Node2D"]
 script = ExtResource("1_hdleh")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_2fny7")
+texture = ExtResource("2_hwltj")
 metadata/_edit_lock_ = true
 
 [node name="ToolPreview" type="Sprite2D" parent="."]
@@ -40,6 +45,7 @@ scale = Vector2(1.554, 1.554)
 texture = ExtResource("3_2fny7")
 
 [node name="Prof" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(1.375, 1.375)
 texture = ExtResource("3_4dojl")
 metadata/_edit_lock_ = true
@@ -49,6 +55,7 @@ metadata/_edit_lock_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -158,4 +165,110 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_hqe8s")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_a0x7v")
 theme_override_styles/normal = SubResource("StyleBoxTexture_imsk6")
 
+[node name="QuizUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuizUI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Title" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_gdfq6")
+theme_override_font_sizes/font_size = 96
+text = "QUIZ"
+horizontal_alignment = 1
+
+[node name="Question" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "1. Materials with insulated plastics, it can also transmit electrical current from one component to another in a ciruit"
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+columns = 3
+
+[node name="A" type="Button" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_uxdue")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cqlwo")
+icon = ExtResource("3_2fny7")
+icon_alignment = 1
+
+[node name="B" type="Button" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_uxdue")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cqlwo")
+
+[node name="C" type="Button" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_uxdue")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cqlwo")
+
+[node name="LabelA" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Electrical Tape"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LabelB" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Electrical Tape"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LabelC" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Electrical Tape"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/Review" to="." method="_on_review_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/ChoicesBox/VBoxContainer/No" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/DialogueBox/Next" to="." method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer/A" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer/B" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuizUI/MarginContainer/VBoxContainer/GridContainer/C" to="." method="_on_yes_pressed"]
