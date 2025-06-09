@@ -1,4 +1,4 @@
-res://scenes/lessons/lesson_1/lesson_1.tscn
 res://scenes/main_menu.tscn
 res://scenes/lessons/lessons_list.tscn
-res://scripts/ui/button.gd
+res://scenes/lessons/lesson_1/lesson_1.tscn
+res://scripts/lessons/lessons_list.gd

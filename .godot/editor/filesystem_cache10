@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749115647
+::res://::1749443335
 README.md::TextFile/TextFile::-1::1747843648::0::1::::<><><>0<>0<><>::
 ::res://assets/::1748912883
 ::res://assets/audio/::1747882914
@@ -352,9 +352,9 @@ Unactive.svg::CompressedTexture2D/CompressedTexture2D::1902435322020111367::1680
 ::res://assets/gui/asset/svg/Star/Small/::1748916601
 Active.svg::CompressedTexture2D/CompressedTexture2D::3661654609888447063::1680262338::1748916601::1::::<><><>0<>0<>7b7bc8345a96de49b11f97b8f7310e8f<>res://.godot/imported/Active.svg-38dc69bd7f73f3b42c642997191d30f4.ctex::
 Unactive.svg::CompressedTexture2D/CompressedTexture2D::3936773428516891930::1680262338::1748916601::1::::<><><>0<>0<>3e69417229a5497332af5eb1138b8679<>res://.godot/imported/Unactive.svg-40b549896efc92109b5100c39665d255.ctex::
-::res://assets/images/::1749117979
-background.jpg::CompressedTexture2D::5540979576731669008::1749117275::1749117317::1::::<><><>0<>0<>207d7d37313d5ea7ed76bb1e25703268<>res://.godot/imported/background.jpg-d656ee7c3b4e3ad9f24b9850cd3d67b3.ctex::
-prof.png::CompressedTexture2D::1536466648510531108::1749117953::1749118519::1::::<><><>0<>0<>a2c31d21e4de3bb77031ac8e14e0b385<>res://.godot/imported/prof.png-3808fe82c5fad23b4efc4db0be5e084b.ctex::
+::res://assets/images/::1749118519
+background.jpg::CompressedTexture2D/CompressedTexture2D::5540979576731669008::1749117275::1749117317::1::::<><><>0<>0<>207d7d37313d5ea7ed76bb1e25703268<>res://.godot/imported/background.jpg-d656ee7c3b4e3ad9f24b9850cd3d67b3.ctex::
+prof.png::CompressedTexture2D/CompressedTexture2D::1536466648510531108::1749117953::1749118519::1::::<><><>0<>0<>a2c31d21e4de3bb77031ac8e14e0b385<>res://.godot/imported/prof.png-3808fe82c5fad23b4efc4db0be5e084b.ctex::
 ::res://assets/models/::1748570701
 horse.glb::PackedScene/PackedScene::235334972953837049::1747968736::1748570701::1::::<><><>0<>0<>a89fa4a7ddf35a468084c4ef12165659<>res://.godot/imported/horse.glb-b058c7a163b8b3351d26de174e85f30c.scn::
 ::res://assets/ui/::1748913596
@@ -410,13 +410,13 @@ dummy.png::CompressedTexture2D/CompressedTexture2D::1909778523131726276::1680262
 large.png::CompressedTexture2D/CompressedTexture2D::6007344555010397492::1680262338::1748916602::1::::<><><>0<>0<>b15005236718f76322f9c664249283df<>res://.godot/imported/large.png-aa2cf3b397acadd00936823fdc25954c.ctex::
 medium.png::CompressedTexture2D/CompressedTexture2D::4276831451832069278::1680262338::1748916602::1::::<><><>0<>0<>61f74debdeb7a8064a11b0ef599e3a98<>res://.godot/imported/medium.png-2a3cda5d5a14d14fab08c54a3ccdb631.ctex::
 ::res://resources/::1747882009
-::res://scenes/::1749117617
-main_menu.tscn::PackedScene::602639046865370086::1749117617::0::1::::<><><>0<>0<><>::uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://bw7n5ummgpnbg::::res://assets/ui/buttons/square_medium/SoundOn/Default@3x.png<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://q8ad0q1jw077::::res://scripts/main_menu.gd
+::res://scenes/::1749130561
+main_menu.tscn::PackedScene::602639046865370086::1749130561::0::1::::<><><>0<>0<><>::uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://bw7n5ummgpnbg::::res://assets/ui/buttons/square_medium/SoundOn/Default@3x.png<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://q8ad0q1jw077::::res://scripts/main_menu.gd
 test_3d.tscn::PackedScene/PackedScene::2000550854494487602::1748912308::0::1::::<><><>0<>0<><>::uid://b6fxf071r2jm0::::res://scripts/lessons/draggable_object.gd<>uid://dl86yd06pqov::::res://assets/models/horse.glb<>uid://i4wr5it167o7::::res://scripts/camera.gd<>uid://ddif7cqy25o5e::::res://scenes/ui/play.tscn
-::res://scenes/lessons/::1749117617
-lessons_list.tscn::PackedScene::6474750933781516760::1749117617::0::1::::<><><>0<>0<><>::uid://c6sjikm4xkdd1::::res://scripts/lessons/lessons_list.gd<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://cxdyacqa2kfeq::::res://assets/ui/button/unlocked.png<>uid://56fdm7becv1v::::res://assets/ui/button/unlocked_hover.png
-::res://scenes/lessons/lesson_1/::1749117617
-lesson_1.tscn::PackedScene::7196823128301168995::1749117617::0::1::::<><><>0<>0<><>::uid://ck7deho5uut2o::::res://assets/images/background.jpg
+::res://scenes/lessons/::1749130561
+lessons_list.tscn::PackedScene::6474750933781516760::1749130561::0::1::::<><><>0<>0<><>::uid://c6sjikm4xkdd1::::res://scripts/lessons/lessons_list.gd<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://cxdyacqa2kfeq::::res://assets/ui/button/unlocked.png<>uid://56fdm7becv1v::::res://assets/ui/button/unlocked_hover.png
+::res://scenes/lessons/lesson_1/::1749134372
+lesson_1.tscn::PackedScene::7196823128301168995::1749134372::0::1::::<><><>0<>0<><>::uid://ck7deho5uut2o::::res://assets/images/background.jpg<>uid://v5jm7xqrxfls::::res://assets/images/prof.png<>uid://dyat1d7hwljlx::::res://assets/ui/panel/body/titled.png<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://c5ncwdnfodc8e::::res://assets/fonts/Rubik-Regular.ttf
 ::res://scenes/ui/::1748999541
 play.tscn::PackedScene/PackedScene::7386704465285966040::1748999541::0::1::::<><><>0<>0<><>::uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png
 title_label.tscn::PackedScene/PackedScene::7439033055334575648::1748951593::0::1::::<><><>0<>0<><>::
@@ -426,5 +426,5 @@ main_menu.gd::GDScript/GDScript::1191152660469072452::1748910634::0::1::::<>Butt
 ::res://scripts/lessons/::1749003348
 draggable_object.gd::GDScript/GDScript::4574003508768162685::1747975789::0::1::::<>CharacterBody3D<><>0<>0<><>::
 lessons_list.gd::GDScript/GDScript::6986415604144333420::1749003348::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/ui/::1748910218
-button.gd::GDScript/GDScript::6801287985350202329::1748909016::0::1::::<>Button<><>0<>0<><>::
+::res://scripts/ui/::1749128724
+button.gd::GDScript::6801287985350202329::1749128724::0::1::::<>Button<><>0<>0<><>::
