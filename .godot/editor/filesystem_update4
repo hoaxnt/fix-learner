@@ -2,3 +2,4 @@ res://scenes/main_menu.tscn
 res://scenes/lessons/lessons_list.tscn
 res://scenes/lessons/lesson_1/lesson_1.tscn
 res://scripts/lessons/lessons_list.gd
+res://scripts/lessons/lesson_1/lesson_1.gd
