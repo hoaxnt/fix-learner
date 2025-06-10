@@ -1,15 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dptxvnl4enwnd"]
+[gd_scene load_steps=16 format=3 uid="uid://dptxvnl4enwnd"]
 
-[ext_resource type="Script" uid="uid://b8cupksdsvolc" path="res://scripts/lessons/lesson1/lo1/lo1.gd" id="1_ab2v8"]
+[ext_resource type="Script" uid="uid://dfxuselnqyns0" path="res://scripts/lessons/lesson1/lo2/lo2.gd" id="1_gouem"]
 [ext_resource type="Texture2D" uid="uid://byo2g1nyeml87" path="res://assets/images/backgrounds/classroom.jpg" id="2_q2bje"]
-[ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="3_lqa6o"]
 [ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/models/prof.png" id="4_i0g84"]
 [ext_resource type="FontFile" uid="uid://c5ncwdnfodc8e" path="res://assets/fonts/Rubik-Regular.ttf" id="5_3pvmx"]
 [ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="6_qg1o8"]
 [ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="7_f8mef"]
 [ext_resource type="Texture2D" uid="uid://dyat1d7hwljlx" path="res://assets/ui/panel/body/titled.png" id="8_jq0kf"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="9_r85yj"]
-[ext_resource type="Script" uid="uid://cvcoedls5snmc" path="res://scripts/lessons/lesson1/lo1/lo1_quiz.gd" id="10_fm75l"]
+[ext_resource type="Script" uid="uid://b5xd7m84s4vg2" path="res://scripts/lessons/lesson1/lo2/lo2_quiz.gd" id="10_gouem"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdfq6"]
 texture = ExtResource("6_qg1o8")
@@ -27,7 +26,7 @@ texture = ExtResource("7_f8mef")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_imsk6"]
 
 [node name="LO2" type="Node2D"]
-script = ExtResource("1_ab2v8")
+script = ExtResource("1_gouem")
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -38,7 +37,6 @@ metadata/_edit_lock_ = true
 visible = false
 position = Vector2(138.5, -138.5)
 scale = Vector2(1.554, 1.554)
-texture = ExtResource("3_lqa6o")
 
 [node name="Prof" type="Sprite2D" parent="."]
 scale = Vector2(1.375, 1.375)
@@ -86,7 +84,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4dojl")
-text = "Yes, I'm ready"
+text = "Let's go"
 
 [node name="Answer2" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
 visible = false
@@ -97,7 +95,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4dojl")
-text = "Let's review again"
+text = "Review again"
 
 [node name="Answer3" type="Button" parent="CanvasLayer/UI/ChoicesBox/VBoxContainer"]
 visible = false
@@ -169,7 +167,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("10_fm75l")
+script = ExtResource("10_gouem")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizUI"]

@@ -35,10 +35,10 @@ var dialogue_data = [
 var index := 0
 
 func _ready() -> void:
-	#quiz_ui.visible = false
+	quiz_ui.visible = false
 	tool_preview.visible = false
 	dialogue.text = dialogue_data[index]
-# FIX LO2 of LESSON1 ASAPP then proceed to LESSON2
+
 func _on_pressed() -> void:
 	index += 1
 
