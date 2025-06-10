@@ -12,79 +12,33 @@ var score = 0
 
 var data = [
 	{
-		"question": "1. Materials with insulated plastics, it can also transmit electrical current from one component to another in a circuit.",
+		"question": "1. A manual that is provided by the manufacturer that explains how to repair, troubleshoot, and maintain a specific product or device.",
 		"choices": [
-			{"text": "Cables", "image": "res://assets/images/lesson1/lo1/tool2.png"},
-			{"text": "Electrical Tape", "image": "res://assets/images/lesson1/lo1/tool3.png"},
-			{"text": "Wires", "image": "res://assets/images/lesson1/lo1/tool1.png"},
-		],
-		"answer": 2
-	},
-	{
-		"question": "2. A group of two or more insulated wires bundled together to transmit electrical power or data signals.",
-		"choices": [
-			{"text": "Electrical Tape", "image": "res://assets/images/lesson1/lo1/tool3.png"},
-			{"text": "Wires", "image": "res://assets/images/lesson1/lo1/tool1.png"},
-			{"text": "Cables", "image": "res://assets/images/lesson1/lo1/tool2.png"},
-		],
-		"answer": 2
-	},
-	{
-		"question": "3. An insulating tape made of plastic or vinyl used to wrap and protect electrical wires and connections from moisture, abrasion.",
-		"choices": [
-			{"text": "Electrical Tape", "image": "res://assets/images/lesson1/lo1/tool3.png"},
-			{"text": "Capacitor", "image": "res://assets/images/lesson1/lo1/tool5.png"},
-			{"text": "Wires", "image": "res://assets/images/lesson1/lo1/tool1.png"},
-		],
-		"answer": 0
-	},
-	{
-		"question": "4. Passive electrical components that limit or regulate the flow of electrical current in a circuit.",
-		"choices": [
-			{"text": "Capacitor", "image": "res://assets/images/lesson1/lo1/tool5.png"},
-			{"text": "Wires", "image": "res://assets/images/lesson1/lo1/tool1.png"},
-			{"text": "Resistors", "image": "res://assets/images/lesson1/lo1/tool4.png"},
-		],
-		"answer": 2
-	},
-	{
-		"question": "5. Electronic components that store and release electrical energy.",
-		"choices": [
-			{"text": "Capacitor", "image": "res://assets/images/lesson1/lo1/tool5.png"},
-			{"text": "Diodes", "image": "res://assets/images/lesson1/lo1/tool7.png"},
-			{"text": "Transistors", "image": "res://assets/images/lesson1/lo1/tool8.png"},
-		],
-		"answer": 0
-	},
-	{
-		"question": "6. Micro electronic circuits consisting of semiconductor devices and passive components built onto a single chip.",
-		"choices": [
-			{"text": "Diodes", "image": "res://assets/images/lesson1/lo1/tool7.png"},
-			{"text": "Integrated Circuit", "image": "res://assets/images/lesson1/lo1/tool6.png"},
-			{"text": "Capacitor", "image": "res://assets/images/lesson1/lo1/tool5.png"},
+			{"text": "Certifications", "image": "res://assets/images/lesson1/lo2/tool3.png"},
+			{"text": "Service manual", "image": "res://assets/images/lesson1/lo2/tool1.png"},
+			{"text": "Operations manual", "image": "res://assets/images/lesson1/lo2/tool2.png"},
 		],
 		"answer": 1
 	},
 	{
-		"question": "7. Semiconductor devices that allow current to flow in one direction only.",
+		"question": "2. Provides instructions on how to use and operate a device or system properly. It focuses on routine use, not repair.",
 		"choices": [
-			{"text": "Transistors", "image": "res://assets/images/lesson1/lo1/tool8.png"},
-			{"text": "Diodes", "image": "res://assets/images/lesson1/lo1/tool7.png"},
-			{"text": "Capacitor", "image": "res://assets/images/lesson1/lo1/tool5.png"},
+			{"text": "Service manual", "image": "res://assets/images/lesson1/lo2/tool1.png"},
+			{"text": "Certifications", "image": "res://assets/images/lesson1/lo2/tool3.png"},
+			{"text": "Operations manual", "image": "res://assets/images/lesson1/lo2/tool2.png"},
 		],
-		"answer": 1
+		"answer": 2
 	},
 	{
-		"question": "8. Semiconductor devices used to amplify or switch electronic signals.",
+		"question": "3. Official documents issued by authorities or manufacturers that confirm a product or person meets specific standards.",
 		"choices": [
-			{"text": "Transistors", "image": "res://assets/images/lesson1/lo1/tool8.png"},
-			{"text": "Integrated Circuit", "image": "res://assets/images/lesson1/lo1/tool6.png"},
-			{"text": "Diodes", "image": "res://assets/images/lesson1/lo1/tool7.png"},
+			{"text": "Certifications", "image": "res://assets/images/lesson1/lo2/tool3.png"},
+			{"text": "Operations manual", "image": "res://assets/images/lesson1/lo2/tool2.png"},
+			{"text": "Service manual", "image": "res://assets/images/lesson1/lo2/tool1.png"},
 		],
 		"answer": 0
 	}
 ]
-
 
 func _ready():
 	load_question()
@@ -109,7 +63,7 @@ func load_question():
 		item_image.connect("gui_input", Callable(self, "_on_choice_selected").bind(i))
 
 func _on_choice_selected(event: InputEvent, choice_index: int) -> void:
-	if event is InputEventMouseButton and event.pressed and index != 8:
+	if event is InputEventMouseButton and event.pressed and index != 4:
 		var correct = data[index]["answer"]
 		if choice_index == correct:
 			print("✅ Correct!")
@@ -133,7 +87,7 @@ func quiz_done():
 	parent.is_quiz_done = true
 	parent.score = score
 	
-	if score < 5:
+	if score < 2:
 		get_parent().get_node("UI/DialogueBox/Next").visible = false
 		answer_1.visible = true
 		answer_1.text = "Let's try again"
