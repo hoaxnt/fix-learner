@@ -15,8 +15,8 @@ var is_quiz_done = false
 var score = 0
 
 var dialogue_data = [
-		"Hi there, students of computer system servicing!",
-		"I’m [Teacher Name], your guide and mentor as you begin your journey into the world of computer hardware and electronics.",
+		"Welcome again, students of computer system servicing!",
+		"I’m Prof, your guide and mentor as you begin your journey into the world of computer hardware and electronics.",
 		"Before we dive in, let me share some essential information to power up your knowledge!",
 		"In this lesson, you'll explore specifications of materials and components like wires, resistors, and integrated circuits",
 		"So lets get started!",
@@ -38,7 +38,7 @@ func _ready() -> void:
 	#quiz_ui.visible = false
 	tool_preview.visible = false
 	dialogue.text = dialogue_data[index]
-
+# FIX LO2 of LESSON1 ASAPP then proceed to LESSON2
 func _on_pressed() -> void:
 	index += 1
 
@@ -59,7 +59,6 @@ func _on_pressed() -> void:
 				tool_preview.texture = null
 				answer_1.visible = true
 				answer_2.visible = true
-				answer_3.visible = true
 	else:
 		if is_quiz_done == true:
 			get_tree().change_scene_to_file("res://scenes/lessons/lesson_1/lesson_1.tscn")
@@ -79,8 +78,8 @@ func _on_answer_1_pressed() -> void:
 
 
 func _on_answer_2_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
 
 
 func _on_answer_3_pressed() -> void:
-	pass # Replace with function body.
+	pass

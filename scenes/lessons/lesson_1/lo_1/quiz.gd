@@ -134,6 +134,7 @@ func quiz_done():
 	parent.score = score
 	
 	if score < 5:
+		get_parent().get_node("UI/DialogueBox/Next").visible = false
 		answer_1.visible = true
 		answer_1.text = "Let's try again"
 		dialogue.text = "Nice try! You earned %d points don't worry, give it another shot and you'll get there!" % (score)
