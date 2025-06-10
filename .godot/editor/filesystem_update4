@@ -7,3 +7,11 @@ res://scenes/lessons/lesson_1/lo_1/lo_1.tscn
 res://scripts/lessons/lesson_1/lo_1/lo_1.gd
 res://scenes/lessons/lesson_1/lo_1/quiz.tscn
 res://scenes/lessons/lesson_1/lo_1/quiz.gd
+res://scenes/lessons/lesson_1/lo_1/lo1.tscn
+res://scenes/lessons/lesson_1/lo1/lo1.tscn
+res://scenes/lessons/lesson1/lesson1.tscn
+res://scenes/lessons/lesson1/lo1/lo1.tscn
+res://scenes/lessons/lesson1/lo1/lo1_quiz.tscn
+res://scripts/lessons/lesson1/lo1/lo1.gd
+res://scripts/lessons/lesson1/lesson1.gd
+res://scripts/lessons/lesson1/lo1/lo1_quiz.gd
