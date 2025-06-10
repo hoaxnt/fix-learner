@@ -61,7 +61,7 @@ func _on_pressed() -> void:
 				answer_2.visible = true
 	else:
 		if is_quiz_done == true:
-			get_tree().change_scene_to_file("res://scenes/lessons/lesson1/lesson1.tscn")
+			get_tree().change_scene_to_file("res://scenes/lessons/lesson1/lesson1_lo.tscn")
 
 func _on_answer_1_pressed() -> void:
 	background.texture = load("res://assets/images/backgrounds/background.jpg")

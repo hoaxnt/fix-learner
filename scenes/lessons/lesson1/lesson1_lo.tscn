@@ -1,30 +1,30 @@
 [gd_scene load_steps=14 format=3 uid="uid://cyiog4ny3kxqm"]
 
-[ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/lessons/lesson1/lesson1.gd" id="1_3ptb6"]
-[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_sfdv6"]
-[ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="3_1f5ci"]
-[ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="4_yj2sa"]
-[ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_o4ay5"]
-[ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="6_t2qea"]
-[ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_xd7b4"]
+[ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/lessons/lesson1/lesson1_lo.gd" id="1_fypge"]
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_rmgd7"]
+[ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="3_5qdrk"]
+[ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="4_632mn"]
+[ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_vyf7h"]
+[ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="6_ivsbp"]
+[ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_7j0dv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c24rk"]
-texture = ExtResource("3_1f5ci")
+texture = ExtResource("3_5qdrk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12pgh"]
-texture = ExtResource("4_yj2sa")
+texture = ExtResource("4_632mn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72g8v"]
-texture = ExtResource("4_yj2sa")
+texture = ExtResource("4_632mn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5hl7"]
-texture = ExtResource("6_t2qea")
+texture = ExtResource("6_ivsbp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmh07"]
-texture = ExtResource("7_xd7b4")
+texture = ExtResource("7_7j0dv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oood6"]
-texture = ExtResource("7_xd7b4")
+texture = ExtResource("7_7j0dv")
 
 [node name="Lesson1" type="Control"]
 layout_mode = 3
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3ptb6")
+script = ExtResource("1_fypge")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="ColorRect" parent="."]
@@ -51,7 +51,7 @@ custom_minimum_size = Vector2(100, 130)
 layout_mode = 0
 offset_right = 226.0
 offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("2_sfdv6")
+theme_override_fonts/font = ExtResource("2_rmgd7")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_12pgh")
@@ -75,7 +75,7 @@ theme_override_constants/margin_bottom = 60
 
 [node name="Title" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_sfdv6")
+theme_override_fonts/font = ExtResource("2_rmgd7")
 theme_override_font_sizes/font_size = 90
 text = "LEARNING OUTCOMES"
 horizontal_alignment = 1
@@ -89,7 +89,7 @@ columns = 2
 [node name="1" type="Button" parent="VBoxContainer/L0"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_o4ay5")
+theme_override_fonts/font = ExtResource("5_vyf7h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
@@ -100,7 +100,7 @@ metadata/_edit_use_anchors_ = true
 [node name="2" type="Button" parent="VBoxContainer/L0"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_o4ay5")
+theme_override_fonts/font = ExtResource("5_vyf7h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")

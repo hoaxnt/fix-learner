@@ -15,3 +15,6 @@ res://scenes/lessons/lesson1/lo1/lo1_quiz.tscn
 res://scripts/lessons/lesson1/lo1/lo1.gd
 res://scripts/lessons/lesson1/lesson1.gd
 res://scripts/lessons/lesson1/lo1/lo1_quiz.gd
+res://scenes/lessons/lesson1/lo2/lo2.tscn
+res://scenes/lessons/lesson1/lesson1_lo.tscn
+res://scenes/lessons/lesson1/lo2/lo2_quiz.tscn
