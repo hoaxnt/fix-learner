@@ -1,24 +1,24 @@
-[gd_scene load_steps=17 format=3 uid="uid://dptxvnl4enwnd"]
+[gd_scene load_steps=17 format=3 uid="uid://bu28d3vkv5xgg"]
 
-[ext_resource type="Script" uid="uid://dfxuselnqyns0" path="res://scripts/lessons/lesson1/lo2/lo2.gd" id="1_gouem"]
-[ext_resource type="Texture2D" uid="uid://byo2g1nyeml87" path="res://assets/images/backgrounds/classroom.jpg" id="2_q2bje"]
-[ext_resource type="Texture2D" uid="uid://coeyrx0c4e2ef" path="res://assets/images/lesson1/lo2/tool3.png" id="3_gouem"]
-[ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/models/prof.png" id="4_i0g84"]
-[ext_resource type="FontFile" uid="uid://c5ncwdnfodc8e" path="res://assets/fonts/Rubik-Regular.ttf" id="5_3pvmx"]
-[ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="6_qg1o8"]
-[ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="7_f8mef"]
-[ext_resource type="Texture2D" uid="uid://dyat1d7hwljlx" path="res://assets/ui/panel/body/titled.png" id="8_jq0kf"]
-[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="9_r85yj"]
-[ext_resource type="Script" uid="uid://b5xd7m84s4vg2" path="res://scripts/lessons/lesson1/lo2/lo2_quiz.gd" id="10_gouem"]
+[ext_resource type="Script" uid="uid://dfxuselnqyns0" path="res://scripts/lessons/lesson1/lo2/lo2.gd" id="1_p8s03"]
+[ext_resource type="Texture2D" uid="uid://byo2g1nyeml87" path="res://assets/images/backgrounds/classroom.jpg" id="2_ka8vb"]
+[ext_resource type="Texture2D" uid="uid://coeyrx0c4e2ef" path="res://assets/images/lesson1/lo2/tool3.png" id="3_xnpoy"]
+[ext_resource type="Texture2D" uid="uid://v5jm7xqrxfls" path="res://assets/models/prof.png" id="4_37rag"]
+[ext_resource type="FontFile" uid="uid://c5ncwdnfodc8e" path="res://assets/fonts/Rubik-Regular.ttf" id="5_soc6g"]
+[ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="6_3s40o"]
+[ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="7_1wbn0"]
+[ext_resource type="Texture2D" uid="uid://dyat1d7hwljlx" path="res://assets/ui/panel/body/titled.png" id="8_5rsxk"]
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="9_slh1g"]
+[ext_resource type="Script" uid="uid://b5xd7m84s4vg2" path="res://scripts/lessons/lesson1/lo2/lo2_quiz.gd" id="10_4tlur"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdfq6"]
-texture = ExtResource("6_qg1o8")
+texture = ExtResource("6_3s40o")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxdue"]
-texture = ExtResource("7_f8mef")
+texture = ExtResource("7_1wbn0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dojl"]
-texture = ExtResource("7_f8mef")
+texture = ExtResource("7_1wbn0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqe8s"]
 
@@ -27,20 +27,20 @@ texture = ExtResource("7_f8mef")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_imsk6"]
 
 [node name="LO2" type="Node2D"]
-script = ExtResource("1_gouem")
+script = ExtResource("1_p8s03")
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_q2bje")
+texture = ExtResource("2_ka8vb")
 metadata/_edit_lock_ = true
 
 [node name="ToolPreview" type="Sprite2D" parent="."]
 position = Vector2(138.5, -138.5)
-texture = ExtResource("3_gouem")
+texture = ExtResource("3_xnpoy")
 
 [node name="Prof" type="Sprite2D" parent="."]
 scale = Vector2(1.375, 1.375)
-texture = ExtResource("4_i0g84")
+texture = ExtResource("4_37rag")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -79,7 +79,7 @@ alignment = 1
 visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_3pvmx")
+theme_override_fonts/font = ExtResource("5_soc6g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
@@ -90,7 +90,7 @@ text = "Let's go"
 visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_3pvmx")
+theme_override_fonts/font = ExtResource("5_soc6g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
@@ -101,7 +101,7 @@ text = "Review again"
 visible = false
 custom_minimum_size = Vector2(500, 70)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_3pvmx")
+theme_override_fonts/font = ExtResource("5_soc6g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_gdfq6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uxdue")
@@ -124,7 +124,7 @@ theme_override_constants/margin_bottom = 30
 [node name="Background" type="NinePatchRect" parent="CanvasLayer/UI/DialogueBox"]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
-texture = ExtResource("8_jq0kf")
+texture = ExtResource("8_5rsxk")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/DialogueBox"]
 layout_mode = 2
@@ -139,7 +139,7 @@ theme_override_constants/separation = 30
 
 [node name="Name" type="Label" parent="CanvasLayer/UI/DialogueBox/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("9_r85yj")
+theme_override_fonts/font = ExtResource("9_slh1g")
 theme_override_font_sizes/font_size = 50
 text = "Prof"
 
@@ -167,7 +167,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("10_gouem")
+script = ExtResource("10_4tlur")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizUI"]
@@ -188,7 +188,7 @@ theme_override_constants/separation = 40
 
 [node name="Title" type="Label" parent="CanvasLayer/QuizUI/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("9_r85yj")
+theme_override_fonts/font = ExtResource("9_slh1g")
 theme_override_font_sizes/font_size = 96
 text = "QUIZ"
 horizontal_alignment = 1
