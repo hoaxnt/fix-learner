@@ -13,14 +13,13 @@ extends Node2D
 
 var is_quiz_done = false
 var score = 0
+var index := 0
 
 var dialogue_data = [
 		"Lesson 2 LO1!",
 #		Item description
-		"Okay, it's quiz time! Are you ready?"
+		"Start"
 ]
-
-var index := 0
 
 func _ready() -> void:
 	quiz_ui.visible = false
@@ -29,7 +28,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	index += 1
-
+	
 	if index < dialogue_data.size():
 		dialogue.text = dialogue_data[index]
 
