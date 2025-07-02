@@ -1,0 +1,10 @@
+res://scenes/main_menu.tscn
+res://scenes/lessons/lessons_list.tscn
+res://scenes/lessons/lesson1/lo2/lo2.tscn
+res://scenes/lessons/lesson1/lo2/lo2_quiz.tscn
+res://scenes/lessons/lesson1/lesson1_lo.tscn
+res://scenes/lessons/lesson2/lo2/lo2.tscn
+res://scenes/lessons/lesson2/lo2/lo2_quiz.tscn
+res://scenes/lessons/lesson2/lesson2_lo.tscn
+res://scenes/lessons/lesson2/lo1/lo1.tscn
+res://scripts/lessons/lesson1/lo1/lo1.gd
