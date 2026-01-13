@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://caa1j87royuml"]
+
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="1_ols5k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ols5k"]
+bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nojw"]
+bg_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_ols5k")
+Button/styles/normal = SubResource("StyleBoxFlat_ols5k")
+Label/colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 1)
+Label/fonts/font = ExtResource("1_ols5k")
+Panel/styles/panel = SubResource("StyleBoxFlat_2nojw")

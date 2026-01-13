@@ -1,6 +1,7 @@
+Panel
+VBoxContainer
 HBoxContainer
 TextureRect
-VBoxContainer
 Label
 Button
 GridContainer
