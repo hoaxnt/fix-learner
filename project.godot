@@ -13,10 +13,10 @@ config_version=5
 config/name="Fix Learner"
 run/main_scene="uid://it6m241pfkbe"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-boot_splash/bg_color=Color(0.8784314, 0.9019608, 0.92941177, 1)
 boot_splash/fullsize=false
 boot_splash/image="uid://dlb40w05g1hyn"
 config/icon="uid://dlb40w05g1hyn"
+boot_splash/minimum_display_time=1000
 
 [display]
 

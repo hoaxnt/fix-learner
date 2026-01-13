@@ -1,9 +1,37 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://caa1j87royuml"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://caa1j87royuml"]
 
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="1_ols5k"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hofdy"]
+bg_color = Color(0, 0.84313726, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ols5k"]
 bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ahyh"]
+bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83bj2"]
+bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u427p"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -12,9 +40,36 @@ corner_radius_bottom_left = 5
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nojw"]
 bg_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x127s"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjhx0"]
+bg_color = Color(0, 0.84313726, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biaja"]
+bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnc4k"]
+bg_color = Color(0.3019608, 0.5647059, 0.99607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rtxy"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+
 [resource]
 Button/fonts/font = ExtResource("1_ols5k")
+Button/styles/hover = SubResource("StyleBoxFlat_hofdy")
 Button/styles/normal = SubResource("StyleBoxFlat_ols5k")
+Button/styles/pressed = SubResource("StyleBoxFlat_0ahyh")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_83bj2")
 Label/colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 1)
 Label/fonts/font = ExtResource("1_ols5k")
+LineEdit/fonts/font = ExtResource("1_ols5k")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_u427p")
 Panel/styles/panel = SubResource("StyleBoxFlat_2nojw")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_x127s")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_qjhx0")
+TabContainer/fonts/font = ExtResource("1_ols5k")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_biaja")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_vnc4k")
+TextEdit/fonts/font = ExtResource("1_ols5k")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_7rtxy")

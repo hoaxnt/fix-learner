@@ -1,7 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768317691
+::res://::1768322996
 README.md::TextFile/TextFile::-1::1747843648::0::1::::<><><>0<>0<><>::
-::res://assets/::1748912883
+::res://assets/::1768322996
+icon.png::CompressedTexture2D::7935210341995494153::1768322924::1768322997::1::::<><><>0<>0<>cc21b2ff5d1afa948aefd271da48bddd<>res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex::
 ::res://assets/audio/::1747882914
 ::res://assets/fonts/::1748576807
 Rubik-Black.ttf::FontFile/FontFile::7326182336023550489::1748576807::1748576807::1::::<><><>0<>0<>76c494815b691ca8c2a4b2b727c6b588<>res://.godot/imported/Rubik-Black.ttf-0b6b2568cfdbf1aca9e9c7daf3950dff.fontdata::
@@ -376,8 +377,7 @@ tool3.png::CompressedTexture2D/CompressedTexture2D::5765231502444649833::1749532
 ::res://assets/models/::1749788910
 horse.glb::PackedScene/PackedScene::235334972953837049::1747968736::1748570701::1::::<><><>0<>0<>a89fa4a7ddf35a468084c4ef12165659<>res://.godot/imported/horse.glb-b058c7a163b8b3351d26de174e85f30c.scn::
 prof.png::CompressedTexture2D/CompressedTexture2D::1536466648510531108::1749117953::1749475101::1::::<><><>0<>0<>c551a17c9a5901a1b757dbd51047cf57<>res://.godot/imported/prof.png-615e671be77a9eebc05b26adbd915b69.ctex::
-::res://assets/ui/::1748913596
-icon.png::CompressedTexture2D/CompressedTexture2D::7935210341995494153::1747882820::1748570705::1::::<><><>0<>0<>02f54ab207df5923f5147252e2796d99<>res://.godot/imported/icon.png-b2186b5b4a56bd57079f80a9dcb82304.ctex::
+::res://assets/ui/::1768322996
 ::res://assets/ui/button/::1748916602
 locked.png::CompressedTexture2D/CompressedTexture2D::774550882601509760::1680262338::1748916602::1::::<><><>0<>0<>d0ac5f4ee5cedae92794b65dfed3f09b<>res://.godot/imported/locked.png-4360d0dad5c16e5841b23a106831a117.ctex::
 unlocked.png::CompressedTexture2D/CompressedTexture2D::6394835241949572396::1680262338::1748916602::1::::<><><>0<>0<>f88e41a3b54b27d7ae3b969ec9bc735c<>res://.godot/imported/unlocked.png-45909b3f0c01ee475b1ba1672c8efd25.ctex::
@@ -428,9 +428,10 @@ dummy.png::CompressedTexture2D/CompressedTexture2D::1909778523131726276::1680262
 ::res://assets/ui/panel/window/::1748916602
 large.png::CompressedTexture2D/CompressedTexture2D::6007344555010397492::1680262338::1748916602::1::::<><><>0<>0<>b15005236718f76322f9c664249283df<>res://.godot/imported/large.png-aa2cf3b397acadd00936823fdc25954c.ctex::
 medium.png::CompressedTexture2D/CompressedTexture2D::4276831451832069278::1680262338::1748916602::1::::<><><>0<>0<>61f74debdeb7a8064a11b0ef599e3a98<>res://.godot/imported/medium.png-2a3cda5d5a14d14fab08c54a3ccdb631.ctex::
-::res://resources/::1747882009
-::res://scenes/::1751483300
-main_menu.tscn::PackedScene::602639046865370086::1751483300::0::1::::<><><>0<>0<><>::uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://bw7n5ummgpnbg::::res://assets/ui/buttons/square_medium/SoundOn/Default@3x.png<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://q8ad0q1jw077::::res://scripts/main_menu.gd
+::res://resources/::1768322495
+main_theme.tres::Theme::4774437864839648051::1768322495::0::1::::<><><>0<>0<><>::uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf
+::res://scenes/::1768322978
+main_menu.tscn::PackedScene::602639046865370086::1768322978::0::1::::<><><>0<>0<><>::uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://q8ad0q1jw077::::res://scripts/main_menu.gd<>uid://caa1j87royuml::::res://resources/main_theme.tres
 ::res://scenes/lessons/::1751480209
 lessons_list.tscn::PackedScene::5759483755043386564::1751480209::0::1::::<><><>0<>0<><>::uid://c6sjikm4xkdd1::::res://scripts/lessons/lessons_list.gd<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://cxdyacqa2kfeq::::res://assets/ui/button/unlocked.png<>uid://56fdm7becv1v::::res://assets/ui/button/unlocked_hover.png
 ::res://scenes/lessons/lesson1/::1751480209

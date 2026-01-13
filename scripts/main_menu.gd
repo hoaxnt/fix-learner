@@ -11,3 +11,7 @@ func load_scene(path: String):
 	get_tree().change_scene_to_packed(scene)
 	
 	
+
+
+func _on_learn_button_pressed() -> void:
+	pass # Replace with function body.
