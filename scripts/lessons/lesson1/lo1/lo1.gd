@@ -25,6 +25,7 @@ func _ready() -> void:
 	quiz_ui.visible = false
 	tool_preview.visible = false
 	dialogue.text = dialogue_data[index]
+	
 
 func _on_pressed() -> void:
 	index += 1
