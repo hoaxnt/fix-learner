@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://it6m241pfkbe"]
+[gd_scene load_steps=7 format=3 uid="uid://it6m241pfkbe"]
 
 [ext_resource type="Texture2D" uid="uid://dlb40w05g1hyn" path="res://assets/icon.png" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_8ln24"]
@@ -11,6 +11,9 @@ corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.15686275, 0.17254902, 0.20392157, 0.99215686)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -135,6 +138,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_8ln24")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ln24")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -191,4 +195,7 @@ theme_override_font_sizes/font_size = 80
 text = "Accept"
 
 [connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/LearnButton" to="." method="_on_learn_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/OptionsButton" to="HBoxContainer/Panel/VBoxContainer/OptionsButton" method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/DeclineButton" to="." method="_on_decline_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
