@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cob64drhqncye"]
+[gd_scene load_steps=6 format=3 uid="uid://cob64drhqncye"]
 
 [ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_n1ehl"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_htqx8"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_emo30"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="4_ngx2m"]
+[ext_resource type="Texture2D" uid="uid://b0fudypob1dp0" path="res://assets/images/icons/hard-hat.png" id="5_htqx8"]
 
 [node name="LessonsList" type="Control"]
 layout_mode = 3
@@ -61,9 +62,14 @@ custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("2_htqx8")
+theme_override_constants/icon_max_width = 250
 theme_override_fonts/font = ExtResource("4_ngx2m")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 50
 text = "COC 1"
+icon = ExtResource("5_htqx8")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Coc2_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
@@ -109,5 +115,6 @@ theme = ExtResource("2_htqx8")
 theme_override_fonts/font = ExtResource("3_emo30")
 theme_override_font_sizes/font_size = 70
 text = "Back"
+flat = true
 
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

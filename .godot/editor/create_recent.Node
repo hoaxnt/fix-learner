@@ -1,3 +1,6 @@
+ScrollContainer
+HScrollBar
+ItemList
 HBoxContainer
 Button
 CheckBox
@@ -10,5 +13,3 @@ TextureRect
 GridContainer
 MarginContainer
 Control
-RichTextLabel
-Sprite2D

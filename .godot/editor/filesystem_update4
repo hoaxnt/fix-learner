@@ -5,3 +5,4 @@ res://scripts/lessons/lessons_list.gd
 res://scripts/main_menu.gd
 res://scenes/learning_materials/coc_list.tscn
 res://scenes/learning_materials/coc_1/lessons_list_1.tscn
+res://scripts/lessons/lesson1/lesson1_lo.gd

@@ -1,10 +1,10 @@
 extends Control
 
 func _ready():
-	var lo_list = get_node("VBoxContainer/L0")
-	for child in lo_list.get_children():
-		if child is Button:
-			child.pressed.connect(func() : _on_pressed(child.name))
+	#var lo_list = get_node("VBoxContainer/L0")
+	#for child in lo_list.get_children():
+		#if child is Button:
+			#child.pressed.connect(func() : _on_pressed(child.name))
 	pass
 	
 func _on_pressed(button_name):
