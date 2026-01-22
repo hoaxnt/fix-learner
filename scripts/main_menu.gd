@@ -1,7 +1,7 @@
 extends Control
 
 func _on_learn_button_pressed() -> void:
-	load_scene("res://scenes/lessons/lessons_list.tscn")
+	load_scene("res://scenes/lessons/coc_list.tscn")
 	
 func _on_options_button_pressed() -> void:
 	pass # Replace with function body.

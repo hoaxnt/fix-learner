@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	var lessons_list = get_node("VBoxContainer/Lessons")
+	var lessons_list = get_node("VBoxContainer/HBoxContainer")
 	for child in lessons_list.get_children():
 		if child is Button:
 			child.pressed.connect(func() : _on_pressed(child.name))

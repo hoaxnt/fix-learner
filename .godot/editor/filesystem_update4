@@ -1,3 +1,5 @@
 res://scenes/main_menu.tscn
 res://resources/main_theme.tres
 res://scenes/lessons/coc_list.tscn
+res://scripts/lessons/lessons_list.gd
+res://scripts/main_menu.gd
