@@ -1,3 +1,7 @@
+TextureRect
+Label
+VBoxContainer
+CenterContainer
 ScrollContainer
 HScrollBar
 ItemList
@@ -5,11 +9,6 @@ HBoxContainer
 Button
 CheckBox
 CheckButton
-Label
-VBoxContainer
 Panel
 CanvasLayer
-TextureRect
 GridContainer
-MarginContainer
-Control

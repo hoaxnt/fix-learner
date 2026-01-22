@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_htqx8"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_emo30"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="4_ngx2m"]
-[ext_resource type="Texture2D" uid="uid://b0fudypob1dp0" path="res://assets/images/icons/hard-hat.png" id="5_htqx8"]
+[ext_resource type="Texture2D" uid="uid://dsxrbpg86ktl3" path="res://assets/images/icons/graduate-hat.png" id="5_htqx8"]
 
 [node name="LessonsList" type="Control"]
 layout_mode = 3
@@ -62,15 +62,35 @@ custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("2_htqx8")
-theme_override_constants/icon_max_width = 250
+theme_override_constants/icon_max_width = 240
 theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 50
-text = "COC 1"
-icon = ExtResource("5_htqx8")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc1_Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_htqx8")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_htqx8")
+text = "COC 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Coc2_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
@@ -80,8 +100,35 @@ theme = ExtResource("2_htqx8")
 theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
-text = "COC 2"
+text = "LOCKED"
 metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc2_Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 2
+texture = ExtResource("5_htqx8")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_htqx8")
+theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
+text = "COC 2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Coc3_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
@@ -91,8 +138,35 @@ theme = ExtResource("2_htqx8")
 theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
-text = "COC 3"
+text = "LOCKED"
 metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc3_Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 2
+texture = ExtResource("5_htqx8")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_htqx8")
+theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
+text = "COC 3"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Coc4_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
@@ -102,8 +176,35 @@ theme = ExtResource("2_htqx8")
 theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
-text = "COC 4"
+text = "LOCKED"
 metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc4_Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 2
+texture = ExtResource("5_htqx8")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_htqx8")
+theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
+text = "COC 4"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(400, 150)

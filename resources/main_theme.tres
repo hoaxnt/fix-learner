@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://caa1j87royuml"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://caa1j87royuml"]
 
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="1_ols5k"]
+[ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="2_biaja"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hofdy"]
 bg_color = Color(0, 0.84313726, 1, 1)
@@ -77,7 +78,8 @@ Button/styles/normal = SubResource("StyleBoxFlat_ols5k")
 Button/styles/pressed = SubResource("StyleBoxFlat_0ahyh")
 CheckBox/styles/normal = SubResource("StyleBoxFlat_83bj2")
 Label/colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 1)
-Label/fonts/font = ExtResource("1_ols5k")
+Label/font_sizes/font_size = 70
+Label/fonts/font = ExtResource("2_biaja")
 LineEdit/fonts/font = ExtResource("1_ols5k")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_u427p")
 Panel/styles/panel = SubResource("StyleBoxFlat_2nojw")
