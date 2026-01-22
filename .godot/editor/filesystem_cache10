@@ -357,10 +357,11 @@ Unactive.svg::CompressedTexture2D/CompressedTexture2D::3936773428516891930::1680
 ::res://assets/images/backgrounds/::1749530949
 background.jpg::CompressedTexture2D/CompressedTexture2D::5540979576731669008::1749117275::1749530949::1::::<><><>0<>0<>29036225b09ada149b95ed5c89f47da2<>res://.godot/imported/background.jpg-58ed5d2dc650d179b950eed41d3d2a6c.ctex::
 classroom.jpg::CompressedTexture2D/CompressedTexture2D::4101505679916681230::1749468820::1749530947::1::::<><><>0<>0<>1963062ada2920cdbd9208424f58de0b<>res://.godot/imported/classroom.jpg-d2d1a41f903d64b4562d402667aeb222.ctex::
-::res://assets/images/icons/::1769104200
+::res://assets/images/icons/::1769104451
 danger.png::CompressedTexture2D::4845110455644506663::1769104191::1769104209::1::::<><><>0<>0<>531a1ae3ac309eb52a136f5adc7f01e2<>res://.godot/imported/danger.png-f51d4ed99c80be20b9365b7f6de0e466.ctex::
 graduate-hat.png::CompressedTexture2D::8471176698238485182::1769103087::1769103138::1::::<><><>0<>0<>d56e1ebeacbc5241ea36e4798fd16708<>res://.godot/imported/graduate-hat.png-7acff6ed36c98fe3a3470dc8ef922318.ctex::
 hard-hat.png::CompressedTexture2D::4152684645022181379::1769099233::1769099281::1::::<><><>0<>0<>2772c6f085761254e7e308d9f0433c1a<>res://.godot/imported/hard-hat.png-ea9048e0d39eccc8d1239bc52a7742d7.ctex::
+laptop.png::CompressedTexture2D::8183470939498267632::1769104445::1769104453::1::::<><><>0<>0<>aaa1c506339586e5530012ec240167b2<>res://.godot/imported/laptop.png-35b032ed29d9bc3dd1a87e0467dc1e65.ctex::
 ::res://assets/images/lesson1/::1749531843
 ::res://assets/images/lesson1/lo1/::1749530361
 tool1.png::CompressedTexture2D/CompressedTexture2D::4282570770039487867::1749456413::1749530330::1::::<><><>0<>0<>37393c45119d4b168ca4e27c61b012a2<>res://.godot/imported/tool1.png-fd56f0a67b248c3db3f3fff4f8255f04.ctex::
@@ -438,8 +439,8 @@ main_theme.tres::Theme::4774437864839648051::1769103021::0::1::::<><><>0<>0<><>:
 main_menu.tscn::PackedScene::602639046865370086::1769099611::0::1::::<><><>0<>0<><>::uid://dlb40w05g1hyn::::res://assets/icon.png<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://q8ad0q1jw077::::res://scripts/main_menu.gd<>uid://caa1j87royuml::::res://resources/main_theme.tres
 ::res://scenes/learning_materials/::1769103461
 coc_list.tscn::PackedScene::5759483755043386564::1769103461::0::1::::<><><>0<>0<><>::uid://c6sjikm4xkdd1::::res://scripts/lessons/lessons_list.gd<>uid://caa1j87royuml::::res://resources/main_theme.tres<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://dsxrbpg86ktl3::::res://assets/images/icons/graduate-hat.png
-::res://scenes/learning_materials/coc_1/::1769104173
-lessons_list_1.tscn::PackedScene::6474750933781516760::1769104173::0::1::::<><><>0<>0<><>::uid://k1nixvp8q2vi::::res://scripts/lessons/lesson1/lesson1_lo.gd<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://b0fudypob1dp0::::res://assets/images/icons/hard-hat.png<>uid://dsxrbpg86ktl3::::res://assets/images/icons/graduate-hat.png<>uid://cxdyacqa2kfeq::::res://assets/ui/button/unlocked.png<>uid://caa1j87royuml::::res://resources/main_theme.tres<>uid://56fdm7becv1v::::res://assets/ui/button/unlocked_hover.png
+::res://scenes/learning_materials/coc_1/::1769104408
+lessons_list_1.tscn::PackedScene::6474750933781516760::1769104408::0::1::::<><><>0<>0<><>::uid://k1nixvp8q2vi::::res://scripts/lessons/lesson1/lesson1_lo.gd<>uid://md3bneuh3f8p::::res://assets/fonts/Rubik-Bold.ttf<>uid://cye7bm7hbrw04::::res://assets/ui/button/rect_medium/rect.png<>uid://dq38ve1u1074y::::res://assets/ui/button/rect_medium/rect_hover.png<>uid://dcm4fgr7c84q4::::res://assets/fonts/Rubik-Black.ttf<>uid://b0fudypob1dp0::::res://assets/images/icons/hard-hat.png<>uid://cxdyacqa2kfeq::::res://assets/ui/button/unlocked.png<>uid://caa1j87royuml::::res://resources/main_theme.tres<>uid://56fdm7becv1v::::res://assets/ui/button/unlocked_hover.png<>uid://cbbai5dd70dqt::::res://assets/images/icons/danger.png
 ::res://scenes/learning_materials/coc_1/assemble_disassemble/::1769080103
 ::res://scenes/learning_materials/coc_1/bootable_device/::1769080151
 ::res://scenes/learning_materials/coc_1/electrical_hazards/::1769079879

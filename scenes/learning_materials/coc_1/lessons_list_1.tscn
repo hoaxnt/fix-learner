@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyiog4ny3kxqm"]
+[gd_scene load_steps=19 format=3 uid="uid://cyiog4ny3kxqm"]
 
 [ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/lessons/lesson1/lesson1_lo.gd" id="1_4y0e3"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_2o1ih"]
@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="4_5d45y"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_swqtd"]
 [ext_resource type="Texture2D" uid="uid://b0fudypob1dp0" path="res://assets/images/icons/hard-hat.png" id="6_5d45y"]
-[ext_resource type="Texture2D" uid="uid://dsxrbpg86ktl3" path="res://assets/images/icons/graduate-hat.png" id="6_kegxn"]
 [ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="6_yijig"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_5d45y"]
 [ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="7_lo2yu"]
+[ext_resource type="Texture2D" uid="uid://cbbai5dd70dqt" path="res://assets/images/icons/danger.png" id="8_5d45y"]
+[ext_resource type="Texture2D" uid="uid://douetn15n4nca" path="res://assets/images/icons/laptop.png" id="9_swqtd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
@@ -65,7 +66,7 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_2o1ih")
 theme_override_font_sizes/font_size = 90
-text = "Lessons"
+text = "What to learn?"
 horizontal_alignment = 1
 
 [node name="HScrollBar" type="ScrollContainer" parent="VBoxContainer"]
@@ -81,11 +82,12 @@ layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Ohs_Button" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+[node name="OhsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
 custom_minimum_size = Vector2(700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("5_swqtd")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
@@ -93,7 +95,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/Ohs_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,19 +103,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/Ohs_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/Ohs_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("6_5d45y")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/Ohs_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_5d45y")
 text = "OHS
@@ -121,11 +123,12 @@ Procedures"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hazards_Button" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+[node name="HazardsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
 custom_minimum_size = Vector2(700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("5_swqtd")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
@@ -133,7 +136,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/Hazards_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,19 +144,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/Hazards_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/Hazards_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_kegxn")
+texture = ExtResource("8_5d45y")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/Hazards_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_5d45y")
 text = "Electrical
@@ -161,7 +164,48 @@ Hazards"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Back" type="Button" parent="VBoxContainer"]
+[node name="AssembleButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_swqtd")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_swqtd")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_5d45y")
+text = "Assemble &
+Disassemble"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(100, 130)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -174,4 +218,4 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
 text = "Back"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]

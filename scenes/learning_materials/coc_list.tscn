@@ -57,7 +57,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 85
 alignment = 1
 
-[node name="Coc1_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Coc1Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
@@ -67,7 +67,7 @@ theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 50
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc1_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc1Button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,24 +75,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc1Button/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 55
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc1Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("5_htqx8")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc1_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc1Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_htqx8")
 text = "COC 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Coc2_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Coc2Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
@@ -103,7 +103,7 @@ disabled = true
 text = "LOCKED"
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc2_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc2Button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,18 +111,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc2Button/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 55
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc2Button/CenterContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 2
 texture = ExtResource("5_htqx8")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc2_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc2Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_htqx8")
 theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
@@ -130,7 +130,7 @@ text = "COC 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Coc3_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Coc3Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
@@ -141,7 +141,7 @@ disabled = true
 text = "LOCKED"
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc3_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc3Button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,18 +149,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc3Button/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 55
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc3Button/CenterContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 2
 texture = ExtResource("5_htqx8")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc3_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc3Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_htqx8")
 theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
@@ -168,7 +168,7 @@ text = "COC 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Coc4_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Coc4Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
@@ -179,7 +179,7 @@ disabled = true
 text = "LOCKED"
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc4_Button"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc4Button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,18 +187,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Coc4Button/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 55
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc4Button/CenterContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 2
 texture = ExtResource("5_htqx8")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc4_Button/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc4Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_htqx8")
 theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
@@ -206,7 +206,7 @@ text = "COC 4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Back" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -218,4 +218,4 @@ theme_override_font_sizes/font_size = 70
 text = "Back"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
