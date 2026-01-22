@@ -38,14 +38,15 @@ offset_right = 550.0
 offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 115
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("2_apybn")
 theme_override_font_sizes/font_size = 90
-text = "LESSONS"
+text = "Learning Materials"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -71,6 +72,7 @@ focus_mode = 0
 theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
+disabled = true
 text = "COC 2"
 metadata/_edit_use_anchors_ = true
 
@@ -81,6 +83,7 @@ focus_mode = 0
 theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
+disabled = true
 text = "COC 3"
 metadata/_edit_use_anchors_ = true
 
@@ -91,6 +94,7 @@ focus_mode = 0
 theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
+disabled = true
 text = "COC 4"
 metadata/_edit_use_anchors_ = true
 
@@ -103,6 +107,6 @@ focus_mode = 0
 theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("2_apybn")
 theme_override_font_sizes/font_size = 70
-text = "BACK"
+text = "Back"
 
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
