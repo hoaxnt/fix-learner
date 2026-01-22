@@ -1,20 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cob64drhqncye"]
+[gd_scene load_steps=5 format=3 uid="uid://cob64drhqncye"]
 
 [ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_06g62"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_apybn"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_qouji"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_qhrb8"]
-[ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="6_te52h"]
-[ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="7_bn6na"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oood6"]
-texture = ExtResource("6_te52h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmh07"]
-texture = ExtResource("6_te52h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5hl7"]
-texture = ExtResource("7_bn6na")
 
 [node name="LessonsList" type="Control"]
 layout_mode = 3
@@ -50,6 +39,7 @@ offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 115
+alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -77,33 +67,30 @@ metadata/_edit_use_anchors_ = true
 [node name="Coc2_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 text = "COC 2"
 metadata/_edit_use_anchors_ = true
 
 [node name="Coc3_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 text = "COC 3"
 metadata/_edit_use_anchors_ = true
 
 [node name="Coc4_Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("5_qhrb8")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 text = "COC 4"
 metadata/_edit_use_anchors_ = true
 
@@ -112,6 +99,7 @@ custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme = ExtResource("2_qouji")
 theme_override_fonts/font = ExtResource("2_apybn")
 theme_override_font_sizes/font_size = 70
