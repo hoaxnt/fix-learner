@@ -3,3 +3,4 @@ res://resources/main_theme.tres
 res://scenes/lessons/coc_list.tscn
 res://scripts/lessons/lessons_list.gd
 res://scripts/main_menu.gd
+res://scenes/learning_materials/coc_list.tscn

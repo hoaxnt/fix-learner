@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cob64drhqncye"]
 
-[ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_06g62"]
-[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_apybn"]
-[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_qouji"]
-[ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_qhrb8"]
+[ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_n1ehl"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_htqx8"]
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_emo30"]
+[ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="4_ngx2m"]
 
 [node name="LessonsList" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06g62")
+script = ExtResource("1_n1ehl")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="ColorRect" parent="."]
@@ -43,8 +43,8 @@ alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("2_apybn")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("3_emo30")
 theme_override_font_sizes/font_size = 90
 text = "Learning Materials"
 horizontal_alignment = 1
@@ -59,8 +59,8 @@ alignment = 1
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("5_qhrb8")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 text = "COC 1"
 metadata/_edit_use_anchors_ = true
@@ -69,8 +69,8 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("5_qhrb8")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
 text = "COC 2"
@@ -80,8 +80,8 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("5_qhrb8")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
 text = "COC 3"
@@ -91,8 +91,8 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(350, 500)
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("5_qhrb8")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
 disabled = true
 text = "COC 4"
@@ -104,8 +104,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("2_qouji")
-theme_override_fonts/font = ExtResource("2_apybn")
+theme = ExtResource("2_htqx8")
+theme_override_fonts/font = ExtResource("3_emo30")
 theme_override_font_sizes/font_size = 70
 text = "Back"
 
