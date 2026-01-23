@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cob64drhqncye"]
 
-[ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/lessons/lessons_list.gd" id="1_n1ehl"]
+[ext_resource type="Script" uid="uid://c6sjikm4xkdd1" path="res://scripts/learning_materials/coc_list.gd" id="1_n1ehl"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_htqx8"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="3_emo30"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="4_ngx2m"]
