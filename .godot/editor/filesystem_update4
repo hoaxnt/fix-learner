@@ -8,3 +8,4 @@ res://scenes/learning_materials/coc_1/lessons_list_1.tscn
 res://scripts/lessons/lesson1/lesson1_lo.gd
 res://scenes/learning_materials/coc_1/ohs_procedures/ohs_procedures.tscn
 res://scripts/learning_materials/coc_1/coc_1.gd
+res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd

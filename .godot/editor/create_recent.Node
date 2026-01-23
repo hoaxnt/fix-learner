@@ -1,5 +1,7 @@
-MarginContainer
+Button
+VBoxContainer
 Label
+MarginContainer
 Panel
 Sprite2D
 TileMapLayer
@@ -8,8 +10,6 @@ AnimatedSprite2D
 Control
 CanvasLayer
 TextureRect
-VBoxContainer
 CenterContainer
 ScrollContainer
 HScrollBar
-ItemList
