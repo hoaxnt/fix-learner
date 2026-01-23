@@ -1,13 +1,71 @@
-[gd_scene format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=6 format=3 uid="uid://cb8ifl0ku4240"]
+
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
+[ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_0jn8k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkd3x"]
+atlas = ExtResource("1_25a41")
+region = Rect2(166, 0, 166, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7jnuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkd3x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="OhsProcedures" type="Node2D"]
 
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.17133333, 0.17133333)
+texture = ExtResource("2_dkd3x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(193, 51)
+sprite_frames = SubResource("SpriteFrames_7jnuq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.79, 2.79)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+custom_minimum_size = Vector2(1500, 250)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -750.0
+offset_top = -280.0
+offset_right = 750.0
+offset_bottom = -29.999756
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_0jn8k")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Hello world!"
