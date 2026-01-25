@@ -28,7 +28,8 @@ scale = Vector2(0.17133333, 0.17133333)
 texture = ExtResource("2_dkd3x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(193, 51)
+position = Vector2(-3, 35.000008)
+scale = Vector2(1.8365167, 1.8365167)
 sprite_frames = SubResource("SpriteFrames_7jnuq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
