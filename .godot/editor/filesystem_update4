@@ -1,11 +1,2 @@
-res://scenes/main_menu.tscn
-res://resources/main_theme.tres
-res://scenes/lessons/coc_list.tscn
-res://scripts/lessons/lessons_list.gd
-res://scripts/main_menu.gd
-res://scenes/learning_materials/coc_list.tscn
 res://scenes/learning_materials/coc_1/lessons_list_1.tscn
-res://scripts/lessons/lesson1/lesson1_lo.gd
-res://scenes/learning_materials/coc_1/ohs_procedures/ohs_procedures.tscn
-res://scripts/learning_materials/coc_1/coc_1.gd
-res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd
+res://resources/main_theme.tres
