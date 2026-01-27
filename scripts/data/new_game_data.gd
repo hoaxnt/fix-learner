@@ -16,3 +16,5 @@ class_name NewGameData
 @export var installing_softwares : bool = false
 
 #COC 2 Lessons
+
+# NOTE: 

@@ -8,6 +8,10 @@ func _on_continue_button_pressed() -> void:
 	
 func _on_learn_button_pressed() -> void:
 	data.opened_once = not data.opened_once
+	var result = ResourceSaver.save(data, "user://save_file.tres")
+		
+if result == OK:
+print("Game Saved!")
 	print("Learn Opened Once: ", data.opened_once)
 	load_scene("res://scenes/learning_materials/coc_list.tscn")
 	
