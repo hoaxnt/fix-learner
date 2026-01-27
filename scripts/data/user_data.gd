@@ -1,11 +1,21 @@
-extends Node
+extends Resource
+class_name UserData
 
+# Config
+@export var opened_once: bool = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+# Settings
+@export var sounds: bool = false
 
+# COC
+@export var coc_1_unlocked : bool = true
+@export var coc_2_unlocked : bool = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# COC 1 Lessons
+@export var ohs_procedures : bool = true
+@export var electrical_hazards : bool = false
+@export var assemble_disassemble : bool = false
+@export var creating_bootable_device : bool = false
+@export var installing_softwares : bool = false
+
+#COC 2 Lessons

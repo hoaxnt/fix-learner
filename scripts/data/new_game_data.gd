@@ -1,6 +1,9 @@
 extends Resource
 class_name NewGameData
 
+# Config
+@export var opened_once: bool = false
+
 # COC
 @export var coc_1_unlocked : bool = true
 @export var coc_2_unlocked : bool = false
