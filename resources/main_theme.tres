@@ -1,7 +1,19 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://caa1j87royuml"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://caa1j87royuml"]
 
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="1_ols5k"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="2_biaja"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjb6u"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hofdy"]
 bg_color = Color(0, 0.84313726, 1, 1)
@@ -77,6 +89,7 @@ bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 
 [resource]
 Button/fonts/font = ExtResource("1_ols5k")
+Button/styles/disabled = SubResource("StyleBoxFlat_bjb6u")
 Button/styles/hover = SubResource("StyleBoxFlat_hofdy")
 Button/styles/normal = SubResource("StyleBoxFlat_ols5k")
 Button/styles/pressed = SubResource("StyleBoxFlat_0ahyh")
