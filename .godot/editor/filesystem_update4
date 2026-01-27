@@ -3,3 +3,5 @@ res://resources/main_theme.tres
 res://scenes/learning_materials/coc_1/ohs_procedures/ohs_procedures.tscn
 res://scenes/ui/dialogue_box.tscn
 res://scripts/data/settings.gd
+res://scripts/data/new_game_data.gd
+res://scripts/data/new_game_data.tscn
