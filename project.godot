@@ -18,6 +18,10 @@ boot_splash/image="uid://dlb40w05g1hyn"
 config/icon="uid://dlb40w05g1hyn"
 boot_splash/minimum_display_time=1000
 
+[autoload]
+
+InitializeGameData="*res://scripts/data/initialize_game_data.gd"
+
 [display]
 
 window/size/viewport_width=1920

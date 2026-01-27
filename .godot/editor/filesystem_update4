@@ -9,3 +9,4 @@ res://scripts/data/user_data.gd
 res://scripts/data/settings_data.gd
 res://scenes/main_menu.tscn
 res://scripts/main_menu.gd
+res://scripts/data/initialize_game_data.gd
