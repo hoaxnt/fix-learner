@@ -1,2 +1,4 @@
 res://scenes/learning_materials/coc_1/lessons_list_1.tscn
 res://resources/main_theme.tres
+res://scenes/learning_materials/coc_1/ohs_procedures/ohs_procedures.tscn
+res://scenes/ui/dialogue_box.tscn

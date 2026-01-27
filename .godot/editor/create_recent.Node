@@ -1,3 +1,4 @@
+CanvasLayer
 Button
 VBoxContainer
 Label
@@ -8,8 +9,6 @@ TileMapLayer
 Camera2D
 AnimatedSprite2D
 Control
-CanvasLayer
 TextureRect
 CenterContainer
 ScrollContainer
-HScrollBar
