@@ -73,7 +73,6 @@ dialog_lines = Array[String](["Hello, student. Our first laboratory will focus o
 text_speed = 0.01
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -82,7 +81,7 @@ offset_right = 775.0
 offset_bottom = 180.0
 grow_horizontal = 2
 theme = ExtResource("6_v3s6i")
-theme_override_constants/outline_size = 30
+theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 61
 text = "Grab the Essentials"
 horizontal_alignment = 1
