@@ -10,3 +10,6 @@ res://scripts/data/settings_data.gd
 res://scenes/main_menu.tscn
 res://scripts/main_menu.gd
 res://scripts/data/initialize_game_data.gd
+res://scripts/data/save.gd
+res://scripts/data/game_manager.gd
+res://scenes/utils/scene_transition.tscn

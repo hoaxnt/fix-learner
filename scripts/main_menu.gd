@@ -1,14 +1,18 @@
 extends Control
 
+@onready var user_data = ResourceLoader.load("user://user_data.tres")
+@onready var continue_button = $HBoxContainer/Panel/VBoxContainer/ContinueButton
+
+func _ready() -> void:
+	if user_data.opened_once:
+		continue_button.disabled = false
+
 func _on_continue_button_pressed() -> void:
 	load_scene("res://scenes/learning_materials/coc_list.tscn")
 	
 func _on_learn_button_pressed() -> void:
-	var d : UserData = ResourceLoader.load("user://user_data.tres")
-	d.opened_once = false
-	print(d.opened_once)
-	ResourceSaver.save(d, "user://user_data.tres")
-	
+	user_data.opened_once = true
+	ResourceSaver.save(user_data, "user://user_data.tres")
 	load_scene("res://scenes/learning_materials/coc_list.tscn")
 	
 func _on_options_button_pressed() -> void:
