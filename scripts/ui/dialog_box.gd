@@ -44,6 +44,13 @@ func _input(event):
 				show_line()
 			else:
 				finish_dialog()
+				
+func update_dialog(new_lines: Array[String]):
+	dialog_lines = new_lines
+	current_line_index = 0
+	show()
+	set_process_input(true) 
+	show_line()
 
 func show_line():
 		label.text = dialog_lines[current_line_index]
@@ -57,5 +64,7 @@ func _on_timer_timeout():
 				timer.stop()
 
 func finish_dialog():
-		# You can trigger an animation here or just delete the box
-		queue_free()
+	hide()
+	set_process_input(false)
+	#emit a signal so other scripts know it's done
+	emit_signal("dialog_finished")
