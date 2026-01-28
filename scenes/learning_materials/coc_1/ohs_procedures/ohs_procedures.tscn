@@ -39,5 +39,11 @@ zoom = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
-dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to gear up properly.", "Check the equipment rack. Make sure you’ve got your anti-static wrist strap, goggles and safety boots on. Once you're fully suited up, we can head onto the site"])
+dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your bag."])
 text_speed = 0.01
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
