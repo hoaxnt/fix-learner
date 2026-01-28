@@ -1,0 +1,10 @@
+res://resources/main_theme.tres::f034c7a4c5887405ee31a7ff33c9e031::1769582891::res://.godot/exported/133200997/export-c6e7a52313879d4feb936802ebded1e6-main_theme.res
+res://scenes/learning_materials/coc_1/ohs_procedures/ohs_procedures.tscn::e3a08fb7c68bbdd07fcf9e787c4cb534::1769586844::res://.godot/exported/133200997/export-d5ac0066b730051752f3a8d580b53c0f-ohs_procedures.scn
+res://scenes/learning_materials/coc_1/lessons_list_1.tscn::f8efed56724063941b4df5fddb7b9666::1769571402::res://.godot/exported/133200997/export-4113206dcbeb05311ae22a045bd3dee3-lessons_list_1.scn
+res://scenes/learning_materials/coc_2/lessons_list_2.tscn::dfe48feaf7e6c4a6c7c5663a99af5fd2::1769181407::res://.godot/exported/133200997/export-663d2c710506938de8e8d3c7cceec00a-lessons_list_2.scn
+res://scenes/learning_materials/coc_list.tscn::4246f5ce9150f906721afb1ff9d9a13a::1769572484::res://.godot/exported/133200997/export-6c848f16a2ae9d017d3462bfd1475805-coc_list.scn
+res://scenes/ui/dialog_box.tscn::d1d369f438a02ccf97a4ec08042b34d7::1769575386::res://.godot/exported/133200997/export-24b234df00d90b40b0dbb2a94ca6306e-dialog_box.scn
+res://scenes/ui/play.tscn::323d222895de74c636e06d010921d5b7::1748999541::res://.godot/exported/133200997/export-f2d7cd84bd6744c78f49c8092ce08117-play.scn
+res://scenes/ui/title_label.tscn::0d5bd34eaa5ded1d2e0c3656557793f6::1748951593::res://.godot/exported/133200997/export-a7aaa41de6e1511623e930df70ed4e72-title_label.scn
+res://scenes/utils/scene_transition.tscn::c016bdbb00cfca9e8411b767df59d7b0::1769571066::res://.godot/exported/133200997/export-855161e0d8972085bc6cad988d106ab3-scene_transition.scn
+res://scenes/main_menu.tscn::9533143c7b1ea2d20f11ab94fe33db0e::1769570048::res://.godot/exported/133200997/export-ea5c6ad4629af728dc514cefde332394-main_menu.scn
