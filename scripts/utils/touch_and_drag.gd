@@ -43,6 +43,7 @@ func check_for_slot():
 						body.is_occupied = true
 						found_slot = true
 						print("Item placed in slot: ", body.slot_type)
+						queue_free()
 						break
 		if not found_slot:
 				var tween = create_tween()

@@ -73,6 +73,7 @@ dialog_lines = Array[String](["Hello, student. Our first laboratory will focus o
 text_speed = 0.01
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

@@ -5,7 +5,7 @@ extends StaticBody2D
 @export var slot_color: ColorRect
 
 func accept_item(item_name: String) -> bool:
-	if item_name == slot_type:
+	if item_name: # == slot_type:
 		print("Safety Procedure Followed!")
 		slot_color.color = Color.GREEN # Visual feedback
 		return true
