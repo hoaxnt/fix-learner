@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=11 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/wrist_strap.tscn" id="3_k3u2l"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
+[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs-procedures/table.png" id="5_q75wh"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="6_v3s6i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
@@ -32,12 +33,16 @@ texture = ExtResource("2_dkd3x")
 
 [node name="Minigame" type="Node2D" parent="."]
 
+[node name="Table" type="Sprite2D" parent="Minigame"]
+position = Vector2(0, 535)
+scale = Vector2(2.3371427, 2.337143)
+texture = ExtResource("5_q75wh")
+
 [node name="WristStrap" parent="Minigame" instance=ExtResource("3_k3u2l")]
-position = Vector2(753, -139.00003)
-scale = Vector2(0.455, 0.455)
+position = Vector2(461, 213.00002)
 
 [node name="Slot" parent="Minigame" instance=ExtResource("4_ot512")]
-position = Vector2(-676, -91)
+position = Vector2(0, -183)
 scale = Vector2(5.4, 5.4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -68,3 +73,4 @@ theme_override_font_sizes/font_size = 61
 text = "Grab the Essentials"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
