@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=17 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs-procedures/gloves.png" id="6_g5lw6"]
 [ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs-procedures/anti-static-wrist-strap.png" id="6_hwvad"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="6_v3s6i"]
+[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs-procedures/head-lamp.png" id="8_aolge"]
+[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs-procedures/safety-glasses.png" id="10_ilwiu"]
+[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs-procedures/screw-driver.png" id="11_iylnk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
 atlas = ExtResource("1_25a41")
@@ -47,16 +50,28 @@ scale = Vector2(2.3371427, 2.337143)
 texture = ExtResource("5_q75wh")
 
 [node name="WristStrap" parent="Minigame" instance=ExtResource("3_k3u2l")]
-position = Vector2(461, 213.00002)
+position = Vector2(538, 331)
 texture = ExtResource("6_hwvad")
 
 [node name="Gloves" parent="Minigame" instance=ExtResource("3_k3u2l")]
-position = Vector2(-31, 320)
+position = Vector2(266, 260)
 texture = ExtResource("6_g5lw6")
+
+[node name="HeadLamp" parent="Minigame" instance=ExtResource("3_k3u2l")]
+position = Vector2(-538, 249)
+texture = ExtResource("8_aolge")
 
 [node name="Slot" parent="Minigame" instance=ExtResource("4_ot512")]
 position = Vector2(0, -83)
 scale = Vector2(3.7999992, 3.7999992)
+
+[node name="SafetyGlasses" parent="Minigame" instance=ExtResource("3_k3u2l")]
+position = Vector2(-289, 327)
+texture = ExtResource("10_ilwiu")
+
+[node name="ScrewDriver" parent="Minigame" instance=ExtResource("3_k3u2l")]
+position = Vector2(-3, 330)
+texture = ExtResource("11_iylnk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false

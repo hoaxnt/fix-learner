@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://kirfk2g7ia05"]
+[gd_scene load_steps=5 format=3 uid="uid://kirfk2g7ia05"]
 
 [ext_resource type="Script" uid="uid://cfk7bc8amgx6q" path="res://scripts/utils/touch_and_drag.gd" id="1_dd8jb"]
+[ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="2_5mjp2"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs-procedures/shadow.png" id="2_21aqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
 radius = 112.1606
@@ -11,5 +13,11 @@ script = ExtResource("1_dd8jb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dh66b")
 
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("2_21aqy")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5mjp2")
