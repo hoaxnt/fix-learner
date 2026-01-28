@@ -28,7 +28,6 @@ scale = Vector2(0.17133333, 0.17133333)
 texture = ExtResource("2_dkd3x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(1.0000076, 40.999996)
 scale = Vector2(0.8901039, 0.8901039)
 sprite_frames = SubResource("SpriteFrames_7jnuq")
