@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=8 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
+[ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/wrist_strap.tscn" id="3_k3u2l"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
@@ -24,17 +25,20 @@ animations = [{
 script = ExtResource("1_tlavw")
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(0.17133333, 0.17133333)
+scale = Vector2(0.45, 0.45)
 texture = ExtResource("2_dkd3x")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="WristStrap" parent="Node2D" instance=ExtResource("3_k3u2l")]
+position = Vector2(7, 3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(1.0000076, 40.999996)
-scale = Vector2(0.8901039, 0.8901039)
 sprite_frames = SubResource("SpriteFrames_7jnuq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

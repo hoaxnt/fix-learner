@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs-procedures/anti-static-wrist-strap.png" id="1_kh6j7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
-radius = 12.0
+radius = 308.27423
 
 [node name="WristStrap" type="Area2D"]
 script = ExtResource("1_dd8jb")
@@ -13,5 +13,4 @@ script = ExtResource("1_dd8jb")
 shape = SubResource("CircleShape2D_dh66b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_kh6j7")
