@@ -2,6 +2,8 @@
 .import/
 export.cfg
 export_presets.cfg
+.godot/
+*.translation
 
 # Android build ignores
 android/build/
@@ -14,3 +16,4 @@ android/.gradle/
 # System ignores
 .DS_Store
 Thumbs.db
+*.tmp
