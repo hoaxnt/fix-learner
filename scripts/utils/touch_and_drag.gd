@@ -1,12 +1,18 @@
 extends Area2D
 
 @export var texture : Texture2D
+@export var item_name : String = "None"
+@onready var shadow_sprite : Sprite2D = $Shadow
+@onready var name_label : Label = $NameLabel
 @onready var item_sprite : Sprite2D = $Sprite2D
 @onready var initial_position = global_position
 var dragging = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
+	name_label.hide()
+	name_label.text = item_name
+	
 	if texture:
 		item_sprite.texture = texture
 
@@ -15,12 +21,18 @@ func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			dragging = true
+			name_label.show()
+			shadow_sprite.hide()
+			
 			# "Pick up" animation: make it slightly bigger and transparent
 			var tween = create_tween()
 			tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1)
 			offset = global_position - event.position
 		else:
 			dragging = false
+			name_label.hide()
+			shadow_sprite.show()
+			
 			# "Drop" animation: snap back to normal size
 			var tween = create_tween()
 			tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)

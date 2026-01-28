@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://kirfk2g7ia05"]
+[gd_scene load_steps=6 format=3 uid="uid://kirfk2g7ia05"]
 
 [ext_resource type="Script" uid="uid://cfk7bc8amgx6q" path="res://scripts/utils/touch_and_drag.gd" id="1_dd8jb"]
 [ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="2_5mjp2"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs-procedures/shadow.png" id="2_21aqy"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="4_2pjoo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
 radius = 112.1606
@@ -21,3 +22,21 @@ texture = ExtResource("2_21aqy")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_5mjp2")
+
+[node name="NameLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_2pjoo")
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1

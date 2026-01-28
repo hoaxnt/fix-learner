@@ -52,26 +52,31 @@ texture = ExtResource("5_q75wh")
 [node name="WristStrap" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(538, 331)
 texture = ExtResource("6_hwvad")
+item_name = "Anti-Static Strap"
 
 [node name="Gloves" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(266, 260)
 texture = ExtResource("6_g5lw6")
+item_name = "Anti-Static Gloves"
 
 [node name="HeadLamp" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(-538, 249)
 texture = ExtResource("8_aolge")
-
-[node name="Slot" parent="Minigame" instance=ExtResource("4_ot512")]
-position = Vector2(0, -83)
-scale = Vector2(3.7999992, 3.7999992)
+item_name = "LED Headlamp"
 
 [node name="SafetyGlasses" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(-289, 327)
 texture = ExtResource("10_ilwiu")
+item_name = "Safety Glasses"
 
 [node name="ScrewDriver" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(-3, 330)
 texture = ExtResource("11_iylnk")
+item_name = "Screwdriver"
+
+[node name="Slot" parent="Minigame" instance=ExtResource("4_ot512")]
+position = Vector2(0, -83)
+scale = Vector2(3.7999992, 3.7999992)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
