@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iv54ov3hvl88"
-path="res://.godot/imported/anti-static-wrist-Strap.jpg-4ba9d9aebb214fed594ddbf93170a97c.ctex"
+uid="uid://cby2v5ryjmjjb"
+path="res://.godot/imported/screw-driver.png-8a9ebd4224ee31e56bc7ff929ac3bc83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/ohs-procedures/anti-static-wrist-Strap.jpg"
-dest_files=["res://.godot/imported/anti-static-wrist-Strap.jpg-4ba9d9aebb214fed594ddbf93170a97c.ctex"]
+source_file="res://assets/items/ohs-procedures/screw-driver.png"
+dest_files=["res://.godot/imported/screw-driver.png-8a9ebd4224ee31e56bc7ff929ac3bc83.ctex"]
 
 [params]
 
