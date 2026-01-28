@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
-[ext_resource type="PackedScene" uid="uid://c6bmls4o5t22c" path="res://scenes/ui/dialogue_box.tscn" id="4_tlavw"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
 atlas = ExtResource("1_25a41")
@@ -35,4 +35,8 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.79, 2.79)
 
-[node name="DialogueBox" parent="." instance=ExtResource("4_tlavw")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
+dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "to ensure a safe and proper learning environment before performing", "any computer-related tasks."])
+text_speed = 0.01

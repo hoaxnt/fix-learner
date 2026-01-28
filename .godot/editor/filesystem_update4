@@ -17,3 +17,6 @@ res://scripts/utils/scene_transition.gd
 res://scenes/learning_materials/coc_list.tscn
 res://scripts/learning_materials/coc_list.gd
 res://scripts/learning_materials/coc_1/coc_1.gd
+res://scenes/ui/dialog_box.tscn
+res://scripts/ui/dialog_box.gd
+res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd
