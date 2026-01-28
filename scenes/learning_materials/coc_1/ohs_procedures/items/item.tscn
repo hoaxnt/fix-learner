@@ -1,12 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://kirfk2g7ia05"]
+[gd_scene load_steps=3 format=3 uid="uid://kirfk2g7ia05"]
 
 [ext_resource type="Script" uid="uid://cfk7bc8amgx6q" path="res://scripts/utils/touch_and_drag.gd" id="1_dd8jb"]
-[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs-procedures/anti-static-wrist-strap.png" id="1_kh6j7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
-radius = 140.51335
+radius = 112.1606
 
-[node name="WristStrap" type="Area2D"]
+[node name="Item" type="Area2D"]
 script = ExtResource("1_dd8jb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -14,4 +13,3 @@ shape = SubResource("CircleShape2D_dh66b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_kh6j7")

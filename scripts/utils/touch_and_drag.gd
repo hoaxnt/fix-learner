@@ -1,8 +1,14 @@
 extends Area2D
 
+@export var texture : Texture2D
+@onready var item_sprite : Sprite2D = $Sprite2D
+@onready var initial_position = global_position
 var dragging = false
 var offset = Vector2.ZERO
-@onready var initial_position = global_position
+
+func _ready() -> void:
+	if texture:
+		item_sprite.texture = texture
 
 func _input_event(_viewport, event, _shape_idx):
 	# Detect the initial touch

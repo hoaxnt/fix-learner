@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctgpdxwe0pev6" path="res://scripts/ui/slot.gd" id="1_jkamp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3s6i"]
-size = Vector2(46, 48)
+size = Vector2(126, 66)
 
 [node name="Slot" type="StaticBody2D" node_paths=PackedStringArray("slot_color") groups=["slots"]]
 script = ExtResource("1_jkamp")
@@ -13,6 +13,7 @@ slot_color = NodePath("ColorRect")
 shape = SubResource("RectangleShape2D_v3s6i")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
