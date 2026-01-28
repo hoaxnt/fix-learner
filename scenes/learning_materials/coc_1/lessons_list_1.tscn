@@ -76,6 +76,7 @@ size_flags_horizontal = 4
 theme_override_styles/focus = SubResource("StyleBoxFlat_4y0e3")
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
+scroll_deadzone = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HScrollBar"]
 layout_mode = 2
