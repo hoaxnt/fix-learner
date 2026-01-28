@@ -12,11 +12,9 @@ var current_line_index: int = 0
 func _ready():
 	scale = Vector2(0.5, 0.5)
 	modulate.a = 0
-
 	var tween = create_tween().set_parallel(true)
 	tween.tween_property(self, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_BACK)
 	tween.tween_property(self, "modulate:a", 1.0, 0.3)
-
 	if dialog_lines.size() > 0:
 		show_line()
 	else:

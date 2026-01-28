@@ -28,6 +28,7 @@ scale = Vector2(0.17133333, 0.17133333)
 texture = ExtResource("2_dkd3x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(1.0000076, 40.999996)
 scale = Vector2(0.8901039, 0.8901039)
 sprite_frames = SubResource("SpriteFrames_7jnuq")
@@ -38,5 +39,5 @@ zoom = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
-dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "to ensure a safe and proper learning environment before performing", "any computer-related tasks."])
+dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to gear up properly.", "Check the equipment rack. Make sure you’ve got your anti-static wrist strap, goggles and safety boots on. Once you're fully suited up, we can head onto the site"])
 text_speed = 0.01
