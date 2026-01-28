@@ -30,7 +30,7 @@ func check_for_slot():
 		var found_slot = false
 		
 		for body in areas:
-				if body.is_in_group("slots") and not body.is_occupied:
+				if body.is_in_group("slots"):# and not body.is_occupied:
 						# Snap to the center of the slot
 						var tween = create_tween()
 						tween.tween_property(self, "global_position", body.global_position, 0.1)
