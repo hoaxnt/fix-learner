@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=1000
 [autoload]
 
 InitializeGameData="*res://scripts/data/initialize_game_data.gd"
+SceneTransition="*res://scenes/utils/scene_transition.tscn"
 
 [display]
 

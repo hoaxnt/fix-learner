@@ -13,3 +13,7 @@ res://scripts/data/initialize_game_data.gd
 res://scripts/data/save.gd
 res://scripts/data/game_manager.gd
 res://scenes/utils/scene_transition.tscn
+res://scripts/utils/scene_transition.gd
+res://scenes/learning_materials/coc_list.tscn
+res://scripts/learning_materials/coc_list.gd
+res://scripts/learning_materials/coc_1/coc_1.gd
