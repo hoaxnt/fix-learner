@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=10 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/wrist_strap.tscn" id="3_k3u2l"]
+[ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="6_v3s6i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
 atlas = ExtResource("1_25a41")
@@ -25,13 +27,18 @@ animations = [{
 script = ExtResource("1_tlavw")
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_dkd3x")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="WristStrap" parent="Node2D" instance=ExtResource("3_k3u2l")]
-position = Vector2(7, 3)
+position = Vector2(753, -139.00003)
+scale = Vector2(0.455, 0.455)
+
+[node name="Slot" parent="Node2D" instance=ExtResource("4_ot512")]
+position = Vector2(-676, -91)
+scale = Vector2(5.4, 5.4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -44,5 +51,21 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 visible = false
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
+visible = false
 dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your bag."])
 text_speed = 0.01
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -775.0
+offset_right = 775.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme = ExtResource("6_v3s6i")
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 61
+text = "Grab the Essentials"
+horizontal_alignment = 1
+vertical_alignment = 1

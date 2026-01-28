@@ -10,6 +10,7 @@ extends MarginContainer
 var current_line_index: int = 0
 
 func _ready():
+	#show()
 	scale = Vector2(0.5, 0.5)
 	modulate.a = 0
 	var tween = create_tween().set_parallel(true)
