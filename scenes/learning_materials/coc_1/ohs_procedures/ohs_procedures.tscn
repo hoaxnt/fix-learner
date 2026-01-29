@@ -38,10 +38,9 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_dkd3x")
 
 [node name="Minigame" type="Node2D" parent="."]
-visible = false
 
 [node name="ToolBox" type="Sprite2D" parent="Minigame"]
-position = Vector2(0, -39)
+position = Vector2(0, -72)
 scale = Vector2(1.8539999, 1.8539999)
 texture = ExtResource("3_7ew3f")
 
@@ -80,6 +79,7 @@ position = Vector2(0, -83)
 scale = Vector2(3.7999992, 3.7999992)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-23.000002, 121)
 scale = Vector2(1.8333334, 1.8333334)
 sprite_frames = SubResource("SpriteFrames_7jnuq")
@@ -89,6 +89,7 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
+visible = false
 dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your toolbox."])
 text_speed = 0.01
 

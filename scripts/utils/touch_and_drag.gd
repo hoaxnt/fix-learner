@@ -1,5 +1,8 @@
 extends Area2D
 
+@export var item_display_name: String
+@export_multiline var item_info: String
+
 @export var texture : Texture2D
 @export var item_name : String = "None"
 @onready var shadow_sprite : Sprite2D = $Shadow

@@ -70,7 +70,7 @@ text = "What to learn?"
 horizontal_alignment = 1
 
 [node name="HScrollBar" type="ScrollContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(1700, 500)
+custom_minimum_size = Vector2(1700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_styles/focus = SubResource("StyleBoxFlat_4y0e3")
