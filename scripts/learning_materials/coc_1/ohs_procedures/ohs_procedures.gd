@@ -6,8 +6,6 @@ extends Node
 @onready var minigame_label : Label = $CanvasLayer/MinigameLabel
 
 func _ready() -> void:
-	pass
-	
 	dialog_box.show()
 	teacher_sprite.show()
 	minigame.hide()

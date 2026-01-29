@@ -6,6 +6,8 @@ extends Area2D
 
 @export var texture : Texture2D
 @export var item_name : String = "None"
+
+@onready var user_data = ResourceLoader.load("user://user_data.tres")
 @onready var shadow_sprite : Sprite2D = $Shadow
 @onready var name_label : Label = $NameLabel
 @onready var item_sprite : Sprite2D = $Sprite2D
@@ -67,6 +69,9 @@ func check_for_slot():
 						# 3. Delay queue_free so the player sees the snap
 						await tween.finished 
 						queue_free()
+						
+						
+						
 						break
 						
 		if not found_slot:

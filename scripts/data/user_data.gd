@@ -18,4 +18,7 @@ class_name UserData
 @export var creating_bootable_device : bool = false
 @export var installing_softwares : bool = false
 
+# OHS Procedures
+@export var toolbox_item_count : int = 0
+
 #COC 2 Lessons
