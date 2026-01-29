@@ -9,6 +9,7 @@ extends MarginContainer
 @onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel
 @onready var timer = $Timer
 
+
 var current_line_index: int = 0
 
 func _ready():
@@ -74,4 +75,4 @@ func finish_dialog():
 	hide()
 	set_process_input(false)
 	#emit a signal so other scripts know it's done
-	emit_signal("dialog_finished")
+	#emit_signal("dialog_finished")

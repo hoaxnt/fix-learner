@@ -60,7 +60,6 @@ func check_for_slot():
 						tween.tween_property(self, "global_position", body.global_position, 0.1)
 						
 						if dialog_box:
-							print("name and desc")
 							dialog_box.show_description(item_display_name, item_info)
 #						
 						body.is_occupied = true
@@ -70,8 +69,15 @@ func check_for_slot():
 						await tween.finished 
 						queue_free()
 						
-						
-						
+						if dialog_box.visible == false and user_data.toolbox_item_count >= 5:
+							print("Well done!")
+							user_data.toolbox_item_count = 0
+							
+						else:
+							#user_data.toolbox_item_count = 0
+							user_data.toolbox_item_count += 1
+							ResourceSaver.save(user_data, "user://user_data.tres")
+							print(user_data.toolbox_item_count)
 						break
 						
 		if not found_slot:
