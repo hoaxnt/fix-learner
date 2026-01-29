@@ -1,25 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=8 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
+[ext_resource type="Script" uid="uid://coouonylea17w" path="res://scripts/learning_materials/coc_1/electrical_hazards/electrical_hazards.gd" id="1_wbjbv"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
 
+[sub_resource type="Animation" id="Animation_wbjbv"]
+resource_name = "camera_slide_down"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -219), Vector2(0, 140)]
+}
+
+[sub_resource type="Animation" id="Animation_m2gvb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -219)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m2gvb"]
+_data = {
+&"RESET": SubResource("Animation_m2gvb"),
+&"camera_slide_down": SubResource("Animation_wbjbv")
+}
+
 [node name="ElectricalHazards" type="Node2D"]
-position = Vector2(0, -1)
+script = ExtResource("1_wbjbv")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_cyucj")
 
 [node name="Teacher" type="Sprite2D" parent="."]
-position = Vector2(286, 237)
+position = Vector2(212.00002, -77)
 scale = Vector2(1.3462008, 1.3462008)
 texture = ExtResource("2_xybym")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 140)
+position = Vector2(0, -219)
 zoom = Vector2(1.88, 1.88)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_75cua")]
 dialog_lines = Array[String](["Welcome back, student. Our next laboratory will introduce electrical hazards", "And how to identify and avoid possible dangers while working with computer equipment."])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_m2gvb")
+}
