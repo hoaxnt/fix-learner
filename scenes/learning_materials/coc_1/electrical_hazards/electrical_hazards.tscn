@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=2 format=3 uid="uid://kwn4xx4rkn5y"]
+
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 
 [node name="ElectricalHazards" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_75cua")]
+dialog_lines = Array[String](["Welcome back, student. Our next laboratory will introduce electrical hazards", "And how to identify and avoid possible dangers while working with computer equipment."])
