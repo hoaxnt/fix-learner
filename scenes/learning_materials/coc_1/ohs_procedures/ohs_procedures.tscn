@@ -51,6 +51,8 @@ texture = ExtResource("5_q75wh")
 
 [node name="WristStrap" parent="Minigame" instance=ExtResource("3_k3u2l")]
 position = Vector2(538, 331)
+item_display_name = "Anti-Static Wrist Strap"
+item_info = "Pantanggal kurinti"
 texture = ExtResource("6_hwvad")
 item_name = "Anti-Static Strap"
 
@@ -89,7 +91,6 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
-visible = false
 dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your toolbox."])
 text_speed = 0.01
 

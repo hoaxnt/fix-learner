@@ -1,16 +1,19 @@
 extends MarginContainer
 
 # This allows you to add lines of text in the Inspector
+@export var character_name : String = "Teacher"
 @export_multiline var dialog_lines: Array[String] = []
 @export var text_speed: float = 0.05
 
-@onready var label = $MarginContainer/VBoxContainer/RichTextLabel
+@onready var character_name_label : Label = $MarginContainer/VBoxContainer/Label
+@onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel
 @onready var timer = $Timer
 
 var current_line_index: int = 0
 
 func _ready():
-	#show()
+	show()
+	character_name_label.text = character_name
 	scale = Vector2(0.5, 0.5)
 	modulate.a = 0
 	var tween = create_tween().set_parallel(true)
@@ -21,9 +24,14 @@ func _ready():
 	else:
 		hide()
 
+func show_description(title: String, desc: String):
+	character_name_label.text = title
+	description_label.text = desc
+	show()
+		
 func _on_next_button_pressed() -> void:
-	if label.visible_ratio < 1.0:
-		label.visible_ratio = 1.0
+	if description_label.visible_ratio < 1.0:
+		description_label.visible_ratio = 1.0
 		timer.stop()
 	else:
 		current_line_index += 1
@@ -34,8 +42,8 @@ func _on_next_button_pressed() -> void:
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
-		if label.visible_ratio < 1.0:
-			label.visible_ratio = 1.0
+		if description_label.visible_ratio < 1.0:
+			description_label.visible_ratio = 1.0
 			timer.stop()
 		else:
 			current_line_index += 1
@@ -52,13 +60,13 @@ func update_dialog(new_lines: Array[String]):
 	show_line()
 
 func show_line():
-		label.text = dialog_lines[current_line_index]
-		label.visible_characters = 0
+		description_label.text = dialog_lines[current_line_index]
+		description_label.visible_characters = 0
 		timer.start(text_speed)
 
 func _on_timer_timeout():
-		if label.visible_characters < label.text.length():
-				label.visible_characters += 1
+		if description_label.visible_characters < description_label.text.length():
+				description_label.visible_characters += 1
 		else:
 				timer.stop()
 

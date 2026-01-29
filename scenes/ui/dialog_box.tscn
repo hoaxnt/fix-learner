@@ -37,7 +37,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme = ExtResource("1_svbij")
 theme_override_colors/font_color = Color(1, 0.72156864, 0.42352942, 1)
-text = "Teacher"
+text = "None"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)

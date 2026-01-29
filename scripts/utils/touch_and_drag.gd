@@ -1,5 +1,6 @@
 extends Area2D
 
+#@export var dialog_box : MarginContainer
 @export var item_display_name: String
 @export_multiline var item_info: String
 
@@ -46,20 +47,50 @@ func _input(event):
 	if event is InputEventScreenDrag and dragging:
 		global_position = event.position + offset
 
+#func check_for_slot():
+		#var areas = get_overlapping_bodies() # Finds StaticBody2D slots
+		#var found_slot = false
+		#
+		#for body in areas:
+				#if body.is_in_group("slots"):# and not body.is_occupied:
+						## Snap to the center of the slot
+						#var tween = create_tween()
+						#tween.tween_property(self, "global_position", body.global_position, 0.1)
+						#body.is_occupied = true
+						#found_slot = true
+						#print("Item placed in slot: ", body.slot_type)
+						#queue_free()
+						#break
+		#if not found_slot:
+				#var tween = create_tween()
+				#tween.tween_property(self, "global_position", initial_position, 0.2)
+				
 func check_for_slot():
-		var areas = get_overlapping_bodies() # Finds StaticBody2D slots
+		var areas = get_overlapping_bodies()
 		var found_slot = false
 		
 		for body in areas:
-				if body.is_in_group("slots"):# and not body.is_occupied:
-						# Snap to the center of the slot
+				if body.is_in_group("slots"):
+						# 1. Snap Animation
 						var tween = create_tween()
 						tween.tween_property(self, "global_position", body.global_position, 0.1)
+						
+						# 2. Show Dialogue
+						# We assume your UI is in the main scene tree under a node called "UI"
+						#var dialog = get_tree().root.find_child("CanvasLayer/DialogBox", true, false)
+		
+						if DialogBox:
+							print("name and desc")
+							DialogBox.show_description(item_display_name, item_info)
+						
 						body.is_occupied = true
 						found_slot = true
-						print("Item placed in slot: ", body.slot_type)
+						
+						# 3. Delay queue_free so the player sees the snap
+						await tween.finished 
 						queue_free()
 						break
+						
 		if not found_slot:
 				var tween = create_tween()
 				tween.tween_property(self, "global_position", initial_position, 0.2)
