@@ -1,10 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=4 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
+[ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
 
 [node name="ElectricalHazards" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_cyucj")
+
+[node name="Teacher" type="Sprite2D" parent="."]
+position = Vector2(-6.999996, 261)
+scale = Vector2(1.4816176, 1.4816176)
+texture = ExtResource("2_xybym")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 140)
+zoom = Vector2(1.88, 1.88)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
