@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
 
 [node name="ElectricalHazards" type="Node2D"]
+position = Vector2(0, -1)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_cyucj")
