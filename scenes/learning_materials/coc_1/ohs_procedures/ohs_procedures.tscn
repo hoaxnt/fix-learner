@@ -53,7 +53,7 @@ texture = ExtResource("5_q75wh")
 position = Vector2(538, 331)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
-item_info = Array[String](["Hi strap", "this is anti static"])
+item_info = Array[String](["Anti-Static Wrist Strap - This is your primary defense against Electrostatic Discharge (ESD).", "It clips onto a grounded metal object (like your PC case) and ensures that you and the computer stay at the same electrical potential. ", "It prevents you from accidentally \"frying\" a $500 CPU with a tiny spark from your fingertip."])
 texture = ExtResource("6_hwvad")
 item_name = "Anti-Static Strap"
 
@@ -61,7 +61,7 @@ item_name = "Anti-Static Strap"
 position = Vector2(266, 260)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
-item_info = Array[String](["this is so comfy", "gloves"])
+item_info = Array[String](["Anti-Static Gloves - Many modern PC cases are made of stamped steel with unfinished internal edges. ", "Thin, snug-fitting gloves protect your hands from \"case bites\" (nasty slices from sharp metal). ", "Additionally, they prevent skin oils from getting onto the gold contact points of your RAM and GPU, which can cause corrosion over time."])
 texture = ExtResource("6_g5lw6")
 item_name = "Anti-Static Gloves"
 
@@ -69,6 +69,7 @@ item_name = "Anti-Static Gloves"
 position = Vector2(-538, 249)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
+item_info = Array[String](["LED Headlamp - Shadows are the enemy of a safe build. ", "Trying to plug in a tiny Front Panel connector in the dark leads to bent pins and frustration. ", "A headlamp keeps both your hands free to handle components while ensuring you can see exactly where every delicate pin is supposed to go."])
 texture = ExtResource("8_aolge")
 item_name = "LED Headlamp"
 
@@ -76,6 +77,7 @@ item_name = "LED Headlamp"
 position = Vector2(-289, 327)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
+item_info = Array[String](["Safety Glasses - It might seem like overkill for a desk job, but PC building involves tension and small parts. ", "When you are clipping plastic zip ties for cable management or using compressed air to blow out a dusty component, small shards or debris can fly directly toward your eyes at high speeds."])
 texture = ExtResource("10_ilwiu")
 item_name = "Safety Glasses"
 
@@ -83,6 +85,7 @@ item_name = "Safety Glasses"
 position = Vector2(-3, 330)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
+item_info = Array[String](["Screwdriver - While not \"wearable\" armor, this is an essential safety tool for the hardware. ", "A magnetized tip prevents tiny screws from falling into the \"void\" behind the motherboard or inside the power supply, where they could cause a catastrophic short circuit when you turn the power on."])
 texture = ExtResource("11_iylnk")
 item_name = "Screwdriver"
 
