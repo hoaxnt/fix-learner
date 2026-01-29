@@ -52,15 +52,15 @@ texture = ExtResource("5_q75wh")
 [node name="WristStrap" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
 position = Vector2(538, 331)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Anti-Static Wrist Strap"
-item_info = "This is your primary defense against Electrostatic Discharge (ESD)."
+item_display_name = "Teacher"
+item_info = "The Anti-Static Wrist Strap is your primary defense against Electrostatic Discharge (ESD)."
 texture = ExtResource("6_hwvad")
 item_name = "Anti-Static Strap"
 
 [node name="Gloves" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
 position = Vector2(266, 260)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Anti-Static Gloves"
+item_display_name = "Teacher"
 item_info = "Many modern PC cases are made of stamped steel with unfinished internal edges. Thin, snug-fitting gloves protect your hands from \"case bites\" (nasty slices from sharp metal)."
 texture = ExtResource("6_g5lw6")
 item_name = "Anti-Static Gloves"
@@ -68,24 +68,24 @@ item_name = "Anti-Static Gloves"
 [node name="HeadLamp" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
 position = Vector2(-538, 249)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "LED Headlamp"
-item_info = "A headlamp keeps both your hands free to handle components while ensuring you can see exactly where every delicate pin is supposed to go."
+item_display_name = "Teacher"
+item_info = "A LED Headlamp keeps both your hands free to handle components while ensuring you can see exactly where every delicate pin is supposed to go."
 texture = ExtResource("8_aolge")
 item_name = "LED Headlamp"
 
 [node name="SafetyGlasses" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
 position = Vector2(-289, 327)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Safety Glasses"
-item_info = "It might seem like overkill for a desk job, but PC building involves tension and small parts."
+item_display_name = "Teacher"
+item_info = "Safety Glasses might seem like overkill for a desk job, but PC building involves tension and small parts."
 texture = ExtResource("10_ilwiu")
 item_name = "Safety Glasses"
 
 [node name="ScrewDriver" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
 position = Vector2(-3, 330)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Screwdriver"
-item_info = "While not \"wearable\" armor, this is an essential safety tool for the hardware."
+item_display_name = "Teacher"
+item_info = "While Screwdriver is not \"wearable\" armor, this is an essential safety tool for the hardware."
 texture = ExtResource("11_iylnk")
 item_name = "Screwdriver"
 
