@@ -20,5 +20,6 @@ class_name UserData
 
 # OHS Procedures
 @export var toolbox_item_count : int = 0
+@export var is_final_message : bool = false
 
 #COC 2 Lessons

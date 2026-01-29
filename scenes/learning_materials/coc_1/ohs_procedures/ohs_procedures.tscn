@@ -64,6 +64,7 @@ texture = ExtResource("5_q75wh")
 position = Vector2(538, 331)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
+final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Anti-Static Wrist Strap - This is your primary defense against Electrostatic Discharge (ESD).", "It clips onto a grounded metal object (like your PC case) and ensures that you and the computer stay at the same electrical potential. ", "It prevents you from accidentally \"frying\" a $500 CPU with a tiny spark from your fingertip."])
 texture = ExtResource("6_hwvad")
 item_name = "Anti-Static Strap"

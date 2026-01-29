@@ -8,6 +8,7 @@ extends MarginContainer
 @onready var character_name_label : Label = $MarginContainer/VBoxContainer/Label
 @onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel
 @onready var timer = $Timer
+@onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var current_line_index: int = 0
 
@@ -74,5 +75,7 @@ func _on_timer_timeout():
 func finish_dialog():
 	hide()
 	set_process_input(false)
-	#emit a signal so other scripts know it's done
-	#emit_signal("dialog_finished")
+	if user_data.is_final_message:
+		SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
+		user_data.is_final_message = false
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cyiog4ny3kxqm"]
+[gd_scene load_steps=21 format=3 uid="uid://cyiog4ny3kxqm"]
 
 [ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/learning_materials/coc_1/coc_1.gd" id="1_4y0e3"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_2o1ih"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="7_lo2yu"]
 [ext_resource type="Texture2D" uid="uid://cbbai5dd70dqt" path="res://assets/images/icons/danger.png" id="8_5d45y"]
 [ext_resource type="Texture2D" uid="uid://douetn15n4nca" path="res://assets/images/icons/laptop.png" id="9_swqtd"]
+[ext_resource type="Texture2D" uid="uid://bw4trhv0rso2x" path="res://assets/images/icons/usb-flash-drive.png" id="10_lo2yu"]
+[ext_resource type="Texture2D" uid="uid://btbw2cp2cd08j" path="res://assets/images/icons/software.png" id="11_sft4o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
@@ -70,6 +72,7 @@ text = "What to learn?"
 horizontal_alignment = 1
 
 [node name="HScrollBar" type="ScrollContainer" parent="VBoxContainer"]
+clip_contents = false
 custom_minimum_size = Vector2(1700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -203,6 +206,87 @@ layout_mode = 2
 theme = ExtResource("7_5d45y")
 text = "Assemble &
 Disassemble"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BootableButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_swqtd")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_lo2yu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_5d45y")
+text = "Creating Bootable 
+Device"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoftwareButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_swqtd")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_sft4o")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_5d45y")
+text = "Installing Softwares"
 horizontal_alignment = 1
 vertical_alignment = 1
 

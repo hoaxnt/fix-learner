@@ -2,6 +2,7 @@ extends Area2D
 
 @export var dialog_box : MarginContainer
 @export var item_display_name: String
+@export var final_message : String = ""
 @export_multiline var item_info: Array[String]
 
 @export var texture : Texture2D
@@ -64,11 +65,13 @@ func check_for_slot():
 				var data : Array[String] = item_info.duplicate()
 				user_data.toolbox_item_count += 1
 				ResourceSaver.save(user_data, "user://user_data.tres")
-				# NOTE: make the append dynamic data
+			
 				if user_data.toolbox_item_count == 5:
-					data.append("Nice! Let's go!") 
+					if final_message != "":
+						data.append(final_message)
+					user_data.is_final_message = true
 					user_data.toolbox_item_count = 0 # Reset for next round
-				# Send the updated array (which now has 1 extra line at the end)
+					
 				dialog_box.update_dialog(item_display_name, data)
 		
 			body.is_occupied = true
@@ -79,5 +82,5 @@ func check_for_slot():
 			break
 					
 	if not found_slot:
-			var tween = create_tween()
-			tween.tween_property(self, "global_position", initial_position, 0.2)
+		var tween = create_tween()
+		tween.tween_property(self, "global_position", initial_position, 0.2)
