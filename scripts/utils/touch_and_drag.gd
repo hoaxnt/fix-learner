@@ -60,11 +60,11 @@ func check_for_slot():
 			var tween = create_tween()
 			tween.tween_property(self, "global_position", body.global_position, 0.1)
 			
-			# Inside your check_for_slot() loop...
 			if dialog_box:
 				var data : Array[String] = item_info.duplicate()
 				user_data.toolbox_item_count += 1
 				ResourceSaver.save(user_data, "user://user_data.tres")
+				# NOTE: make the append dynamic data
 				if user_data.toolbox_item_count == 5:
 					data.append("Nice! Let's go!") 
 					user_data.toolbox_item_count = 0 # Reset for next round
