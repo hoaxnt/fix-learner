@@ -10,5 +10,3 @@ func _ready() -> void:
 		ResourceSaver.save(settings_data, "user://settings_data.tres")
 		ResourceSaver.save(new_game_data, "user://new_game_data.tres")
 		print("Default data initialized")
-	else:
-		print("Data already exist.")

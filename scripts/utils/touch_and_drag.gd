@@ -2,7 +2,7 @@ extends Area2D
 
 @export var dialog_box : MarginContainer
 @export var item_display_name: String
-@export_multiline var item_info: String
+@export_multiline var item_info: Array[String]
 
 @export var texture : Texture2D
 @export var item_name : String = "None"
@@ -60,7 +60,8 @@ func check_for_slot():
 						tween.tween_property(self, "global_position", body.global_position, 0.1)
 						
 						if dialog_box:
-							dialog_box.show_description(item_display_name, item_info)
+							var data : Array[String] = item_info.duplicate()
+							dialog_box.update_dialog(item_display_name, data)
 #						
 						body.is_occupied = true
 						found_slot = true
@@ -69,14 +70,17 @@ func check_for_slot():
 						await tween.finished 
 						queue_free()
 						
-						if dialog_box.visible == false and user_data.toolbox_item_count >= 5:
+						if not dialog_box.is_visible_in_tree() and user_data.toolbox_item_count >= 4:
 							print("Well done!")
 							user_data.toolbox_item_count = 0
 							
 						else:
-							#user_data.toolbox_item_count = 0
+							if user_data.toolbox_item_count >= 5:
+								user_data.toolbox_item_count = 0
+								
 							user_data.toolbox_item_count += 1
 							ResourceSaver.save(user_data, "user://user_data.tres")
+							print(dialog_box.is_visible_in_tree())
 							print(user_data.toolbox_item_count)
 						break
 						

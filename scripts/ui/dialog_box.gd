@@ -25,10 +25,6 @@ func _ready():
 	else:
 		hide()
 
-func show_description(title: String, desc: String):
-	character_name_label.text = title
-	description_label.text = desc
-	show()
 		
 func _on_next_button_pressed() -> void:
 	if description_label.visible_ratio < 1.0:
@@ -53,7 +49,13 @@ func _input(event):
 			else:
 				finish_dialog()
 				
-func update_dialog(new_lines: Array[String]):
+#func show_description(title: String, desc: String):
+	#character_name_label.text = title
+	#description_label.text = desc
+	#show()
+	
+func update_dialog(title: String, new_lines: Array[String]):
+	character_name_label.text = title
 	dialog_lines = new_lines
 	current_line_index = 0
 	show()
