@@ -9,7 +9,6 @@ extends MarginContainer
 @onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel
 @onready var timer = $Timer
 
-
 var current_line_index: int = 0
 
 func _ready():
@@ -24,7 +23,6 @@ func _ready():
 		show_line()
 	else:
 		hide()
-
 		
 func _on_next_button_pressed() -> void:
 	if description_label.visible_ratio < 1.0:
@@ -36,7 +34,7 @@ func _on_next_button_pressed() -> void:
 			show_line()
 		else:
 			finish_dialog()
-
+			
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if description_label.visible_ratio < 1.0:
@@ -49,10 +47,10 @@ func _input(event):
 			else:
 				finish_dialog()
 				
-#func show_description(title: String, desc: String):
-	#character_name_label.text = title
-	#description_label.text = desc
-	#show()
+func update_dialog_one_line_only(title: String, desc: String):
+	character_name_label.text = title
+	description_label.text = desc
+	show()
 	
 func update_dialog(title: String, new_lines: Array[String]):
 	character_name_label.text = title

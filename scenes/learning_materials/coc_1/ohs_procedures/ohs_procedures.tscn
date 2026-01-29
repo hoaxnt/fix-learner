@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=18 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
 [ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs-procedures/toolbox.png" id="3_7ew3f"]
+[ext_resource type="Texture2D" uid="uid://b6sy44uoykd42" path="res://assets/characters/technician.png" id="3_ilwiu"]
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/item.tscn" id="3_k3u2l"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
@@ -39,9 +40,19 @@ texture = ExtResource("2_dkd3x")
 
 [node name="Minigame" type="Node2D" parent="."]
 
+[node name="Technician" type="Sprite2D" parent="Minigame"]
+position = Vector2(-629, 66)
+scale = Vector2(2.242, 2.242)
+texture = ExtResource("3_ilwiu")
+
+[node name="Teacher" type="Sprite2D" parent="Minigame"]
+position = Vector2(644, 56)
+scale = Vector2(1.7193627, 1.7193627)
+texture = ExtResource("1_25a41")
+
 [node name="ToolBox" type="Sprite2D" parent="Minigame"]
 position = Vector2(0, -72)
-scale = Vector2(1.8539999, 1.8539999)
+scale = Vector2(1.54, 1.5799998)
 texture = ExtResource("3_7ew3f")
 
 [node name="Table" type="Sprite2D" parent="Minigame"]
@@ -116,9 +127,10 @@ offset_right = 775.0
 offset_bottom = 180.0
 grow_horizontal = 2
 theme = ExtResource("6_v3s6i")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
-text = "Place the PPE (Personal Protective Equipment) into the toolkit."
+text = "Drag the equipments into the toolbox"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true

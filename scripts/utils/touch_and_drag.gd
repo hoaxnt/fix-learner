@@ -16,6 +16,7 @@ var dragging = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
+	user_data.toolbox_item_count = 0
 	name_label.hide()
 	name_label.text = item_name
 	
@@ -50,40 +51,33 @@ func _input(event):
 		global_position = event.position + offset
 				
 func check_for_slot():
-		var areas = get_overlapping_bodies()
-		var found_slot = false
+	var areas = get_overlapping_bodies()
+	var found_slot = false
+	
+	for body in areas:
+		if body.is_in_group("slots"):
+			# 1. Snap Animation
+			var tween = create_tween()
+			tween.tween_property(self, "global_position", body.global_position, 0.1)
+			
+			# Inside your check_for_slot() loop...
+			if dialog_box:
+				var data : Array[String] = item_info.duplicate()
+				user_data.toolbox_item_count += 1
+				ResourceSaver.save(user_data, "user://user_data.tres")
+				if user_data.toolbox_item_count == 5:
+					data.append("Nice! Let's go!") 
+					user_data.toolbox_item_count = 0 # Reset for next round
+				# Send the updated array (which now has 1 extra line at the end)
+				dialog_box.update_dialog(item_display_name, data)
 		
-		for body in areas:
-				if body.is_in_group("slots"):
-						# 1. Snap Animation
-						var tween = create_tween()
-						tween.tween_property(self, "global_position", body.global_position, 0.1)
-						
-						if dialog_box:
-							var data : Array[String] = item_info.duplicate()
-							dialog_box.update_dialog(item_display_name, data)
-#						
-						body.is_occupied = true
-						found_slot = true
-						
-						# 3. Delay queue_free so the player sees the snap
-						await tween.finished 
-						queue_free()
-						
-						if not dialog_box.is_visible_in_tree() and user_data.toolbox_item_count >= 4:
-							print("Well done!")
-							user_data.toolbox_item_count = 0
-							
-						else:
-							if user_data.toolbox_item_count >= 5:
-								user_data.toolbox_item_count = 0
-								
-							user_data.toolbox_item_count += 1
-							ResourceSaver.save(user_data, "user://user_data.tres")
-							print(dialog_box.is_visible_in_tree())
-							print(user_data.toolbox_item_count)
-						break
-						
-		if not found_slot:
-				var tween = create_tween()
-				tween.tween_property(self, "global_position", initial_position, 0.2)
+			body.is_occupied = true
+			found_slot = true
+				# 3. Delay queue_free so the player sees the snap
+			await tween.finished
+			queue_free()
+			break
+					
+	if not found_slot:
+			var tween = create_tween()
+			tween.tween_property(self, "global_position", initial_position, 0.2)
