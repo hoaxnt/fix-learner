@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=18 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -14,6 +14,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
 size = Vector2(74, 74)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgw27"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
 radius = 46.09772
@@ -40,11 +42,20 @@ texture = ExtResource("2_ph2hc")
 
 [node name="Slots" type="Node2D" parent="."]
 
-[node name="CPU_Slot" type="Area2D" parent="Slots"]
+[node name="CPUSlot" type="Area2D" parent="Slots"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/CPU_Slot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/CPUSlot"]
 position = Vector2(-13, 40)
 shape = SubResource("RectangleShape2D_4y6sc")
+
+[node name="ThermalPasteSlot" type="Area2D" parent="Slots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/ThermalPasteSlot"]
+shape = SubResource("CircleShape2D_pgw27")
+
+[node name="CPUFanSlot" type="Area2D" parent="Slots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/CPUFanSlot"]
 
 [node name="Parts" type="Node2D" parent="."]
 
@@ -196,4 +207,4 @@ text = "TASK : Put the components on the motherboard"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="area_exited" from="Slots/CPU_Slot" to="." method="_on_cpu_slot_area_exited"]
+[connection signal="area_exited" from="Slots/CPUSlot" to="." method="_on_cpu_slot_area_exited"]
