@@ -1,19 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://rld36jlxnohm"]
+[gd_scene load_steps=4 format=3 uid="uid://rld36jlxnohm"]
 
+[ext_resource type="Texture2D" uid="uid://cl372stw0adh3" path="res://assets/environment/garage.PNG" id="1_25tdn"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_is6v6"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_ooxcv"]
 
 [node name="AssembleDisassemble" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_25tdn")
 
 [node name="CPUMinigame" type="Node2D" parent="."]
 
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Teacher" type="Sprite2D" parent="."]
+position = Vector2(-1.0000076, 96)
+scale = Vector2(1.44, 1.44)
 texture = ExtResource("1_ooxcv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.33, 1.33)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_is6v6")]
+dialog_lines = Array[String](["Hey", "tara here"])
