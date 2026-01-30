@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=23 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ripiqmalrvrf" path="res://assets/items/assemble_disassemble/parts/ram.png" id="8_f0g6q"]
 [ext_resource type="Texture2D" uid="uid://b7sheokfvap6o" path="res://assets/items/assemble_disassemble/parts/thermal-paste.png" id="9_f0g6q"]
 [ext_resource type="Texture2D" uid="uid://cyibvwk8cyhuy" path="res://assets/items/assemble_disassemble/parts/gpu.png" id="10_pgw27"]
+[ext_resource type="Texture2D" uid="uid://cs6so1e2xvmeo" path="res://assets/items/assemble_disassemble/parts/cpu-fan.png" id="11_f0g6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
 size = Vector2(74, 74)
@@ -21,6 +22,12 @@ radius = 39.012817
 [sub_resource type="CircleShape2D" id="CircleShape2D_f0g6q"]
 radius = 39.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0g6q"]
+size = Vector2(46, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3quq"]
+size = Vector2(152, 122)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
 radius = 46.09772
 
@@ -28,18 +35,20 @@ radius = 46.09772
 size = Vector2(120, 188)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8q8"]
-size = Vector2(115.453064, 232.0078)
+size = Vector2(70.99992, 146.99988)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gfsr"]
 size = Vector2(224, 120)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k3quq"]
+radius = 59.0
 
 [node name="CpuMinigame" type="Node2D"]
 script = ExtResource("1_pgw27")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_n5jh2")
+metadata/_edit_lock_ = true
 
 [node name="Motherboard" type="Sprite2D" parent="."]
 position = Vector2(-20, 109)
@@ -66,6 +75,18 @@ shape = SubResource("CircleShape2D_pgw27")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/CPUFanSlot"]
 position = Vector2(-13, 40)
 shape = SubResource("CircleShape2D_f0g6q")
+
+[node name="RamSlot" type="Area2D" parent="Slots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/RamSlot"]
+position = Vector2(94, 27)
+shape = SubResource("RectangleShape2D_f0g6q")
+
+[node name="GPUSlot" type="Area2D" parent="Slots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/GPUSlot"]
+position = Vector2(-56, 193)
+shape = SubResource("RectangleShape2D_k3quq")
 
 [node name="Parts" type="Node2D" parent="."]
 
@@ -132,25 +153,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ThermalPaste" type="Area2D" parent="Parts"]
-position = Vector2(290, 184)
-rotation = 1.3962634
+position = Vector2(209, 170)
 script = ExtResource("3_4y6sc")
 item = "Thermal Paste"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/ThermalPaste"]
-position = Vector2(0.14390564, -0.6054077)
+position = Vector2(-0.50001526, 0)
 scale = Vector2(1.000001, 1.000001)
 shape = SubResource("RectangleShape2D_5a8q8")
 
 [node name="Shadow" type="Sprite2D" parent="Parts/ThermalPaste"]
-position = Vector2(0.11658573, 5.097707)
-rotation = -1.4135277
-scale = Vector2(0.20306382, 0.20306382)
+position = Vector2(0, 52.999996)
+scale = Vector2(0.13622579, 0.13622579)
 texture = ExtResource("5_f0g6q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/ThermalPaste"]
-position = Vector2(-1.969604, -0.3473096)
-scale = Vector2(0.5089673, 0.5089673)
+scale = Vector2(0.3089673, 0.3089673)
 texture = ExtResource("9_f0g6q")
 
 [node name="Label" type="Label" parent="Parts/ThermalPaste"]
@@ -167,7 +185,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GPU" type="Area2D" parent="Parts"]
-position = Vector2(284, 6)
+position = Vector2(278, -10)
 script = ExtResource("3_4y6sc")
 item = "GPU"
 
@@ -198,12 +216,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Fan" type="Area2D" parent="Parts"]
+position = Vector2(337, 159)
+script = ExtResource("3_4y6sc")
+item = "CPU Fan"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Fan"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_k3quq")
 
+[node name="Shadow" type="Sprite2D" parent="Parts/Fan"]
+position = Vector2(-1, 36)
+rotation = 0.020485852
+scale = Vector2(0.11346743, 0.13470607)
+texture = ExtResource("5_f0g6q")
+
 [node name="Sprite2D" type="Sprite2D" parent="Parts/Fan"]
+position = Vector2(0, 9.000001)
+scale = Vector2(0.286, 0.286)
+texture = ExtResource("11_f0g6q")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
@@ -230,3 +260,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="area_exited" from="Slots/CPUSlot" to="." method="_on_cpu_slot_area_exited"]
+[connection signal="area_exited" from="Slots/ThermalPasteSlot" to="." method="_on_thermal_paste_slot_area_exited"]
+[connection signal="area_exited" from="Slots/CPUFanSlot" to="." method="_on_cpu_fan_slot_area_exited"]
+[connection signal="area_exited" from="Slots/RamSlot" to="." method="_on_ram_slot_area_exited"]
+[connection signal="area_exited" from="Slots/GPUSlot" to="." method="_on_gpu_slot_area_exited"]
