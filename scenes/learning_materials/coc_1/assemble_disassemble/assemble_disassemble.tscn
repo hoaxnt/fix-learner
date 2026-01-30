@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://rld36jlxnohm"]
+[gd_scene load_steps=5 format=3 uid="uid://rld36jlxnohm"]
 
 [ext_resource type="Texture2D" uid="uid://cl372stw0adh3" path="res://assets/environment/garage.PNG" id="1_25tdn"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_is6v6"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_ooxcv"]
+[ext_resource type="Script" uid="uid://c8ma8x6fkfufe" path="res://scripts/learning_materials/coc_1/assemble_disassemble/assemble_disassemble.gd" id="1_y024a"]
 
 [node name="AssembleDisassemble" type="Node2D"]
+script = ExtResource("1_y024a")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_25tdn")
@@ -24,4 +26,4 @@ zoom = Vector2(1.33, 1.33)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_is6v6")]
-dialog_lines = Array[String](["Hey", "tara here"])
+dialog_lines = Array[String](["Great job so far, student! Our next laboratory will guide you through the proper assembly and disassembly of computer components using correct handling techniques.", "You will learn to identify each major part while ensuring every piece is installed safely and precisely."])

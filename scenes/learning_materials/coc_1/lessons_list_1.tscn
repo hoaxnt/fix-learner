@@ -306,4 +306,6 @@ flat = true
 [connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/OhsButton" to="." method="_on_ohs_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton" to="." method="_on_hazards_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton" to="." method="_on_assemble_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/BootableButton" to="." method="_on_bootable_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton" to="." method="_on_software_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
