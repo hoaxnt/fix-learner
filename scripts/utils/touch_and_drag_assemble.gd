@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var item_sprite : Texture2D
+@onready var item_name : Label = $Label
+@onready var shadow : Sprite2D = $Shadow
 @onready var sprite : Sprite2D = $Sprite2D
-@onready var collision : CollisionShape2D = $CollisionShape2D
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
@@ -36,21 +36,23 @@ func _input(event):
 func start_dragging():
 	dragging = true
 	z_index = 100 
+	shadow.hide()
+	item_name.show()
 	
 	# Calculate offset BEFORE the scale change to prevent jumping
 	offset = global_position - get_global_mouse_position()
-	
 	# Visual Pop: Scale up slightly (1.2x)
 	var tween = create_tween()
 	# .set_trans(Tween.TRANS_BACK) gives it a nice organic 'bounce'
 	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	
 	# Optional: Make it slightly transparent so you can see the slots underneath
 	tween.parallel().tween_property(self, "modulate:a", 0.7, 0.15)
 
 func stop_dragging():
 	dragging = false
 	z_index = 0
+	shadow.show()
+	item_name.hide()
 	
 	var tween = create_tween()
 	# Return to original size and full opacity

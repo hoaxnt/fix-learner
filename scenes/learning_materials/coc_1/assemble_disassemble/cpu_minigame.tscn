@@ -53,6 +53,7 @@ scale = Vector2(0.20330293, 0.20330298)
 texture = ExtResource("4_m22s2")
 
 [node name="Label" type="Label" parent="Parts/CPU"]
+visible = false
 offset_left = -48.0
 offset_top = -95.0
 offset_right = 55.0
@@ -83,6 +84,7 @@ scale = Vector2(0.27999938, 0.27999938)
 texture = ExtResource("3_mw2da")
 
 [node name="Label" type="Label" parent="Parts/RAM"]
+visible = false
 offset_left = -50.0
 offset_top = -147.0
 offset_right = 53.0
@@ -115,6 +117,7 @@ scale = Vector2(0.5089673, 0.5089673)
 texture = ExtResource("4_5a8q8")
 
 [node name="Label" type="Label" parent="Parts/ThermalPaste"]
+visible = false
 offset_left = -100.09588
 offset_top = 32.106293
 offset_right = 2.9041214
@@ -145,6 +148,7 @@ scale = Vector2(0.4473948, 0.44739482)
 texture = ExtResource("5_5gfsr")
 
 [node name="Label" type="Label" parent="Parts/GPU"]
+visible = false
 offset_left = -53.0
 offset_top = -105.0
 offset_right = 50.0
