@@ -12,16 +12,16 @@
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="8_06ixj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
-radius = 236.32469
+radius = 46.09772
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2da"]
-size = Vector2(184, 68)
+size = Vector2(120, 188)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8q8"]
-size = Vector2(137, 420)
+size = Vector2(115.453064, 232.0078)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gfsr"]
-size = Vector2(112, 218)
+size = Vector2(224, 120)
 
 [node name="CpuMinigame" type="Node2D"]
 
@@ -36,77 +36,124 @@ texture = ExtResource("2_ph2hc")
 [node name="Parts" type="Node2D" parent="."]
 
 [node name="CPU" type="Area2D" parent="Parts"]
-position = Vector2(284, -14)
-scale = Vector2(0.2000011, 0.2000011)
+position = Vector2(-278, -10)
 script = ExtResource("3_4y6sc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/CPU"]
 shape = SubResource("CircleShape2D_8xini")
 
 [node name="Shadow" type="Sprite2D" parent="Parts/CPU"]
-position = Vector2(29.999832, 89.99949)
+position = Vector2(-2.0000076, 19)
 rotation = 0.020485852
-scale = Vector2(0.8164195, 0.8164195)
+scale = Vector2(0.124106325, 0.124106325)
 texture = ExtResource("4_hqtg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/CPU"]
+scale = Vector2(0.20330293, 0.20330298)
 texture = ExtResource("4_m22s2")
 
 [node name="Label" type="Label" parent="Parts/CPU"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -48.0
+offset_top = -95.0
+offset_right = 55.0
+offset_bottom = -35.0
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RAM" type="Area2D" parent="Parts"]
-position = Vector2(289, 98)
+position = Vector2(-304, 170)
+script = ExtResource("3_4y6sc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/RAM"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_mw2da")
 
 [node name="Shadow" type="Sprite2D" parent="Parts/RAM"]
-position = Vector2(4.9999847, 2.0000014)
+position = Vector2(-1.5258789e-05, 60.999992)
 rotation = 0.020485852
-scale = Vector2(0.26161635, 0.26161635)
+scale = Vector2(0.1744055, 0.26161635)
 texture = ExtResource("4_hqtg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/RAM"]
+rotation = 1.5707964
 scale = Vector2(0.27999938, 0.27999938)
 texture = ExtResource("3_mw2da")
 
+[node name="Label" type="Label" parent="Parts/RAM"]
+offset_left = -50.0
+offset_top = -147.0
+offset_right = 53.0
+offset_bottom = -87.0
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ThermalPaste" type="Area2D" parent="Parts"]
-position = Vector2(300, 227.99998)
+position = Vector2(290, 184)
 rotation = 1.3962634
-scale = Vector2(0.47999936, 0.47999936)
+script = ExtResource("3_4y6sc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/ThermalPaste"]
-position = Vector2(-5.5, 2)
+position = Vector2(0.14390564, -0.6054077)
+scale = Vector2(1.000001, 1.000001)
 shape = SubResource("RectangleShape2D_5a8q8")
 
 [node name="Shadow" type="Sprite2D" parent="Parts/ThermalPaste"]
-position = Vector2(7.0025635, 20.274006)
+position = Vector2(0.11658573, 5.097707)
 rotation = -1.4135277
-scale = Vector2(0.36925402, 0.36925402)
+scale = Vector2(0.20306382, 0.20306382)
 texture = ExtResource("4_hqtg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/ThermalPaste"]
+position = Vector2(-1.969604, -0.3473096)
+scale = Vector2(0.5089673, 0.5089673)
 texture = ExtResource("4_5a8q8")
 
+[node name="Label" type="Label" parent="Parts/ThermalPaste"]
+offset_left = -100.09588
+offset_top = 32.106293
+offset_right = 2.9041214
+offset_bottom = 92.10629
+rotation = -1.400834
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="GPU" type="Area2D" parent="Parts"]
-position = Vector2(-315, 110)
+position = Vector2(284, 6)
+script = ExtResource("3_4y6sc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/GPU"]
 shape = SubResource("RectangleShape2D_5gfsr")
 
 [node name="Shadow" type="Sprite2D" parent="Parts/GPU"]
-position = Vector2(2.999989, 83.00001)
+position = Vector2(-6.00001, 30.000011)
 rotation = 0.020485852
 scale = Vector2(0.1938959, 0.1938959)
 texture = ExtResource("4_hqtg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/GPU"]
-rotation = 1.6032581
+rotation = -0.011282325
 scale = Vector2(0.4473948, 0.44739482)
 texture = ExtResource("5_5gfsr")
+
+[node name="Label" type="Label" parent="Parts/GPU"]
+offset_left = -53.0
+offset_top = -105.0
+offset_right = 50.0
+offset_bottom = -45.0
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
