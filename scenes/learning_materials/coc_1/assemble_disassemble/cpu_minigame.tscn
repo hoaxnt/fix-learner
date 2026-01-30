@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=17 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
+[ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
 [ext_resource type="Texture2D" uid="uid://wxywjilu1pi0" path="res://assets/items/electrical hazards/build/no-cpu.png" id="2_ph2hc"]
 [ext_resource type="Script" uid="uid://xljmjijwblit" path="res://scripts/utils/touch_and_drag_assemble.gd" id="3_4y6sc"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_8xini"]
@@ -10,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://be4wld76maa5a" path="res://assets/items/electrical hazards/parts/cpu.png" id="4_m22s2"]
 [ext_resource type="Texture2D" uid="uid://cyibvwk8cyhuy" path="res://assets/items/electrical hazards/parts/gpu.png" id="5_5gfsr"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="8_06ixj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
+size = Vector2(74, 74)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
 radius = 46.09772
@@ -24,6 +28,7 @@ size = Vector2(115.453064, 232.0078)
 size = Vector2(224, 120)
 
 [node name="CpuMinigame" type="Node2D"]
+script = ExtResource("1_pgw27")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_n5jh2")
@@ -32,6 +37,14 @@ texture = ExtResource("1_n5jh2")
 position = Vector2(-20, 109)
 scale = Vector2(0.94173276, 0.94173276)
 texture = ExtResource("2_ph2hc")
+
+[node name="Slots" type="Node2D" parent="."]
+
+[node name="CPU_Slot" type="Area2D" parent="Slots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/CPU_Slot"]
+position = Vector2(-13, 40)
+shape = SubResource("RectangleShape2D_4y6sc")
 
 [node name="Parts" type="Node2D" parent="."]
 
@@ -182,3 +195,5 @@ theme_override_font_sizes/font_size = 50
 text = "TASK : Put the components on the motherboard"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="area_exited" from="Slots/CPU_Slot" to="." method="_on_cpu_slot_area_exited"]

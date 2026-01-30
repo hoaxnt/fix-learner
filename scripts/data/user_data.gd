@@ -25,4 +25,7 @@ class_name UserData
 # Electrical Hazards
 @export var trash_count : int = 0
 
+# Assemble Disassemble
+@export var dragging : bool = false
+
 #COC 2 Lessons

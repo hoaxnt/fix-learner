@@ -10,12 +10,17 @@ var dragging = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
+	print("info: ", item_name, shadow)
 	initial_position = global_position
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
 		if event.pressed:
+			user_data.dragging = true
+			ResourceSaver.save(user_data, "user://user_data.tres")
 			dragging = true
+			shadow.hide()
+			item_name.show()
 			# Calculate offset using GLOBAL mouse position
 			offset = global_position - get_global_mouse_position()
 			
@@ -23,7 +28,11 @@ func _input_event(_viewport, event, _shape_idx):
 			tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1)
 			get_viewport().set_input_as_handled()
 		else:
+			user_data.dragging = false
+			ResourceSaver.save(user_data, "user://user_data.tres")
 			dragging = false
+			shadow.show()
+			item_name.hide()
 			var tween = create_tween()
 			tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
 			check_for_slot()
@@ -36,8 +45,6 @@ func _input(event):
 func start_dragging():
 	dragging = true
 	z_index = 100 
-	shadow.hide()
-	item_name.show()
 	
 	# Calculate offset BEFORE the scale change to prevent jumping
 	offset = global_position - get_global_mouse_position()
@@ -47,12 +54,10 @@ func start_dragging():
 	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	# Optional: Make it slightly transparent so you can see the slots underneath
 	tween.parallel().tween_property(self, "modulate:a", 0.7, 0.15)
-
+	
 func stop_dragging():
 	dragging = false
 	z_index = 0
-	shadow.show()
-	item_name.hide()
 	
 	var tween = create_tween()
 	# Return to original size and full opacity
