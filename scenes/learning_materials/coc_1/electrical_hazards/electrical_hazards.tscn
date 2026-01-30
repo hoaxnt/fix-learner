@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical hazards/pizza.png" id="4_d3v5n"]
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
-[ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/learning_materials/coc_1/electrical_hazards/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
+[ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/utils/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
 [ext_resource type="Texture2D" uid="uid://bkphrbdglvjfd" path="res://assets/items/electrical hazards/trash.png" id="7_bpj2y"]
 [ext_resource type="Script" uid="uid://bueq7iy6ose8b" path="res://scripts/learning_materials/coc_1/electrical_hazards/trash.gd" id="7_kvqo3"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="9_vj4gh"]
