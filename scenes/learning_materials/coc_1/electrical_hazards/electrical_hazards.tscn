@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=15 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/learning_materials/coc_1/electrical_hazards/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs-procedures/shadow.png" id="9_kvqo3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2gvb"]
 radius = 89.0
@@ -80,6 +81,22 @@ shape = SubResource("CircleShape2D_m2gvb")
 [node name="Sprite2D" type="Sprite2D" parent="Minigame/Water"]
 scale = Vector2(0.318, 0.318)
 texture = ExtResource("6_8li02")
+
+[node name="CPU" type="Area2D" parent="Minigame"]
+position = Vector2(-12.000002, 137.00002)
+scale = Vector2(1.1599989, 1.1599989)
+script = ExtResource("6_vj4gh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/CPU"]
+shape = SubResource("CircleShape2D_m2gvb")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/CPU"]
+position = Vector2(1.6442675e-06, 26.724146)
+scale = Vector2(0.41357088, 0.41154808)
+texture = ExtResource("9_kvqo3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/CPU"]
+position = Vector2(0, -13)
 
 [node name="Teacher" type="Sprite2D" parent="."]
 visible = false
