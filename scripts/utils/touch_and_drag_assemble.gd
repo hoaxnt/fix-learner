@@ -11,7 +11,8 @@ var dragging = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
-	item_label.text = item
+	if item_label:
+		item_label.text = item
 	initial_position = global_position
 
 func _input_event(_viewport, event, _shape_idx):

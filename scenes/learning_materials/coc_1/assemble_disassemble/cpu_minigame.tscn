@@ -17,7 +17,7 @@
 size = Vector2(74, 74)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pgw27"]
-radius = 39.012817
+radius = 49.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f0g6q"]
 radius = 39.0
@@ -64,7 +64,7 @@ position = Vector2(-13, 40)
 shape = SubResource("RectangleShape2D_4y6sc")
 
 [node name="ThermalPasteSlot" type="Area2D" parent="Slots"]
-position = Vector2(-15, 36)
+position = Vector2(-138, -23)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/ThermalPasteSlot"]
 position = Vector2(2, 3)
@@ -173,11 +173,10 @@ texture = ExtResource("9_f0g6q")
 
 [node name="Label" type="Label" parent="Parts/ThermalPaste"]
 visible = false
-offset_left = -132.11143
-offset_top = 167.6054
-offset_right = 291.88855
-offset_bottom = 227.6054
-rotation = -1.400834
+offset_left = -232.0
+offset_top = -139.0
+offset_right = 192.0
+offset_bottom = -79.0
 theme = ExtResource("8_06ixj")
 theme_override_constants/outline_size = 15
 text = "Thermal Paste"
@@ -234,6 +233,18 @@ texture = ExtResource("5_f0g6q")
 position = Vector2(0, 9.000001)
 scale = Vector2(0.286, 0.286)
 texture = ExtResource("11_f0g6q")
+
+[node name="Label" type="Label" parent="Parts/Fan"]
+visible = false
+offset_left = -53.0
+offset_top = -105.0
+offset_right = 50.0
+offset_bottom = -45.0
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
