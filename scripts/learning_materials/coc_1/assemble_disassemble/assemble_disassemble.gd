@@ -6,3 +6,5 @@ extends Node2D
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	teacher_sprite.hide()
+
+#NOTE: MAKE IT TOP VIEW AND LOOK FOR A TABLE TOP

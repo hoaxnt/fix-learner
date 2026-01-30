@@ -1,14 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=8 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
+[ext_resource type="Texture2D" uid="uid://wxywjilu1pi0" path="res://assets/items/electrical hazards/build/no-cpu.png" id="2_ph2hc"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_8xini"]
+[ext_resource type="Texture2D" uid="uid://ripiqmalrvrf" path="res://assets/items/electrical hazards/parts/ram.png" id="3_mw2da"]
+[ext_resource type="Texture2D" uid="uid://be4wld76maa5a" path="res://assets/items/electrical hazards/parts/cpu.png" id="4_m22s2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
+radius = 177.63446
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2da"]
+size = Vector2(184, 68)
 
 [node name="CpuMinigame" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_n5jh2")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="CPU" type="Area2D" parent="Parts"]
+position = Vector2(284, -14)
+scale = Vector2(0.2000011, 0.2000011)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/CPU"]
+shape = SubResource("CircleShape2D_8xini")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/CPU"]
+texture = ExtResource("4_m22s2")
+
+[node name="RAM" type="Area2D" parent="Parts"]
+position = Vector2(291, 102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/RAM"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_mw2da")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/RAM"]
+scale = Vector2(0.27999938, 0.27999938)
+texture = ExtResource("3_mw2da")
+
+[node name="Motherboard" type="Sprite2D" parent="."]
+position = Vector2(5, 117)
+scale = Vector2(0.882, 0.882)
+texture = ExtResource("2_ph2hc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
-zoom = Vector2(1.88, 1.88)
+zoom = Vector2(2.045, 2.045)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("3_8xini")]
+
+[node name="TaskLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -185.0
+offset_right = 185.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "TASK : Put the components on the motherboard"
+horizontal_alignment = 1
+vertical_alignment = 1
