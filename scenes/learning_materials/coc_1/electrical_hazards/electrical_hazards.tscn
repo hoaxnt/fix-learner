@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=14 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/learning_materials/coc_1/electrical_hazards/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="9_vj4gh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2gvb"]
 radius = 53.08484
@@ -106,6 +107,20 @@ zoom = Vector2(1.88, 1.88)
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_75cua")]
 dialog_lines = Array[String](["Welcome back, student. Our next laboratory will introduce electrical hazards", "And how to identify and avoid possible dangers while working with computer equipment."])
+
+[node name="ObjectiveLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.0
+offset_top = 66.0
+offset_right = 441.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme = ExtResource("9_vj4gh")
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 70
+text = "Clean up the workbench"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

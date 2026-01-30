@@ -11,6 +11,7 @@ extends MarginContainer
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var current_line_index: int = 0
+signal dialog_finished
 
 func _ready():
 	show()
@@ -73,6 +74,7 @@ func _on_timer_timeout():
 				timer.stop()
 
 func finish_dialog():
+	dialog_finished.emit()
 	hide()
 	set_process_input(false)
 	if user_data.is_final_message:
