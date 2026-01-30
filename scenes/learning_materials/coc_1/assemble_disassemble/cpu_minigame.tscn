@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=24 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -12,12 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://b7sheokfvap6o" path="res://assets/items/assemble_disassemble/parts/thermal-paste.png" id="9_f0g6q"]
 [ext_resource type="Texture2D" uid="uid://cyibvwk8cyhuy" path="res://assets/items/assemble_disassemble/parts/gpu.png" id="10_pgw27"]
 [ext_resource type="Texture2D" uid="uid://cs6so1e2xvmeo" path="res://assets/items/assemble_disassemble/parts/cpu-fan.png" id="11_f0g6q"]
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="12_k3quq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
 size = Vector2(74, 74)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pgw27"]
-radius = 49.0
+radius = 44.04543
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f0g6q"]
 radius = 39.0
@@ -64,7 +65,7 @@ position = Vector2(-13, 40)
 shape = SubResource("RectangleShape2D_4y6sc")
 
 [node name="ThermalPasteSlot" type="Area2D" parent="Slots"]
-position = Vector2(-138, -23)
+position = Vector2(-16, 36)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/ThermalPasteSlot"]
 position = Vector2(2, 3)
@@ -246,6 +247,11 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Teacher" type="Sprite2D" parent="."]
+position = Vector2(-17, 164)
+scale = Vector2(1.450304, 1.450304)
+texture = ExtResource("12_k3quq")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
 zoom = Vector2(2.045, 2.045)
@@ -253,6 +259,7 @@ zoom = Vector2(2.045, 2.045)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("3_8xini")]
+dialog_lines = Array[String](["sup"])
 
 [node name="TaskLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -266,7 +273,7 @@ grow_horizontal = 2
 theme = ExtResource("8_06ixj")
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
-text = "TASK : Put the components on the motherboard"
+text = "TASK : Assemble the motherboard"
 horizontal_alignment = 1
 vertical_alignment = 1
 

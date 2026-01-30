@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
+@onready var teacher_sprite : Sprite2D = $Teacher
 @onready var motherboard_sprite : Sprite2D = $Motherboard
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 @onready var cpu_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-cpu.png")
@@ -15,6 +17,8 @@ var cpu_fan_slot : bool = false
 var ram_slot : bool = false
 var gpu_slot : bool = false
 
+signal motherboard_assembled
+
 func _on_cpu_slot_area_exited(area: Area2D) -> void:
 	if area.name == "CPU" and user_data.dragging == false:
 		if thermal_paste_slot == false and cpu_fan_slot == false and ram_slot == false and gpu_slot == false:
@@ -25,7 +29,6 @@ func _on_cpu_slot_area_exited(area: Area2D) -> void:
 
 func _on_thermal_paste_slot_area_exited(area: Area2D) -> void:
 	if area.name == "ThermalPaste" and user_data.dragging == false:
-		print(cpu_fan_slot,thermal_paste_slot,cpu_fan_slot,ram_slot,gpu_slot)
 		if cpu_slot == true and thermal_paste_slot == false and cpu_fan_slot == false and ram_slot == false and gpu_slot == false:
 			thermal_paste_slot = true
 			motherboard_sprite.texture = thermal_paste_slot_texture
@@ -54,3 +57,19 @@ func _on_gpu_slot_area_exited(area: Area2D) -> void:
 			gpu_slot = true
 			motherboard_sprite.texture = gpu_slot_texture
 			area.queue_free()
+			motherboard_assembled.emit()
+			#print(cpu_fan_slot,thermal_paste_slot,cpu_fan_slot,ram_slot,gpu_slot)
+
+func _process(_delta: float) -> void:
+	await dialog_box.dialog_finished
+	teacher_sprite.hide()
+	
+	await motherboard_assembled
+	teacher_sprite.show()
+	
+	var data : Array[String] = ["nice par","ayos ka","magaling!"]
+	dialog_box.update_dialog("Teacher", data)
+	
+	await dialog_box.dialog_finished
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/assemble_disassemble.tscn")
+	

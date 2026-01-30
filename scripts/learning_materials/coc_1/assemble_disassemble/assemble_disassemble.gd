@@ -6,5 +6,4 @@ extends Node2D
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	teacher_sprite.hide()
-
-#NOTE: MAKE IT TOP VIEW AND LOOK FOR A TABLE TOP
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/cpu_minigame.tscn")
