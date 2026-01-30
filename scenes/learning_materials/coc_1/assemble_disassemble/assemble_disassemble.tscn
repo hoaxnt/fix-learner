@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rld36jlxnohm"]
+[gd_scene load_steps=3 format=3 uid="uid://rld36jlxnohm"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_is6v6"]
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_ooxcv"]
 
 [node name="AssembleDisassemble" type="Node2D"]
 
@@ -11,6 +12,7 @@
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Teacher" type="Sprite2D" parent="."]
+texture = ExtResource("1_ooxcv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
