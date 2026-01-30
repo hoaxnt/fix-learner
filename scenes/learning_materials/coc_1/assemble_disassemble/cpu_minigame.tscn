@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=15 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Texture2D" uid="uid://wxywjilu1pi0" path="res://assets/items/electrical hazards/build/no-cpu.png" id="2_ph2hc"]
+[ext_resource type="Script" uid="uid://xljmjijwblit" path="res://scripts/utils/touch_and_drag_assemble.gd" id="3_4y6sc"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_8xini"]
 [ext_resource type="Texture2D" uid="uid://ripiqmalrvrf" path="res://assets/items/electrical hazards/parts/ram.png" id="3_mw2da"]
 [ext_resource type="Texture2D" uid="uid://b7sheokfvap6o" path="res://assets/items/electrical hazards/parts/thermal-paste.png" id="4_5a8q8"]
@@ -37,6 +38,7 @@ texture = ExtResource("2_ph2hc")
 [node name="CPU" type="Area2D" parent="Parts"]
 position = Vector2(284, -14)
 scale = Vector2(0.2000011, 0.2000011)
+script = ExtResource("3_4y6sc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/CPU"]
 shape = SubResource("CircleShape2D_8xini")
@@ -49,6 +51,10 @@ texture = ExtResource("4_hqtg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parts/CPU"]
 texture = ExtResource("4_m22s2")
+
+[node name="Label" type="Label" parent="Parts/CPU"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="RAM" type="Area2D" parent="Parts"]
 position = Vector2(289, 98)
@@ -86,7 +92,7 @@ texture = ExtResource("4_hqtg5")
 texture = ExtResource("4_5a8q8")
 
 [node name="GPU" type="Area2D" parent="Parts"]
-position = Vector2(-288, 110)
+position = Vector2(-315, 110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/GPU"]
 shape = SubResource("RectangleShape2D_5gfsr")
