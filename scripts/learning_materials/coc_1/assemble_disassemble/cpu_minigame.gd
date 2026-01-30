@@ -58,13 +58,13 @@ func _on_gpu_slot_area_exited(area: Area2D) -> void:
 			motherboard_sprite.texture = gpu_slot_texture
 			area.queue_free()
 			motherboard_assembled.emit()
-			#print(cpu_fan_slot,thermal_paste_slot,cpu_fan_slot,ram_slot,gpu_slot)
 
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	teacher_sprite.hide()
 	
 	await motherboard_assembled
+	
 	teacher_sprite.show()
 	
 	var data : Array[String] = ["nice par","ayos ka","magaling!"]
