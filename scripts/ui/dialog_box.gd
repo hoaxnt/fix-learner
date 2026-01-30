@@ -74,8 +74,8 @@ func _on_timer_timeout():
 				timer.stop()
 
 func finish_dialog():
-	dialog_finished.emit()
 	hide()
+	dialog_finished.emit()
 	set_process_input(false)
 	if user_data.is_final_message:
 		SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")

@@ -29,10 +29,11 @@ func _on_area_exited(area: Area2D) -> void:
 			
 			await anim_player.animation_finished
 			
-			var data : Array[String] = ["Great!","that's what im talking","nice!"]
-			dialog_box.update_dialog("Teacher", data)
+			var data : Array[String] = ["Great job! Liquids are highly conductive and can instantly short-circuit a PC.",
+			"Keeping the workspace dry is rule number one.",
+			"Now that the workspace is safe, we can move on to the real work."]
 			teacher_sprite.show()
-
-			if dialog_box.dialog_finished:
-				SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
+			dialog_box.update_dialog("Teacher", data)
 			
+			await dialog_box.dialog_finished
+			SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")

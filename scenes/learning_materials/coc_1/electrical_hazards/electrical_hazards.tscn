@@ -195,8 +195,8 @@ offset_bottom = 150.0
 grow_horizontal = 2
 theme = ExtResource("9_vj4gh")
 theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 70
-text = "Clean up the workbench"
+theme_override_font_sizes/font_size = 50
+text = "TASK : Remove clutter from the work zone"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

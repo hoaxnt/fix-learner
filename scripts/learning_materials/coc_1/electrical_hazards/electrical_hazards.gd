@@ -30,8 +30,11 @@ func trigger_teacher_move() -> void:
 	teacher_sprite.position = Vector2(7.0, 230.0)
 	teacher_sprite.show()
 
-	var data : Array[String] = ["Oh no!", "Clean up the mess!"]
-	
+	var data : Array[String] = [
+	"Oops! Working with food and drinks near open hardware is a major risk.",
+	"Liquid spills cause instant short circuits, while crumbs can clog cooling fans and attract pests.",
+	"Let's maintain a clean, professional environment. Can you clear the work zone before we start?"
+]
 	dialog_box.update_dialog("Teacher", data)
 	
 	await dialog_box.dialog_finished
