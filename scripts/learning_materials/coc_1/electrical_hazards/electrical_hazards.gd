@@ -5,16 +5,16 @@ extends Node2D
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var objective_label : Label = $CanvasLayer/ObjectiveLabel
+@onready var user_data = ResourceLoader.load("user://user_data.tres")
 
-# Use this to make sure the event only happens once
 var triggered_cleanup_event : bool = false
 
 func _ready() -> void:
+	user_data.is_final_message = false
+	ResourceSaver.save(user_data, "user://user_data.tres")
 	objective_label.hide()
 
-
 func _process(_delta: float) -> void:
-	# Check if we hit the specific line and haven't run this logic yet
 	if dialog_box.current_line_index == 2 and not triggered_cleanup_event:
 		trigger_teacher_move()
 

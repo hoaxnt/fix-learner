@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=21 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
@@ -54,6 +54,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, -219)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Minigame/Trash:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-55.999996, 379)]
+}
 
 [sub_resource type="Animation" id="Animation_wbjbv"]
 resource_name = "camera_slide_down"
@@ -71,10 +83,27 @@ tracks/0/keys = {
 "values": [Vector2(0, -219), Vector2(0, 140)]
 }
 
+[sub_resource type="Animation" id="Animation_kvqo3"]
+resource_name = "trash_slide_down"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Minigame/Trash:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-55.999996, 379), Vector2(-56, 600)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m2gvb"]
 _data = {
 &"RESET": SubResource("Animation_m2gvb"),
-&"camera_slide_down": SubResource("Animation_wbjbv")
+&"camera_slide_down": SubResource("Animation_wbjbv"),
+&"trash_slide_down": SubResource("Animation_kvqo3")
 }
 
 [node name="ElectricalHazards" type="Node2D"]
@@ -121,10 +150,14 @@ shape = SubResource("CircleShape2D_m2gvb")
 scale = Vector2(0.23300005, 0.23300005)
 texture = ExtResource("6_8li02")
 
-[node name="Trash" type="Area2D" parent="Minigame" groups=["slots"]]
+[node name="Trash" type="Area2D" parent="Minigame" node_paths=PackedStringArray("anim_player", "objective_label", "dialog_box", "teacher_sprite") groups=["slots"]]
 position = Vector2(-55.999996, 379)
 scale = Vector2(1.0800004, 1.0800004)
 script = ExtResource("7_kvqo3")
+anim_player = NodePath("../../AnimationPlayer")
+objective_label = NodePath("../../CanvasLayer/ObjectiveLabel")
+dialog_box = NodePath("../../CanvasLayer/DialogBox")
+teacher_sprite = NodePath("../../Teacher")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Minigame/Trash"]
 position = Vector2(11.111108, -2.8257005e-05)

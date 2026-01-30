@@ -71,6 +71,7 @@ func check_for_slot():
 						data.append(final_message)
 					user_data.is_final_message = true
 					user_data.toolbox_item_count = 0 # Reset for next round
+					ResourceSaver.save(user_data, "user://user_data.tres")
 					
 				dialog_box.update_dialog(item_display_name, data)
 		

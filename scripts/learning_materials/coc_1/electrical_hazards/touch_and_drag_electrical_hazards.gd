@@ -4,6 +4,7 @@ extends Area2D
 @export var item_sprite : Texture2D
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var collision : CollisionShape2D = $CollisionShape2D
+@onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
 var dragging = false
@@ -75,6 +76,7 @@ func check_for_slot():
 			found_slot = true
 			snap_to_slot(area)
 			queue_free()
+			user_data.trash_count += 1
 			break
 					
 	if not found_slot:

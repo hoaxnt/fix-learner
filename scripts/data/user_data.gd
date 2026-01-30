@@ -22,4 +22,7 @@ class_name UserData
 @export var toolbox_item_count : int = 0
 @export var is_final_message : bool = false
 
+# Electrical Hazards
+@export var trash_count : int = 0
+
 #COC 2 Lessons
