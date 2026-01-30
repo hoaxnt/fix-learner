@@ -5,25 +5,32 @@ extends Node2D
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 
-var is_index_max : bool = true
+# Use this to make sure the event only happens once
+var triggered_cleanup_event : bool = false
 
 func _process(_delta: float) -> void:
-	if dialog_box.current_line_index == 2 and is_index_max:
-		teacher_sprite.hide()
-		anim_player.play("camera_slide_down")
-		
-		await anim_player.animation_finished
-		
-		is_index_max = false
-		teacher_sprite.position = Vector2(7.0, 230.0)
-		teacher_sprite.show()
-#		NOTE: FIX THE TEACHER HIDE LOGIC AFTER THE ANIMATION DOWN AND ALSO HIDE THE TEACHER, THE BUG IS STILL ZERO EVEN IF THE DIALOG IS CLICKING
-		var data : Array[String] = ["Oh no!", "Tangina kumalat shet!"]
-		dialog_box.update_dialog("Teacher", data)
+	# Check if we hit the specific line and haven't run this logic yet
+	if dialog_box.current_line_index == 2 and not triggered_cleanup_event:
+		trigger_teacher_move()
 
-		if dialog_box.current_line_index == 0:
-			teacher_sprite.hide()
-		
-		
-		
-		
+func trigger_teacher_move() -> void:
+	triggered_cleanup_event = true # Lock this function immediately
+	
+	teacher_sprite.hide()
+	anim_player.play("camera_slide_down")
+	
+	await anim_player.animation_finished
+	
+	# Move the teacher to the new "mess" location
+	teacher_sprite.position = Vector2(7.0, 230.0)
+	teacher_sprite.show()
+
+	# Prepare the new dialogue
+	var data : Array[String] = ["Oh no!", "Clean up the mess!"]
+	
+	# IMPORTANT: Update the dialog and ensure it resets to its internal index 0
+	dialog_box.update_dialog("Teacher", data)
+	
+	# If your DialogBox script doesn't automatically reset current_line_index 
+	# to 0 inside update_dialog, you should do it manually here:
+	# dialog_box.current_line_index = 0
