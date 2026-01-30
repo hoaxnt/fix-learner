@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0xy7pehhdelx"]
+
+[ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
+
+[node name="CpuMinigame" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_n5jh2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 46)
+zoom = Vector2(1.88, 1.88)
