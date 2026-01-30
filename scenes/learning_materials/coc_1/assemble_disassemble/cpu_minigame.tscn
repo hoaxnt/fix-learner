@@ -1,21 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=14 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Texture2D" uid="uid://wxywjilu1pi0" path="res://assets/items/electrical hazards/build/no-cpu.png" id="2_ph2hc"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_8xini"]
 [ext_resource type="Texture2D" uid="uid://ripiqmalrvrf" path="res://assets/items/electrical hazards/parts/ram.png" id="3_mw2da"]
+[ext_resource type="Texture2D" uid="uid://b7sheokfvap6o" path="res://assets/items/electrical hazards/parts/thermal-paste.png" id="4_5a8q8"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs-procedures/shadow.png" id="4_hqtg5"]
 [ext_resource type="Texture2D" uid="uid://be4wld76maa5a" path="res://assets/items/electrical hazards/parts/cpu.png" id="4_m22s2"]
+[ext_resource type="Texture2D" uid="uid://cyibvwk8cyhuy" path="res://assets/items/electrical hazards/parts/gpu.png" id="5_5gfsr"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="8_06ixj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
-radius = 177.63446
+radius = 236.32469
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2da"]
 size = Vector2(184, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8q8"]
+size = Vector2(137, 420)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gfsr"]
+size = Vector2(112, 218)
 
 [node name="CpuMinigame" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_n5jh2")
+
+[node name="Motherboard" type="Sprite2D" parent="."]
+position = Vector2(-20, 109)
+scale = Vector2(0.94173276, 0.94173276)
+texture = ExtResource("2_ph2hc")
 
 [node name="Parts" type="Node2D" parent="."]
 
@@ -26,24 +41,66 @@ scale = Vector2(0.2000011, 0.2000011)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/CPU"]
 shape = SubResource("CircleShape2D_8xini")
 
+[node name="Shadow" type="Sprite2D" parent="Parts/CPU"]
+position = Vector2(29.999832, 89.99949)
+rotation = 0.020485852
+scale = Vector2(0.8164195, 0.8164195)
+texture = ExtResource("4_hqtg5")
+
 [node name="Sprite2D" type="Sprite2D" parent="Parts/CPU"]
 texture = ExtResource("4_m22s2")
 
 [node name="RAM" type="Area2D" parent="Parts"]
-position = Vector2(291, 102)
+position = Vector2(289, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/RAM"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_mw2da")
 
+[node name="Shadow" type="Sprite2D" parent="Parts/RAM"]
+position = Vector2(4.9999847, 2.0000014)
+rotation = 0.020485852
+scale = Vector2(0.26161635, 0.26161635)
+texture = ExtResource("4_hqtg5")
+
 [node name="Sprite2D" type="Sprite2D" parent="Parts/RAM"]
 scale = Vector2(0.27999938, 0.27999938)
 texture = ExtResource("3_mw2da")
 
-[node name="Motherboard" type="Sprite2D" parent="."]
-position = Vector2(5, 117)
-scale = Vector2(0.882, 0.882)
-texture = ExtResource("2_ph2hc")
+[node name="ThermalPaste" type="Area2D" parent="Parts"]
+position = Vector2(300, 227.99998)
+rotation = 1.3962634
+scale = Vector2(0.47999936, 0.47999936)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/ThermalPaste"]
+position = Vector2(-5.5, 2)
+shape = SubResource("RectangleShape2D_5a8q8")
+
+[node name="Shadow" type="Sprite2D" parent="Parts/ThermalPaste"]
+position = Vector2(7.0025635, 20.274006)
+rotation = -1.4135277
+scale = Vector2(0.36925402, 0.36925402)
+texture = ExtResource("4_hqtg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/ThermalPaste"]
+texture = ExtResource("4_5a8q8")
+
+[node name="GPU" type="Area2D" parent="Parts"]
+position = Vector2(-288, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/GPU"]
+shape = SubResource("RectangleShape2D_5gfsr")
+
+[node name="Shadow" type="Sprite2D" parent="Parts/GPU"]
+position = Vector2(2.999989, 83.00001)
+rotation = 0.020485852
+scale = Vector2(0.1938959, 0.1938959)
+texture = ExtResource("4_hqtg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/GPU"]
+rotation = 1.6032581
+scale = Vector2(0.4473948, 0.44739482)
+texture = ExtResource("5_5gfsr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 46)
@@ -57,10 +114,14 @@ zoom = Vector2(2.045, 2.045)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -185.0
-offset_right = 185.0
-offset_bottom = 23.0
+offset_left = -621.0
+offset_top = 45.0
+offset_right = 622.0
+offset_bottom = 105.0
 grow_horizontal = 2
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
 text = "TASK : Put the components on the motherboard"
 horizontal_alignment = 1
 vertical_alignment = 1
