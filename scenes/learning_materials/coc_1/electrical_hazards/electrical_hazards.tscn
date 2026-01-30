@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=10 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
 [ext_resource type="Script" uid="uid://coouonylea17w" path="res://scripts/learning_materials/coc_1/electrical_hazards/electrical_hazards.gd" id="1_wbjbv"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
+[ext_resource type="PackedScene" uid="uid://c2x7bm6nuipsf" path="res://scenes/learning_materials/coc_1/electrical_hazards/items/pizza.tscn" id="3_m2gvb"]
+[ext_resource type="Texture2D" uid="uid://ba2cocfqwh37a" path="res://assets/items/electrical hazards/hazard-items.png" id="4_d3v5n"]
 
 [sub_resource type="Animation" id="Animation_wbjbv"]
 resource_name = "camera_slide_down"
@@ -48,7 +50,15 @@ script = ExtResource("1_wbjbv")
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_cyucj")
 
+[node name="Minigame" type="Node2D" parent="."]
+
+[node name="Pizza" parent="Minigame" instance=ExtResource("3_m2gvb")]
+position = Vector2(305, 209)
+scale = Vector2(1.44, 1.44)
+item_sprite = ExtResource("4_d3v5n")
+
 [node name="Teacher" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(212.00002, -77)
 scale = Vector2(1.3462008, 1.3462008)
 texture = ExtResource("2_xybym")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://kirfk2g7ia05"]
 
-[ext_resource type="Script" uid="uid://cfk7bc8amgx6q" path="res://scripts/utils/touch_and_drag.gd" id="1_dd8jb"]
+[ext_resource type="Script" uid="uid://cfk7bc8amgx6q" path="res://scripts/utils/touch_and_drag_ohs_procedure.gd" id="1_dd8jb"]
 [ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="2_5mjp2"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs-procedures/shadow.png" id="2_21aqy"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="4_2pjoo"]
