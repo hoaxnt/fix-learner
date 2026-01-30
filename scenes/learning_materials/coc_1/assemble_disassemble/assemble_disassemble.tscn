@@ -6,6 +6,8 @@
 
 [node name="Background" type="Sprite2D" parent="."]
 
+[node name="CPUMinigame" type="Node2D" parent="."]
+
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Teacher" type="Sprite2D" parent="."]
