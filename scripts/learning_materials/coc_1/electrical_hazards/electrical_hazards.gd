@@ -12,6 +12,7 @@ var triggered_cleanup_event : bool = false
 func _ready() -> void:
 	objective_label.hide()
 
+
 func _process(_delta: float) -> void:
 	# Check if we hit the specific line and haven't run this logic yet
 	if dialog_box.current_line_index == 2 and not triggered_cleanup_event:
