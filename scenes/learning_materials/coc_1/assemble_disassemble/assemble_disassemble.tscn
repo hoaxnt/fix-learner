@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://rld36jlxnohm"]
+[gd_scene load_steps=2 format=3 uid="uid://rld36jlxnohm"]
+
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_is6v6"]
 
 [node name="AssembleDisassemble" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Minigame" type="Node2D" parent="."]
+
+[node name="Teacher" type="Sprite2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_is6v6")]
