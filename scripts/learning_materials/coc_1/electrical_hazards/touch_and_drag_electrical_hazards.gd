@@ -5,6 +5,7 @@ extends Area2D
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var collision : CollisionShape2D = $CollisionShape2D
 
+
 var initial_position : Vector2
 var dragging = false
 var offset = Vector2.ZERO
@@ -67,14 +68,14 @@ func stop_dragging():
 	check_for_slot()
 
 func check_for_slot():
-	# Use areas if your slots are Area2Ds, or bodies if they are PhysicsBodies
-	var areas = get_overlapping_areas() 
+	var areas = get_overlapping_areas()
 	var found_slot = false
 	
 	for area in areas:
 		if area.is_in_group("slots"):
 			found_slot = true
 			snap_to_slot(area)
+			queue_free()
 			break
 					
 	if not found_slot:

@@ -40,6 +40,7 @@ version_control/autoload_on_startup=true
 [global_group]
 
 slots=""
+hazards=""
 
 [input_devices]
 

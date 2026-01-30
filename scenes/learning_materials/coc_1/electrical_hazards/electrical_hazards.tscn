@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=20 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
@@ -8,10 +8,37 @@
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/learning_materials/coc_1/electrical_hazards/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
+[ext_resource type="Texture2D" uid="uid://bkphrbdglvjfd" path="res://assets/items/electrical hazards/trash.png" id="7_bpj2y"]
+[ext_resource type="Script" uid="uid://bueq7iy6ose8b" path="res://scripts/learning_materials/coc_1/electrical_hazards/trash.gd" id="7_kvqo3"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="9_vj4gh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2gvb"]
 radius = 53.08484
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5od2"]
+atlas = ExtResource("7_bpj2y")
+region = Rect2(0, 0, 250, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p24p1"]
+atlas = ExtResource("7_bpj2y")
+region = Rect2(250, 0, 250, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dibgp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5od2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p24p1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvqo3"]
+size = Vector2(112.962944, 159.25925)
 
 [sub_resource type="Animation" id="Animation_m2gvb"]
 length = 0.001
@@ -58,7 +85,7 @@ texture = ExtResource("1_cyucj")
 
 [node name="Minigame" type="Node2D" parent="."]
 
-[node name="Coffee" type="Area2D" parent="Minigame"]
+[node name="Coffee" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-298, 231)
 script = ExtResource("6_vj4gh")
 item_sprite = ExtResource("4_ltomb")
@@ -70,7 +97,7 @@ shape = SubResource("CircleShape2D_m2gvb")
 scale = Vector2(0.582, 0.582)
 texture = ExtResource("4_ltomb")
 
-[node name="Pizza" type="Area2D" parent="Minigame"]
+[node name="Pizza" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(296, 204.00002)
 script = ExtResource("6_vj4gh")
 item_sprite = ExtResource("4_d3v5n")
@@ -82,7 +109,7 @@ shape = SubResource("CircleShape2D_m2gvb")
 scale = Vector2(1.16, 1.16)
 texture = ExtResource("4_d3v5n")
 
-[node name="Water" type="Area2D" parent="Minigame"]
+[node name="Water" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-253.00003, 88.00001)
 script = ExtResource("6_vj4gh")
 item_sprite = ExtResource("6_8li02")
@@ -93,6 +120,22 @@ shape = SubResource("CircleShape2D_m2gvb")
 [node name="Sprite2D" type="Sprite2D" parent="Minigame/Water"]
 scale = Vector2(0.23300005, 0.23300005)
 texture = ExtResource("6_8li02")
+
+[node name="Trash" type="Area2D" parent="Minigame" groups=["slots"]]
+position = Vector2(-55.999996, 379)
+scale = Vector2(1.0800004, 1.0800004)
+script = ExtResource("7_kvqo3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Minigame/Trash"]
+position = Vector2(11.111108, -2.8257005e-05)
+sprite_frames = SubResource("SpriteFrames_dibgp")
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Trash"]
+position = Vector2(0, 16.666626)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_kvqo3")
 
 [node name="Teacher" type="Sprite2D" parent="."]
 position = Vector2(212.00002, -77)
@@ -126,3 +169,6 @@ text = "Clean up the workbench"
 libraries = {
 &"": SubResource("AnimationLibrary_m2gvb")
 }
+
+[connection signal="area_entered" from="Minigame/Trash" to="Minigame/Trash" method="_on_area_entered"]
+[connection signal="area_exited" from="Minigame/Trash" to="Minigame/Trash" method="_on_area_exited"]
