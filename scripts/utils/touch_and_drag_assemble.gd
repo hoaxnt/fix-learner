@@ -1,6 +1,7 @@
 extends Area2D
 
-@onready var item_name : Label = $Label
+@export var item : String = "none"
+@onready var item_label : Label = $Label
 @onready var shadow : Sprite2D = $Shadow
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
@@ -10,7 +11,7 @@ var dragging = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
-	print("info: ", item_name, shadow)
+	item_label.text = item
 	initial_position = global_position
 
 func _input_event(_viewport, event, _shape_idx):
@@ -20,7 +21,7 @@ func _input_event(_viewport, event, _shape_idx):
 			ResourceSaver.save(user_data, "user://user_data.tres")
 			dragging = true
 			shadow.hide()
-			item_name.show()
+			item_label.show()
 			# Calculate offset using GLOBAL mouse position
 			offset = global_position - get_global_mouse_position()
 			
@@ -32,7 +33,7 @@ func _input_event(_viewport, event, _shape_idx):
 			ResourceSaver.save(user_data, "user://user_data.tres")
 			dragging = false
 			shadow.show()
-			item_name.hide()
+			item_label.hide()
 			var tween = create_tween()
 			tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
 			check_for_slot()
