@@ -71,5 +71,5 @@ func _process(_delta: float) -> void:
 	dialog_box.update_dialog("Teacher", data)
 	
 	await dialog_box.dialog_finished
-	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/assemble_disassemble.tscn")
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
 	

@@ -1,0 +1,140 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7la66gbr2mbo"]
+
+[ext_resource type="Script" uid="uid://8vslaar1kxtx" path="res://scripts/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.gd" id="1_gthx7"]
+[ext_resource type="Texture2D" uid="uid://m0i71ttdq3ht" path="res://assets/environment/workbench2.png" id="2_ixlbu"]
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="3_4bjcl"]
+[ext_resource type="Script" uid="uid://xljmjijwblit" path="res://scripts/utils/touch_and_drag_assemble.gd" id="3_syuov"]
+[ext_resource type="Texture2D" uid="uid://chp5raiwdb8aj" path="res://assets/items/assemble_disassemble/build/empty-unit.png" id="4_4bjcl"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="4_y8vlm"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="5_41ogt"]
+[ext_resource type="Texture2D" uid="uid://bmjv2pg40norn" path="res://assets/items/assemble_disassemble/parts/psu.png" id="5_ixlbu"]
+[ext_resource type="Texture2D" uid="uid://d1t24r8s83wii" path="res://assets/items/assemble_disassemble/build/with-gpu.png" id="5_y8vlm"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_ocyj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixlbu"]
+size = Vector2(190, 322)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gthx7"]
+radius = 69.00725
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bjcl"]
+size = Vector2(185, 184)
+
+[node name="SystemUnitMinigame" type="Node2D"]
+script = ExtResource("1_gthx7")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_ixlbu")
+
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="EmptyUnit" type="Area2D" parent="Parts" groups=["slots"]]
+position = Vector2(0, 113)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/EmptyUnit"]
+position = Vector2(-67, -12)
+shape = SubResource("RectangleShape2D_ixlbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/EmptyUnit"]
+scale = Vector2(0.841, 0.841)
+texture = ExtResource("4_4bjcl")
+
+[node name="PSU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
+position = Vector2(-328, 233)
+script = ExtResource("3_syuov")
+item = "Power Supply"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/PSU"]
+shape = SubResource("CircleShape2D_gthx7")
+
+[node name="Shadow" type="Sprite2D" parent="Parts/PSU"]
+position = Vector2(3.9999924, 42.000015)
+rotation = 0.020485854
+scale = Vector2(0.17102985, 0.17102985)
+texture = ExtResource("5_41ogt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/PSU"]
+scale = Vector2(0.2870083, 0.28700835)
+texture = ExtResource("5_ixlbu")
+
+[node name="Label" type="Label" parent="Parts/PSU"]
+visible = false
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -130.0
+offset_right = 184.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_ocyj7")
+theme_override_constants/outline_size = 15
+text = "Power Supply"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mobo" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
+position = Vector2(304, 103)
+script = ExtResource("3_syuov")
+item = "Motherboard"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Mobo"]
+position = Vector2(13.5, 85)
+shape = SubResource("RectangleShape2D_4bjcl")
+
+[node name="Shadow" type="Sprite2D" parent="Parts/Mobo"]
+position = Vector2(12.999996, 162)
+rotation = 0.020485854
+scale = Vector2(0.196261, 0.196261)
+texture = ExtResource("5_41ogt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/Mobo"]
+position = Vector2(8.000006, 96)
+scale = Vector2(0.43199998, 0.43199998)
+texture = ExtResource("5_y8vlm")
+
+[node name="Label" type="Label" parent="Parts/Mobo"]
+visible = false
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -78.0
+offset_right = 193.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_ocyj7")
+theme_override_constants/outline_size = 15
+text = "Motherboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Teacher" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(22, 205)
+scale = Vector2(1.5808825, 1.5808824)
+texture = ExtResource("3_4bjcl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 90)
+zoom = Vector2(1.88, 1.88)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_y8vlm")]
+dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside", "Don't forget to check for static"])
+
+[connection signal="area_exited" from="Parts/PSU" to="." method="_on_psu_area_exited"]
+[connection signal="area_exited" from="Parts/Mobo" to="." method="_on_mobo_area_exited"]

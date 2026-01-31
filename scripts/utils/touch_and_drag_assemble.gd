@@ -1,14 +1,14 @@
 extends Area2D
 
 @export var item : String = "none"
-@onready var item_label : Label = $Label
-@onready var shadow : Sprite2D = $Shadow
-@onready var sprite : Sprite2D = $Sprite2D
+@export var item_label : Label
+@export var shadow : Sprite2D
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
 var dragging = false
 var offset = Vector2.ZERO
+
 
 func _ready() -> void:
 	if item_label:
