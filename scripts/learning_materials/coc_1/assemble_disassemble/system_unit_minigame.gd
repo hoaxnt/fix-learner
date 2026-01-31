@@ -10,32 +10,6 @@ extends Node2D
 @onready var mobo_installed : bool = false
 @onready var psu_installed : bool = false
 
-#func _process(_delta: float) -> void:
-	#await dialog_box.dialog_finished
-	#teacher_sprite.hide()
-#
-#func _on_mobo_area_exited(area: Area2D) -> void:
-	#if area.is_in_group("slots"):
-		#if user_data.dragging == false:
-			#unit_sprite.texture = no_psu
-			#mobo_installed = true
-#
-#func _on_psu_area_exited(area: Area2D) -> void:
-	#if area.is_in_group("slots"):
-		#print("Mbobo1: ", mobo_installed)
-		#if user_data.dragging == false and mobo_installed == true:
-			#print("Mbobo2: ", mobo_installed)
-			#unit_sprite.texture = with_psu
-			##psu_installed = true
-			#
-			#teacher_sprite.show()
-			#var data : Array[String] = ["great","job","lets move on to installing softwares"]
-			#dialog_box.update_dialog("Teacher", data)
-			#
-			#await dialog_box.dialog_finished
-			#
-			#SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
-
 func request_installation(item_name: String) -> bool:
 		if item_name == "Power Supply":
 				if mobo_installed:
