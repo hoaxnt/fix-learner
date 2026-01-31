@@ -1,13 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=23 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
 [ext_resource type="Script" uid="uid://coouonylea17w" path="res://scripts/learning_materials/coc_1/electrical_hazards/electrical_hazards.gd" id="1_wbjbv"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
-[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/pizza.png" id="4_d3v5n"]
-[ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical_hazards/coffee.png" id="4_dibgp"]
-[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
-[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
+[ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical_hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical_hazards/pizza.png" id="6_njyqc"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/utils/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
 [ext_resource type="Script" uid="uid://bueq7iy6ose8b" path="res://scripts/learning_materials/coc_1/electrical_hazards/trash.gd" id="7_kvqo3"]
@@ -122,7 +119,7 @@ texture = ExtResource("1_cyucj")
 [node name="Coffee" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-298, 231)
 script = ExtResource("6_vj4gh")
-item_sprite = ExtResource("4_dibgp")
+item_sprite = ExtResource("4_ltomb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Coffee"]
 shape = SubResource("CircleShape2D_m2gvb")
@@ -141,7 +138,7 @@ shape = SubResource("CircleShape2D_m2gvb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Minigame/Pizza"]
 scale = Vector2(1.16, 1.16)
-texture = ExtResource("4_d3v5n")
+texture = ExtResource("6_njyqc")
 
 [node name="Water" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-253.00003, 88.00001)
@@ -153,7 +150,7 @@ shape = SubResource("CircleShape2D_m2gvb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Minigame/Water"]
 scale = Vector2(0.23300005, 0.23300005)
-texture = ExtResource("6_8li02")
+texture = ExtResource("8_3c3q1")
 
 [node name="Trash" type="Area2D" parent="Minigame" node_paths=PackedStringArray("anim_player", "objective_label", "dialog_box", "teacher_sprite") groups=["slots"]]
 position = Vector2(-55.999996, 379)
