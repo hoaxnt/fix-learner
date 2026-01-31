@@ -10,6 +10,8 @@ var dragging : bool = false
 var offset : Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	user_data.dragging = false
+	ResourceSaver.save(user_data, "user://user_data.tres")
 	initial_position = global_position
 	
 	# Setup initial UI state
@@ -63,7 +65,7 @@ func stop_dragging() -> void:
 	tween.tween_property(self, "modulate:a", 1.0, 0.1)
 	
 	check_for_slot()
-
+	
 func check_for_slot() -> void:
 	var targets = get_overlapping_areas()
 	# Optional: if your slots are StaticBodies, use get_overlapping_bodies()
