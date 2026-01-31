@@ -260,12 +260,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Teacher" type="Sprite2D" parent="."]
-position = Vector2(326.00003, 150.00002)
+position = Vector2(322.00003, 219.44827)
 scale = Vector2(1.2400271, 1.2400271)
 texture = ExtResource("12_k3quq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 46)
+position = Vector2(-4, 115.44826)
 zoom = Vector2(2.045, 2.045)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
