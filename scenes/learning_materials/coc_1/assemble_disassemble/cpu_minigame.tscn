@@ -91,10 +91,12 @@ shape = SubResource("RectangleShape2D_k3quq")
 
 [node name="Parts" type="Node2D" parent="."]
 
-[node name="CPU" type="Area2D" parent="Parts"]
+[node name="CPU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(-278, -10)
 script = ExtResource("3_4y6sc")
-item = "CPU"
+item_name_string = "CPU"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/CPU"]
 shape = SubResource("CircleShape2D_8xini")
@@ -121,10 +123,12 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RAM" type="Area2D" parent="Parts"]
+[node name="RAM" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(-304, 170)
 script = ExtResource("3_4y6sc")
-item = "Ram"
+item_name_string = "RAM"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/RAM"]
 position = Vector2(0, 2)
@@ -153,10 +157,12 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ThermalPaste" type="Area2D" parent="Parts"]
+[node name="ThermalPaste" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(209, 170)
 script = ExtResource("3_4y6sc")
-item = "Thermal Paste"
+item_name_string = "Thermal Paste"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/ThermalPaste"]
 position = Vector2(-0.50001526, 0)
@@ -184,10 +190,12 @@ text = "Thermal Paste"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GPU" type="Area2D" parent="Parts"]
+[node name="GPU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(278, -10)
 script = ExtResource("3_4y6sc")
-item = "GPU"
+item_name_string = "Graphics Card"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/GPU"]
 shape = SubResource("RectangleShape2D_5gfsr")
@@ -215,10 +223,12 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Fan" type="Area2D" parent="Parts"]
+[node name="Fan" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(337, 159)
 script = ExtResource("3_4y6sc")
-item = "CPU Fan"
+item_name_string = "CPU Fan"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Fan"]
 position = Vector2(0, -1)
