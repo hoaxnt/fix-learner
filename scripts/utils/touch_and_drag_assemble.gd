@@ -1,100 +1,90 @@
 extends Area2D
 
-@export var item : String = "none"
+@export var item_name_string : String = "none"
 @export var item_label : Label
 @export var shadow : Sprite2D
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
-var dragging = false
-var offset = Vector2.ZERO
-
+var dragging : bool = false
+var offset : Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	if item_label:
-		item_label.text = item
 	initial_position = global_position
+	
+	# Setup initial UI state
+	if item_label:
+		item_label.text = item_name_string
+		item_label.hide()
+	if shadow:
+		shadow.show()
 
-func _input_event(_viewport, event, _shape_idx):
+func _input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
 		if event.pressed:
 			user_data.dragging = true
 			ResourceSaver.save(user_data, "user://user_data.tres")
-			dragging = true
-			shadow.hide()
-			item_label.show()
-			# Calculate offset using GLOBAL mouse position
-			offset = global_position - get_global_mouse_position()
-			
-			var tween = create_tween()
-			tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1)
+			start_dragging()
 			get_viewport().set_input_as_handled()
-		else:
+		elif dragging: # Only stop if we were actually dragging
 			user_data.dragging = false
 			ResourceSaver.save(user_data, "user://user_data.tres")
-			dragging = false
-			shadow.show()
-			item_label.hide()
-			var tween = create_tween()
-			tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
-			check_for_slot()
+			stop_dragging()
 
-func _input(event):
-	# Use the global mouse position instead of event.position
+func _input(event) -> void:
 	if dragging and (event is InputEventScreenDrag or event is InputEventMouseMotion):
 		global_position = get_global_mouse_position() + offset
 
-func start_dragging():
+func start_dragging() -> void:
 	dragging = true
-	z_index = 100 
-	
-	# Calculate offset BEFORE the scale change to prevent jumping
+	z_index = 100
 	offset = global_position - get_global_mouse_position()
-	# Visual Pop: Scale up slightly (1.2x)
-	var tween = create_tween()
-	# .set_trans(Tween.TRANS_BACK) gives it a nice organic 'bounce'
-	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	# Optional: Make it slightly transparent so you can see the slots underneath
-	tween.parallel().tween_property(self, "modulate:a", 0.7, 0.15)
 	
-func stop_dragging():
+	# Toggle Visuals
+	if shadow: shadow.hide()
+	if item_label: item_label.show()
+	
+	# "Pick up" Animation
+	var tween = create_tween().set_parallel(true)
+	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "modulate:a", 0.7, 0.15)
+
+func stop_dragging() -> void:
 	dragging = false
 	z_index = 0
 	
-	var tween = create_tween()
-	# Return to original size and full opacity
+	# Toggle Visuals
+	if shadow: shadow.show()
+	if item_label: item_label.hide()
+	
+	# "Drop" Animation
+	var tween = create_tween().set_parallel(true)
 	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
-	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.1)
+	tween.tween_property(self, "modulate:a", 1.0, 0.1)
 	
 	check_for_slot()
 
-func check_for_slot():
-	var areas = get_overlapping_areas()
-	var found_slot = false
+func check_for_slot() -> void:
+	var targets = get_overlapping_areas()
+	# Optional: if your slots are StaticBodies, use get_overlapping_bodies()
 	
-	for area in areas:
+	for area in targets:
 		if area.is_in_group("slots"):
-			found_slot = true
 			snap_to_slot(area)
-			queue_free()
-			user_data.trash_count += 1
-			break
-					
-	if not found_slot:
-		return_to_start()
+			return # Exit function early if found
+			
+	return_to_start()
 
-func snap_to_slot(slot_area):
+func snap_to_slot(slot_area: Area2D) -> void:
 	var tween = create_tween()
-	# Snap to the center of the slot
 	tween.tween_property(self, "global_position", slot_area.global_position, 0.1).set_trans(Tween.TRANS_CUBIC)
 	
-	# Handle slot logic here (e.g., slot_area.is_occupied = true)
 	if slot_area.has_method("occupy_slot"):
 		slot_area.occupy_slot()
 		
 	await tween.finished
-	queue_free()
+	queue_free() # Uncomment if item should disappear after snapping
 
-func return_to_start():
+func return_to_start() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", initial_position, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

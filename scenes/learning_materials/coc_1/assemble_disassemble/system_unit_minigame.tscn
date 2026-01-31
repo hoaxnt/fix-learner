@@ -42,7 +42,7 @@ texture = ExtResource("4_4bjcl")
 [node name="PSU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(-328, 233)
 script = ExtResource("3_syuov")
-item = "Power Supply"
+item_name_string = "Power Supply"
 item_label = NodePath("Label")
 shadow = NodePath("Shadow")
 
@@ -82,7 +82,7 @@ vertical_alignment = 1
 [node name="Mobo" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(304, 103)
 script = ExtResource("3_syuov")
-item = "Motherboard"
+item_name_string = "Motherboard"
 item_label = NodePath("Label")
 shadow = NodePath("Shadow")
 
