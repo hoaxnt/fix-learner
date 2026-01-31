@@ -1,36 +1,41 @@
-[gd_scene load_steps=21 format=3 uid="uid://kwn4xx4rkn5y"]
+[gd_scene load_steps=26 format=3 uid="uid://kwn4xx4rkn5y"]
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
 [ext_resource type="Script" uid="uid://coouonylea17w" path="res://scripts/learning_materials/coc_1/electrical_hazards/electrical_hazards.gd" id="1_wbjbv"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
-[ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical hazards/pizza.png" id="4_d3v5n"]
-[ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
-[ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
+[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/pizza.png" id="4_d3v5n"]
+[ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical_hazards/coffee.png" id="4_dibgp"]
+[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/coffee.png" id="4_ltomb"]
+[ext_resource type="Texture2D" path="res://assets/items/electrical hazards/water.png" id="6_8li02"]
+[ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical_hazards/pizza.png" id="6_njyqc"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/utils/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
-[ext_resource type="Texture2D" uid="uid://bkphrbdglvjfd" path="res://assets/items/electrical hazards/trash.png" id="7_bpj2y"]
 [ext_resource type="Script" uid="uid://bueq7iy6ose8b" path="res://scripts/learning_materials/coc_1/electrical_hazards/trash.gd" id="7_kvqo3"]
+[ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical_hazards/water.png" id="8_3c3q1"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="9_vj4gh"]
+[ext_resource type="Texture2D" uid="uid://bkphrbdglvjfd" path="res://assets/items/electrical_hazards/trash.png" id="11_3c3q1"]
+[ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="12_p24p1"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="12_q5od2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2gvb"]
 radius = 53.08484
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5od2"]
-atlas = ExtResource("7_bpj2y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6dxa"]
+atlas = ExtResource("11_3c3q1")
 region = Rect2(0, 0, 250, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p24p1"]
-atlas = ExtResource("7_bpj2y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbpeo"]
+atlas = ExtResource("11_3c3q1")
 region = Rect2(250, 0, 250, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dibgp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q5od2")
+"texture": SubResource("AtlasTexture_j6dxa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p24p1")
+"texture": SubResource("AtlasTexture_tbpeo")
 }],
 "loop": false,
 "name": &"default",
@@ -117,7 +122,7 @@ texture = ExtResource("1_cyucj")
 [node name="Coffee" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-298, 231)
 script = ExtResource("6_vj4gh")
-item_sprite = ExtResource("4_ltomb")
+item_sprite = ExtResource("4_dibgp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Coffee"]
 shape = SubResource("CircleShape2D_m2gvb")
@@ -129,7 +134,7 @@ texture = ExtResource("4_ltomb")
 [node name="Pizza" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(296, 204.00002)
 script = ExtResource("6_vj4gh")
-item_sprite = ExtResource("4_d3v5n")
+item_sprite = ExtResource("6_njyqc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Pizza"]
 shape = SubResource("CircleShape2D_m2gvb")
@@ -141,7 +146,7 @@ texture = ExtResource("4_d3v5n")
 [node name="Water" type="Area2D" parent="Minigame" groups=["hazards"]]
 position = Vector2(-253.00003, 88.00001)
 script = ExtResource("6_vj4gh")
-item_sprite = ExtResource("6_8li02")
+item_sprite = ExtResource("8_3c3q1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Water"]
 shape = SubResource("CircleShape2D_m2gvb")
@@ -198,6 +203,24 @@ theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
 text = "TASK : Remove clutter from the work zone"
 
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 170.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("12_p24p1")
+flat = true
+expand_icon = true
+
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("12_q5od2")]
+visible = false
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_m2gvb")
@@ -205,3 +228,4 @@ libraries = {
 
 [connection signal="area_entered" from="Minigame/Trash" to="Minigame/Trash" method="_on_area_entered"]
 [connection signal="area_exited" from="Minigame/Trash" to="Minigame/Trash" method="_on_area_exited"]
+[connection signal="button_up" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_button_up"]

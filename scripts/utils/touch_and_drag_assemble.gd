@@ -77,16 +77,27 @@ func check_for_slot() -> void:
 			
 	return_to_start()
 
+# Inside your drag and touch script
 func snap_to_slot(slot_area: Area2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(self, "global_position", slot_area.global_position, 0.1).set_trans(Tween.TRANS_CUBIC)
-	
-	if slot_area.has_method("occupy_slot"):
-		slot_area.occupy_slot()
+		var tween = create_tween()
+		tween.tween_property(self, "global_position", slot_area.global_position, 0.1).set_trans(Tween.TRANS_CUBIC)
 		
-	await tween.finished
-	queue_free() # Uncomment if item should disappear after snapping
-
+		await tween.finished
+		
+		# Check if the minigame allows this specific item to be installed
+		# We look for a function in the parent or main scene
+		var main_game = get_tree().current_scene 
+		if main_game.has_method("request_installation"):
+			var success = main_game.request_installation(item_name_string)
+			
+			if success:
+					queue_free() # Only vanish if the game says OK!
+			else:
+				return_to_start() # Go back if the Motherboard isn't ready
+		else:
+				# Fallback logic if no main game logic exists
+				queue_free()
+				
 func return_to_start() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", initial_position, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

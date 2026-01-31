@@ -9,6 +9,7 @@ extends Node2D
 @onready var cpu_fan_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/fan-cpu.png")
 @onready var ram_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-ram.png")
 @onready var gpu_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-gpu.png")
+@onready var options_menu : Control = $CanvasLayer/OptionsMenu
 
 var item_placement_sequence : int = 0
 var cpu_slot : bool = false
@@ -73,3 +74,5 @@ func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
 	
+func _on_menu_button_button_up() -> void:
+	options_menu.show()

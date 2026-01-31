@@ -6,6 +6,7 @@ extends Node2D
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var objective_label : Label = $CanvasLayer/ObjectiveLabel
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
+@onready var options_menu : Control = $CanvasLayer/OptionsMenu
 
 var triggered_cleanup_event : bool = false
 
@@ -41,3 +42,7 @@ func trigger_teacher_move() -> void:
 	
 	teacher_sprite.hide()
 	objective_label.show()
+
+
+func _on_menu_button_button_up() -> void:
+	options_menu.show()

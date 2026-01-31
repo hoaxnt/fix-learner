@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=26 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://cyibvwk8cyhuy" path="res://assets/items/assemble_disassemble/parts/gpu.png" id="10_pgw27"]
 [ext_resource type="Texture2D" uid="uid://cs6so1e2xvmeo" path="res://assets/items/assemble_disassemble/parts/cpu-fan.png" id="11_f0g6q"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="12_k3quq"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="14_kfmgw"]
+[ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="15_g0ddt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
 size = Vector2(74, 74)
@@ -287,8 +289,27 @@ text = "TASK : Assemble the motherboard"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("14_kfmgw")]
+visible = false
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 170.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("15_g0ddt")
+flat = true
+expand_icon = true
+
 [connection signal="area_exited" from="Slots/CPUSlot" to="." method="_on_cpu_slot_area_exited"]
 [connection signal="area_exited" from="Slots/ThermalPasteSlot" to="." method="_on_thermal_paste_slot_area_exited"]
 [connection signal="area_exited" from="Slots/CPUFanSlot" to="." method="_on_cpu_fan_slot_area_exited"]
 [connection signal="area_exited" from="Slots/RamSlot" to="." method="_on_ram_slot_area_exited"]
 [connection signal="area_exited" from="Slots/GPUSlot" to="." method="_on_gpu_slot_area_exited"]
+[connection signal="button_up" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_button_up"]
