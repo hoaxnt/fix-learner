@@ -8,17 +8,17 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -290.0
+offset_top = -240.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_bottom = 20
 script = ExtResource("1_i22jp")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(1500, 250)
+custom_minimum_size = Vector2(1500, 200)
 layout_mode = 2
 theme = ExtResource("1_svbij")
 
@@ -44,7 +44,7 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_svbij")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Empty"
 
