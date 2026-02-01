@@ -310,22 +310,13 @@ icon = ExtResource("15_g0ddt")
 flat = true
 expand_icon = true
 
-[node name="Closeup" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CPUCloseup" parent="CanvasLayer/Closeup" node_paths=PackedStringArray("dialog_box") instance=ExtResource("16_3fvf7")]
-layout_mode = 1
+[node name="CPUCloseup" parent="CanvasLayer" node_paths=PackedStringArray("dialog_box") instance=ExtResource("16_3fvf7")]
 images = Array[Texture2D]([ExtResource("17_1ased"), ExtResource("18_vwin0"), ExtResource("19_2eflm"), ExtResource("20_oy8bn"), ExtResource("21_68ote")])
 descriptions = Array[String](["A", "B", "C", "D", "E"])
-dialog_box = NodePath("../../DialogBox")
+dialog_box = NodePath("../DialogBox")
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("3_8xini")]
-dialog_lines = Array[String](["sup"])
+dialog_lines = Array[String](["Let's build it!"])
 
 [connection signal="area_exited" from="Slots/CPUSlot" to="." method="_on_cpu_slot_area_exited"]
 [connection signal="area_exited" from="Slots/ThermalPasteSlot" to="." method="_on_thermal_paste_slot_area_exited"]

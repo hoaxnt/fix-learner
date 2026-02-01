@@ -55,6 +55,8 @@ func update_dialog_one_line_only(title: String, desc: String):
 	show()
 	
 func update_dialog(title: String, new_lines: Array[String]):
+	if not is_node_ready():
+		await ready 
 	character_name_label.text = title
 	dialog_lines = new_lines
 	current_line_index = 0

@@ -17,6 +17,7 @@ var thermal_paste_slot : bool = false
 var cpu_fan_slot : bool = false
 var ram_slot : bool = false
 var gpu_slot : bool = false
+var current_component_holding : String = "none" 
 
 signal motherboard_assembled
 
@@ -26,6 +27,7 @@ func _on_cpu_slot_area_exited(area: Area2D) -> void:
 			cpu_slot = true
 			motherboard_sprite.texture = cpu_slot_texture
 			area.queue_free()
+			current_component_holding = "CPU"
 
 
 func _on_thermal_paste_slot_area_exited(area: Area2D) -> void:
