@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cywppu2wtchfe"]
+[gd_scene load_steps=9 format=3 uid="uid://cywppu2wtchfe"]
 
 [ext_resource type="Script" uid="uid://24n35y5b5u7q" path="res://scripts/utils/tutorial_popup.gd" id="1_v46ox"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_ed2ty"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bgg5307i05rts" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_3.PNG" id="4_5ynrn"]
 [ext_resource type="Texture2D" uid="uid://cehb30abnai4w" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_4.PNG" id="5_q8cdn"]
 [ext_resource type="Texture2D" uid="uid://der5j5b35mkxb" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_5.PNG" id="6_llsyd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvkc1"]
 
 [node name="CPUTutorialPopup" type="Control"]
 layout_mode = 3
@@ -19,20 +21,26 @@ script = ExtResource("1_v46ox")
 images = Array[Texture2D]([ExtResource("2_jvkc1"), ExtResource("3_3vtub"), ExtResource("4_5ynrn"), ExtResource("5_q8cdn"), ExtResource("6_llsyd")])
 descriptions = Array[String](["A", "B", "C", "D", "E"])
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jvkc1")
+
 [node name="Slides" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1280, 720)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 320.0
-offset_bottom = 180.0
+offset_left = -640.0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 760.0
 grow_horizontal = 2
-grow_vertical = 2
 expand_mode = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
