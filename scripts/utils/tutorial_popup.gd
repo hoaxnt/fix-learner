@@ -10,7 +10,6 @@ var current_index : int = 0
 func _ready() -> void:
 	if !dialog_box.is_connected("dialog_finished", _on_dialog_finished):
 		dialog_box.dialog_finished.connect(_on_dialog_finished)
-	# Use call_deferred to wait one frame until everything is initialized
 	update_content.call_deferred()
 
 func _on_dialog_finished() -> void:
@@ -18,7 +17,6 @@ func _on_dialog_finished() -> void:
 	if current_index < images.size():
 		update_content()
 	else:
-		#get_parent().hide()
 		queue_free()
 
 func update_content() -> void:
@@ -30,4 +28,4 @@ func update_content() -> void:
 		# Wrap the single string in an Array[String] as your function expects
 		var lines : Array[String] = [descriptions[current_index]]
 		# Pass both the title and the array
-		dialog_box.update_dialog("Tutorial Step", lines)
+		dialog_box.update_dialog("Teacher", lines)
