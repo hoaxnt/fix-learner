@@ -2,7 +2,7 @@ extends Control
 
 @export var images : Array[Texture2D]
 @export_multiline var descriptions : Array[String]
-@export var dialog_box : MarginContainer# = $CanvasLayer/DialogBox
+@onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var slides : TextureRect = $Slides
 
 var current_index : int = 0

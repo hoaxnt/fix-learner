@@ -17,6 +17,8 @@ extends Node2D
 @onready var ram_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-ram.png")
 @onready var gpu_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-gpu.png")
 
+# Preloaded Scene
+@onready var cpu_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_tutorial_popup.tscn")
 
 var item_placement_sequence : int = 0
 var cpu_slot : bool = false
@@ -33,7 +35,7 @@ func _on_cpu_slot_area_exited(area: Area2D) -> void:
 			cpu_slot = true
 			motherboard_sprite.texture = cpu_slot_texture
 			area.queue_free()
-			# Transitioin to a scene without closing this current scene to avoid progress lost
+			canvas_layer.add_child(cpu_tutorial_popup.instantiate())
 
 func _on_thermal_paste_slot_area_exited(area: Area2D) -> void:
 	if area.name == "ThermalPaste" and user_data.dragging == false:
@@ -41,7 +43,6 @@ func _on_thermal_paste_slot_area_exited(area: Area2D) -> void:
 			thermal_paste_slot = true
 			motherboard_sprite.texture = thermal_paste_slot_texture
 			area.queue_free()
-
 
 func _on_cpu_fan_slot_area_exited(area: Area2D) -> void:
 	if area.name == "Fan" and user_data.dragging == false:
