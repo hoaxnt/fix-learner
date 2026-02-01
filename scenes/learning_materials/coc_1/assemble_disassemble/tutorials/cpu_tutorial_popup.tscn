@@ -30,6 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jvkc1")
+metadata/_edit_lock_ = true
 
 [node name="Slides" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1280, 720)
