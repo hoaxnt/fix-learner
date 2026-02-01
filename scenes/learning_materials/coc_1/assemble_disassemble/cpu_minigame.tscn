@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=26 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -15,12 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="12_k3quq"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="14_kfmgw"]
 [ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="15_g0ddt"]
-[ext_resource type="PackedScene" uid="uid://cywppu2wtchfe" path="res://scenes/utils/tutorial_popup.tscn" id="16_3fvf7"]
-[ext_resource type="Texture2D" uid="uid://cxl7tg03uofev" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_1.PNG" id="17_1ased"]
-[ext_resource type="Texture2D" uid="uid://nto3trse2h7d" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_2.PNG" id="18_vwin0"]
-[ext_resource type="Texture2D" uid="uid://bgg5307i05rts" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_3.PNG" id="19_2eflm"]
-[ext_resource type="Texture2D" uid="uid://cehb30abnai4w" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_4.PNG" id="20_oy8bn"]
-[ext_resource type="Texture2D" uid="uid://der5j5b35mkxb" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_5.PNG" id="21_68ote"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y6sc"]
 size = Vector2(74, 74)
@@ -309,11 +303,6 @@ focus_mode = 0
 icon = ExtResource("15_g0ddt")
 flat = true
 expand_icon = true
-
-[node name="CPUCloseup" parent="CanvasLayer" node_paths=PackedStringArray("dialog_box") instance=ExtResource("16_3fvf7")]
-images = Array[Texture2D]([ExtResource("17_1ased"), ExtResource("18_vwin0"), ExtResource("19_2eflm"), ExtResource("20_oy8bn"), ExtResource("21_68ote")])
-descriptions = Array[String](["A", "B", "C", "D", "E"])
-dialog_box = NodePath("../DialogBox")
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("3_8xini")]
 dialog_lines = Array[String](["Let's build it!"])

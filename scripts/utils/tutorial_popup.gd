@@ -12,7 +12,7 @@ func _ready() -> void:
 		dialog_box.dialog_finished.connect(_on_dialog_finished)
 	# Use call_deferred to wait one frame until everything is initialized
 	update_content.call_deferred()
-# NOTE: ADD A BOOL TO UPDATE CONTENT IN ORDER TO NOT EXECUTE THE UPDATE CONTENT IMMIEDIATELY
+
 func _on_dialog_finished() -> void:
 	current_index += 1
 	if current_index < images.size():
