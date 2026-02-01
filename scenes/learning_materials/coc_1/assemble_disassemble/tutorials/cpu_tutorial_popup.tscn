@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://der5j5b35mkxb" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_5.PNG" id="6_llsyd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvkc1"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 
 [node name="CPUTutorialPopup" type="Control"]
 layout_mode = 3
