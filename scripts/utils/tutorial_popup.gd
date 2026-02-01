@@ -18,7 +18,8 @@ func _on_dialog_finished() -> void:
 	if current_index < images.size():
 		update_content()
 	else:
-		get_parent().hide()
+		#get_parent().hide()
+		queue_free()
 
 func update_content() -> void:
 	# Update the visual slide
