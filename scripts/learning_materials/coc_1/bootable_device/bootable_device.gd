@@ -6,14 +6,17 @@ extends Node2D
 @export var scenes_texture : Array[Texture2D]
 
 func _ready() -> void:
-	if dialog_box.has_signal("line_changed"):
-			dialog_box.line_changed.connect(_on_line_changed)
-	dialog_box.dialog_finished.connect(_tutorial_scene)
+	dialog_box.line_changed.connect(_on_line_changed)
+	if dialog_box.has_signal("dialog_finished"):
+		dialog_box.dialog_finished.connect(_tutorial_scene)
 	
 func _tutorial_scene():
 	teacher_sprite.hide()
 	
 	var data : Array[String] = [
+	"Well done, student. Now, let’s take it a step further.",
+	"In our next lab, you’ll be preparing a bootable flash drive, an essential skill for OS installation and troubleshooting system failures.",
+	"Pay close attention to the formatting steps.",
 	"First, search for 'Rufus' and click the link that says Rufus... you know the one.",
 	"Now, click on 'rufus-4.12.exe' make sure it's the standard type.",
 	"You’ll see the setup file pop up in the top right corner, but don't click it just yet!",

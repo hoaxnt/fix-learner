@@ -31,4 +31,3 @@ texture = ExtResource("2_5v5kh")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_52ypj")]
-dialog_lines = Array[String](["Well done, student. Now, let’s take it a step further. ", "In our next lab, you’ll be preparing a bootable flash drive, an essential skill for OS installation and troubleshooting system failures.", "Pay close attention to the formatting steps."])
