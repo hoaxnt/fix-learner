@@ -11,7 +11,7 @@
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
-scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag")])
+scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(0, -18)

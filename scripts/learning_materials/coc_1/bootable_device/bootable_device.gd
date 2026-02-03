@@ -6,6 +6,8 @@ extends Node2D
 @export var scenes_texture : Array[Texture2D]
 
 func _ready() -> void:
+	if dialog_box.has_signal("line_changed"):
+			dialog_box.line_changed.connect(_on_line_changed)
 	dialog_box.dialog_finished.connect(_tutorial_scene)
 	
 func _tutorial_scene():
@@ -30,6 +32,11 @@ func _tutorial_scene():
 	"Click on the Rufus file...",
 	"And finally, click 'Open'!"
 ]
-	
-	
+# Show the first texture immediately
+	if scenes_texture.size() > 0:
+			background.texture = scenes_texture[0]
 	dialog_box.update_dialog("Teacher", data)
+
+func _on_line_changed(index: int):
+	if index < scenes_texture.size():
+			background.texture = scenes_texture[index]

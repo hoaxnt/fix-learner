@@ -12,6 +12,7 @@ extends MarginContainer
 
 var current_line_index: int = 0
 signal dialog_finished
+signal line_changed(index: int)
 
 func _ready():
 	show()
@@ -33,6 +34,7 @@ func _on_next_button_pressed() -> void:
 	else:
 		current_line_index += 1
 		if current_line_index < dialog_lines.size():
+			line_changed.emit(current_line_index)
 			show_line()
 		else:
 			finish_dialog()
