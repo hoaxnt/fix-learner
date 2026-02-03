@@ -3,43 +3,55 @@ extends Node2D
 @onready var background : Sprite2D = $Background
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var teacher_sprite : Sprite2D = $Teacher
+
 @export var scenes_texture : Array[Texture2D]
 
 func _ready() -> void:
+	# Connect the signal from your DialogBox script
 	dialog_box.line_changed.connect(_on_line_changed)
-	if dialog_box.has_signal("dialog_finished"):
-		dialog_box.dialog_finished.connect(_tutorial_scene)
 	
-func _tutorial_scene():
-	teacher_sprite.hide()
+	# Start the tutorial right away
+	_start_tutorial()
+
+func _start_tutorial():
+	teacher_sprite.show()
 	
 	var data : Array[String] = [
-	"Well done, student. Now, let’s take it a step further.",
-	"In our next lab, you’ll be preparing a bootable flash drive, an essential skill for OS installation and troubleshooting system failures.",
-	"Pay close attention to the formatting steps.",
-	"First, search for 'Rufus' and click the link that says Rufus... you know the one.",
-	"Now, click on 'rufus-4.12.exe' make sure it's the standard type.",
-	"You’ll see the setup file pop up in the top right corner, but don't click it just yet!",
-	"Next, go to Google Chrome and search for 'Windows 11 ISO'.",
-	"Click the 'Download Windows 11' link below.",
-	"Now you select the OS type. For this one, we're definitely going with Windows 11.",
-	"Click the 'Select Download' drop-down section.",
-	"Choose the 'Windows 11 Multi-edition ISO for x64 devices'.",
-	"Wait for a few seconds... loading dito boy.",
-	"In this section, we need to pick the language we're going to use.",
-	"Choose 'English (United States)'.",
-	"And wait a few more seconds... loading ule boy.",
-	"Now, click the '64-bit Download' button.",
-	"You’ll see the download progress in the top right corner.",
-	"While Windows 11 is downloading, click the Rufus icon in your downloads to find the folder—just click the button next to it, boi.",
-	"Click on the Rufus file...",
-	"And finally, click 'Open'!"
-]
-# Show the first texture immediately
+		"Well done, student. Now, let’s take it a step further.",
+		"In our next lab, you’ll be preparing a bootable flash drive...",
+		"Pay close attention to the formatting steps.",
+		"First, search for 'Rufus' and click the link...",
+		"Now, click on 'rufus-4.12.exe'...",
+		"You’ll see the setup file pop up...",
+		"Next, go to Google Chrome and search for 'Windows 11 ISO'...",
+		"Click download Windows 11 below...",
+		"Now select the type of OS...",
+		"Click the select download drop down section...",
+		"Now select the windows 11 multi edition...",
+		"Wait for a few seconds... loading dito boy",
+		"Now in this section, we will select the language...",
+		"Choose english(united states)...",
+		"And wait a few seconds... loading ule boy",
+		"Click 64 bit download...",
+		"And you will see on the right top that the download is in progress...",
+		"While the win11 is downloading, click the rufus button boi...",
+		"Click the rufus...",
+		"And click open!"
+	]
+	# Set initial texture before starting
 	if scenes_texture.size() > 0:
-			background.texture = scenes_texture[0]
+		background.texture = scenes_texture[0]
+		
 	dialog_box.update_dialog("Teacher", data)
 
 func _on_line_changed(index: int):
-	if index < scenes_texture.size():
-			background.texture = scenes_texture[index]
+	if index >= 3:
+		teacher_sprite.hide()
+	else:
+		teacher_sprite.show()
+		
+	if index < 3:
+		background.texture = scenes_texture[0]
+	else:
+		if index < scenes_texture.size():
+			background.texture = scenes_texture[index - 3]
