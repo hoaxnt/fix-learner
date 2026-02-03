@@ -133,7 +133,7 @@ zoom = Vector2(1.88, 1.88)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_y8vlm")]
-dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside", "Don't forget to check for static"])
+dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside it.", "Also, ensure the power supply is properly placed and connected."])
 
 [connection signal="area_exited" from="Parts/PSU" to="." method="_on_psu_area_exited"]
 [connection signal="area_exited" from="Parts/Mobo" to="." method="_on_mobo_area_exited"]

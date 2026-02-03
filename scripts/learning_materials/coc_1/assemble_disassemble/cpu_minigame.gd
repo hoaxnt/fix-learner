@@ -76,10 +76,11 @@ func _process(_delta: float) -> void:
 	
 	teacher_sprite.show()
 	
-	var data : Array[String] = ["nice par","ayos ka","magaling!"]
+	var data : Array[String] = ["Excellent job!","All components are in the correct slots and the motherboard assembly is successful."]
 	dialog_box.update_dialog("Teacher", data)
 	
 	await dialog_box.dialog_finished
+	
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
 	
 func _on_menu_button_button_up() -> void:

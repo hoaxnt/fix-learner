@@ -305,7 +305,7 @@ flat = true
 expand_icon = true
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("3_8xini")]
-dialog_lines = Array[String](["Let's build it!"])
+dialog_lines = Array[String](["You may now begin assembling.", "Drag each component to the correct motherboard slot to begin the assembly process."])
 
 [connection signal="area_exited" from="Slots/CPUSlot" to="." method="_on_cpu_slot_area_exited"]
 [connection signal="area_exited" from="Slots/ThermalPasteSlot" to="." method="_on_thermal_paste_slot_area_exited"]

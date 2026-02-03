@@ -9,6 +9,13 @@ extends Node2D
 
 @onready var mobo_installed : bool = false
 @onready var psu_installed : bool = false
+	
+func _ready() -> void:
+	if dialog_box:
+		dialog_box.dialog_finished.connect(_hide_teacher)
+
+func _hide_teacher():
+	teacher_sprite.hide()
 
 func request_installation(item_name: String) -> bool:
 		if item_name == "Power Supply":
