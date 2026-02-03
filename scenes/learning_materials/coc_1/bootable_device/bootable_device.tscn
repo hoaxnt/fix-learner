@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7rhvnd8edwwx"]
+[gd_scene load_steps=12 format=3 uid="uid://b7rhvnd8edwwx"]
 
 [ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_6sn6k"]
@@ -9,10 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://ch6klwshx5m50" path="res://assets/items/bootable_device/4.jpg" id="5_33wag"]
 [ext_resource type="Texture2D" uid="uid://4085123rudwc" path="res://assets/items/bootable_device/5.jpg" id="6_33wag"]
 [ext_resource type="Texture2D" uid="uid://cbm0adp81fiwc" path="res://assets/items/bootable_device/6.jpg" id="7_hnys1"]
+[ext_resource type="Texture2D" uid="uid://d0jtwd42ka824" path="res://assets/items/bootable_device/7.jpg" id="8_ku0y7"]
+[ext_resource type="Texture2D" uid="uid://caoal6yf4otx1" path="res://assets/items/bootable_device/8.jpg" id="9_8cjkf"]
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
-scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), ExtResource("7_hnys1"), null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), ExtResource("7_hnys1"), ExtResource("8_ku0y7"), ExtResource("9_8cjkf"), null, null, null, null, null, null, null, null, null, null, null, null])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(0, -18)
