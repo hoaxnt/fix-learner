@@ -1,13 +1,14 @@
 extends Node2D
 
+@onready var background : Sprite2D = $Background
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var teacher_sprite : Sprite2D = $Teacher
 @export var scenes_texture : Array[Texture2D]
 
 func _ready() -> void:
-	dialog_box.dialog_finished.connect(_hide_teacher)
+	dialog_box.dialog_finished.connect(_tutorial_scene)
 	
-func _hide_teacher():
+func _tutorial_scene():
 	teacher_sprite.hide()
 	
 	var data : Array[String] = [
@@ -29,5 +30,6 @@ func _hide_teacher():
 	"Click on the Rufus file...",
 	"And finally, click 'Open'!"
 ]
+	
 	
 	dialog_box.update_dialog("Teacher", data)
