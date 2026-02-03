@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7rhvnd8edwwx"]
+[gd_scene load_steps=6 format=3 uid="uid://b7rhvnd8edwwx"]
 
 [ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_6sn6k"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_52ypj"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_5v5kh"]
+[ext_resource type="Texture2D" uid="uid://ck76i6e4ivhsq" path="res://assets/items/bootable_device/2.jpg" id="3_x8xhg"]
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
+scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg")])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(0, -18)
@@ -16,8 +18,8 @@ texture = ExtResource("1_4d8m2")
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Teacher" type="Sprite2D" parent="."]
-position = Vector2(-51.000023, 252.99997)
-scale = Vector2(3.1305146, 3.1305146)
+position = Vector2(472, 252)
+scale = Vector2(2.8177083, 2.8177083)
 texture = ExtResource("2_5v5kh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
