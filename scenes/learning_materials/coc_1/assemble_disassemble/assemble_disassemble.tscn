@@ -26,7 +26,7 @@ zoom = Vector2(1.88, 1.88)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_is6v6")]
-dialog_lines = Array[String](["Great job so far, student! Our next laboratory will guide you through the proper assembly and disassembly of computer components using correct handling techniques.", "You will learn to identify each major part while ensuring every piece is installed safely and precisely."])
+dialog_lines = Array[String](["Our next laboratory will guide you through the proper assembly and disassembly of computer components using correct handling techniques.", "You will learn to identify each major part while ensuring every piece is installed safely and precisely."])
 
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(150, 150)

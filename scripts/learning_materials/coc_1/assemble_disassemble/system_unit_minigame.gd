@@ -45,7 +45,7 @@ func install_psu():
 
 func trigger_end_dialog():
 		teacher_sprite.show()
-		var data : Array[String] = ["Great job!", "Let's move on to installing software."]
+		var data : Array[String] = ["Great job!", "Now, let's create a bootable flash drive to install the OS."]
 		dialog_box.update_dialog("Teacher", data)
 		await dialog_box.dialog_finished
 		SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
