@@ -20,7 +20,7 @@ func change_scene(target_scene_path: String) -> void:
 	
 	animation_player.play("fade_to_black")
 	await animation_player.animation_finished
-	
+
 	var path = target_scene_path.strip_edges()
 	var error = get_tree().change_scene_to_file(path)
 	
