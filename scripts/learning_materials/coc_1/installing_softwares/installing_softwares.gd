@@ -14,7 +14,7 @@ var current_tex_index : int = 0
 # 0-3 are intro/setup lines (Texture 0)
 # 4 starts the first technical screenshot
 var texture_map : Dictionary = {
-	0: 0, 1: 0, 2: 0, 3: 0,  # Intro lines use the first texture
+	0: 0, 1: 0, 2: 0, 3: 0, 
 	4: 1,  # Boot Media
 	5: 2,  # Regional
 	6: 3,  # Install Now
