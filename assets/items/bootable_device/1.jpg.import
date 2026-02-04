@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1vhoeb7dfrnb"
-path="res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.ctex"
+path.s3tc="res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.s3tc.ctex"
+path.etc2="res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/items/bootable_device/1.jpg"
-dest_files=["res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.ctex"]
+dest_files=["res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.s3tc.ctex", "res://.godot/imported/1.jpg-e7ca22511d5887b85433af7bf24c6ae3.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
