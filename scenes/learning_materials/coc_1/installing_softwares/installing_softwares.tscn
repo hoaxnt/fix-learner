@@ -1,16 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://f8v2nxm186nu"]
+[gd_scene load_steps=22 format=3 uid="uid://f8v2nxm186nu"]
 
+[ext_resource type="Texture2D" uid="uid://bsdvfbabnfk5q" path="res://assets/items/installing_softwares/1.jpg" id="1_1wsga"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_7p0ts"]
+[ext_resource type="Script" uid="uid://cimpv0marhk52" path="res://scripts/learning_materials/coc_1/installing_softwares/installing_softwares.gd" id="1_su1qh"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="2_d0q0g"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="3_1wsga"]
+[ext_resource type="Texture2D" uid="uid://dhxywopiyord6" path="res://assets/items/installing_softwares/2.jpg" id="3_kt6lq"]
+[ext_resource type="Texture2D" uid="uid://1j0y2ughewdn" path="res://assets/items/installing_softwares/3.jpg" id="4_vbukk"]
+[ext_resource type="Texture2D" uid="uid://dgy4bxpwj1odd" path="res://assets/items/installing_softwares/4.jpg" id="5_3l5j0"]
+[ext_resource type="Texture2D" uid="uid://443vrhtdxaep" path="res://assets/items/installing_softwares/5.jpg" id="6_115uk"]
+[ext_resource type="Texture2D" uid="uid://dsehl2im1xohs" path="res://assets/items/installing_softwares/6.jpg" id="7_odyoe"]
+[ext_resource type="Texture2D" uid="uid://c78s1glv5yvsq" path="res://assets/items/installing_softwares/7.jpg" id="8_cxg5h"]
+[ext_resource type="Texture2D" uid="uid://3k0sfe1tkh77" path="res://assets/items/installing_softwares/8.jpg" id="9_isyoq"]
+[ext_resource type="Texture2D" uid="uid://ccchq2duk03f2" path="res://assets/items/installing_softwares/9.jpg" id="10_llavb"]
+[ext_resource type="Texture2D" uid="uid://8mcwn0l7qpjd" path="res://assets/items/installing_softwares/10.jpg" id="11_pdo6b"]
+[ext_resource type="Texture2D" uid="uid://ch27hdk5sk5bm" path="res://assets/items/installing_softwares/11.jpg" id="12_g321q"]
+[ext_resource type="Texture2D" uid="uid://c752b750wlse5" path="res://assets/items/installing_softwares/12.jpg" id="13_1c5tq"]
+[ext_resource type="Texture2D" uid="uid://c67e6lrmxys50" path="res://assets/items/installing_softwares/13.jpg" id="14_gmx8n"]
+[ext_resource type="Texture2D" uid="uid://m4v0qa6qvhq2" path="res://assets/items/installing_softwares/14.jpg" id="15_nuulh"]
+[ext_resource type="Texture2D" uid="uid://dsusj351ouvwj" path="res://assets/items/installing_softwares/15.jpg" id="16_xuq2m"]
+[ext_resource type="Texture2D" uid="uid://b1cuhnvvgedfc" path="res://assets/items/installing_softwares/16.jpg" id="17_1nnfr"]
+[ext_resource type="Texture2D" uid="uid://cu7dmuu5sf8kt" path="res://assets/items/installing_softwares/17.jpg" id="18_8kmb3"]
 
 [node name="InstallingSoftwares" type="Node2D"]
+script = ExtResource("1_su1qh")
+scenes_texture = Array[Texture2D]([ExtResource("1_1wsga"), ExtResource("3_kt6lq"), ExtResource("4_vbukk"), ExtResource("5_3l5j0"), ExtResource("6_115uk"), ExtResource("7_odyoe"), ExtResource("8_cxg5h"), ExtResource("9_isyoq"), ExtResource("10_llavb"), ExtResource("11_pdo6b"), ExtResource("12_g321q"), ExtResource("13_1c5tq"), ExtResource("14_gmx8n"), ExtResource("15_nuulh"), ExtResource("16_xuq2m"), ExtResource("17_1nnfr"), ExtResource("18_8kmb3")])
 
 [node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_1wsga")
 
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Teacher" type="Sprite2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-107, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
