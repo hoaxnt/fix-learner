@@ -6,6 +6,16 @@ extends Node2D
 
 @export var scenes_texture : Array[Texture2D]
 
+var current_tex_index : int = 0
+
+var texture_map : Dictionary = {
+	0: 0,  # Line 0 starts with Texture 0
+	3: 1,  # Line 3 switches to Texture 1
+	6: 2,  # Line 6 switches to Texture 2
+	10: 3, # Line 10 switches to Texture 3 (this effectively "pauses" Tex 2 for 4 lines)
+	15: 4  # And so on...
+}
+
 func _ready() -> void:
 	# Connect the signal from your DialogBox script
 	dialog_box.line_changed.connect(_on_line_changed)
@@ -46,22 +56,25 @@ func _start_tutorial():
 	"Just wait until our ISO file is extracted and don't touch it.",
 	"Once our extracted ISO file is finished, just click the Close button at the bottom.",
 	"Now let's go to our PC's file manager and check if the inserted USB files have been extracted correctly.",
-	"Once all the files are okay, it can be used to reformat the computer."
+	"Once all the files are okay, it can be used to reformat the computer.",
+	"WELL DONE!"
+	
 ]
 	# Set initial texture before starting
 	if scenes_texture.size() > 0:
 		background.texture = scenes_texture[0]
 		
 	dialog_box.update_dialog("Teacher", data)
-
+	
 func _on_line_changed(index: int):
-	if index >= 3:
-		teacher_sprite.hide()
-	else:
-		teacher_sprite.show()
-		
-	if index < 3:
-		background.texture = scenes_texture[0]
-	else:
-		if index < scenes_texture.size():
-			background.texture = scenes_texture[index - 3]
+	# 1. Handle Teacher Visibility
+	teacher_sprite.visible = (index < 3)
+
+	# 2. Handle Flexible Texture Logic
+	# Check if the current dialog line is defined in our map
+	if texture_map.has(index):
+		current_tex_index = texture_map[index]
+	
+	# Safety check: make sure the texture index exists in your array
+	if current_tex_index < scenes_texture.size():
+		background.texture = scenes_texture[current_tex_index]
