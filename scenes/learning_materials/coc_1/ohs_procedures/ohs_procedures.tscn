@@ -1,20 +1,22 @@
-[gd_scene load_steps=18 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=20 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
-[ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs-procedures/toolbox.png" id="3_7ew3f"]
+[ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs_procedures/toolbox.png" id="3_7ew3f"]
 [ext_resource type="Texture2D" uid="uid://b6sy44uoykd42" path="res://assets/characters/technician.png" id="3_ilwiu"]
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/item.tscn" id="3_k3u2l"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
-[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs-procedures/table.png" id="5_q75wh"]
-[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs-procedures/gloves.png" id="6_g5lw6"]
-[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs-procedures/anti-static-wrist-strap.png" id="6_hwvad"]
+[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="5_q75wh"]
+[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="6_g5lw6"]
+[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="6_hwvad"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="6_v3s6i"]
-[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs-procedures/head-lamp.png" id="8_aolge"]
-[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs-procedures/safety-glasses.png" id="10_ilwiu"]
-[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs-procedures/screw-driver.png" id="11_iylnk"]
+[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="8_aolge"]
+[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="10_ilwiu"]
+[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="11_iylnk"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="16_5ct4s"]
+[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="17_f68pd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
 atlas = ExtResource("1_25a41")
@@ -139,3 +141,9 @@ text = "TASK : Drag the essentials into the toolbox"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("17_f68pd")]
+options_menu = NodePath("../OptionsMenu")
+
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("16_5ct4s")]
+visible = false
