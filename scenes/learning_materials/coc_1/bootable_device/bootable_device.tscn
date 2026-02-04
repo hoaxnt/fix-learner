@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b7rhvnd8edwwx"]
+[gd_scene load_steps=28 format=3 uid="uid://b7rhvnd8edwwx"]
 
 [ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_6sn6k"]
@@ -26,10 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://vphpqx7ldhho" path="res://assets/items/bootable_device/21.jpg" id="22_bvavl"]
 [ext_resource type="Texture2D" uid="uid://ct6a6rra5hk4y" path="res://assets/items/bootable_device/22.jpg" id="23_by5nq"]
 [ext_resource type="Texture2D" uid="uid://cavpr71j0tltq" path="res://assets/items/bootable_device/23.jpg" id="24_lytit"]
+[ext_resource type="Texture2D" uid="uid://5b8d2f40ufmn" path="res://assets/items/bootable_device/24.jpg" id="25_3ssrx"]
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
-scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), ExtResource("7_hnys1"), ExtResource("8_ku0y7"), ExtResource("9_8cjkf"), ExtResource("10_8cjkf"), ExtResource("11_lvb1j"), ExtResource("12_xl7mp"), ExtResource("13_ssxbq"), ExtResource("14_b5cbi"), ExtResource("15_xlonq"), ExtResource("16_mq5lg"), ExtResource("17_y5503"), ExtResource("18_fgwdo"), ExtResource("19_yn34w"), ExtResource("20_b2eyu"), ExtResource("21_w8682"), ExtResource("22_bvavl"), ExtResource("23_by5nq"), ExtResource("24_lytit"), null, null])
+scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), ExtResource("7_hnys1"), ExtResource("8_ku0y7"), ExtResource("9_8cjkf"), ExtResource("10_8cjkf"), ExtResource("11_lvb1j"), ExtResource("12_xl7mp"), ExtResource("13_ssxbq"), ExtResource("14_b5cbi"), ExtResource("15_xlonq"), ExtResource("16_mq5lg"), ExtResource("17_y5503"), ExtResource("18_fgwdo"), ExtResource("19_yn34w"), ExtResource("20_b2eyu"), ExtResource("21_w8682"), ExtResource("22_bvavl"), ExtResource("23_by5nq"), ExtResource("24_lytit"), ExtResource("25_3ssrx"), null])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(0, -18)
