@@ -9,11 +9,33 @@ extends Node2D
 var current_tex_index : int = 0
 
 var texture_map : Dictionary = {
-	0: 0,  # Line 0 starts with Texture 0
-	3: 1,  # Line 3 switches to Texture 1
-	6: 2,  # Line 6 switches to Texture 2
-	10: 3, # Line 10 switches to Texture 3 (this effectively "pauses" Tex 2 for 4 lines)
-	15: 4  # And so on...
+	0: 0,
+	3: 0,
+	4: 1,
+	5: 2,
+	6: 3,
+	7: 4,
+	8: 5,
+	9: 6,
+	10: 6,
+	11: 7,
+	12: 8,
+	13: 9,
+	14: 10,
+	15: 11,
+	16: 12,
+	17: 13,
+	18: 14,
+	19: 15,
+	20: 16,
+	21: 17,
+	22: 17,
+	23: 18,
+	24: 19,
+	25: 20,
+	26: 21,
+	27: 22,
+	28: 23
 }
 
 func _ready() -> void:
@@ -30,6 +52,7 @@ func _start_tutorial():
 	"Well done, student. Now, let’s take it a step further.",
 	"In our next lab, you’ll be preparing a bootable flash drive...",
 	"Pay close attention to the formatting steps.",
+	
 	"Search Rufus and click the link below that says Rufus...",
 	"Now click the rufus-4.12.exe with the standard type.",
 	"You can now see the downloaded setup on the top right corner, but don't click it yet.",
@@ -38,10 +61,10 @@ func _start_tutorial():
 	"After that, you may select the type of OS you want to download; this time we are using Windows 11.",
 	"Click the select download drop down section.",
 	"Now select the Windows 11 Multi-edition ISO for x64 devices.",
-	"Wait for a few seconds... loading dito boy.",
+	"Wait for a few seconds...",
 	"Now in this section, we will select the language we will use.",
 	"Choose English (United States).",
-	"And wait a few seconds... loading ule boy.",
+	"And wait a few seconds...",
 	"Click 64-bit Download.",
 	"And you will see on the right top that the download is in progress.",
 	"While the Win11 is downloading, click the Rufus button to be directed to the folder.",
@@ -57,24 +80,22 @@ func _start_tutorial():
 	"Once our extracted ISO file is finished, just click the Close button at the bottom.",
 	"Now let's go to our PC's file manager and check if the inserted USB files have been extracted correctly.",
 	"Once all the files are okay, it can be used to reformat the computer.",
-	"WELL DONE!"
+	"WELL DONE!",
+	"LETS MOVE ON"
 	
 ]
-	# Set initial texture before starting
+
 	if scenes_texture.size() > 0:
 		background.texture = scenes_texture[0]
 		
 	dialog_box.update_dialog("Teacher", data)
 	
 func _on_line_changed(index: int):
-	# 1. Handle Teacher Visibility
 	teacher_sprite.visible = (index < 3)
+	teacher_sprite.visible = (index >= 29)
 
-	# 2. Handle Flexible Texture Logic
-	# Check if the current dialog line is defined in our map
 	if texture_map.has(index):
 		current_tex_index = texture_map[index]
 	
-	# Safety check: make sure the texture index exists in your array
 	if current_tex_index < scenes_texture.size():
 		background.texture = scenes_texture[current_tex_index]
