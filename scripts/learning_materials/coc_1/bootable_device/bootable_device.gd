@@ -5,7 +5,7 @@ extends Node2D
 @onready var teacher_sprite : Sprite2D = $Teacher
 
 @export var scenes_texture : Array[Texture2D]
-
+FIX THE NUMBERING
 var current_tex_index : int = 0
 
 var texture_map : Dictionary = {
@@ -14,10 +14,10 @@ var texture_map : Dictionary = {
 	4: 1,
 	5: 2,
 	6: 3,
-	7: 4,
-	8: 5,
-	9: 6,
-	10: 6,
+	7: 3,
+	8: 4,
+	9: 4,
+	10: 5,
 	11: 7,
 	12: 8,
 	13: 9,
