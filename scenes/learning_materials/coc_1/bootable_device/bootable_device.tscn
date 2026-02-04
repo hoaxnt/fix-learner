@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b7rhvnd8edwwx"]
+[gd_scene load_steps=32 format=3 uid="uid://b7rhvnd8edwwx"]
 
 [ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_6sn6k"]
@@ -29,7 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cutd6ghpggdpl" path="res://assets/items/bootable_device/25.jpg" id="26_cucwj"]
 [ext_resource type="Script" uid="uid://dxkog2u6ayhn2" path="res://scripts/ui/dialog_box.gd" id="28_5rsj3"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="29_yk3oe"]
-[ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="30_yk3oe"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="30_yysl3"]
+[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="31_ir3vw"]
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
@@ -103,24 +104,11 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 focus_mode = 0
 
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-custom_minimum_size = Vector2(150, 150)
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -170.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 170.0
-grow_horizontal = 0
-size_flags_horizontal = 8
-size_flags_vertical = 4
-focus_mode = 0
-icon = ExtResource("30_yk3oe")
-flat = true
-icon_alignment = 1
-expand_icon = true
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("30_yysl3")]
+visible = false
+
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("31_ir3vw")]
+options_menu = NodePath("../OptionsMenu")
 
 [connection signal="timeout" from="CanvasLayer/DialogBox/Timer" to="CanvasLayer/DialogBox" method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/DialogBox/NextButton" to="CanvasLayer/DialogBox" method="_on_next_button_pressed"]
-[connection signal="button_up" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_button_up"]

@@ -3,7 +3,6 @@ extends Node2D
 @onready var background : Sprite2D = $Background
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var teacher_sprite : Sprite2D = $Teacher
-@onready var options_menu : Control = $CanvasLayer/OptionsMenu
 @export var scenes_texture : Array[Texture2D]
 
 var current_tex_index : int = 0
@@ -103,6 +102,3 @@ func _on_line_changed(index: int):
 	
 	if current_tex_index < scenes_texture.size():
 		background.texture = scenes_texture[current_tex_index]
-
-func _on_menu_button_button_up() -> void:
-	options_menu.show()
