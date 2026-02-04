@@ -61,10 +61,9 @@ func _start_tutorial():
 		"The system is now writing files to the disk. Depending on hardware, this may take between 2 to 30 minutes.",
 		"The installer will ask for your region again to finalize local system services. Provide the standard localized input.",
 		"Select your physical layout (e.g., US or UK). Improper selection will result in incorrect character mapping during use.",
-		"For training purposes, we recommend skipping network setup now to expedite the local account creation.",
 		"Define your Username. If a local-only access policy is in place, you may leave the password field blank for now.",
-		"To maximize system privacy, we recommend setting Location Services to 'No' unless specifically required.",
 		"This feature is primarily for mobile hardware. For desktop lab units, set this to 'No' and proceed.",
+		
 		"Select 'Required Only' for data transmission to Microsoft. This minimizes unnecessary background network traffic.",
 		"Toggle diagnostic data to 'No.' This keeps the system lean and focused on performance.",
 		"Windows is now applying final configurations. Maintain power to the unit for the next 10 minutes.",
@@ -79,8 +78,8 @@ func _start_tutorial():
 	dialog_box.update_dialog("Technical", data)
 
 func _on_line_changed(index: int):
-	# Teacher is visible for the intro (0-3) and the final success message (23)
-	teacher_sprite.visible = (index <= 2 or index >= 23)
+
+	teacher_sprite.visible = (index <= 2 or index >= 19)
 	
 	print("Current Line Index: ", index)
 	
@@ -89,8 +88,7 @@ func _on_line_changed(index: int):
 		if current_tex_index < scenes_texture.size():
 			background.texture = scenes_texture[current_tex_index]
 			
-	# Connect finish signal on the very last line (Index 23)
-	if index >= 23:
+	if index >= 20:
 		if !dialog_box.is_connected("dialog_finished", _end):
 			dialog_box.dialog_finished.connect(_end)
 
