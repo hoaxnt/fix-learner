@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_ooxcv"]
 [ext_resource type="Script" uid="uid://c8ma8x6fkfufe" path="res://scripts/learning_materials/coc_1/assemble_disassemble/assemble_disassemble.gd" id="1_y024a"]
 [ext_resource type="Texture2D" uid="uid://m0i71ttdq3ht" path="res://assets/environment/workbench2.png" id="2_y024a"]
-[ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="5_q70uq"]
+[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="5_attg5"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="6_attg5"]
 
 [node name="AssembleDisassemble" type="Node2D"]
@@ -28,25 +28,8 @@ zoom = Vector2(1.88, 1.88)
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_is6v6")]
 dialog_lines = Array[String](["Our next laboratory will guide you through the proper assembly and disassembly of computer components using correct handling techniques.", "You will learn to identify each major part while ensuring every piece is installed safely and precisely."])
 
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-custom_minimum_size = Vector2(150, 150)
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -170.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 170.0
-grow_horizontal = 0
-size_flags_horizontal = 8
-size_flags_vertical = 4
-focus_mode = 0
-icon = ExtResource("5_q70uq")
-flat = true
-icon_alignment = 1
-expand_icon = true
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("5_attg5")]
+options_menu = NodePath("../OptionsMenu")
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("6_attg5")]
 visible = false
-
-[connection signal="button_up" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_button_up"]

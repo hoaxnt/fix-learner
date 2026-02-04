@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqqqu247lwjh8"]
+
+[ext_resource type="Texture2D" uid="uid://wh3plsjhatbk" path="res://assets/ui/gear.png" id="1_5tk2b"]
+[ext_resource type="Script" uid="uid://gkc6r36kf0e5" path="res://scripts/utils/menu_button.gd" id="2_776a2"]
+
+[node name="MenuButton" type="Button"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 170.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+focus_mode = 0
+icon = ExtResource("1_5tk2b")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_776a2")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
