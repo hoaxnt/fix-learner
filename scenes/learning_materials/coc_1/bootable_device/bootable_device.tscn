@@ -1,8 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://b7rhvnd8edwwx"]
+[gd_scene load_steps=30 format=3 uid="uid://b7rhvnd8edwwx"]
 
 [ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_6sn6k"]
-[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_52ypj"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_5v5kh"]
 [ext_resource type="Texture2D" uid="uid://ck76i6e4ivhsq" path="res://assets/items/bootable_device/2.jpg" id="3_x8xhg"]
 [ext_resource type="Texture2D" uid="uid://cm0wjsbl4gmg" path="res://assets/items/bootable_device/3.jpg" id="4_soo6k"]
@@ -28,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://cavpr71j0tltq" path="res://assets/items/bootable_device/23.jpg" id="24_lytit"]
 [ext_resource type="Texture2D" uid="uid://5b8d2f40ufmn" path="res://assets/items/bootable_device/24.jpg" id="25_3ssrx"]
 [ext_resource type="Texture2D" uid="uid://cutd6ghpggdpl" path="res://assets/items/bootable_device/25.jpg" id="26_cucwj"]
+[ext_resource type="Script" uid="uid://dxkog2u6ayhn2" path="res://scripts/ui/dialog_box.gd" id="28_5rsj3"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="29_yk3oe"]
 
 [node name="BootableDevice" type="Node2D"]
 script = ExtResource("1_6sn6k")
@@ -49,4 +50,57 @@ texture = ExtResource("2_5v5kh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_52ypj")]
+[node name="DialogBox" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -240.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+script = ExtResource("28_5rsj3")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/DialogBox"]
+custom_minimum_size = Vector2(1500, 200)
+layout_mode = 2
+theme = ExtResource("29_yk3oe")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("29_yk3oe")
+theme_override_colors/font_color = Color(1, 0.72156864, 0.42352942, 1)
+text = "None"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("29_yk3oe")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "Empty"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/DialogBox"]
+
+[node name="NextButton" type="Button" parent="CanvasLayer/DialogBox"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+focus_mode = 0
+
+[connection signal="timeout" from="CanvasLayer/DialogBox/Timer" to="CanvasLayer/DialogBox" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/DialogBox/NextButton" to="CanvasLayer/DialogBox" method="_on_next_button_pressed"]
