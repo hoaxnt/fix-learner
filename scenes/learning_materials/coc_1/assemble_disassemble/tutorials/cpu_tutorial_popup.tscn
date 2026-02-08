@@ -1,53 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://cywppu2wtchfe"]
+[gd_scene load_steps=3 format=3 uid="uid://cywppu2wtchfe"]
 
-[ext_resource type="Script" uid="uid://24n35y5b5u7q" path="res://scripts/utils/tutorial_popup.gd" id="1_v46ox"]
+[ext_resource type="Script" uid="uid://5rk16frdlw3i" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_tutorial_popup.gd" id="1_2s5w7"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_ed2ty"]
-[ext_resource type="Texture2D" uid="uid://cxl7tg03uofev" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_1.PNG" id="2_jvkc1"]
-[ext_resource type="Texture2D" uid="uid://nto3trse2h7d" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_2.PNG" id="3_3vtub"]
-[ext_resource type="Texture2D" uid="uid://bgg5307i05rts" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_3.PNG" id="4_5ynrn"]
-[ext_resource type="Texture2D" uid="uid://cehb30abnai4w" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_4.PNG" id="5_q8cdn"]
-[ext_resource type="Texture2D" uid="uid://der5j5b35mkxb" path="res://assets/tutorials/assemble_disassemble/cpu_closeup_5.PNG" id="6_llsyd"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvkc1"]
-bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
-
-[node name="CPUTutorialPopup" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_v46ox")
-images = Array[Texture2D]([ExtResource("2_jvkc1"), ExtResource("3_3vtub"), ExtResource("4_5ynrn"), ExtResource("5_q8cdn"), ExtResource("6_llsyd")])
-descriptions = Array[String](["A", "B", "C", "D", "E"])
-
-[node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(1280, 720)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -660.0
-offset_top = 20.0
-offset_right = 660.0
-offset_bottom = 842.0
-grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jvkc1")
-
-[node name="Slides" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(1280, 720)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -640.0
-offset_top = 40.0
-offset_right = 640.0
-offset_bottom = 760.0
-grow_horizontal = 2
-expand_mode = 3
+[node name="CPUTutorialPopup" type="Node2D"]
+script = ExtResource("1_2s5w7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("2_ed2ty")]
+
+[node name="FirstButton" type="Button" parent="CanvasLayer"]
+offset_left = 645.0
+offset_top = 131.0
+offset_right = 671.0
+offset_bottom = 162.0
+text = " 1 "
+
+[node name="SecondButton" type="Button" parent="CanvasLayer"]
+offset_left = 752.0
+offset_top = 465.0
+offset_right = 778.0
+offset_bottom = 496.0
+text = " 2 "
