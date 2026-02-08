@@ -10,16 +10,19 @@ script = ExtResource("1_2s5w7")
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("2_ed2ty")]
 
-[node name="FirstButton" type="Button" parent="CanvasLayer"]
+[node name="Button1" type="Button" parent="CanvasLayer"]
 offset_left = 645.0
 offset_top = 131.0
 offset_right = 671.0
 offset_bottom = 162.0
 text = " 1 "
 
-[node name="SecondButton" type="Button" parent="CanvasLayer"]
+[node name="Button2" type="Button" parent="CanvasLayer"]
 offset_left = 752.0
 offset_top = 465.0
 offset_right = 778.0
 offset_bottom = 496.0
 text = " 2 "
+
+[connection signal="button_up" from="CanvasLayer/Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
