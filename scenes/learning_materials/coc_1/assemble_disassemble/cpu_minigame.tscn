@@ -271,6 +271,7 @@ zoom = Vector2(2.045, 2.045)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TaskLabel" type="Label" parent="CanvasLayer"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

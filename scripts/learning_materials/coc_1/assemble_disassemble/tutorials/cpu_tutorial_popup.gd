@@ -1,8 +1,8 @@
-extends Node2D
+extends CanvasLayer
 
-@onready var button_1 : Button = $CanvasLayer/Button1
-@onready var button_2 : Button = $CanvasLayer/Button2
-@onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
+@onready var button_1 : Button = $Button1
+@onready var button_2 : Button = $Button2
+@onready var dialog_box : MarginContainer = $DialogBox
 
 func _ready() -> void:
 	button_2.hide()

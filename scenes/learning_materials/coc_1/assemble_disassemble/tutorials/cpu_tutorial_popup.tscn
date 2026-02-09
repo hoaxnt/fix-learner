@@ -4,12 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_ed2ty"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_k1yal"]
 
-[node name="CPUTutorialPopup" type="Node2D"]
+[node name="CPUTutorialPopup" type="CanvasLayer"]
 script = ExtResource("1_2s5w7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,9 +15,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("2_ed2ty")]
+[node name="DialogBox" parent="." instance=ExtResource("2_ed2ty")]
+offset_top = -266.0
 
-[node name="Button1" type="Button" parent="CanvasLayer"]
+[node name="Button1" type="Button" parent="."]
 offset_left = 872.0
 offset_top = 145.0
 offset_right = 977.0
@@ -29,7 +28,7 @@ theme = ExtResource("3_k1yal")
 theme_override_font_sizes/font_size = 70
 text = " 1 "
 
-[node name="Button2" type="Button" parent="CanvasLayer"]
+[node name="Button2" type="Button" parent="."]
 offset_left = 857.0
 offset_top = 520.0
 offset_right = 973.0
@@ -39,5 +38,5 @@ theme = ExtResource("3_k1yal")
 theme_override_font_sizes/font_size = 70
 text = " 2 "
 
-[connection signal="button_up" from="CanvasLayer/Button1" to="." method="_on_button_1_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
