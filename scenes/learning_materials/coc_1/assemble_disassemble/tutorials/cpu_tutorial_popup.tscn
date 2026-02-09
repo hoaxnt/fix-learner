@@ -7,13 +7,9 @@
 [node name="CPUTutorialPopup" type="CanvasLayer"]
 script = ExtResource("1_2s5w7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="DialogBox" parent="." instance=ExtResource("2_ed2ty")]
 offset_top = -266.0
