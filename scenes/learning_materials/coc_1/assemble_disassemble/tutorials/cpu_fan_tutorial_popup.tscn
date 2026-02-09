@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://b8v53m8m0m6cx"]
+[gd_scene load_steps=5 format=3 uid="uid://b8v53m8m0m6cx"]
 
-[node name="CpuFanTutorialPopup" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cg3hdcl7eilwb" path="res://assets/tutorials/assemble_disassemble/cpu_tutorial/1.png" id="1_i2jsa"]
+[ext_resource type="Script" uid="uid://cicdbgk32o5eb" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_fan_tutorial_popup.gd" id="1_wkdkg"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_wkdkg"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_m8cwh"]
+
+[node name="CpuFanTutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_wkdkg")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i2jsa")
+
+[node name="DialogBox" parent="." instance=ExtResource("2_wkdkg")]
+offset_top = -266.0
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 914.0
+offset_top = 285.0
+offset_right = 1019.0
+offset_bottom = 409.0
+focus_mode = 0
+theme = ExtResource("3_m8cwh")
+theme_override_font_sizes/font_size = 70
+text = " 1 "
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 956.0
+offset_top = 668.0
+offset_right = 1072.0
+offset_bottom = 792.0
+focus_mode = 0
+theme = ExtResource("3_m8cwh")
+theme_override_font_sizes/font_size = 70
+text = " 2 "

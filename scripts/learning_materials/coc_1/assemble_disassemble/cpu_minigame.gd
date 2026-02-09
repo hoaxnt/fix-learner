@@ -56,7 +56,7 @@ func _on_cpu_fan_slot_area_exited(area: Area2D) -> void:
 			cpu_fan_slot = true
 			motherboard_sprite.texture = cpu_fan_slot_texture
 			area.queue_free()
-
+			canvas_layer.add_child(cpu_fan_tutorial_popup.instantiate())
 
 func _on_ram_slot_area_exited(area: Area2D) -> void:
 	if area.name == "RAM" and user_data.dragging == false:
@@ -64,7 +64,7 @@ func _on_ram_slot_area_exited(area: Area2D) -> void:
 			ram_slot = true
 			motherboard_sprite.texture = ram_slot_texture
 			area.queue_free()
-
+			canvas_layer.add_child(ram_tutorial_popup.instantiate())
 
 func _on_gpu_slot_area_exited(area: Area2D) -> void:
 	if area.name == "GPU" and user_data.dragging == false:
@@ -73,7 +73,8 @@ func _on_gpu_slot_area_exited(area: Area2D) -> void:
 			motherboard_sprite.texture = gpu_slot_texture
 			area.queue_free()
 			motherboard_assembled.emit()
-
+			canvas_layer.add_child(gpu_tutorial_popup.instantiate())
+			
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	teacher_sprite.hide()
