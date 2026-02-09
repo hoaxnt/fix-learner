@@ -48,7 +48,7 @@ func _on_button_3_button_up() -> void:
 		background.texture = image_c4
 		button_3.hide()
 
-		var final_data : Array[String] = ["The CPU fan is now securely fastened. Great job!"]
+		var final_data : Array[String] = ["Alright, you did it correctly. Let’s now proceed with the next one"]
 		dialog_box.update_dialog("Teacher", final_data)
 		await dialog_box.dialog_finished
 		queue_free()
@@ -71,14 +71,34 @@ func _on_button_4_button_up() -> void:
 	dialog_box.update_dialog("Teacher", data) 
 	all_screw_placed = true
 
-func _on_screwdriver_button_button_up() -> void:
-	if all_screw_placed:
-		# Restart the button sequence but for tightening (c-images)
-		button_1.show()
-	else:
-		var warning_data : Array[String] = ["You need to place all the screws before you can tighten them!"]
-		dialog_box.update_dialog("Teacher", warning_data)
-
 func _on_screw_button_button_up() -> void:
+	# 1. Logic for the Screw Button itself
+	screw_button.toggle_mode = true
+	screw_button.button_pressed = true # Keep this one down
+	
+	# 2. Untoggle the Screwdriver (the "vice versa" part)
+	screw_driver_button.button_pressed = false
+	
+	# 3. Functional logic
 	if not all_screw_placed:
 		button_1.show()
+
+
+func _on_screwdriver_button_button_up() -> void:
+	# 1. Logic for the Screwdriver Button itself
+	screw_driver_button.toggle_mode = true
+	screw_driver_button.button_pressed = true # Keep this one down
+	
+	# 2. Untoggle the Screw button
+	screw_button.button_pressed = false
+	
+	# 3. Functional logic
+	if all_screw_placed:
+		# Restart the button sequence for tightening
+		button_1.show()
+	else:
+		# If they haven't finished placing screws, 
+		# pop the screwdriver back up and warn them
+		screw_driver_button.button_pressed = false
+		var warning_data : Array[String] = ["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted, which helps apply consistent pressure and improves cooling performance."]
+		dialog_box.update_dialog("Teacher", warning_data)
