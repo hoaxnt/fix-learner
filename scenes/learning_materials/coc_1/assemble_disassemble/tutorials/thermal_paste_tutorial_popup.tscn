@@ -1,3 +1,71 @@
-[gd_scene format=3 uid="uid://bj7gaexjxeckh"]
+[gd_scene load_steps=6 format=3 uid="uid://bj7gaexjxeckh"]
 
-[node name="ThermalPasteTutorialPopup" type="Node2D"]
+[ext_resource type="Script" uid="uid://dga1qqrd681ro" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/thermal_paste_tutorial_popup.gd" id="1_a6p3u"]
+[ext_resource type="Texture2D" uid="uid://3r5difupy1t7" path="res://assets/tutorials/assemble_disassemble/thermal_paste_tutorial/3.png" id="2_3ojtl"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_a6p3u"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_3ojtl"]
+[ext_resource type="Texture2D" uid="uid://db2vb7jc1csty" path="res://assets/tutorials/assemble_disassemble/thermal_paste_tutorial/4.png" id="3_jnks2"]
+
+[node name="ThermalPasteTutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_a6p3u")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -902.0
+offset_top = -350.0
+offset_right = 902.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Image1" type="TextureRect" parent="HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(900, 700)
+layout_mode = 2
+texture = ExtResource("2_3ojtl")
+expand_mode = 1
+
+[node name="Image2" type="TextureRect" parent="HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(900, 700)
+layout_mode = 2
+texture = ExtResource("3_jnks2")
+expand_mode = 1
+
+[node name="DialogBox" parent="." instance=ExtResource("2_a6p3u")]
+offset_top = -266.0
+dialog_lines = Array[String](["Which one is the right amount of thermal paste?"])
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 419.0
+offset_top = 100.0
+offset_right = 554.0
+offset_bottom = 224.0
+focus_mode = 0
+theme = ExtResource("3_3ojtl")
+theme_override_font_sizes/font_size = 70
+text = "  1  "
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1346.0
+offset_top = 108.0
+offset_right = 1492.0
+offset_bottom = 232.0
+focus_mode = 0
+theme = ExtResource("3_3ojtl")
+theme_override_font_sizes/font_size = 70
+text = "  2  "
