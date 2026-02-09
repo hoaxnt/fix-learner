@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ufck37i1ou2t"
-path="res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.ctex"
+path.s3tc="res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.s3tc.ctex"
+path.etc2="res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/c2.png"
-dest_files=["res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.ctex"]
+dest_files=["res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.s3tc.ctex", "res://.godot/imported/c2.png-6874ac12e8c7205c9ce1a2f5c69e6ef8.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
