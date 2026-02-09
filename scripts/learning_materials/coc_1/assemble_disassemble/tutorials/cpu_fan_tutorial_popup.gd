@@ -34,7 +34,7 @@ func _on_button_1_button_up() -> void:
 
 func _on_button_2_button_up() -> void:
 	if all_screw_placed:
-		background.texture = image_c2
+		background.texture = image_c3
 		button_2.hide()
 		button_3.text = "4"
 		button_3.show()
@@ -45,7 +45,7 @@ func _on_button_2_button_up() -> void:
 
 func _on_button_3_button_up() -> void:
 	if all_screw_placed:
-		background.texture = image_c3
+		background.texture = image_c4
 		button_3.hide()
 
 		var final_data : Array[String] = ["The CPU fan is now securely fastened. Great job!"]
