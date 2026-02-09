@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="4_y8vlm"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="5_41ogt"]
 [ext_resource type="Texture2D" uid="uid://bmjv2pg40norn" path="res://assets/items/assemble_disassemble/parts/psu.png" id="5_ixlbu"]
-[ext_resource type="Texture2D" uid="uid://d1t24r8s83wii" path="res://assets/items/assemble_disassemble/build/with-gpu.png" id="5_y8vlm"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_ocyj7"]
+[ext_resource type="Texture2D" uid="uid://bqino414k3qgx" path="res://assets/items/assemble_disassemble/build/m2_installed.png" id="8_rgl55"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="11_x2ofc"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="12_rgl55"]
 
@@ -101,7 +101,7 @@ texture = ExtResource("5_41ogt")
 [node name="Sprite2D" type="Sprite2D" parent="Parts/Mobo"]
 position = Vector2(8.000006, 96)
 scale = Vector2(0.43199998, 0.43199998)
-texture = ExtResource("5_y8vlm")
+texture = ExtResource("8_rgl55")
 
 [node name="Label" type="Label" parent="Parts/Mobo"]
 visible = false

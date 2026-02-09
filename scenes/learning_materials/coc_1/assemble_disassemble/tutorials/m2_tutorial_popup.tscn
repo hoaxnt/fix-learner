@@ -45,7 +45,7 @@ expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_7vegf")]
 offset_top = -266.0
-dialog_lines = Array[String](["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted", "Which helps apply consistent pressure and improves cooling performance."])
+dialog_lines = Array[String](["Firmly press down the M.2 drive to connect it properly to the slot, then secure it to ensure it stays in place"])
 
 [node name="Button1" type="Button" parent="."]
 visible = false

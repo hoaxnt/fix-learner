@@ -27,5 +27,6 @@ class_name UserData
 
 # Assemble Disassemble
 @export var dragging : bool = false
+@export var motherboard_assembled : bool = false
 
 #COC 2 Lessons
