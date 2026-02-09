@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8v53m8m0m6cx"]
+[gd_scene load_steps=7 format=3 uid="uid://b8v53m8m0m6cx"]
 
 [ext_resource type="Script" uid="uid://cicdbgk32o5eb" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_fan_tutorial_popup.gd" id="1_wkdkg"]
-[ext_resource type="Texture2D" uid="uid://dac3yk2v30yjn" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/1.png" id="2_m8cwh"]
+[ext_resource type="Texture2D" uid="uid://cir2f0eqf63iq" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/0.png" id="2_uieyq"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_wkdkg"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_m8cwh"]
+[ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="5_m8cwh"]
+[ext_resource type="Texture2D" uid="uid://h77fej3r03m6" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screwdriver.png" id="6_uieyq"]
 
 [node name="CpuFanTutorialPopup" type="CanvasLayer"]
 script = ExtResource("1_wkdkg")
@@ -14,13 +16,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_m8cwh")
+texture = ExtResource("2_uieyq")
 expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_wkdkg")]
 offset_top = -266.0
+dialog_lines = Array[String](["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted", "Which helps apply consistent pressure and improves cooling performance."])
 
 [node name="Button1" type="Button" parent="."]
+visible = false
 offset_left = 537.0
 offset_top = 46.0
 offset_right = 642.0
@@ -31,6 +35,7 @@ theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 1089.0
 offset_top = 47.0
 offset_right = 1205.0
@@ -41,6 +46,7 @@ theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
+visible = false
 offset_left = 514.0
 offset_top = 389.0
 offset_right = 631.0
@@ -51,6 +57,7 @@ theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
+visible = false
 offset_left = 1130.0
 offset_top = 379.0
 offset_right = 1249.0
@@ -76,13 +83,32 @@ grow_vertical = 2
 alignment = 1
 
 [node name="ScrewButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 50
 text = "Screw"
+icon = ExtResource("5_m8cwh")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="ScrewdriverButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 50
 text = "Screwdriver"
+icon = ExtResource("6_uieyq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="button_up" from="Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="Button3" to="." method="_on_button_3_button_up"]
+[connection signal="button_up" from="Button4" to="." method="_on_button_4_button_up"]
+[connection signal="button_up" from="ItemList/ScrewButton" to="." method="_on_screw_button_button_up"]
+[connection signal="button_up" from="ItemList/ScrewdriverButton" to="." method="_on_screwdriver_button_button_up"]
