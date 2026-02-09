@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://davs5j8j7ocf7"]
+[gd_scene load_steps=9 format=3 uid="uid://davs5j8j7ocf7"]
 
+[ext_resource type="Script" uid="uid://nl6fdnlp3kp1" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/m2_tutorial_popup.gd" id="1_7vegf"]
 [ext_resource type="Texture2D" uid="uid://mn7pxxu02f8n" path="res://assets/tutorials/assemble_disassemble/m2_tutorial/1.png" id="1_qpbfy"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_7vegf"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_6r5lq"]
@@ -31,6 +32,7 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [node name="M2TutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_7vegf")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -47,10 +49,10 @@ dialog_lines = Array[String](["You need to put all the screws in place first bef
 
 [node name="Button1" type="Button" parent="."]
 visible = false
-offset_left = 537.0
-offset_top = 46.0
-offset_right = 642.0
-offset_bottom = 170.0
+offset_left = 1476.0
+offset_top = 543.0
+offset_right = 1581.0
+offset_bottom = 667.0
 focus_mode = 0
 theme = ExtResource("3_6r5lq")
 theme_override_font_sizes/font_size = 70
@@ -58,10 +60,10 @@ text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
 visible = false
-offset_left = 1089.0
-offset_top = 47.0
-offset_right = 1205.0
-offset_bottom = 171.0
+offset_left = 992.0
+offset_top = 207.0
+offset_right = 1108.0
+offset_bottom = 331.0
 focus_mode = 0
 theme = ExtResource("3_6r5lq")
 theme_override_font_sizes/font_size = 70
@@ -69,10 +71,10 @@ text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
 visible = false
-offset_left = 514.0
-offset_top = 389.0
-offset_right = 631.0
-offset_bottom = 513.0
+offset_left = 1010.0
+offset_top = 547.0
+offset_right = 1127.0
+offset_bottom = 671.0
 focus_mode = 0
 theme = ExtResource("3_6r5lq")
 theme_override_font_sizes/font_size = 70
@@ -80,16 +82,17 @@ text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
 visible = false
-offset_left = 1130.0
-offset_top = 379.0
-offset_right = 1249.0
-offset_bottom = 503.0
+offset_left = 1007.0
+offset_top = 550.0
+offset_right = 1126.0
+offset_bottom = 674.0
 focus_mode = 0
 theme = ExtResource("3_6r5lq")
 theme_override_font_sizes/font_size = 70
 text = " 4 "
 
 [node name="ItemList" type="VBoxContainer" parent="."]
+visible = false
 custom_minimum_size = Vector2(400, 800)
 anchors_preset = 4
 anchor_top = 0.5
@@ -126,3 +129,10 @@ icon = ExtResource("5_jy5xp")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
+
+[connection signal="button_up" from="Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="Button3" to="." method="_on_button_3_button_up"]
+[connection signal="button_up" from="Button4" to="." method="_on_button_4_button_up"]
+[connection signal="button_up" from="ItemList/ScrewButton" to="." method="_on_screw_button_button_up"]
+[connection signal="button_up" from="ItemList/ScrewdriverButton" to="." method="_on_screwdriver_button_button_up"]
