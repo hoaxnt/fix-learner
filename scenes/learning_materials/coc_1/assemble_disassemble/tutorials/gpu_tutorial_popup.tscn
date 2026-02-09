@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ctb833gekauc8"]
 
-[ext_resource type="Texture2D" uid="uid://d0vhj4xtqxips" path="res://assets/tutorials/assemble_disassemble/ram_tutorial/1.png" id="1_gnwlr"]
 [ext_resource type="Script" uid="uid://bdnb0xt5lqfwm" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/gpu_tutorial_popup.gd" id="1_yv6c7"]
+[ext_resource type="Texture2D" uid="uid://bkug0pv5donbg" path="res://assets/tutorials/assemble_disassemble/gpu_tutorial/1.png" id="2_c7ifv"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_yv6c7"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_c7ifv"]
 
@@ -14,19 +14,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_gnwlr")
+texture = ExtResource("2_c7ifv")
 expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_yv6c7")]
 offset_top = -266.0
-dialog_lines = Array[String](["put the ram"])
+dialog_lines = Array[String](["Press it forward firmly to fully insert the GPU into the motherboard slot until it is securely seated and properly aligned, ensuring a stable connection for optimal performance."])
 
 [node name="Button1" type="Button" parent="."]
 visible = false
-offset_left = 79.0
-offset_top = 306.0
-offset_right = 214.0
-offset_bottom = 430.0
+offset_left = 1168.0
+offset_top = 497.0
+offset_right = 1303.0
+offset_bottom = 621.0
 focus_mode = 0
 theme = ExtResource("3_c7ifv")
 theme_override_font_sizes/font_size = 70
@@ -34,11 +34,14 @@ text = "  1  "
 
 [node name="Button2" type="Button" parent="."]
 visible = false
-offset_left = 1716.0
-offset_top = 310.0
-offset_right = 1862.0
-offset_bottom = 434.0
+offset_left = 818.0
+offset_top = 173.0
+offset_right = 964.0
+offset_bottom = 297.0
 focus_mode = 0
 theme = ExtResource("3_c7ifv")
 theme_override_font_sizes/font_size = 70
 text = "  2  "
+
+[connection signal="button_up" from="Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
