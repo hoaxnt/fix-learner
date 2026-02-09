@@ -19,7 +19,7 @@ expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_dr013")]
 offset_top = -266.0
-dialog_lines = Array[String](["put the ram"])
+dialog_lines = Array[String](["Press firmly to insert the RAM into the slot until it clicks into place, making sure it is properly seated and locked for stable system performance."])
 
 [node name="Button1" type="Button" parent="."]
 visible = false

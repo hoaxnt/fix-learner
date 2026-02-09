@@ -82,8 +82,8 @@ func _on_m_2_slot_area_exited(area: Area2D) -> void:
 			m2_slot = true
 			motherboard_sprite.texture = m2_slot_texture
 			area.queue_free()
-			canvas_layer.add_child(m2_tutorial_popup.instantiate())
 			motherboard_assembled.emit()
+			canvas_layer.add_child(m2_tutorial_popup.instantiate())
 
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished

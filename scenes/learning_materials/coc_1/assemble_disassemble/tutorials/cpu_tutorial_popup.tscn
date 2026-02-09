@@ -9,28 +9,31 @@
 script = ExtResource("1_2s5w7")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_f547g")
 
 [node name="DialogBox" parent="." instance=ExtResource("2_ed2ty")]
 offset_top = -266.0
 
 [node name="Button1" type="Button" parent="."]
-offset_left = 914.0
-offset_top = 285.0
-offset_right = 1019.0
-offset_bottom = 409.0
+offset_left = 1178.0
+offset_top = 280.0
+offset_right = 1283.0
+offset_bottom = 404.0
 focus_mode = 0
 theme = ExtResource("3_k1yal")
 theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 956.0
-offset_top = 668.0
-offset_right = 1072.0
-offset_bottom = 792.0
+offset_left = 1204.0
+offset_top = 663.0
+offset_right = 1320.0
+offset_bottom = 787.0
 focus_mode = 0
 theme = ExtResource("3_k1yal")
 theme_override_font_sizes/font_size = 70

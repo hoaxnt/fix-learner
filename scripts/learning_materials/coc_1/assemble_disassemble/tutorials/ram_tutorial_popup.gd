@@ -18,7 +18,7 @@ func _on_button_1_button_up() -> void:
 func _on_button_2_button_up() -> void:
 	background.texture = image_2
 	button_2.hide()
-	var data : Array[String] = ["Correctas"]
+	var data : Array[String] = ["Next, if you hear a click sound, it means the component is properly installed, and you can check that the clip is securely locked in place."]
 	dialog_box.update_dialog("Teacher", data)
 	
 	await dialog_box.dialog_finished

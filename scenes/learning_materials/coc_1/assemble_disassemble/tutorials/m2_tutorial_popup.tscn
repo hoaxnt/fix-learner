@@ -1,3 +1,128 @@
-[gd_scene format=3 uid="uid://davs5j8j7ocf7"]
+[gd_scene load_steps=8 format=3 uid="uid://davs5j8j7ocf7"]
+
+[ext_resource type="Texture2D" uid="uid://cir2f0eqf63iq" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/0.png" id="1_qpbfy"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_7vegf"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_6r5lq"]
+[ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="4_s3pn4"]
+[ext_resource type="Texture2D" uid="uid://h77fej3r03m6" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screwdriver.png" id="5_jy5xp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jl16j"]
+bg_color = Color(0, 0.84313726, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hkv7"]
+bg_color = Color(0, 0.84313726, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="M2TutorialPopup" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qpbfy")
+expand_mode = 1
+
+[node name="DialogBox" parent="." instance=ExtResource("2_7vegf")]
+offset_top = -266.0
+dialog_lines = Array[String](["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted", "Which helps apply consistent pressure and improves cooling performance."])
+
+[node name="Button1" type="Button" parent="."]
+visible = false
+offset_left = 537.0
+offset_top = 46.0
+offset_right = 642.0
+offset_bottom = 170.0
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 70
+text = " 1 "
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 1089.0
+offset_top = 47.0
+offset_right = 1205.0
+offset_bottom = 171.0
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 70
+text = " 2 "
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+offset_left = 514.0
+offset_top = 389.0
+offset_right = 631.0
+offset_bottom = 513.0
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 70
+text = " 3 "
+
+[node name="Button4" type="Button" parent="."]
+visible = false
+offset_left = 1130.0
+offset_top = 379.0
+offset_right = 1249.0
+offset_bottom = 503.0
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 70
+text = " 4 "
+
+[node name="ItemList" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 800)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -527.0
+offset_right = 412.0
+offset_bottom = 277.0
+grow_vertical = 2
+alignment = 1
+
+[node name="ScrewButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jl16j")
+text = "Screw"
+icon = ExtResource("4_s3pn4")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="ScrewdriverButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("3_6r5lq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0hkv7")
+text = "Screwdriver"
+icon = ExtResource("5_jy5xp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
