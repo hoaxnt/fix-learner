@@ -16,6 +16,7 @@ extends Node2D
 @onready var cpu_fan_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/fan-cpu.png")
 @onready var ram_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-ram.png")
 @onready var gpu_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-gpu.png")
+@onready var m2_slot_texture : Texture2D = preload("res://assets/items/assemble_disassemble/build/m2_installed.png")
 
 # Preloaded Scene
 @onready var cpu_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_tutorial_popup.tscn")
@@ -23,7 +24,7 @@ extends Node2D
 @onready var cpu_fan_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_fan_tutorial_popup.tscn")
 @onready var ram_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/ram_tutorial_popup.tscn")
 @onready var gpu_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/gpu_tutorial_popup.tscn")
-
+@onready var m2_tutorial_popup : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/m2_tutorial_popup.tscn")
 
 var item_placement_sequence : int = 0
 var cpu_slot : bool = false
@@ -31,6 +32,7 @@ var thermal_paste_slot : bool = false
 var cpu_fan_slot : bool = false
 var ram_slot : bool = false
 var gpu_slot : bool = false
+var m2_slot : bool = false
 
 signal motherboard_assembled
 
@@ -72,9 +74,17 @@ func _on_gpu_slot_area_exited(area: Area2D) -> void:
 			gpu_slot = true
 			motherboard_sprite.texture = gpu_slot_texture
 			area.queue_free()
-			motherboard_assembled.emit()
 			canvas_layer.add_child(gpu_tutorial_popup.instantiate())
 			
+func _on_m_2_slot_area_exited(area: Area2D) -> void:
+	if area.name == "M2" and user_data.dragging == false:
+		if cpu_slot == true and thermal_paste_slot == true and cpu_fan_slot == true and ram_slot == true and gpu_slot == true and m2_slot == false:
+			m2_slot = true
+			motherboard_sprite.texture = m2_slot_texture
+			area.queue_free()
+			canvas_layer.add_child(m2_tutorial_popup.instantiate())
+			motherboard_assembled.emit()
+
 func _process(_delta: float) -> void:
 	await dialog_box.dialog_finished
 	teacher_sprite.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d0xy7pehhdelx"]
+[gd_scene load_steps=28 format=3 uid="uid://d0xy7pehhdelx"]
 
 [ext_resource type="Texture2D" uid="uid://boa8n8gk1nkqw" path="res://assets/environment/workbench-minigame.png" id="1_n5jh2"]
 [ext_resource type="Script" uid="uid://centi03fdps4k" path="res://scripts/learning_materials/coc_1/assemble_disassemble/cpu_minigame.gd" id="1_pgw27"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_8xini"]
 [ext_resource type="Texture2D" uid="uid://wxywjilu1pi0" path="res://assets/items/assemble_disassemble/build/no-cpu.png" id="3_pgw27"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="5_f0g6q"]
+[ext_resource type="Texture2D" uid="uid://68k3es0pj3fd" path="res://assets/items/assemble_disassemble/parts/m2.png" id="6_3fvf7"]
 [ext_resource type="Texture2D" uid="uid://be4wld76maa5a" path="res://assets/items/assemble_disassemble/parts/cpu.png" id="6_pgw27"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="8_06ixj"]
 [ext_resource type="Texture2D" uid="uid://ripiqmalrvrf" path="res://assets/items/assemble_disassemble/parts/ram.png" id="8_f0g6q"]
@@ -31,11 +32,14 @@ size = Vector2(46, 192)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3quq"]
 size = Vector2(152, 122)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fvf7"]
+size = Vector2(198, 120)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xini"]
 radius = 46.09772
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2da"]
-size = Vector2(120, 188)
+size = Vector2(120, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8q8"]
 size = Vector2(70.99992, 146.99988)
@@ -91,10 +95,49 @@ shape = SubResource("RectangleShape2D_f0g6q")
 position = Vector2(-56, 193)
 shape = SubResource("RectangleShape2D_k3quq")
 
+[node name="M2Slot" type="Area2D" parent="Slots"]
+position = Vector2(-19, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/M2Slot"]
+position = Vector2(-18, 0)
+shape = SubResource("RectangleShape2D_3fvf7")
+
 [node name="Parts" type="Node2D" parent="."]
 
+[node name="M2" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
+position = Vector2(-314, 27)
+script = ExtResource("3_4y6sc")
+item_name_string = "M2"
+item_label = NodePath("Label")
+shadow = NodePath("Shadow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/M2"]
+shape = SubResource("CircleShape2D_8xini")
+
+[node name="Shadow" type="Sprite2D" parent="Parts/M2"]
+position = Vector2(-2.0000076, 19)
+rotation = 0.020485852
+scale = Vector2(0.124106325, 0.124106325)
+texture = ExtResource("5_f0g6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/M2"]
+scale = Vector2(0.3203181, 0.32031816)
+texture = ExtResource("6_3fvf7")
+
+[node name="Label" type="Label" parent="Parts/M2"]
+visible = false
+offset_left = -48.0
+offset_top = -95.0
+offset_right = 55.0
+offset_bottom = -35.0
+theme = ExtResource("8_06ixj")
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="CPU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
-position = Vector2(-278, -10)
+position = Vector2(-243, -47)
 script = ExtResource("3_4y6sc")
 item_name_string = "CPU"
 item_label = NodePath("Label")
@@ -301,3 +344,4 @@ options_menu = NodePath("../OptionsMenu")
 [connection signal="area_exited" from="Slots/CPUFanSlot" to="." method="_on_cpu_fan_slot_area_exited"]
 [connection signal="area_exited" from="Slots/RamSlot" to="." method="_on_ram_slot_area_exited"]
 [connection signal="area_exited" from="Slots/GPUSlot" to="." method="_on_gpu_slot_area_exited"]
+[connection signal="area_exited" from="Slots/M2Slot" to="." method="_on_m_2_slot_area_exited"]
