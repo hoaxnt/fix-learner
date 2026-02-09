@@ -19,8 +19,10 @@ expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_dr013")]
 offset_top = -266.0
+dialog_lines = Array[String](["put the ram"])
 
 [node name="Button1" type="Button" parent="."]
+visible = false
 offset_left = 79.0
 offset_top = 306.0
 offset_right = 214.0
@@ -31,6 +33,7 @@ theme_override_font_sizes/font_size = 70
 text = "  1  "
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 1716.0
 offset_top = 310.0
 offset_right = 1862.0
