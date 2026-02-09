@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8v53m8m0m6cx"]
+[gd_scene load_steps=5 format=3 uid="uid://b8v53m8m0m6cx"]
 
 [ext_resource type="Script" uid="uid://cicdbgk32o5eb" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/cpu_fan_tutorial_popup.gd" id="1_wkdkg"]
+[ext_resource type="Texture2D" uid="uid://dac3yk2v30yjn" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/1.png" id="2_m8cwh"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_wkdkg"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_m8cwh"]
 
@@ -8,48 +9,80 @@
 script = ExtResource("1_wkdkg")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_m8cwh")
+expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("2_wkdkg")]
 offset_top = -266.0
 
 [node name="Button1" type="Button" parent="."]
-offset_left = 485.0
-offset_top = 287.0
-offset_right = 590.0
-offset_bottom = 411.0
+offset_left = 537.0
+offset_top = 46.0
+offset_right = 642.0
+offset_bottom = 170.0
 focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 876.0
-offset_top = 291.0
-offset_right = 992.0
-offset_bottom = 415.0
+offset_left = 1089.0
+offset_top = 47.0
+offset_right = 1205.0
+offset_bottom = 171.0
 focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 454.0
-offset_top = 656.0
-offset_right = 571.0
-offset_bottom = 780.0
+offset_left = 514.0
+offset_top = 389.0
+offset_right = 631.0
+offset_bottom = 513.0
 focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 923.0
-offset_top = 677.0
-offset_right = 1042.0
-offset_bottom = 801.0
+offset_left = 1130.0
+offset_top = 379.0
+offset_right = 1249.0
+offset_bottom = 503.0
 focus_mode = 0
 theme = ExtResource("3_m8cwh")
 theme_override_font_sizes/font_size = 70
 text = " 4 "
+
+[node name="ItemList" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 800)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -411.0
+offset_top = -527.0
+offset_right = -11.0
+offset_bottom = 273.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+
+[node name="ScrewButton" type="Button" parent="ItemList"]
+layout_mode = 2
+theme = ExtResource("3_m8cwh")
+theme_override_font_sizes/font_size = 50
+text = "Screw"
+
+[node name="ScrewdriverButton" type="Button" parent="ItemList"]
+layout_mode = 2
+theme = ExtResource("3_m8cwh")
+theme_override_font_sizes/font_size = 50
+text = "Screwdriver"
