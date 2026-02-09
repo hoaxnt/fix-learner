@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://davs5j8j7ocf7"]
 
-[ext_resource type="Texture2D" uid="uid://cir2f0eqf63iq" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/0.png" id="1_qpbfy"]
+[ext_resource type="Texture2D" uid="uid://mn7pxxu02f8n" path="res://assets/tutorials/assemble_disassemble/m2_tutorial/1.png" id="1_qpbfy"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="2_7vegf"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="3_6r5lq"]
 [ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="4_s3pn4"]
