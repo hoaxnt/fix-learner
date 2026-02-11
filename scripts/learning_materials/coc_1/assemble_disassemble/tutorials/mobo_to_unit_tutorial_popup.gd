@@ -10,12 +10,10 @@ extends CanvasLayer
 @onready var screw_button : Button = $ItemList/ScrewButton
 @onready var screw_driver_button : Button = $ItemList/ScrewdriverButton
 
-@onready var image_1 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/1.png")
-@onready var image_2 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/2.png")
-@onready var image_3 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/3.png")
-@onready var image_4 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/4.png")
-
-var all_screw_placed : bool = false
+@onready var image_1 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b2.jpg")
+@onready var image_2 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b3.jpg")
+@onready var image_4 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b.jpg")
+@onready var image_3 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b2.jpg")
 
 func _on_button_1_button_up() -> void:
 	background.texture = image_1
@@ -28,32 +26,18 @@ func _on_button_2_button_up() -> void:
 	button_3.show()
 
 func _on_button_3_button_up() -> void:
-	if all_screw_placed:
-		background.texture = image_c4
-		button_3.hide()
-
-		var final_data : Array[String] = ["Alright, you did it correctly. Let’s now proceed with the next one"]
-		dialog_box.update_dialog("Teacher", final_data)
-		await dialog_box.dialog_finished
-		queue_free()
-		return
 	background.texture = image_3
 	button_3.hide()
 	button_4.show()
 
 func _on_button_4_button_up() -> void:
-	if all_screw_placed:
-		background.texture = image_c2
-		button_4.hide()
-		button_2.text = "3"
-		button_2.show()
-		return
-		
 	background.texture = image_4
 	button_4.hide()
+	
 	var data : Array[String] = ["All screws are positioned correctly. Use the screwdriver to tighten them securely."]
 	dialog_box.update_dialog("Teacher", data) 
-	all_screw_placed = true
+	await dialog_box.dialog_finished
+	queue_free()
 
 func _on_screw_button_button_up() -> void:
 	# 1. Logic for the Screw Button itself
