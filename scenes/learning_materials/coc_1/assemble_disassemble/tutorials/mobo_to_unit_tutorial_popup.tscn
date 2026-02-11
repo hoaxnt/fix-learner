@@ -57,44 +57,40 @@ metadata/_edit_lock_ = true
 offset_top = -266.0
 
 [node name="Button1" type="Button" parent="."]
-visible = false
-offset_left = 537.0
-offset_top = 46.0
-offset_right = 642.0
-offset_bottom = 170.0
+offset_left = 775.0
+offset_top = 58.0
+offset_right = 880.0
+offset_bottom = 182.0
 focus_mode = 0
 theme = ExtResource("3_j6i1c")
 theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-visible = false
-offset_left = 1089.0
-offset_top = 47.0
-offset_right = 1205.0
-offset_bottom = 171.0
+offset_left = 1452.0
+offset_top = 63.0
+offset_right = 1568.0
+offset_bottom = 187.0
 focus_mode = 0
 theme = ExtResource("3_j6i1c")
 theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
-visible = false
-offset_left = 514.0
-offset_top = 389.0
-offset_right = 631.0
-offset_bottom = 513.0
+offset_left = 677.0
+offset_top = 672.0
+offset_right = 794.0
+offset_bottom = 796.0
 focus_mode = 0
 theme = ExtResource("3_j6i1c")
 theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
-visible = false
-offset_left = 1130.0
-offset_top = 379.0
-offset_right = 1249.0
-offset_bottom = 503.0
+offset_left = 1460.0
+offset_top = 695.0
+offset_right = 1579.0
+offset_bottom = 819.0
 focus_mode = 0
 theme = ExtResource("3_j6i1c")
 theme_override_font_sizes/font_size = 70
@@ -137,3 +133,10 @@ icon = ExtResource("5_wfl2n")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
+
+[connection signal="button_up" from="Button1" to="." method="_on_button_1_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="Button3" to="." method="_on_button_3_button_up"]
+[connection signal="button_up" from="Button4" to="." method="_on_button_4_button_up"]
+[connection signal="button_up" from="ItemList/ScrewButton" to="." method="_on_screw_button_button_up"]
+[connection signal="button_up" from="ItemList/ScrewdriverButton" to="." method="_on_screwdriver_button_button_up"]
