@@ -83,7 +83,6 @@ func _on_screw_button_button_up() -> void:
 	if not all_screw_placed:
 		button_1.show()
 
-
 func _on_screwdriver_button_button_up() -> void:
 	# 1. Logic for the Screwdriver Button itself
 	screw_driver_button.toggle_mode = true
