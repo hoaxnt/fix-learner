@@ -48,6 +48,7 @@ func _on_button_3_button_up() -> void:
 
 func _on_button_4_button_up() -> void:
 	if all_screw_placed:
+		button_4.hide()
 		var data_done : Array[String] = ["Great job!"]
 		dialog_box.update_dialog("Teacher", data_done) 
 		await dialog_box.dialog_finished

@@ -57,6 +57,7 @@ metadata/_edit_lock_ = true
 offset_top = -266.0
 
 [node name="Button1" type="Button" parent="."]
+visible = false
 offset_left = 775.0
 offset_top = 58.0
 offset_right = 880.0
@@ -67,6 +68,7 @@ theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 1452.0
 offset_top = 63.0
 offset_right = 1568.0
@@ -77,6 +79,7 @@ theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
+visible = false
 offset_left = 677.0
 offset_top = 672.0
 offset_right = 794.0
@@ -87,6 +90,7 @@ theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
+visible = false
 offset_left = 1460.0
 offset_top = 695.0
 offset_right = 1579.0
