@@ -13,7 +13,7 @@ extends CanvasLayer
 @onready var image_1 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b2.jpg")
 @onready var image_2 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b3.jpg")
 @onready var image_4 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b4.jpg")
-@onready var image_3 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b2.jpg")
+@onready var image_3 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b5.jpg")
 
 func _on_button_1_button_up() -> void:
 	background.texture = image_1
