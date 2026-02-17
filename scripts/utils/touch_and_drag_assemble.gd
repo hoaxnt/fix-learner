@@ -49,7 +49,6 @@ func start_dragging() -> void:
 	
 	if not tutorial_shown and tutorial_scene:
 		var tutorial_instance = tutorial_scene.instantiate()
-		# Add to the CanvasLayer of the current main scene
 		get_tree().current_scene.get_node("CanvasLayer").add_child(tutorial_instance)
 		tutorial_shown = true
 	
