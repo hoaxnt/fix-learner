@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3t8ven8nlk2w"]
+[gd_scene load_steps=8 format=3 uid="uid://d3t8ven8nlk2w"]
 
 [ext_resource type="Script" uid="uid://dqyww5qq0kde8" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.gd" id="1_snptm"]
-[ext_resource type="Texture2D" uid="uid://cir2f0eqf63iq" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/0.png" id="2_btt83"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_che53"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="4_jthim"]
 [ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="5_pt5fo"]
@@ -40,7 +39,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_btt83")
 expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("3_che53")]
