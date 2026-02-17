@@ -3,17 +3,13 @@ extends Area2D
 @export var item_name_string : String = "none"
 @export var item_label : Label
 @export var shadow : Sprite2D
-
-@export var tutorial_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
-
+@export var wiring_psu_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
 var dragging : bool = false
 var offset : Vector2 = Vector2.ZERO
-
-# Boolean flag to track if the scene was already shown
-var tutorial_shown : bool = false
+var wiring_psu_tutorial_shown : bool = false
 
 func _ready() -> void:
 	user_data.dragging = false
@@ -47,10 +43,10 @@ func start_dragging() -> void:
 	z_index = 100
 	offset = global_position - get_global_mouse_position()
 	
-	if not tutorial_shown and tutorial_scene:
-		var tutorial_instance = tutorial_scene.instantiate()
-		get_tree().current_scene.get_node("CanvasLayer").add_child(tutorial_instance)
-		tutorial_shown = true
+	if not wiring_psu_tutorial_shown and wiring_psu_scene:
+		var wiring_psu_tutorial_instance = wiring_psu_scene.instantiate()
+		get_tree().current_scene.get_node("CanvasLayer").add_child(wiring_psu_tutorial_instance)
+		wiring_psu_tutorial_shown = true
 	
 	if shadow: shadow.hide()
 	if item_label: item_label.show()
