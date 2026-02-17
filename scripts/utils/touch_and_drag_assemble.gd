@@ -3,7 +3,7 @@ extends Area2D
 @export var item_name_string : String = "none"
 @export var item_label : Label
 @export var shadow : Sprite2D
-# NEW: Preload the scene you want to instantiate
+
 @export var tutorial_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
 
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
