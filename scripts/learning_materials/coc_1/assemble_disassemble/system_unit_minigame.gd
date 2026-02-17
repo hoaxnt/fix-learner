@@ -1,12 +1,20 @@
 extends Node2D
 
+# UI and Visuals
 @onready var dialog_box : MarginContainer = $CanvasLayer/DialogBox
 @onready var teacher_sprite : Sprite2D = $Teacher
 @onready var unit_sprite : Sprite2D = $Parts/EmptyUnit/Sprite2D
+@onready var canvas_layer : CanvasLayer = $CanvasLayer
+
+# Textures
 @onready var no_psu : Texture2D = preload("res://assets/items/assemble_disassemble/build/no-psu.png")
 @onready var with_psu : Texture2D = preload("res://assets/items/assemble_disassemble/build/with-psu.png")
+
+# Tutorial Scene to Instantiate
+@onready var mobo_to_unit = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/mobo_to_unit_tutorial_popup.tscn")
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
+# State Flags
 @onready var mobo_installed : bool = false
 @onready var psu_installed : bool = false
 	
@@ -18,34 +26,44 @@ func _hide_teacher():
 	teacher_sprite.hide()
 
 func request_installation(item_name: String) -> bool:
-		if item_name == "Power Supply":
-				if mobo_installed:
-						install_psu()
-						return true # Item will queue_free
-				else:
-						# Optional: Show a hint to the user
-						var data : Array[String] = ["Wait! You need to install the Motherboard first."]
-						dialog_box.update_dialog("Teacher", data)
-						return false # Item will return_to_start
+	if item_name == "Power Supply":
+		if mobo_installed:
+			install_psu()
+			return true # Item will queue_free
+		else:
+			# Show hint if motherboard is missing
+			var data : Array[String] = ["Wait! You need to install the Motherboard first."]
+			dialog_box.update_dialog("Teacher", data)
+			return false # Item will return_to_start
 						
-		if item_name == "Motherboard":
-				install_mobo()
-				return true
-				
+	if item_name == "Motherboard":
+		if not mobo_installed:
+			install_mobo()
+			return true
 		return false
+				
+	return false
 
 func install_mobo():
-		unit_sprite.texture = no_psu
-		mobo_installed = true
+	# 1. Update visuals and state
+	unit_sprite.texture = no_psu
+	mobo_installed = true
+	
+	# 2. Instantiate and add the tutorial popup to the CanvasLayer
+	var tutorial_instance = mobo_to_unit.instantiate()
+	canvas_layer.add_child(tutorial_instance)
+	
+	# Optional: Center the popup if it's not handled in its own scene
+	# tutorial_instance.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 
 func install_psu():
-		unit_sprite.texture = with_psu
-		psu_installed = true
-		trigger_end_dialog()
+	unit_sprite.texture = with_psu
+	psu_installed = true
+	trigger_end_dialog()
 
 func trigger_end_dialog():
-		teacher_sprite.show()
-		var data : Array[String] = ["Great job!", "Now, let's create a bootable flash drive to install the OS."]
-		dialog_box.update_dialog("Teacher", data)
-		await dialog_box.dialog_finished
-		SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
+	teacher_sprite.show()
+	var data : Array[String] = ["Great job!", "Now, let's create a bootable flash drive to install the OS."]
+	dialog_box.update_dialog("Teacher", data)
+	await dialog_box.dialog_finished
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
