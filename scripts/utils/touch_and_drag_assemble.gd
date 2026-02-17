@@ -78,7 +78,6 @@ func check_for_slot() -> void:
 		if area.is_in_group("slots"):
 			snap_to_slot(area)
 			return 
-			
 	return_to_start()
 
 func snap_to_slot(slot_area: Area2D) -> void:
