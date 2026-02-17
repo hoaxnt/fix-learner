@@ -47,7 +47,7 @@ func start_dragging() -> void:
 	z_index = 100
 	offset = global_position - get_global_mouse_position()
 	
-	# --- Wirign PSU LOGIC ---
+	# --- Wirign PSU	 ---
 	if not tutorial_shown and tutorial_scene:
 		var tutorial_instance = tutorial_scene.instantiate()
 		# Add to the CanvasLayer of the current main scene
