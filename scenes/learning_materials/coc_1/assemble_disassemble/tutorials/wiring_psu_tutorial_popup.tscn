@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://d3t8ven8nlk2w"]
+[gd_scene load_steps=2 format=3 uid="uid://d3t8ven8nlk2w"]
+
+[ext_resource type="Script" uid="uid://dqyww5qq0kde8" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.gd" id="1_snptm"]
 
 [node name="WiringPsuTutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_snptm")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -15.5
+offset_right = 24.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "clsoe"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
