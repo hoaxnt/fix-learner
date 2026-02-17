@@ -52,7 +52,7 @@ func start_dragging() -> void:
 		var tutorial_instance = tutorial_scene.instantiate()
 		# Add to the CanvasLayer of the current main scene
 		get_tree().current_scene.get_node("CanvasLayer").add_child(tutorial_instance)
-		tutorial_shown = true # Set to true so it never runs again
+		tutorial_shown = true
 	# --------------------------
 	
 	if shadow: shadow.hide()
