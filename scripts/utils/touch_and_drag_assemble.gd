@@ -3,18 +3,23 @@ extends Area2D
 @export var item_name_string : String = "none"
 @export var item_label : Label
 @export var shadow : Sprite2D
+# NEW: Preload the scene you want to instantiate
+@export var tutorial_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
+
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
 var initial_position : Vector2
 var dragging : bool = false
 var offset : Vector2 = Vector2.ZERO
 
+# NEW: Boolean flag to track if the scene was already shown
+var tutorial_shown : bool = false
+
 func _ready() -> void:
 	user_data.dragging = false
 	ResourceSaver.save(user_data, "user://user_data.tres")
 	initial_position = global_position
 	
-	# Setup initial UI state
 	if item_label:
 		item_label.text = item_name_string
 		item_label.hide()
@@ -28,7 +33,7 @@ func _input_event(_viewport, event, _shape_idx) -> void:
 			ResourceSaver.save(user_data, "user://user_data.tres")
 			start_dragging()
 			get_viewport().set_input_as_handled()
-		elif dragging: # Only stop if we were actually dragging
+		elif dragging:
 			user_data.dragging = false
 			ResourceSaver.save(user_data, "user://user_data.tres")
 			stop_dragging()
@@ -42,11 +47,17 @@ func start_dragging() -> void:
 	z_index = 100
 	offset = global_position - get_global_mouse_position()
 	
-	# Toggle Visuals
+	# --- NEW TUTORIAL LOGIC ---
+	if not tutorial_shown and tutorial_scene:
+		var tutorial_instance = tutorial_scene.instantiate()
+		# Add to the CanvasLayer of the current main scene
+		get_tree().current_scene.get_node("CanvasLayer").add_child(tutorial_instance)
+		tutorial_shown = true # Set to true so it never runs again
+	# --------------------------
+	
 	if shadow: shadow.hide()
 	if item_label: item_label.show()
 	
-	# "Pick up" Animation
 	var tween = create_tween().set_parallel(true)
 	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(self, "modulate:a", 0.7, 0.15)
@@ -55,11 +66,9 @@ func stop_dragging() -> void:
 	dragging = false
 	z_index = 0
 	
-	# Toggle Visuals
 	if shadow: shadow.show()
 	if item_label: item_label.hide()
 	
-	# "Drop" Animation
 	var tween = create_tween().set_parallel(true)
 	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
 	tween.tween_property(self, "modulate:a", 1.0, 0.1)
@@ -68,35 +77,28 @@ func stop_dragging() -> void:
 	
 func check_for_slot() -> void:
 	var targets = get_overlapping_areas()
-	# Optional: if your slots are StaticBodies, use get_overlapping_bodies()
-	
 	for area in targets:
 		if area.is_in_group("slots"):
 			snap_to_slot(area)
-			return # Exit function early if found
+			return 
 			
 	return_to_start()
 
-# Inside your drag and touch script
 func snap_to_slot(slot_area: Area2D) -> void:
-		var tween = create_tween()
-		tween.tween_property(self, "global_position", slot_area.global_position, 0.1).set_trans(Tween.TRANS_CUBIC)
-		
-		await tween.finished
-		
-		# Check if the minigame allows this specific item to be installed
-		# We look for a function in the parent or main scene
-		var main_game = get_tree().current_scene 
-		if main_game.has_method("request_installation"):
-			var success = main_game.request_installation(item_name_string)
-			
-			if success:
-					queue_free() # Only vanish if the game says OK!
-			else:
-				return_to_start() # Go back if the Motherboard isn't ready
+	var tween = create_tween()
+	tween.tween_property(self, "global_position", slot_area.global_position, 0.1).set_trans(Tween.TRANS_CUBIC)
+	
+	await tween.finished
+	
+	var main_game = get_tree().current_scene 
+	if main_game.has_method("request_installation"):
+		var success = main_game.request_installation(item_name_string)
+		if success:
+			queue_free()
 		else:
-				# Fallback logic if no main game logic exists
-				queue_free()
+			return_to_start()
+	else:
+		queue_free()
 				
 func return_to_start() -> void:
 	var tween = create_tween()
