@@ -12,7 +12,7 @@ var initial_position : Vector2
 var dragging : bool = false
 var offset : Vector2 = Vector2.ZERO
 
-# NEW: Boolean flag to track if the scene was already shown
+# Boolean flag to track if the scene was already shown
 var tutorial_shown : bool = false
 
 func _ready() -> void:
