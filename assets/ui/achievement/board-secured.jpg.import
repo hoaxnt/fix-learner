@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y4kvb355udd5"
+uid="uid://4y0cjeo2bix2"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/9 board secured.jpg"
+source_file="res://assets/ui/achievement/board-secured.jpg"
 
 [params]
 
