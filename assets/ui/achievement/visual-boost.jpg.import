@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2g8n6g570q8j"
+uid="uid://byrl0vnacdw4d"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/7 visual boost.jpg"
+source_file="res://assets/ui/achievement/visual-boost.jpg"
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqimti7skqctc"
+uid="uid://v0bpdilv3fbw"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/8 speed drive.jpg"
+source_file="res://assets/ui/achievement/speed-driver.jpg"
 
 [params]
 
