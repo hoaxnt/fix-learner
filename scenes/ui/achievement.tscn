@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlpiexvh6e4sn"]
+[gd_scene load_steps=5 format=3 uid="uid://dlpiexvh6e4sn"]
 
 [ext_resource type="Texture2D" uid="uid://bpwj6igxqnrlt" path="res://assets/ui/achievement/airflow-expert.PNG" id="1_120ss"]
+[ext_resource type="Script" uid="uid://b4ck0typykhn8" path="res://scripts/ui/achievement.gd" id="1_b6oxt"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="1_hdufb"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_5jp8t"]
 
 [node name="Achievement" type="CanvasLayer"]
+script = ExtResource("1_b6oxt")
 
 [node name="Panel" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0.98039216)
