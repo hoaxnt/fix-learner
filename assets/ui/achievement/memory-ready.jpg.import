@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfi47gbjj5nxh"
+uid="uid://c44yga8i8k4qd"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/6 memory ready.jpg"
+source_file="res://assets/ui/achievement/memory-ready.jpg"
 
 [params]
 
