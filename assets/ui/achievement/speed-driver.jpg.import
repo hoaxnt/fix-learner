@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv77qau0dlkil"
-valid=false
+uid="uid://326yuoml05e8"
+path="res://.godot/imported/speed-driver.jpg-9201a52883c659300fc2e5df922d44b5.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/speed-driver.jpg"
+dest_files=["res://.godot/imported/speed-driver.jpg-9201a52883c659300fc2e5df922d44b5.ctex"]
 
 [params]
 

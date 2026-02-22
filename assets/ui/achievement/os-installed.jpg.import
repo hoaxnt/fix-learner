@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cddgx3032l2fe"
-valid=false
+uid="uid://csii4avmv8q17"
+path="res://.godot/imported/os-installed.jpg-f015f5ae33e4369cbad73707c9811fbd.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/os-installed.jpg"
+dest_files=["res://.godot/imported/os-installed.jpg-f015f5ae33e4369cbad73707c9811fbd.ctex"]
 
 [params]
 

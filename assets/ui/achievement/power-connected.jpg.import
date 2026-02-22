@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2bcwdsoef5il"
-valid=false
+uid="uid://dggful85ob344"
+path="res://.godot/imported/power-connected.jpg-c6e7d99da7db06a4e9f02c94f7e421fe.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/power-connected.jpg"
+dest_files=["res://.godot/imported/power-connected.jpg-c6e7d99da7db06a4e9f02c94f7e421fe.ctex"]
 
 [params]
 

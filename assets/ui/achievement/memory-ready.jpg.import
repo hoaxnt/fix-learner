@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nv6sggyvwqqy"
-valid=false
+uid="uid://dawg0u1hojhkb"
+path="res://.godot/imported/memory-ready.jpg-1f27d5b4f3c3016675df6be7da7d0c9a.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/memory-ready.jpg"
+dest_files=["res://.godot/imported/memory-ready.jpg-1f27d5b4f3c3016675df6be7da7d0c9a.ctex"]
 
 [params]
 

@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlpiexvh6e4sn"]
-
-[ext_resource type="Texture2D" uid="uid://ccg4nfa2j86po" path="res://assets/ui/achievement/hazard.PNG" id="1_120ss"]
+[gd_scene format=3 uid="uid://dlpiexvh6e4sn"]
 
 [node name="Achievement" type="CanvasLayer"]
 
@@ -16,4 +14,3 @@ offset_right = 455.0
 offset_bottom = 298.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_120ss")

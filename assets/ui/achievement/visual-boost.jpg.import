@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxr68n1aqt1ac"
-valid=false
+uid="uid://cm55gtydkmod2"
+path="res://.godot/imported/visual-boost.jpg-1046f6db06d45f9061ef88eae94dbc3f.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/visual-boost.jpg"
+dest_files=["res://.godot/imported/visual-boost.jpg-1046f6db06d45f9061ef88eae94dbc3f.ctex"]
 
 [params]
 

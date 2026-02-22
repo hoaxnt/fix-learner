@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ljkllbnyl8k"
-valid=false
+uid="uid://bd51ygt6ownb4"
+path="res://.godot/imported/power-routed.jpg-bb161187e0f1834e4763947dbed6e237.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/power-routed.jpg"
+dest_files=["res://.godot/imported/power-routed.jpg-bb161187e0f1834e4763947dbed6e237.ctex"]
 
 [params]
 

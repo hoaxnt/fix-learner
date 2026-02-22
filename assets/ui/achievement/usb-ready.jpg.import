@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d04ksguvo35hx"
-valid=false
+uid="uid://bhostgd4dqdrr"
+path="res://.godot/imported/usb-ready.jpg-b5bd0999cdefb3ce713fcd0d3a9c31eb.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/usb-ready.jpg"
+dest_files=["res://.godot/imported/usb-ready.jpg-b5bd0999cdefb3ce713fcd0d3a9c31eb.ctex"]
 
 [params]
 

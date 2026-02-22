@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cja62qn1083fa"
-valid=false
+uid="uid://51vu74hq7gph"
+path="res://.godot/imported/core-master.jpg-3ca215ab3c698cc288654dc479956379.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/ui/achievement/core-master.jpg"
+dest_files=["res://.godot/imported/core-master.jpg-3ca215ab3c698cc288654dc479956379.ctex"]
 
 [params]
 
