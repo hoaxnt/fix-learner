@@ -42,7 +42,6 @@ scale = Vector2(0.841, 0.841)
 texture = ExtResource("4_4bjcl")
 
 [node name="PSU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
-visible = false
 position = Vector2(-328, 233)
 script = ExtResource("3_syuov")
 item_name_string = "Power Supply"
