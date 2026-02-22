@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7la66gbr2mbo"]
+[gd_scene load_steps=17 format=3 uid="uid://b7la66gbr2mbo"]
 
 [ext_resource type="Script" uid="uid://8vslaar1kxtx" path="res://scripts/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.gd" id="1_gthx7"]
 [ext_resource type="Texture2D" uid="uid://m0i71ttdq3ht" path="res://assets/environment/workbench2.png" id="2_ixlbu"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bqino414k3qgx" path="res://assets/items/assemble_disassemble/build/m2_installed.png" id="8_rgl55"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="11_x2ofc"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="12_rgl55"]
+[ext_resource type="PackedScene" uid="uid://dlpiexvh6e4sn" path="res://scenes/ui/achievement.tscn" id="13_ossx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixlbu"]
 size = Vector2(190, 322)
@@ -142,6 +143,8 @@ options_menu = NodePath("../OptionsMenu")
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("12_rgl55")]
 visible = false
+
+[node name="Achievement" parent="." instance=ExtResource("13_ossx8")]
 
 [connection signal="area_exited" from="Parts/PSU" to="." method="_on_psu_area_exited"]
 [connection signal="area_exited" from="Parts/Mobo" to="." method="_on_mobo_area_exited"]
