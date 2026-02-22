@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca8gqrfki31ci"
+uid="uid://1oemiorre7ug"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/10 power connected.jpg"
+source_file="res://assets/ui/achievement/power-routed.jpg"
 
 [params]
 

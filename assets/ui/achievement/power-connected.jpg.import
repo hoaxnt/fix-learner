@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bko81u33oefu1"
+uid="uid://ds1mpkp1t1lfi"
 valid=false
 
 [deps]
 
-source_file="res://assets/ui/achievement/12 usb ready.jpg"
+source_file="res://assets/ui/achievement/power-connected.jpg"
 
 [params]
 
