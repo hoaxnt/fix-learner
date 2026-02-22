@@ -7,7 +7,7 @@
 [node name="Achievement" type="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="."]
-modulate = Color(1, 1, 1, 0.78431374)
+modulate = Color(1, 1, 1, 0.98039216)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
