@@ -65,30 +65,19 @@ func _on_button_4_button_up() -> void:
 	all_screw_placed = true
 
 func _on_screw_button_button_up() -> void:
-	# 1. Logic for the Screw Button itself
 	screw_button.toggle_mode = true
-	screw_button.button_pressed = true # Keep this one down
-	# 2. Untoggle the Screwdriver (the "vice versa" part)
+	screw_button.button_pressed = true
 	screw_driver_button.button_pressed = false
-	
-	# 3. Functional logic
 	if not all_screw_placed:
 		button_1.show()
 
 func _on_screwdriver_button_button_up() -> void:
-	# 1. Logic for the Screwdriver Button itself
 	screw_driver_button.toggle_mode = true
-	screw_driver_button.button_pressed = true # Keep this one down
-	# 2. Untoggle the Screw button
+	screw_driver_button.button_pressed = true
 	screw_button.button_pressed = false
-	
-	# 3. Functional logic
 	if all_screw_placed:
-		# Restart the button sequence for tightening
 		button_1.show()
 	else:
-		# If they haven't finished placing screws, 
-		# pop the screwdriver back up and warn them
 		screw_driver_button.button_pressed = false
 		var warning_data : Array[String] = ["You need to put all the screws in place first before tightening them."]
 		dialog_box.update_dialog("Teacher", warning_data)

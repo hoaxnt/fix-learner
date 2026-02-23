@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bggvcgl5mokvc"]
+[gd_scene load_steps=9 format=3 uid="uid://bggvcgl5mokvc"]
 
 [ext_resource type="Texture2D" uid="uid://bn6pk8td5rwor" path="res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/p1.png" id="1_ig35i"]
 [ext_resource type="Script" uid="uid://f0fo2af46d1o" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.gd" id="1_ukuat"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_tgvsw"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="3_ajsie"]
 [ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="3_ukuat"]
 [ext_resource type="Texture2D" uid="uid://h77fej3r03m6" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screwdriver.png" id="4_ajsie"]
 
@@ -42,6 +43,9 @@ grow_vertical = 2
 texture = ExtResource("1_ig35i")
 metadata/_edit_lock_ = true
 
+[node name="DialogBox" parent="." instance=ExtResource("3_ajsie")]
+offset_top = -266.0
+
 [node name="Button1" type="Button" parent="."]
 offset_left = 1540.0
 offset_top = 400.0
@@ -53,30 +57,33 @@ theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 1212.0
-offset_top = 445.0
-offset_right = 1317.0
-offset_bottom = 569.0
+visible = false
+offset_left = 1516.0
+offset_top = 779.0
+offset_right = 1632.0
+offset_bottom = 903.0
 focus_mode = 0
 theme = ExtResource("2_tgvsw")
 theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 1469.0
-offset_top = 571.0
-offset_right = 1574.0
-offset_bottom = 695.0
+visible = false
+offset_left = 524.0
+offset_top = 852.0
+offset_right = 641.0
+offset_bottom = 976.0
 focus_mode = 0
 theme = ExtResource("2_tgvsw")
 theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 1017.0
-offset_top = 743.0
-offset_right = 1122.0
-offset_bottom = 867.0
+visible = false
+offset_left = 494.0
+offset_top = 486.0
+offset_right = 613.0
+offset_bottom = 610.0
 focus_mode = 0
 theme = ExtResource("2_tgvsw")
 theme_override_font_sizes/font_size = 70
@@ -120,6 +127,8 @@ vertical_icon_alignment = 0
 expand_icon = true
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ItemList/ScrewButton" to="." method="_on_screw_button_button_up"]
+[connection signal="pressed" from="ItemList/ScrewdriverButton" to="." method="_on_screwdriver_button_button_up"]
