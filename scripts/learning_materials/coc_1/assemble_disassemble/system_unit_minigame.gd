@@ -44,7 +44,6 @@ func request_installation(item_name: String) -> void:
 			install_mobo()
 
 func _on_wiring_finished():
-	get_tree().paused = false
 	print("install psu")
 	install_psu()
 

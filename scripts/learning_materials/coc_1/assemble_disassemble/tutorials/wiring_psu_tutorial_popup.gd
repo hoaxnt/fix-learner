@@ -51,5 +51,5 @@ func _on_button_5_pressed() -> void:
 
 func _on_button_6_pressed() -> void:
 	background.texture = tex7
-	
+	b6.hide()
 	wiring_complete.emit()
