@@ -22,8 +22,9 @@ radius = 69.00725
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4bjcl"]
 size = Vector2(185, 184)
 
-[node name="SystemUnitMinigame" type="Node2D"]
+[node name="SystemUnitMinigame" type="Node2D" node_paths=PackedStringArray("psu")]
 script = ExtResource("1_gthx7")
+psu = NodePath("Parts/PSU")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_ixlbu")
@@ -43,6 +44,7 @@ texture = ExtResource("4_4bjcl")
 
 [node name="PSU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(-328, 233)
+input_pickable = false
 script = ExtResource("3_syuov")
 item_name_string = "Power Supply"
 item_label = NodePath("Label")

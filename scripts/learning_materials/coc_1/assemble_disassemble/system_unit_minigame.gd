@@ -17,6 +17,8 @@ extends Node2D
 # State Flags
 @onready var mobo_installed : bool = false
 @onready var psu_installed : bool = false
+
+@export var psu : Area2D
 	
 func _ready() -> void:
 	if dialog_box:
@@ -51,6 +53,10 @@ func install_mobo():
 	
 	var tutorial_instance = mobo_to_unit.instantiate()
 	canvas_layer.add_child(tutorial_instance)
+	
+#	PSU pickable after mobo installed
+	if psu:
+		psu.input_pickable = true
 	
 func install_psu():
 	unit_sprite.texture = with_psu
