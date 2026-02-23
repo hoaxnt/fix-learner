@@ -20,6 +20,7 @@ extends Node2D
 @onready var psu_installed : bool = false
 
 @export var psu : Area2D
+@export var mobo : Area2D
 	
 func _ready() -> void:
 	if dialog_box:
@@ -28,28 +29,26 @@ func _ready() -> void:
 func _hide_teacher():
 	teacher_sprite.hide()
 
-func request_installation(item_name: String) -> bool:
+func request_installation(item_name: String) -> void:
 	if item_name == "Power Supply":
 		if mobo_installed:
+			psu.queue_free()
 			var wiring_psu = wiring_psu_scene.instantiate()
+			
+			wiring_psu.wiring_complete.connect(_on_wiring_finished)
 			get_parent().add_child(wiring_psu)
-			
-			await wiring_psu.wiring_complete
-			
-			print("install psu")
-			#install_psu() 
-			
 			
 	if item_name == "Motherboard":
 		if not mobo_installed:
+			mobo.queue_free()   
 			install_mobo()
-			return true
-		return false
-				
-	return false
+
+func _on_wiring_finished():
+	get_tree().paused = false
+	print("install psu")
+	install_psu()
 
 func install_mobo():
-
 	unit_sprite.texture = no_psu
 	mobo_installed = true
 	

@@ -32,6 +32,7 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [node name="WiringPsuTutorialPopup" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_snptm")
 
 [node name="Background" type="TextureRect" parent="."]

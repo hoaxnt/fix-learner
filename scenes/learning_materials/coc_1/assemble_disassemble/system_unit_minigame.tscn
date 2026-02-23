@@ -22,9 +22,10 @@ radius = 69.00725
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4bjcl"]
 size = Vector2(185, 184)
 
-[node name="SystemUnitMinigame" type="Node2D" node_paths=PackedStringArray("psu")]
+[node name="SystemUnitMinigame" type="Node2D" node_paths=PackedStringArray("psu", "mobo")]
 script = ExtResource("1_gthx7")
 psu = NodePath("Parts/PSU")
+mobo = NodePath("Parts/Mobo")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_ixlbu")
