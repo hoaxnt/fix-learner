@@ -45,17 +45,13 @@ func request_installation(item_name: String) -> bool:
 	return false
 
 func install_mobo():
-	# 1. Update visuals and state
+
 	unit_sprite.texture = no_psu
 	mobo_installed = true
 	
-	# 2. Instantiate and add the tutorial popup to the CanvasLayer
 	var tutorial_instance = mobo_to_unit.instantiate()
 	canvas_layer.add_child(tutorial_instance)
 	
-	# Optional: Center the popup if it's not handled in its own scene
-	# tutorial_instance.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-
 func install_psu():
 	unit_sprite.texture = with_psu
 	psu_installed = true
