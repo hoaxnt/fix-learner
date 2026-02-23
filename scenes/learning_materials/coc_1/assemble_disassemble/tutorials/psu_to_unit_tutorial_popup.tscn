@@ -33,7 +33,7 @@ corner_radius_bottom_left = 30
 [node name="PsuToUnitTutorialPopup" type="CanvasLayer"]
 script = ExtResource("1_ukuat")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -41,6 +41,46 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ig35i")
 metadata/_edit_lock_ = true
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 1540.0
+offset_top = 400.0
+offset_right = 1645.0
+offset_bottom = 524.0
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 70
+text = " 1 "
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1212.0
+offset_top = 445.0
+offset_right = 1317.0
+offset_bottom = 569.0
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 70
+text = " 2 "
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 1469.0
+offset_top = 571.0
+offset_right = 1574.0
+offset_bottom = 695.0
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 70
+text = " 3 "
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 1017.0
+offset_top = 743.0
+offset_right = 1122.0
+offset_bottom = 867.0
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 70
+text = " 4 "
 
 [node name="ItemList" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 800)
@@ -78,3 +118,8 @@ icon = ExtResource("4_ajsie")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_1_pressed"]
