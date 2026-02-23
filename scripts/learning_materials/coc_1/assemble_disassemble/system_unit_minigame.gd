@@ -33,8 +33,13 @@ func request_installation(item_name: String) -> bool:
 		if mobo_installed:
 			var wiring_psu = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu)
-			install_psu()
-						
+			
+			await wiring_psu.wiring_complete
+			
+			print("install psu")
+			#install_psu() 
+			
+			
 	if item_name == "Motherboard":
 		if not mobo_installed:
 			install_mobo()
