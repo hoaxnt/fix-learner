@@ -45,7 +45,6 @@ expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("3_che53")]
 offset_top = -266.0
-dialog_lines = Array[String](["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted", "Which helps apply consistent pressure and improves cooling performance."])
 
 [node name="Button1" type="Button" parent="."]
 offset_left = 537.0
