@@ -33,13 +33,7 @@ func request_installation(item_name: String) -> bool:
 		if mobo_installed:
 			var wiring_psu = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu)
-			#install_psu()
-			return true # Item will queue_free
-		else:
-			# Show hint if motherboard is missing
-			var data : Array[String] = ["Wait! You need to install the Motherboard first."]
-			dialog_box.update_dialog("Teacher", data)
-			return false # Item will return_to_start
+			install_psu()
 						
 	if item_name == "Motherboard":
 		if not mobo_installed:

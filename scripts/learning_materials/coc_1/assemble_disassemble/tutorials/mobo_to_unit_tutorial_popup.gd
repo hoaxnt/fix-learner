@@ -18,6 +18,7 @@ extends CanvasLayer
 var all_screw_placed : bool = false
 
 func _on_button_1_button_up() -> void:
+	queue_free()#fortest
 	if all_screw_placed:
 		button_1.hide()
 		button_2.show()
