@@ -43,11 +43,6 @@ func start_dragging() -> void:
 	z_index = 100
 	offset = global_position - get_global_mouse_position()
 	
-	if not wiring_psu_tutorial_shown and wiring_psu_scene:
-		var wiring_psu_tutorial_instance = wiring_psu_scene.instantiate()
-		get_tree().current_scene.get_node("CanvasLayer").add_child(wiring_psu_tutorial_instance)
-		wiring_psu_tutorial_shown = true
-	
 	if shadow: shadow.hide()
 	if item_label: item_label.show()
 	
