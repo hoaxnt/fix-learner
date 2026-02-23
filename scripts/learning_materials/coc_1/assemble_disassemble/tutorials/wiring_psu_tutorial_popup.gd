@@ -3,6 +3,7 @@ extends CanvasLayer
 signal wiring_complete
 
 @onready var background : TextureRect = $Background
+@onready var dialog_box : MarginContainer = $DialogBox
 @onready var b1 = $Button1
 @onready var b2 = $Button2
 @onready var b3 = $Button3
@@ -52,6 +53,11 @@ func _on_button_5_pressed() -> void:
 func _on_button_6_pressed() -> void:
 	background.texture = tex7
 	b6.hide()
+	
+	var data : Array[String] = ["Great! now put the PSU to case"]
+	dialog_box.update_dialog("Teacher", data)
+	
+	await dialog_box.dialog_finished
 	
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
 	queue_free()
