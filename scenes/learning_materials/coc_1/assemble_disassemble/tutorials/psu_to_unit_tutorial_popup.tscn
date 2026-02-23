@@ -1,6 +1,37 @@
-[gd_scene format=3 uid="uid://bggvcgl5mokvc"]
+[gd_scene load_steps=8 format=3 uid="uid://bggvcgl5mokvc"]
+
+[ext_resource type="Texture2D" uid="uid://bn6pk8td5rwor" path="res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/p1.png" id="1_ig35i"]
+[ext_resource type="Script" uid="uid://f0fo2af46d1o" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.gd" id="1_ukuat"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_tgvsw"]
+[ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="3_ukuat"]
+[ext_resource type="Texture2D" uid="uid://h77fej3r03m6" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screwdriver.png" id="4_ajsie"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fxcm"]
+bg_color = Color(0, 0.84313726, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_572c1"]
+bg_color = Color(0, 0.84313726, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.15686275, 0.17254902, 0.20392157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="PsuToUnitTutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_ukuat")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -8,4 +39,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_ig35i")
 metadata/_edit_lock_ = true
+
+[node name="ItemList" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 800)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -402.0
+offset_right = 351.0
+offset_bottom = 402.0
+grow_vertical = 2
+alignment = 1
+
+[node name="ScrewButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3fxcm")
+text = "Screw"
+icon = ExtResource("3_ukuat")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="ScrewdriverButton" type="Button" parent="ItemList"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tgvsw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_572c1")
+text = "Screwdriver"
+icon = ExtResource("4_ajsie")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true

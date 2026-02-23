@@ -52,4 +52,6 @@ func _on_button_5_pressed() -> void:
 func _on_button_6_pressed() -> void:
 	background.texture = tex7
 	b6.hide()
-	wiring_complete.emit()
+	
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
+	queue_free()
