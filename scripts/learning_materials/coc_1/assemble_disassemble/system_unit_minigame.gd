@@ -13,6 +13,7 @@ extends Node2D
 # Tutorial Scene to Instantiate
 @onready var mobo_to_unit = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/mobo_to_unit_tutorial_popup.tscn")
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
+@onready var wiring_psu_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
 
 # State Flags
 @onready var mobo_installed : bool = false
@@ -30,7 +31,9 @@ func _hide_teacher():
 func request_installation(item_name: String) -> bool:
 	if item_name == "Power Supply":
 		if mobo_installed:
-			install_psu()
+			var wiring_psu = wiring_psu_scene.instantiate()
+			get_parent().add_child(wiring_psu)
+			#install_psu()
 			return true # Item will queue_free
 		else:
 			# Show hint if motherboard is missing

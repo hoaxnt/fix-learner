@@ -48,7 +48,6 @@ offset_top = -266.0
 dialog_lines = Array[String](["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted", "Which helps apply consistent pressure and improves cooling performance."])
 
 [node name="Button1" type="Button" parent="."]
-visible = false
 offset_left = 537.0
 offset_top = 46.0
 offset_right = 642.0
@@ -129,3 +128,5 @@ icon = ExtResource("6_5q1sy")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_pressed"]
