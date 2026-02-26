@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://jnjhetsl5cvx"]
+[gd_scene load_steps=7 format=3 uid="uid://jnjhetsl5cvx"]
 
-[ext_resource type="Texture2D" uid="uid://c1107ju1sxesi" path="res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b2.png" id="1_jjic6"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_f375y"]
 [ext_resource type="Texture2D" uid="uid://1jrufsyqokyl" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screw.png" id="3_ap2jp"]
 [ext_resource type="Texture2D" uid="uid://h77fej3r03m6" path="res://assets/tutorials/assemble_disassemble/cpu_fan_tutorial/screwdriver.png" id="4_oyse6"]
@@ -38,7 +37,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jjic6")
 metadata/_edit_lock_ = true
 
 [node name="Button1" type="Button" parent="."]
@@ -52,30 +50,30 @@ theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 1516.0
-offset_top = 779.0
-offset_right = 1632.0
-offset_bottom = 903.0
+offset_left = 754.0
+offset_top = 239.0
+offset_right = 870.0
+offset_bottom = 363.0
 focus_mode = 0
 theme = ExtResource("2_f375y")
 theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 524.0
-offset_top = 852.0
-offset_right = 641.0
-offset_bottom = 976.0
+offset_left = 276.0
+offset_top = 783.0
+offset_right = 393.0
+offset_bottom = 907.0
 focus_mode = 0
 theme = ExtResource("2_f375y")
 theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 494.0
-offset_top = 486.0
-offset_right = 613.0
-offset_bottom = 610.0
+offset_left = 1562.0
+offset_top = 106.0
+offset_right = 1681.0
+offset_bottom = 230.0
 focus_mode = 0
 theme = ExtResource("2_f375y")
 theme_override_font_sizes/font_size = 70
