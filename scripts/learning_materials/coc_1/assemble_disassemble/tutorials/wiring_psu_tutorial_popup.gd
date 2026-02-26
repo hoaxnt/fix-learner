@@ -49,7 +49,7 @@ func _on_button_5_pressed() -> void:
 	background.texture = tex6
 	b5.hide()
 	b6.show()
-
+	
 func _on_button_6_pressed() -> void:
 	background.texture = tex7
 	b6.hide()
