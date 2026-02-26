@@ -8,12 +8,14 @@ extends CanvasLayer
 @onready var b3 = $Button3
 @onready var b4 = $Button4
 
+# Completing the sequence of preloaded textures
 @onready var tex2 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b2.png")
-@onready var tex3 = preload("")
-@onready var tex4 = preload("")
-@onready var tex5 = preload("")
+@onready var tex3 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b3.png")
+@onready var tex4 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b4.jpg")
+@onready var tex5 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b5.png")
 
 func _ready() -> void:
+	# Initialize the UI state
 	b2.hide()
 	b3.hide()
 	b4.hide()
@@ -34,13 +36,15 @@ func _on_button_3_pressed() -> void:
 	b4.show()
 
 func _on_button_4_pressed() -> void:
+	# Final step: update texture and cleanup
 	background.texture = tex5
 	b4.hide()
 	
 	var data : Array[String] = ["Great! now put the PSU to case"]
 	dialog_box.update_dialog("Teacher", data)
 	
+	# Wait for the player to finish reading before switching scenes
 	await dialog_box.dialog_finished
 	
-	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
+	#SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
 	queue_free()
