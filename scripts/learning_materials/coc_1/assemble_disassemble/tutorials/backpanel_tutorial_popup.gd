@@ -40,7 +40,7 @@ func _on_button_4_pressed() -> void:
 	background.texture = tex5
 	b4.hide()
 	
-	var data : Array[String] = ["Great! now put the PSU to case"]
+	var data : Array[String] = ["Great! We're all set!"]
 	dialog_box.update_dialog("Teacher", data)
 	
 	# Wait for the player to finish reading before switching scenes

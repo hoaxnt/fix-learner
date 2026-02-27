@@ -28,7 +28,7 @@ func _ready() -> void:
 
 func _hide_teacher():
 	teacher_sprite.hide()
-
+	
 func request_installation(item_name: String) -> void:
 	if item_name == "Power Supply":
 		if mobo_installed:
@@ -42,11 +42,11 @@ func request_installation(item_name: String) -> void:
 		if not mobo_installed:
 			mobo.queue_free()   
 			install_mobo()
-
+	
 func _on_wiring_finished():
 	print("install psu")
 	install_psu()
-
+	
 func install_mobo():
 	unit_sprite.texture = no_psu
 	mobo_installed = true
@@ -62,7 +62,7 @@ func install_psu():
 	unit_sprite.texture = with_psu
 	psu_installed = true
 	trigger_end_dialog()
-
+	
 func trigger_end_dialog():
 	teacher_sprite.show()
 	var data : Array[String] = ["Great job!", "Now, let's create a bootable flash drive to install the OS."]

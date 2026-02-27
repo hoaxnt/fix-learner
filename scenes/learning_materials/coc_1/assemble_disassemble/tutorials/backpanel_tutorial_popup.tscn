@@ -61,7 +61,6 @@ theme_override_font_sizes/font_size = 70
 text = " 4 "
 
 [node name="DialogBox" parent="." instance=ExtResource("5_ghr1u")]
-visible = false
 offset_top = -266.0
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]

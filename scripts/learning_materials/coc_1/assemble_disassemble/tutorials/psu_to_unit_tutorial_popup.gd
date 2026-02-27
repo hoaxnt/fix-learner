@@ -35,7 +35,7 @@ func _on_button_1_pressed() -> void:
 	button_1.hide()
 	button_2.show()
 	_handle_tightening()
-
+	
 func _on_button_2_pressed() -> void:
 	if screw_button.button_pressed:
 		background.texture = image_2
@@ -43,7 +43,7 @@ func _on_button_2_pressed() -> void:
 	button_2.hide()
 	button_3.show()
 	_handle_tightening()
-
+	
 func _on_button_3_pressed() -> void:
 	if screw_button.button_pressed:
 		background.texture = image_3
@@ -51,7 +51,7 @@ func _on_button_3_pressed() -> void:
 	button_3.hide()
 	button_4.show()
 	_handle_tightening()
-
+	
 func _on_button_4_pressed() -> void:
 	if screw_button.button_pressed:
 		background.texture = image_4
@@ -60,20 +60,20 @@ func _on_button_4_pressed() -> void:
 	
 	button_4.hide()
 	_handle_tightening()
-
+	
 func _handle_tightening() -> void:
 	if screw_driver_button.button_pressed and all_screw_placed:
 		screws_tightened += 1
 		if screws_tightened >= 4:
 			_finish_tutorial()
-
+			
 func _on_screw_button_button_up() -> void:
 	screw_button.toggle_mode = true
 	screw_button.button_pressed = true
 	screw_driver_button.button_pressed = false
 	if not all_screw_placed:
 		button_1.show()
-
+	
 func _on_screwdriver_button_button_up() -> void:
 	if not all_screw_placed:
 		screw_driver_button.button_pressed = false
@@ -81,12 +81,12 @@ func _on_screwdriver_button_button_up() -> void:
 		dialog_box.show()
 		dialog_box.update_dialog("Teacher", warning_data)
 		return
-
+	
 	screw_driver_button.toggle_mode = true
 	screw_driver_button.button_pressed = true
 	screw_button.button_pressed = false
 	button_1.show()
-
+	
 func _finish_tutorial() -> void:
 	dialog_box.show()
 	var final_data : Array[String] = ["Great job! The Power Supply Unit is now securely mounted to the case."]
@@ -96,6 +96,6 @@ func _finish_tutorial() -> void:
 		await dialog_box.dialog_finished
 	else:
 		await get_tree().create_timer(3.0).timeout
-	
-	wiring_complete.emit()
+		
+	SceneTransition.change_scene("")
 	queue_free()
