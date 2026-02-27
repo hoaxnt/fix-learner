@@ -23,6 +23,7 @@ radius = 69.00725
 size = Vector2(185, 184)
 
 [node name="SystemUnitMinigame" type="Node2D" node_paths=PackedStringArray("psu", "mobo")]
+position = Vector2(-110, 11)
 script = ExtResource("1_gthx7")
 psu = NodePath("Parts/PSU")
 mobo = NodePath("Parts/Mobo")
