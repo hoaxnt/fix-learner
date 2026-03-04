@@ -60,7 +60,7 @@ func _on_button_6_pressed() -> void:
 	
 	await dialog_box.dialog_finished
 	
-	#var psu_to_unit_instance = psu_to_unit_scene.instantiate()
-	#get_parent().add_child(psu_to_unit_instance)
+	var psu_to_unit_instance = psu_to_unit_scene.instantiate()
+	get_parent().add_child(psu_to_unit_instance)
 	
 	queue_free()
