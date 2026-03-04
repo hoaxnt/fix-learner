@@ -138,16 +138,8 @@ zoom = Vector2(1.88, 1.88)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_y8vlm")]
-dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside it.", "Also, ensure the power supply is properly placed and connected."])
-
-[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("11_x2ofc")]
-options_menu = NodePath("../OptionsMenu")
-
-[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("12_rgl55")]
-visible = false
-
 [node name="FinishButton" type="Button" parent="CanvasLayer"]
+visible = false
 custom_minimum_size = Vector2(500, 100)
 anchors_preset = 6
 anchor_left = 1.0
@@ -164,6 +156,15 @@ focus_mode = 0
 theme = ExtResource("7_ocyj7")
 theme_override_font_sizes/font_size = 100
 text = "Finish"
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_y8vlm")]
+dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside it.", "Also, ensure the power supply is properly placed and connected."])
+
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("11_x2ofc")]
+options_menu = NodePath("../OptionsMenu")
+
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("12_rgl55")]
+visible = false
 
 [connection signal="area_exited" from="Parts/PSU" to="." method="_on_psu_area_exited"]
 [connection signal="area_exited" from="Parts/Mobo" to="." method="_on_mobo_area_exited"]
