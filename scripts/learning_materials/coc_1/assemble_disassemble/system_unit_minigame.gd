@@ -45,7 +45,6 @@ func request_installation(item_name: String) -> void:
 			install_mobo()
 	
 func _on_install_finished():
-	print("install backpanel shits done!")
 	trigger_end_dialog()
 	
 func install_mobo():
