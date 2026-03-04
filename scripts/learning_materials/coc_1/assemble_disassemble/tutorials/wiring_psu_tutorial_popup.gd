@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-signal wiring_complete
-
 @onready var background : TextureRect = $Background
 @onready var dialog_box : MarginContainer = $DialogBox
 @onready var b1 = $Button1
@@ -17,6 +15,9 @@ signal wiring_complete
 @onready var tex5 = preload("res://assets/tutorials/assemble_disassemble/wiring_psu_tutorial/5.jpg")
 @onready var tex6 = preload("res://assets/tutorials/assemble_disassemble/wiring_psu_tutorial/6.jpg")
 @onready var tex7 = preload("res://assets/tutorials/assemble_disassemble/wiring_psu_tutorial/7.jpg")
+
+@onready var psu_to_unit_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
+
 
 func _ready() -> void:
 	b2.hide()
@@ -59,5 +60,7 @@ func _on_button_6_pressed() -> void:
 	
 	await dialog_box.dialog_finished
 	
-	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
+	var psu_to_unit_instance = psu_to_unit_scene.instantiate()
+	get_parent().add_child(psu_to_unit_instance)
+	
 	queue_free()
