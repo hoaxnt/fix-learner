@@ -35,8 +35,8 @@ func request_installation(item_name: String) -> void:
 			psu.queue_free()
 			
 			var wiring_psu = wiring_psu_scene.instantiate()
-			wiring_psu.wiring_complete.connect(_on_wiring_finished)
 			get_parent().add_child(wiring_psu)
+			#wiring_psu.wiring_complete.connect(_on_wiring_finished)
 			
 	if item_name == "Motherboard":
 		if not mobo_installed:
@@ -45,7 +45,9 @@ func request_installation(item_name: String) -> void:
 	
 func _on_wiring_finished():
 	print("install psu")
-	install_psu()
+	unit_sprite.texture = with_psu
+	psu_installed = true
+	trigger_end_dialog()
 	
 func install_mobo():
 	unit_sprite.texture = no_psu
@@ -57,11 +59,6 @@ func install_mobo():
 #	PSU pickable after mobo installed
 	if psu:
 		psu.input_pickable = true
-	
-func install_psu():
-	unit_sprite.texture = with_psu
-	psu_installed = true
-	trigger_end_dialog()
 	
 func trigger_end_dialog():
 	teacher_sprite.show()
