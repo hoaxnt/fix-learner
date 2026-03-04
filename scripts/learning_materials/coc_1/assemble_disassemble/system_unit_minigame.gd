@@ -40,14 +40,13 @@ func request_installation(item_name: String) -> void:
 			var wiring_psu_instance = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu_instance)
 			
-			finish_button.show()
-			
 	if item_name == "Motherboard":
 		if not mobo_installed:
 			mobo.queue_free()   
 			install_mobo()
 	
 func _on_install_finished():
+	finish_button.hide()
 	trigger_end_dialog()
 	
 func install_mobo():
