@@ -59,5 +59,5 @@ func _on_button_6_pressed() -> void:
 	
 	await dialog_box.dialog_finished
 	
-	#SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/psu_to_unit_tutorial_popup.tscn")
 	queue_free()
