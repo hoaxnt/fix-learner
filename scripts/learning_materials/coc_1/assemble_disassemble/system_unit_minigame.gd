@@ -5,6 +5,7 @@ extends Node2D
 @onready var teacher_sprite : Sprite2D = $Teacher
 @onready var unit_sprite : Sprite2D = $Parts/EmptyUnit/Sprite2D
 @onready var canvas_layer : CanvasLayer = $CanvasLayer
+@onready var finish_button : Button = $CanvasLayer/FinishButton
 
 # Textures
 @onready var no_psu : Texture2D = preload("res://assets/items/assemble_disassemble/build/no-psu.png")
@@ -38,6 +39,8 @@ func request_installation(item_name: String) -> void:
 			
 			var wiring_psu_instance = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu_instance)
+			
+			#finish_button.show()
 			
 	if item_name == "Motherboard":
 		if not mobo_installed:
