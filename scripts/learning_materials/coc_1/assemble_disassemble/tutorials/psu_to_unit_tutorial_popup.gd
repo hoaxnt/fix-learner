@@ -18,6 +18,9 @@ signal wiring_complete
 @onready var image_3 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/p4.jpg")
 @onready var image_4 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/p5.jpg")
 
+@onready var backpanel_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/backpanel_tutorial_popup.tscn")
+
+
 var all_screw_placed : bool = false
 var screws_tightened : int = 0
 
