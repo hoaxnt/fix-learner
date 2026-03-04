@@ -97,8 +97,10 @@ func _finish_tutorial() -> void:
 	
 	if dialog_box.has_signal("dialog_finished"):
 		await dialog_box.dialog_finished
+		
+		var backpanel_instance = backpanel_scene.instantiate()
+		
 	else:
 		await get_tree().create_timer(3.0).timeout
 		
-	SceneTransition.change_scene("")
 	queue_free()
