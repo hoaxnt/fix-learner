@@ -49,6 +49,10 @@ func _on_button_4_pressed() -> void:
 	# Wait for the player to finish reading before switching scenes
 	await dialog_box.dialog_finished
 	
-	get_tree().root.get_node("SystemUnitMinigame/CanvasLayer/FinishButton")
+	if get_tree().root.get_node("SystemUnitMinigame/CanvasLayer/FinishButton"):
+		var finish_button : Button = get_tree().root.get_node("SystemUnitMinigame/CanvasLayer/FinishButton")
+		finish_button.show()
+	else:
+		print("finish button not found")
 	
 	queue_free()
