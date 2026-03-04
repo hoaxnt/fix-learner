@@ -99,7 +99,7 @@ func _finish_tutorial() -> void:
 		await dialog_box.dialog_finished
 		
 		var backpanel_instance = backpanel_scene.instantiate()
-		get_parent()
+		get_parent().add_child(backpanel_instance)
 		
 	else:
 		await get_tree().create_timer(3.0).timeout
