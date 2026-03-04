@@ -14,6 +14,8 @@ extends CanvasLayer
 @onready var tex4 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b4.jpg")
 @onready var tex5 = preload("res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b5.png")
 
+signal install_complete
+
 func _ready() -> void:
 	# Initialize the UI state
 	b2.hide()
