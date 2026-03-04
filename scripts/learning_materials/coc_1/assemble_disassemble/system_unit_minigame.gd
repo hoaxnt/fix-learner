@@ -37,14 +37,15 @@ func request_installation(item_name: String) -> void:
 			unit_sprite.texture = with_psu
 			psu_installed = true
 			
-			var backpanel_instance = backpanel_scene.instantiate()
+			#var backpanel_instance = backpanel_scene.instantiate()
 			var wiring_psu_instance = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu_instance)
-			var error = backpanel_instance.install_complete.connect(_on_install_finished)
-			if error == OK:
-				print("backpanel connected")
-			else:
-				print("failed to connect backpanel")
+			
+			#var error = backpanel_instance.install_complete.connect(_on_install_finished)
+			#if error == OK:
+				#print("backpanel connected")
+			#else:
+				#print("failed to connect backpanel")
 			
 			
 	if item_name == "Motherboard":
