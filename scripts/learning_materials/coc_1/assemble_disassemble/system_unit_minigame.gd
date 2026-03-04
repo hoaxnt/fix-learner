@@ -61,7 +61,7 @@ func install_mobo():
 func install_psu():
 	unit_sprite.texture = with_psu
 	psu_installed = true
-	trigger_end_dialog()
+	#trigger_end_dialog()
 	
 func trigger_end_dialog():
 	teacher_sprite.show()
