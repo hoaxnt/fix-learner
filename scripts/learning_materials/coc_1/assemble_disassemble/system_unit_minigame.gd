@@ -33,8 +33,8 @@ func request_installation(item_name: String) -> void:
 	if item_name == "Power Supply":
 		if mobo_installed:
 			psu.queue_free()
-			var wiring_psu = wiring_psu_scene.instantiate()
 			
+			var wiring_psu = wiring_psu_scene.instantiate()
 			wiring_psu.wiring_complete.connect(_on_wiring_finished)
 			get_parent().add_child(wiring_psu)
 			
