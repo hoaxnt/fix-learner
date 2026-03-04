@@ -34,12 +34,13 @@ func request_installation(item_name: String) -> void:
 	if item_name == "Power Supply":
 		if mobo_installed:
 			psu.queue_free()
+			unit_sprite.texture = with_psu
+			psu_installed = true
 			
 			var backpanel_instance = backpanel_scene.instantiate()
 			var wiring_psu_instance = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu_instance)
 			var error = backpanel_instance.install_complete.connect(_on_install_finished)
-			
 			if error == OK:
 				print("backpanel connected")
 			else:
@@ -52,8 +53,6 @@ func request_installation(item_name: String) -> void:
 			install_mobo()
 	
 func _on_install_finished():
-	unit_sprite.texture = with_psu
-	psu_installed = true
 	trigger_end_dialog()
 	
 func install_mobo():

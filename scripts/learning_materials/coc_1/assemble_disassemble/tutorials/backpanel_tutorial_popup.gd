@@ -41,6 +41,7 @@ func _on_button_4_pressed() -> void:
 	# Final step: update texture and cleanup
 	background.texture = tex5
 	b4.hide()
+	install_complete.emit()
 	
 	var data : Array[String] = ["Great! We're all set!"]
 	dialog_box.update_dialog("Teacher", data)
@@ -48,5 +49,4 @@ func _on_button_4_pressed() -> void:
 	# Wait for the player to finish reading before switching scenes
 	await dialog_box.dialog_finished
 	
-	#SceneTransition.change_scene("res://scenes/learning_materials/coc_1/assemble_disassemble/system_unit_minigame.tscn")
 	queue_free()
