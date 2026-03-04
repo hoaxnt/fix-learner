@@ -14,7 +14,6 @@ extends Node2D
 @onready var mobo_to_unit = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/mobo_to_unit_tutorial_popup.tscn")
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 @onready var wiring_psu_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/wiring_psu_tutorial_popup.tscn")
-@onready var backpanel_scene : PackedScene = preload("res://scenes/learning_materials/coc_1/assemble_disassemble/tutorials/backpanel_tutorial_popup.tscn")
 
 # State Flags
 @onready var mobo_installed : bool = false
@@ -37,16 +36,8 @@ func request_installation(item_name: String) -> void:
 			unit_sprite.texture = with_psu
 			psu_installed = true
 			
-			#var backpanel_instance = backpanel_scene.instantiate()
 			var wiring_psu_instance = wiring_psu_scene.instantiate()
 			get_parent().add_child(wiring_psu_instance)
-			
-			#var error = backpanel_instance.install_complete.connect(_on_install_finished)
-			#if error == OK:
-				#print("backpanel connected")
-			#else:
-				#print("failed to connect backpanel")
-			
 			
 	if item_name == "Motherboard":
 		if not mobo_installed:
