@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var button_3 : Button = $Button3
 @onready var button_4 : Button = $Button4
 @onready var screw_button : Button = $ItemList/ScrewButton
-@onready var screw_driver_button : Button = $ItemList/ScrewdriverButton
+@onready var screw_driver_button : Button = $ItemList/ScrewdriverButton	
 
 @onready var image_1 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b2.jpg")
 @onready var image_2 : Texture2D = preload("res://assets/tutorials/assemble_disassemble/mobo_to_unit_tutorial/b3.jpg")
