@@ -91,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 50
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="LearnButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer"]
@@ -118,6 +118,18 @@ theme_override_fonts/font = ExtResource("2_8ln24")
 theme_override_font_sizes/font_size = 70
 text = "Options"
 
+[node name="AchievementsButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(700, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("5_8ln24")
+theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 1)
+theme_override_fonts/font = ExtResource("2_8ln24")
+theme_override_font_sizes/font_size = 70
+text = "Achievements"
+
 [node name="ExitButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(700, 130)
 layout_mode = 2
@@ -127,6 +139,7 @@ theme_override_font_sizes/font_size = 70
 text = "Exit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 custom_minimum_size = Vector2(1700, 900)
