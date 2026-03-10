@@ -53,13 +53,13 @@ func _on_button_3_pressed() -> void:
 	b4.show()
 
 func _on_button_4_pressed() -> void:
+
 	background.texture = tex5
 	b4.hide()
 	b5.show()
 
 func _on_button_5_pressed() -> void:
-	if dialog_box.next_button:
-		dialog_box.next_button.pressed.emit()
+
 	background.texture = tex6
 	b5.hide()
 	b6.show()
