@@ -1,5 +1,6 @@
 extends MarginContainer
 
+@onready var next_button : Button = $NextButton
 # This allows you to add lines of text in the Inspector
 @export var character_name : String = "Teacher"
 @export_multiline var dialog_lines: Array[String] = []

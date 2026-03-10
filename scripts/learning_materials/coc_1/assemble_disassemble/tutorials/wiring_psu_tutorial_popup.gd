@@ -20,6 +20,9 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.disabled = true
+		
 	b2.hide()
 	b3.hide()
 	b4.hide()
