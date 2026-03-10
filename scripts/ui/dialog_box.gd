@@ -6,7 +6,7 @@ extends MarginContainer
 # This allows you to add lines of text in the Inspector
 @export var character_name : String = "Teacher"
 @export_multiline var dialog_lines: Array[String] = []
-@export var text_speed: float = 0.05
+@export var text_speed: float = 0.01
 
 @onready var character_name_label : Label = $MarginContainer/VBoxContainer/Label
 @onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel

@@ -32,16 +32,22 @@ func _ready() -> void:
 	b6.hide()
 
 func _on_button_1_pressed() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.pressed.emit()
 	background.texture = tex2
 	b1.hide()
 	b2.show()
 
 func _on_button_2_pressed() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.pressed.emit()
 	background.texture = tex3
 	b2.hide()
 	b3.show()
 
 func _on_button_3_pressed() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.pressed.emit()
 	background.texture = tex4
 	b3.hide()
 	b4.show()
@@ -52,11 +58,15 @@ func _on_button_4_pressed() -> void:
 	b5.show()
 
 func _on_button_5_pressed() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.pressed.emit()
 	background.texture = tex6
 	b5.hide()
 	b6.show()
 	
 func _on_button_6_pressed() -> void:
+	if dialog_box.next_button:
+		dialog_box.next_button.pressed.emit()
 	background.texture = tex7
 	b6.hide()
 	
