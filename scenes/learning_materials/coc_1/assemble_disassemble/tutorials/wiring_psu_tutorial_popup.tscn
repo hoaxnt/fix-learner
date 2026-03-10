@@ -49,10 +49,10 @@ offset_top = -266.0
 dialog_lines = Array[String](["Welcome, students. Now we will insert and connect the necessary cables to the power supply unit (PSU).", "Select the 24-pin power cable and connect it to its designated location on the motherboard, making sure it is firmly and properly inserted.", "Nice! we put it to the right place now", "Next, select the appropriate cable and connect it to the PCIe/CPU power connector, ensuring it is properly aligned and securely plugged in."])
 
 [node name="Button1" type="Button" parent="."]
-offset_left = 1559.0
-offset_top = 803.0
-offset_right = 1664.0
-offset_bottom = 927.0
+offset_left = 1572.0
+offset_top = 692.0
+offset_right = 1677.0
+offset_bottom = 816.0
 focus_mode = 0
 theme = ExtResource("4_jthim")
 theme_override_font_sizes/font_size = 70

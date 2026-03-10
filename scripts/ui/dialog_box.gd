@@ -1,6 +1,8 @@
 extends MarginContainer
 
 @onready var next_button : Button = $NextButton
+@onready var next_label : Label = $MarginContainer/VBoxContainer/Label2
+
 # This allows you to add lines of text in the Inspector
 @export var character_name : String = "Teacher"
 @export_multiline var dialog_lines: Array[String] = []

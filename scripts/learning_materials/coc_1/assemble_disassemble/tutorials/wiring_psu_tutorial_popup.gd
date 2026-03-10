@@ -22,6 +22,8 @@ extends CanvasLayer
 func _ready() -> void:
 	if dialog_box.next_button:
 		dialog_box.next_button.disabled = true
+		if dialog_box.next_label:
+			dialog_box.next_label.visible = false
 		
 	b2.hide()
 	b3.hide()
