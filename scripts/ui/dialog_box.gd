@@ -78,7 +78,8 @@ func _on_timer_timeout():
 		if description_label.visible_characters < description_label.text.length():
 				description_label.visible_characters += 1
 		else:
-				timer.stop()
+			print("emitted")
+			timer.stop()
 
 func finish_dialog():
 	hide()
