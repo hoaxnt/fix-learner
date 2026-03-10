@@ -55,7 +55,7 @@ func _on_button_6_pressed() -> void:
 	background.texture = tex7
 	b6.hide()
 	
-	var data : Array[String] = ["Great! now put the PSU to case"]
+	var data : Array[String] = ["Nice! You plugged it in correctly."]
 	dialog_box.update_dialog("Teacher", data)
 	
 	await dialog_box.dialog_finished
