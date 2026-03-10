@@ -73,6 +73,11 @@ func _on_button_6_pressed() -> void:
 	var data : Array[String] = ["Nice! You plugged it in correctly."]
 	dialog_box.update_dialog("Teacher", data)
 	
+	if dialog_box.next_button:
+		dialog_box.next_button.disabled = false
+		if dialog_box.next_label:
+			dialog_box.next_label.visible = true
+	
 	await dialog_box.dialog_finished
 	
 	var psu_to_unit_instance = psu_to_unit_scene.instantiate()
