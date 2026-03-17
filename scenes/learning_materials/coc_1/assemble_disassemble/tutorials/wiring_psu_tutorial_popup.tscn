@@ -45,7 +45,6 @@ texture = ExtResource("2_btt83")
 expand_mode = 1
 
 [node name="DialogBox" parent="." instance=ExtResource("3_che53")]
-visible = false
 offset_top = -266.0
 dialog_lines = Array[String](["Welcome, students. Now we will insert and connect the necessary cables to the power supply unit (PSU).", "Select the 24-pin power cable and connect it to its designated location on the motherboard, making sure it is firmly and properly inserted.", "Nice! we put it to the right place now", "Next, select the appropriate cable and connect it to the PCIe/CPU power connector, ensuring it is properly aligned and securely plugged in."])
 
