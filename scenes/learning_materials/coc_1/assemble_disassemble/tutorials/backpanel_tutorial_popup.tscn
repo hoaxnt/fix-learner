@@ -28,7 +28,6 @@ theme_override_font_sizes/font_size = 70
 text = " 1 "
 
 [node name="Button2" type="Button" parent="."]
-visible = false
 offset_left = 754.0
 offset_top = 239.0
 offset_right = 870.0
@@ -39,7 +38,6 @@ theme_override_font_sizes/font_size = 70
 text = " 2 "
 
 [node name="Button3" type="Button" parent="."]
-visible = false
 offset_left = 271.0
 offset_top = 856.0
 offset_right = 388.0
@@ -50,7 +48,6 @@ theme_override_font_sizes/font_size = 70
 text = " 3 "
 
 [node name="Button4" type="Button" parent="."]
-visible = false
 offset_left = 1562.0
 offset_top = 106.0
 offset_right = 1681.0
