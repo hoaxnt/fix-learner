@@ -220,6 +220,8 @@ theme_override_font_sizes/font_size = 80
 text = "Accept"
 
 [connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/LearnButton" to="." method="_on_learn_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/AchievementsButton" to="." method="_on_achievements_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/ActivityLogButton" to="." method="_on_activity_log_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/DeclineButton" to="." method="_on_decline_button_pressed"]
