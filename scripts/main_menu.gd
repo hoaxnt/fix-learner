@@ -2,13 +2,14 @@ extends Control
 
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 @onready var canvas_layer : CanvasLayer = $CanvasLayer
+@onready var user_agreement : Panel = $CanvasLayer/Panel
 @onready var achievements = preload("res://scenes/utils/achievements.tscn")
 
 func _ready() -> void:
 	#user_data.opened_once = false
 	#ResourceSaver.save(user_data, "user://user_data.tres")
 	if user_data.opened_once:
-		canvas_layer.hide()
+		user_agreement.hide()
 		
 func _on_continue_button_pressed() -> void:
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_list.tscn")
