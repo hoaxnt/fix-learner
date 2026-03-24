@@ -2,6 +2,7 @@ extends Control
 
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 @onready var canvas_layer : CanvasLayer = $CanvasLayer
+@onready var achievements = preload("res://scenes/utils/achievements.tscn")
 
 func _ready() -> void:
 	#user_data.opened_once = false
@@ -32,7 +33,8 @@ func _on_decline_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_achievements_button_pressed() -> void:
-	print("Achievements")
+	var achievements_instance = achievements.instantiate()
+	canvas_layer.add_child(achievements_instance)
 	pass # Replace with function body.
 
 func _on_activity_log_button_pressed() -> void:
