@@ -58,6 +58,17 @@ theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 100
 columns = 2
 
+[node name="Airflow" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme = ExtResource("1_3awrg")
+theme_override_font_sizes/font_size = 50
+text = "Airflow Expert"
+icon = ExtResource("3_crus7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
