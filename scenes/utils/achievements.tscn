@@ -65,7 +65,7 @@ horizontal_scroll_mode = 0
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/h_separation = 150
+theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 3
 
@@ -132,6 +132,7 @@ expand_icon = true
 [node name="PowerConnected" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Power Connected"
@@ -143,6 +144,7 @@ expand_icon = true
 [node name="PowerRouted" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Power Routed"
@@ -154,6 +156,7 @@ expand_icon = true
 [node name="SpeedDriver" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Speed Driver"
@@ -165,6 +168,7 @@ expand_icon = true
 [node name="USBReady" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "USB Ready"
@@ -176,6 +180,7 @@ expand_icon = true
 [node name="VisualBoost" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Visual Boost"
@@ -187,6 +192,7 @@ expand_icon = true
 [node name="BoardSecured" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Board Secured"
@@ -198,6 +204,7 @@ expand_icon = true
 [node name="Hazard" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Hazard"
