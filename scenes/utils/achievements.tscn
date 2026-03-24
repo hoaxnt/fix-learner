@@ -1,10 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://cokannwmsupix"]
+[gd_scene load_steps=16 format=3 uid="uid://cokannwmsupix"]
 
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="1_3awrg"]
 [ext_resource type="Script" uid="uid://dha2ab3115pe2" path="res://scripts/utils/achievements.gd" id="1_ltwru"]
 [ext_resource type="Texture2D" uid="uid://bpwj6igxqnrlt" path="res://assets/ui/achievement/airflow-expert.PNG" id="3_crus7"]
 [ext_resource type="Texture2D" uid="uid://51vu74hq7gph" path="res://assets/ui/achievement/core-master.jpg" id="3_lqmsd"]
 [ext_resource type="Texture2D" uid="uid://dp56022wke10p" path="res://assets/ui/achievement/cool-operator.jpg" id="4_lqmsd"]
+[ext_resource type="Texture2D" uid="uid://dawg0u1hojhkb" path="res://assets/ui/achievement/memory-ready.jpg" id="6_x4kid"]
+[ext_resource type="Texture2D" uid="uid://csii4avmv8q17" path="res://assets/ui/achievement/os-installed.jpg" id="7_tx515"]
+[ext_resource type="Texture2D" uid="uid://dggful85ob344" path="res://assets/ui/achievement/power-connected.jpg" id="8_tx515"]
+[ext_resource type="Texture2D" uid="uid://bd51ygt6ownb4" path="res://assets/ui/achievement/power-routed.jpg" id="9_61fns"]
+[ext_resource type="Texture2D" uid="uid://326yuoml05e8" path="res://assets/ui/achievement/speed-driver.jpg" id="10_3v5kg"]
+[ext_resource type="Texture2D" uid="uid://bhostgd4dqdrr" path="res://assets/ui/achievement/usb-ready.jpg" id="11_vb7tn"]
+[ext_resource type="Texture2D" uid="uid://cm55gtydkmod2" path="res://assets/ui/achievement/visual-boost.jpg" id="12_g1yqa"]
+[ext_resource type="Texture2D" uid="uid://bp3swpirb63o8" path="res://assets/ui/achievement/board-secured.PNG" id="13_m1k0x"]
+[ext_resource type="Texture2D" uid="uid://dhuu2vyvl4k81" path="res://assets/ui/achievement/hazard.PNG" id="14_6nhtf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
 bg_color = Color(0.101960786, 0.10980392, 0.13725491, 0.9019608)
@@ -58,11 +67,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 100
-columns = 2
+columns = 3
 
 [node name="CoreMaster" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Core Master"
@@ -74,6 +84,7 @@ expand_icon = true
 [node name="CoolOperator" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Cool Operator"
@@ -85,6 +96,7 @@ expand_icon = true
 [node name="AirflowExpert" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Airflow Expert"
@@ -96,98 +108,100 @@ expand_icon = true
 [node name="MemoryReady" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
 text = "Memory Ready"
-icon = ExtResource("3_lqmsd")
+icon = ExtResource("6_x4kid")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement5" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="OSInstalled" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "OS Installed"
+icon = ExtResource("7_tx515")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement6" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="PowerConnected" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Power Connected"
+icon = ExtResource("8_tx515")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement7" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="PowerRouted" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Power Routed"
+icon = ExtResource("9_61fns")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement8" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="SpeedDriver" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Speed Driver"
+icon = ExtResource("10_3v5kg")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement9" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="USBReady" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "USB Ready"
+icon = ExtResource("11_vb7tn")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement10" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="VisualBoost" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Visual Boost"
+icon = ExtResource("12_g1yqa")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement11" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="BoardSecured" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Board Secured"
+icon = ExtResource("13_m1k0x")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="achievement12" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="Hazard" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Core Master"
-icon = ExtResource("3_lqmsd")
+text = "Hazard"
+icon = ExtResource("14_6nhtf")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
