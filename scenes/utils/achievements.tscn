@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cokannwmsupix"]
+[gd_scene load_steps=4 format=3 uid="uid://cokannwmsupix"]
 
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="1_3awrg"]
+[ext_resource type="Script" uid="uid://dha2ab3115pe2" path="res://scripts/utils/achievements.gd" id="1_ltwru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
 bg_color = Color(0.101960786, 0.10980392, 0.13725491, 0.7058824)
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ltwru")
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
