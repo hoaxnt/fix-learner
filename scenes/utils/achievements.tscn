@@ -58,7 +58,7 @@ theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="Airflow" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="achievement1" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 theme = ExtResource("1_3awrg")
