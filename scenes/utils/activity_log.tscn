@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://be88je7bg30tn"]
+
+[ext_resource type="Script" uid="uid://cn27tcgj1poie" path="res://scripts/utils/activity_log.gd" id="1_3gsn8"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_3s6ie"]
+[ext_resource type="Texture2D" uid="uid://51vu74hq7gph" path="res://assets/ui/achievement/core-master.jpg" id="3_msljy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 0.9019608)
+
+[node name="ActivityLog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gsn8")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ad3a0")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_3s6ie")
+theme_override_font_sizes/font_size = 100
+text = "Activity Log"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 700)
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 3
+
+[node name="CoreMaster" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_3s6ie")
+theme_override_font_sizes/font_size = 50
+text = "Core Master"
+icon = ExtResource("3_msljy")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("2_3s6ie")
+theme_override_font_sizes/font_size = 80
+text = "Back"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
