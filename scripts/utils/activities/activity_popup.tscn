@@ -15,8 +15,7 @@ script = ExtResource("2_bv40v")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Panel" parent="."]
-self_modulate = Color(1, 1, 1, 0.98039216)
-custom_minimum_size = Vector2(1000, 600)
+custom_minimum_size = Vector2(1200, 600)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,6 +56,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 theme_override_font_sizes/font_size = 60
-text = "  Close  "
+text = "  >>  "
 
 [connection signal="pressed" from="Background/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
