@@ -35,9 +35,10 @@ position = Vector2(0, 535)
 scale = Vector2(2.3371427, 2.337143)
 texture = ExtResource("6_vlws6")
 
-[node name="WristStrap" type="Area2D" parent="Minigame"]
+[node name="WristStrap" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
 position = Vector2(538, 331)
 script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/WristStrap"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -72,9 +73,10 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Gloves" type="Area2D" parent="Minigame"]
+[node name="Gloves" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
 position = Vector2(266, 260)
 script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Gloves"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -109,9 +111,10 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HeadLamp" type="Area2D" parent="Minigame"]
+[node name="HeadLamp" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
 position = Vector2(-538, 249)
 script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/HeadLamp"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -146,9 +149,10 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SafetyGlasses" type="Area2D" parent="Minigame"]
+[node name="SafetyGlasses" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
 position = Vector2(-289, 327)
 script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/SafetyGlasses"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -183,9 +187,10 @@ text = "Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScrewDriver" type="Area2D" parent="Minigame"]
+[node name="ScrewDriver" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
 position = Vector2(-3, 330)
 script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/ScrewDriver"]
 shape = SubResource("CircleShape2D_dh66b")

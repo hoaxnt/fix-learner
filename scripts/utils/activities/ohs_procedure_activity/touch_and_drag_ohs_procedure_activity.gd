@@ -3,6 +3,8 @@ extends Area2D
 @export var item_display_name: String
 @export var final_message : String = ""
 @export_multiline var item_info: Array[String]
+@export var activity_popup : Control
+
 
 @export var texture : Texture2D
 @export var item_name : String = "None"
@@ -64,9 +66,10 @@ func check_for_slot():
 			ResourceSaver.save(user_data, "user://user_data.tres")
 			
 			if user_data.toolbox_item_count == 5:
-				print("CONgRATs!")
 				user_data.toolbox_item_count = 0 # Reset for next round
 				ResourceSaver.save(user_data, "user://user_data.tres")
+				if activity_popup:
+					activity_popup.show()
 		
 			body.is_occupied = true
 			found_slot = true
