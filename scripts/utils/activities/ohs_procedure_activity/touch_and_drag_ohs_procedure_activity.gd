@@ -1,6 +1,5 @@
 extends Area2D
 
-@export var dialog_box : MarginContainer
 @export var item_display_name: String
 @export var final_message : String = ""
 @export_multiline var item_info: Array[String]
@@ -61,19 +60,13 @@ func check_for_slot():
 			var tween = create_tween()
 			tween.tween_property(self, "global_position", body.global_position, 0.1)
 			
-			if dialog_box:
-				var data : Array[String] = item_info.duplicate()
-				user_data.toolbox_item_count += 1
-				ResourceSaver.save(user_data, "user://user_data.tres")
+			user_data.toolbox_item_count += 1
+			ResourceSaver.save(user_data, "user://user_data.tres")
 			
-				if user_data.toolbox_item_count == 5:
-					if final_message != "":
-						data.append(final_message)
-					user_data.is_final_message = true
-					user_data.toolbox_item_count = 0 # Reset for next round
-					ResourceSaver.save(user_data, "user://user_data.tres")
-					
-				dialog_box.update_dialog(item_display_name, data)
+			if user_data.toolbox_item_count == 5:
+				print("CONgRATs!")
+				user_data.toolbox_item_count = 0 # Reset for next round
+				ResourceSaver.save(user_data, "user://user_data.tres")
 		
 			body.is_occupied = true
 			found_slot = true
