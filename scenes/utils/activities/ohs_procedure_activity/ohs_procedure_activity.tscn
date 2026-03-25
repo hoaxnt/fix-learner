@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=14 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Script" uid="uid://bnrgh6ufq4e0c" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedure_activity.gd" id="1_eh5re"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_37gbm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bfngnb305vv2h" path="res://scripts/utils/activities/ohs_procedure_activity/touch_and_drag_ohs_procedure_activity.gd" id="7_o8xkp"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="9_aw4uh"]
 [ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="10_ohcgd"]
+[ext_resource type="PackedScene" uid="uid://5fq7vyl5x43i" path="res://scripts/utils/activities/activity_popup.tscn" id="12_jacfw"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="13_m7cie"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="15_kalvl"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="16_enqxt"]
@@ -249,3 +250,6 @@ options_menu = NodePath("../OptionsMenu")
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("17_4oh3e")]
 visible = false
+
+[node name="ActivityPopup" parent="CanvasLayer" node_paths=PackedStringArray("dragged_parent") instance=ExtResource("12_jacfw")]
+dragged_parent = NodePath("../..")
