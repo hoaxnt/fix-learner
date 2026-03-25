@@ -252,4 +252,5 @@ options_menu = NodePath("../OptionsMenu")
 visible = false
 
 [node name="ActivityPopup" parent="CanvasLayer" node_paths=PackedStringArray("dragged_parent") instance=ExtResource("12_jacfw")]
+visible = false
 dragged_parent = NodePath("../..")
