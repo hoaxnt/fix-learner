@@ -4,6 +4,7 @@ extends Control
 @onready var canvas_layer : CanvasLayer = $CanvasLayer
 @onready var user_agreement : Panel = $CanvasLayer/Panel
 @onready var achievements = preload("res://scenes/utils/achievements.tscn")
+@onready var activity_log = preload("res://scenes/utils/activity_log.tscn")
 
 func _ready() -> void:
 	#user_data.opened_once = false
@@ -36,8 +37,7 @@ func _on_decline_button_pressed() -> void:
 func _on_achievements_button_pressed() -> void:
 	var achievements_instance = achievements.instantiate()
 	canvas_layer.add_child(achievements_instance)
-	pass # Replace with function body.
 
 func _on_activity_log_button_pressed() -> void:
-	print("Activity Log")
-	pass # Replace with function body.
+	var activity_log_instance = activity_log.instantiate()
+	canvas_layer.add_child(activity_log_instance)
