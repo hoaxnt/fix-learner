@@ -3,7 +3,6 @@ extends Area2D
 @export_multiline var item_info: Array[String]
 @export var activity_popup : Control
 
-
 @export var texture : Texture2D
 @export var item_name : String = "None"
 

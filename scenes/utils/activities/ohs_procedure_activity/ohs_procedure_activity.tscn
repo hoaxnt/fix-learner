@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=19 format=3 uid="uid://cb8ifl0ku4240"]
 
 [ext_resource type="Script" uid="uid://bnrgh6ufq4e0c" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedure_activity.gd" id="1_eh5re"]
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_37gbm"]
@@ -7,7 +7,11 @@
 [ext_resource type="Script" uid="uid://bfngnb305vv2h" path="res://scripts/utils/activities/ohs_procedure_activity/touch_and_drag_ohs_procedure_activity.gd" id="7_o8xkp"]
 [ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="8_vb5x2"]
 [ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="9_aw4uh"]
+[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="9_sbrlv"]
+[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="10_aiksf"]
 [ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="10_ohcgd"]
+[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="11_rntup"]
+[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="12_cjwlo"]
 [ext_resource type="PackedScene" uid="uid://5fq7vyl5x43i" path="res://scenes/utils/activities/activity_popup.tscn" id="12_jacfw"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="13_m7cie"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="15_kalvl"]
@@ -80,6 +84,7 @@ vertical_alignment = 1
 position = Vector2(266, 260)
 script = ExtResource("7_o8xkp")
 activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("9_sbrlv")
 item_name = "Gloves"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Gloves"]
@@ -119,6 +124,8 @@ vertical_alignment = 1
 position = Vector2(-538, 249)
 script = ExtResource("7_o8xkp")
 activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("10_aiksf")
+item_name = "Head Lamp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/HeadLamp"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -157,6 +164,8 @@ vertical_alignment = 1
 position = Vector2(-289, 327)
 script = ExtResource("7_o8xkp")
 activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("11_rntup")
+item_name = "Safety Glasses"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/SafetyGlasses"]
 shape = SubResource("CircleShape2D_dh66b")
@@ -195,6 +204,8 @@ vertical_alignment = 1
 position = Vector2(-3, 330)
 script = ExtResource("7_o8xkp")
 activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("12_cjwlo")
+item_name = "Screwdriver"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/ScrewDriver"]
 shape = SubResource("CircleShape2D_dh66b")
