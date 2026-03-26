@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://ctgpdxwe0pev6" path="res://scripts/ui/slot.gd" id="1_jkamp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3s6i"]
-size = Vector2(126, 66)
+size = Vector2(228, 116)
 
-[node name="Slot" type="StaticBody2D" node_paths=PackedStringArray("slot_color") groups=["slots"]]
+[node name="Slot" type="StaticBody2D" groups=["slots"]]
 script = ExtResource("1_jkamp")
-slot_color = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -25)
 shape = SubResource("RectangleShape2D_v3s6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
