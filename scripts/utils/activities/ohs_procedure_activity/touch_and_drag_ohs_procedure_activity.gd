@@ -1,7 +1,5 @@
 extends Area2D
 
-@export var item_display_name: String
-@export var final_message : String = ""
 @export_multiline var item_info: Array[String]
 @export var activity_popup : Control
 
