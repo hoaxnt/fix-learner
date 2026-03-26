@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
-[ext_resource type="Script" uid="uid://coouonylea17w" path="res://scripts/learning_materials/coc_1/electrical_hazards/electrical_hazards.gd" id="1_wbjbv"]
+[ext_resource type="Script" uid="uid://dubycc4wnyfqe" path="res://scripts/utils/activities/electrical_hazards_activity/electrical_hazards_activity.gd" id="1_qgkw6"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical_hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical_hazards/pizza.png" id="6_njyqc"]
@@ -109,7 +109,7 @@ _data = {
 }
 
 [node name="ElectricalHazardsActivity" type="Node2D"]
-script = ExtResource("1_wbjbv")
+script = ExtResource("1_qgkw6")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_cyucj")
@@ -173,6 +173,7 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_kvqo3")
 
 [node name="Teacher" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(212.00002, -77)
 scale = Vector2(1.3462008, 1.3462008)
 texture = ExtResource("2_xybym")
@@ -184,7 +185,6 @@ zoom = Vector2(1.88, 1.88)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_75cua")]
-dialog_lines = Array[String](["Welcome back, student. Our next laboratory will introduce electrical hazards", "And how to identify and avoid possible dangers while working with computer equipment."])
 
 [node name="ObjectiveLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
