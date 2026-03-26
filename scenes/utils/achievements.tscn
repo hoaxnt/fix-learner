@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dhuu2vyvl4k81" path="res://assets/ui/achievement/hazard.PNG" id="14_6nhtf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
-bg_color = Color(0.101960786, 0.10980392, 0.13725491, 0.9019608)
+bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 
 [node name="Achievements" type="Control"]
 layout_mode = 3

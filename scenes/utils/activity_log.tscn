@@ -70,6 +70,18 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
+[node name="ElectricalHazards" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_3s6ie")
+theme_override_font_sizes/font_size = 50
+text = "Safety Tools"
+icon = ExtResource("3_msljy")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
@@ -84,4 +96,5 @@ flat = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/SafetyTools" to="." method="_on_safety_tools_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/ElectricalHazards" to="." method="_on_electrical_hazards_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
