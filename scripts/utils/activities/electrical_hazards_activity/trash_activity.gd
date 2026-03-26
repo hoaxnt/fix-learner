@@ -2,8 +2,8 @@ extends Area2D
 
 @export var anim_player : AnimationPlayer
 @export var objective_label : Label
-@export var dialog_box : MarginContainer
-@export var teacher_sprite : Sprite2D
+
+@export var activity_popup : Control
 @onready var anim_sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var user_data = ResourceLoader.load("user://user_data.tres")
 
@@ -29,11 +29,4 @@ func _on_area_exited(area: Area2D) -> void:
 			
 			await anim_player.animation_finished
 			
-			var data : Array[String] = ["Great job! Liquids are highly conductive and can instantly short-circuit a PC.",
-			"Keeping the workspace dry is rule number one.",
-			"Now that the workspace is safe, we can move on to the real work."]
-			teacher_sprite.show()
-			dialog_box.update_dialog("Teacher", data)
-			
-			await dialog_box.dialog_finished
-			SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
+			activity_popup.show()

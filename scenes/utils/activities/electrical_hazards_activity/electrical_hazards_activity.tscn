@@ -1,18 +1,17 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0wjrwp7kwt7y"]
+[gd_scene load_steps=22 format=3 uid="uid://d0wjrwp7kwt7y"]
 
-[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="1_75cua"]
 [ext_resource type="Texture2D" uid="uid://b8skuwj0a24kl" path="res://assets/environment/workbench.png" id="1_cyucj"]
 [ext_resource type="Script" uid="uid://dubycc4wnyfqe" path="res://scripts/utils/activities/electrical_hazards_activity/electrical_hazards_activity.gd" id="1_qgkw6"]
-[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="2_xybym"]
 [ext_resource type="Texture2D" uid="uid://w23mhspxnx7" path="res://assets/items/electrical_hazards/coffee.png" id="4_ltomb"]
 [ext_resource type="Texture2D" uid="uid://bcps8xuh8tdl1" path="res://assets/items/electrical_hazards/pizza.png" id="6_njyqc"]
 [ext_resource type="Script" uid="uid://cfolgv3uw5d4i" path="res://scripts/utils/touch_and_drag_electrical_hazards.gd" id="6_vj4gh"]
-[ext_resource type="Script" uid="uid://bueq7iy6ose8b" path="res://scripts/learning_materials/coc_1/electrical_hazards/trash.gd" id="7_kvqo3"]
+[ext_resource type="Script" uid="uid://c6ljvf84ba4bx" path="res://scripts/utils/activities/electrical_hazards_activity/trash_activity.gd" id="7_qgkw6"]
 [ext_resource type="Texture2D" uid="uid://ex2irctrgd3x" path="res://assets/items/electrical_hazards/water.png" id="8_3c3q1"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="9_vj4gh"]
 [ext_resource type="Texture2D" uid="uid://bkphrbdglvjfd" path="res://assets/items/electrical_hazards/trash.png" id="11_3c3q1"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="12_q5od2"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="13_p24p1"]
+[ext_resource type="PackedScene" uid="uid://5fq7vyl5x43i" path="res://scenes/utils/activities/activity_popup.tscn" id="14_tdwgw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2gvb"]
 radius = 53.08484
@@ -152,14 +151,13 @@ shape = SubResource("CircleShape2D_m2gvb")
 scale = Vector2(0.23300005, 0.23300005)
 texture = ExtResource("8_3c3q1")
 
-[node name="Trash" type="Area2D" parent="Minigame" node_paths=PackedStringArray("anim_player", "objective_label", "dialog_box", "teacher_sprite") groups=["slots"]]
+[node name="Trash" type="Area2D" parent="Minigame" node_paths=PackedStringArray("anim_player", "objective_label", "activity_popup") groups=["slots"]]
 position = Vector2(-55.999996, 379)
 scale = Vector2(1.0800004, 1.0800004)
-script = ExtResource("7_kvqo3")
+script = ExtResource("7_qgkw6")
 anim_player = NodePath("../../AnimationPlayer")
 objective_label = NodePath("../../CanvasLayer/ObjectiveLabel")
-dialog_box = NodePath("../../CanvasLayer/DialogBox")
-teacher_sprite = NodePath("../../Teacher")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Minigame/Trash"]
 position = Vector2(11.111108, -2.8257005e-05)
@@ -172,19 +170,11 @@ position = Vector2(0, 16.666626)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_kvqo3")
 
-[node name="Teacher" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(212.00002, -77)
-scale = Vector2(1.3462008, 1.3462008)
-texture = ExtResource("2_xybym")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -219)
 zoom = Vector2(1.88, 1.88)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("1_75cua")]
 
 [node name="ObjectiveLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -205,6 +195,10 @@ visible = false
 
 [node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("13_p24p1")]
 options_menu = NodePath("../OptionsMenu")
+
+[node name="ActivityPopup" parent="CanvasLayer" node_paths=PackedStringArray("dragged_parent") instance=ExtResource("14_tdwgw")]
+visible = false
+dragged_parent = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
