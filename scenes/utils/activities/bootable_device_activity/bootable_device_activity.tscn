@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="31_ir3vw"]
 
 [node name="BootableDevice" type="Node2D"]
+visible = false
 script = ExtResource("1_6sn6k")
 scenes_texture = Array[Texture2D]([ExtResource("1_4d8m2"), ExtResource("3_x8xhg"), ExtResource("4_soo6k"), ExtResource("5_33wag"), ExtResource("6_33wag"), ExtResource("7_hnys1"), ExtResource("8_ku0y7"), ExtResource("9_8cjkf"), ExtResource("10_8cjkf"), ExtResource("11_lvb1j"), ExtResource("12_xl7mp"), ExtResource("13_ssxbq"), ExtResource("14_b5cbi"), ExtResource("15_xlonq"), ExtResource("16_mq5lg"), ExtResource("17_y5503"), ExtResource("18_fgwdo"), ExtResource("19_yn34w"), ExtResource("20_b2eyu"), ExtResource("21_w8682"), ExtResource("22_bvavl"), ExtResource("23_by5nq"), ExtResource("24_lytit"), ExtResource("25_3ssrx"), ExtResource("26_cucwj")])
 
