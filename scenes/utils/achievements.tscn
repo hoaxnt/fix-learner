@@ -276,6 +276,18 @@ theme_override_font_sizes/font_size = 75
 text = "Close"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/ProtocolMaster" to="CanvasLayer/AchivementPreview" method="_on_protocol_master_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/ProtocolMaster" to="." method="_on_protocol_master_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/HazardHandler" to="." method="_on_hazard_handler_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/CoreMaster" to="." method="_on_core_master_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/CoolOperator" to="." method="_on_cool_operator_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/AirflowExpert" to="." method="_on_airflow_expert_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/MemoryReady" to="." method="_on_memory_ready_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/VisualBoost" to="." method="_on_visual_boost_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/SpeedDriver" to="." method="_on_speed_driver_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/BoardSecured" to="." method="_on_board_secured_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/PowerConnected" to="." method="_on_power_connected_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/PowerRouted" to="." method="_on_power_routed_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/USBReady" to="." method="_on_usb_ready_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/GridContainer/OSInstalled" to="." method="_on_os_installed_pressed"]
 [connection signal="pressed" from="VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/AchivementPreview/VBoxContainer/CloseButton" to="CanvasLayer/AchivementPreview" method="_on_close_button_pressed"]
