@@ -256,7 +256,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 theme = ExtResource("1_3awrg")
-theme_override_constants/separation = 60
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Display" type="TextureRect" parent="CanvasLayer/AchivementPreview/VBoxContainer"]
