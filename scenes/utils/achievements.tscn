@@ -69,6 +69,18 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 3
 
+[node name="HazardHandler" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_3awrg")
+theme_override_font_sizes/font_size = 50
+text = "Hazard Handler"
+icon = ExtResource("14_6nhtf")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
 [node name="CoreMaster" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
@@ -117,14 +129,38 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="OSInstalled" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="VisualBoost" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "OS Installed"
-icon = ExtResource("7_tx515")
+text = "Visual Boost"
+icon = ExtResource("12_g1yqa")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="SpeedDriver" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_3awrg")
+theme_override_font_sizes/font_size = 50
+text = "Speed Driver"
+icon = ExtResource("10_3v5kg")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="BoardSecured" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_3awrg")
+theme_override_font_sizes/font_size = 50
+text = "Board Secured"
+icon = ExtResource("13_m1k0x")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
@@ -153,18 +189,6 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="SpeedDriver" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("1_3awrg")
-theme_override_font_sizes/font_size = 50
-text = "Speed Driver"
-icon = ExtResource("10_3v5kg")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
 [node name="USBReady" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
@@ -177,38 +201,14 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="VisualBoost" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
+[node name="OSInstalled" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 50
-text = "Visual Boost"
-icon = ExtResource("12_g1yqa")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
-[node name="BoardSecured" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("1_3awrg")
-theme_override_font_sizes/font_size = 50
-text = "Board Secured"
-icon = ExtResource("13_m1k0x")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
-[node name="Hazard" type="Button" parent="VBoxContainer/ScrollContainer/GridContainer"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("1_3awrg")
-theme_override_font_sizes/font_size = 50
-text = "Hazard"
-icon = ExtResource("14_6nhtf")
+text = "OS Installed"
+icon = ExtResource("7_tx515")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
