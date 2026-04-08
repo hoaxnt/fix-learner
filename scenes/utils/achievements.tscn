@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cokannwmsupix"]
+[gd_scene load_steps=18 format=3 uid="uid://cokannwmsupix"]
 
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="1_3awrg"]
 [ext_resource type="Script" uid="uid://dha2ab3115pe2" path="res://scripts/utils/achievements.gd" id="1_ltwru"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cm55gtydkmod2" path="res://assets/ui/achievement/visual-boost.jpg" id="12_g1yqa"]
 [ext_resource type="Texture2D" uid="uid://bp3swpirb63o8" path="res://assets/ui/achievement/board-secured.PNG" id="13_m1k0x"]
 [ext_resource type="Texture2D" uid="uid://dhuu2vyvl4k81" path="res://assets/ui/achievement/hazard.PNG" id="14_6nhtf"]
+[ext_resource type="Script" uid="uid://d64iqds5d2fk" path="res://scripts/utils/achivement_preview.gd" id="16_gr0xe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
 bg_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
@@ -235,6 +236,43 @@ focus_mode = 0
 theme = ExtResource("1_3awrg")
 theme_override_font_sizes/font_size = 80
 text = "Back"
+flat = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AchivementPreview" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3awrg")
+script = ExtResource("16_gr0xe")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/AchivementPreview"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+theme = ExtResource("1_3awrg")
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/AchivementPreview/VBoxContainer"]
+custom_minimum_size = Vector2(1200, 700)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_rg30w")
+expand_mode = 1
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/AchivementPreview/VBoxContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Close"
 flat = true
 
 [connection signal="pressed" from="VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
