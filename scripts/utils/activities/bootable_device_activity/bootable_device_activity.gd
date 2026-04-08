@@ -1,11 +1,9 @@
 extends Control
 
+@onready var background = $CanvasLayer/Background
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var image_1 = preload("res://assets/items/bootable_device/1.jpg")
+@onready var image_2 = preload("res://assets/items/bootable_device/2.jpg")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_button_1_pressed() -> void:
+	background.texture = image_2

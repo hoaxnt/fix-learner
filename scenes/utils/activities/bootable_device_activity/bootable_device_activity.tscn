@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://t6sfpmqmgxdu"]
+[gd_scene load_steps=5 format=3 uid="uid://t6sfpmqmgxdu"]
 
+[ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://bjnnm8dsynohg" path="res://scripts/utils/activities/bootable_device_activity/bootable_device_activity.gd" id="1_cdjmb"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="30_yysl3"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="31_ir3vw"]
@@ -12,8 +13,13 @@ script = ExtResource("1_cdjmb")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background" type="TextureRect" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4d8m2")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -24,14 +30,17 @@ offset_bottom = 40.0
 [node name="Button1" type="Button" parent="CanvasLayer/Control"]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 0
-offset_left = 225.0
-offset_top = 345.0
-offset_right = 1025.0
-offset_bottom = 445.0
-text = ">>"
+offset_left = 244.0
+offset_top = 380.0
+offset_right = 1044.0
+offset_bottom = 480.0
+focus_mode = 0
+flat = true
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("30_yysl3")]
 visible = false
 
 [node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("31_ir3vw")]
 options_menu = NodePath("../OptionsMenu")
+
+[connection signal="pressed" from="CanvasLayer/Control/Button1" to="." method="_on_button_1_pressed"]
