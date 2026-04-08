@@ -17,14 +17,23 @@ func _on_continue_button_pressed() -> void:
 	
 func _on_learn_button_pressed() -> void:
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_list.tscn")
+
+func _on_achievements_button_pressed() -> void:
+	SceneTransition.change_scene("res://scenes/utils/achievements.tscn")
+
+func _on_activity_log_button_pressed() -> void:
+	SceneTransition.change_scene("res://scenes/utils/activity_log.tscn")
 	
 func _on_options_button_pressed() -> void:
 	print("Options")
-	pass # Replace with function body.
 	
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
 	
+
+
+
+
 func _on_accept_button_pressed() -> void:
 	user_data.opened_once = true
 	ResourceSaver.save(user_data, "user://user_data.tres")
@@ -33,11 +42,3 @@ func _on_accept_button_pressed() -> void:
 	
 func _on_decline_button_pressed() -> void:
 	get_tree().quit()
-
-func _on_achievements_button_pressed() -> void:
-	var achievements_instance = achievements.instantiate()
-	canvas_layer.add_child(achievements_instance)
-
-func _on_activity_log_button_pressed() -> void:
-	var activity_log_instance = activity_log.instantiate()
-	canvas_layer.add_child(activity_log_instance)
