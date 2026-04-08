@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://t6sfpmqmgxdu"]
 
-[ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://bjnnm8dsynohg" path="res://scripts/utils/activities/bootable_device_activity/bootable_device_activity.gd" id="1_cdjmb"]
+[ext_resource type="Texture2D" uid="uid://gn0ygejtox6m" path="res://assets/items/bootable_device/activity/1.jpg" id="2_1fyu2"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="30_yysl3"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="31_ir3vw"]
 
@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4d8m2")
+texture = ExtResource("2_1fyu2")
 expand_mode = 1
 
 [node name="Control" type="Control" parent="CanvasLayer"]
