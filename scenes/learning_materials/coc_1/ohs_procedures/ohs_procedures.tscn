@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
 [ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs_procedures/toolbox.png" id="3_7ew3f"]
 [ext_resource type="Texture2D" uid="uid://b6sy44uoykd42" path="res://assets/characters/technician.png" id="3_ilwiu"]
-[ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/learning_materials/coc_1/ohs_procedures/items/item.tscn" id="3_k3u2l"]
+[ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/utils/activities/ohs_procedure_activity/items/item.tscn" id="3_k3u2l"]
 [ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
 [ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="5_q75wh"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="11_iylnk"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="16_5ct4s"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="17_f68pd"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
 atlas = ExtResource("1_25a41")

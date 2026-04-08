@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://jnjhetsl5cvx"]
+
+[ext_resource type="Script" uid="uid://buxyowtqg3wey" path="res://scripts/learning_materials/coc_1/assemble_disassemble/tutorials/backpanel_tutorial_popup.gd" id="1_iokk3"]
+[ext_resource type="Texture2D" uid="uid://bxlq12pmskukr" path="res://assets/tutorials/assemble_disassemble/psu_to_unit_tutorial/b1.png" id="1_jjic6"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="2_f375y"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_ghr1u"]
+
+[node name="BackpanelTutorialPopup" type="CanvasLayer"]
+script = ExtResource("1_iokk3")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jjic6")
+metadata/_edit_lock_ = true
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 566.0
+offset_top = 553.0
+offset_right = 671.0
+offset_bottom = 677.0
+focus_mode = 0
+theme = ExtResource("2_f375y")
+theme_override_font_sizes/font_size = 70
+text = " 1 "
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 754.0
+offset_top = 239.0
+offset_right = 870.0
+offset_bottom = 363.0
+focus_mode = 0
+theme = ExtResource("2_f375y")
+theme_override_font_sizes/font_size = 70
+text = " 2 "
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 290.0
+offset_top = 683.0
+offset_right = 407.0
+offset_bottom = 807.0
+focus_mode = 0
+theme = ExtResource("2_f375y")
+theme_override_font_sizes/font_size = 70
+text = " 3 "
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 1456.0
+offset_top = 144.0
+offset_right = 1575.0
+offset_bottom = 268.0
+focus_mode = 0
+theme = ExtResource("2_f375y")
+theme_override_font_sizes/font_size = 70
+text = " 4 "
+
+[node name="DialogBox" parent="." instance=ExtResource("5_ghr1u")]
+offset_top = -266.0
+dialog_lines = Array[String](["Welcome to the backpanel of the cpu case, now we will insert the cables from psu to the motherboard", "Select that 24 pin to the hole near the motherboard", "Nice! now we can see it is inserted in the motherboard lets move on to the next", "Select that pcie cable and put it in the right top near the processor ", "Congratulations! you complete the cable management, now lets proceed to the last part!"])
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

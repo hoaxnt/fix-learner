@@ -96,8 +96,6 @@ func _on_screwdriver_button_button_up() -> void:
 		# Restart the button sequence for tightening
 		button_1.show()
 	else:
-		# If they haven't finished placing screws, 
-		# pop the screwdriver back up and warn them
 		screw_driver_button.button_pressed = false
 		var warning_data : Array[String] = ["You need to put all the screws in place first before tightening them to ensure the CPU cooler is properly balanced and evenly mounted, which helps apply consistent pressure and improves cooling performance."]
 		dialog_box.update_dialog("Teacher", warning_data)

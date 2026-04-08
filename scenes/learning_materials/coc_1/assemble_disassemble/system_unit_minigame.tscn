@@ -22,8 +22,10 @@ radius = 69.00725
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4bjcl"]
 size = Vector2(185, 184)
 
-[node name="SystemUnitMinigame" type="Node2D"]
+[node name="SystemUnitMinigame" type="Node2D" node_paths=PackedStringArray("psu", "mobo")]
 script = ExtResource("1_gthx7")
+psu = NodePath("Parts/PSU")
+mobo = NodePath("Parts/Mobo")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_ixlbu")
@@ -43,6 +45,7 @@ texture = ExtResource("4_4bjcl")
 
 [node name="PSU" type="Area2D" parent="Parts" node_paths=PackedStringArray("item_label", "shadow")]
 position = Vector2(-328, 233)
+input_pickable = false
 script = ExtResource("3_syuov")
 item_name_string = "Power Supply"
 item_label = NodePath("Label")
@@ -134,6 +137,25 @@ zoom = Vector2(1.88, 1.88)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="FinishButton" type="Button" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(500, 100)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -609.0
+offset_top = -79.5
+offset_right = -109.0
+offset_bottom = 79.5
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("7_ocyj7")
+theme_override_font_sizes/font_size = 100
+text = "Finish"
+
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_y8vlm")]
 dialog_lines = Array[String](["Here is the empty system unit, put the motherboard inside it.", "Also, ensure the power supply is properly placed and connected."])
 
@@ -145,3 +167,4 @@ visible = false
 
 [connection signal="area_exited" from="Parts/PSU" to="." method="_on_psu_area_exited"]
 [connection signal="area_exited" from="Parts/Mobo" to="." method="_on_mobo_area_exited"]
+[connection signal="pressed" from="CanvasLayer/FinishButton" to="." method="_on_install_finished"]

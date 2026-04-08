@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlpiexvh6e4sn"]
+
+[ext_resource type="Texture2D" uid="uid://bpwj6igxqnrlt" path="res://assets/ui/achievement/airflow-expert.PNG" id="1_120ss"]
+[ext_resource type="Script" uid="uid://b4ck0typykhn8" path="res://scripts/ui/achievement.gd" id="1_b6oxt"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="1_hdufb"]
+[ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_5jp8t"]
+
+[node name="Achievement" type="CanvasLayer"]
+script = ExtResource("1_b6oxt")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.98039216)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hdufb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -350.0
+offset_right = 500.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 700)
+layout_mode = 2
+texture = ExtResource("1_120ss")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jp8t")
+theme_override_font_sizes/font_size = 50
+text = "Achievement Unlocked : 
+\"Airflow Expert\""
+horizontal_alignment = 1
+vertical_alignment = 1

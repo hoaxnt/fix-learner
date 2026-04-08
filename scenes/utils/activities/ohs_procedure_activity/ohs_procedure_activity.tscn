@@ -1,0 +1,276 @@
+[gd_scene load_steps=19 format=3 uid="uid://cb8ifl0ku4240"]
+
+[ext_resource type="Script" uid="uid://bnrgh6ufq4e0c" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedure_activity.gd" id="1_eh5re"]
+[ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_37gbm"]
+[ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs_procedures/toolbox.png" id="5_7i6rv"]
+[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="6_vlws6"]
+[ext_resource type="Script" uid="uid://bfngnb305vv2h" path="res://scripts/utils/activities/ohs_procedure_activity/touch_and_drag_ohs_procedure_activity.gd" id="7_o8xkp"]
+[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="8_vb5x2"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="9_aw4uh"]
+[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="9_sbrlv"]
+[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="10_aiksf"]
+[ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="10_ohcgd"]
+[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="11_rntup"]
+[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="12_cjwlo"]
+[ext_resource type="PackedScene" uid="uid://5fq7vyl5x43i" path="res://scenes/utils/activities/activity_popup.tscn" id="12_jacfw"]
+[ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="13_m7cie"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="15_kalvl"]
+[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="16_enqxt"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="17_4oh3e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
+radius = 112.1606
+
+[node name="OhsProceduresActivity" type="Node2D"]
+script = ExtResource("1_eh5re")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_37gbm")
+
+[node name="Minigame" type="Node2D" parent="."]
+
+[node name="ToolBox" type="Sprite2D" parent="Minigame"]
+position = Vector2(0, -72)
+scale = Vector2(1.54, 1.5799998)
+texture = ExtResource("5_7i6rv")
+
+[node name="Table" type="Sprite2D" parent="Minigame"]
+position = Vector2(0, 535)
+scale = Vector2(2.3371427, 2.337143)
+texture = ExtResource("6_vlws6")
+
+[node name="WristStrap" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
+position = Vector2(538, 331)
+script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("8_vb5x2")
+item_name = "Wrist Strap"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/WristStrap"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/WristStrap"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("9_aw4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/WristStrap"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ohcgd")
+
+[node name="NameLabel" type="Label" parent="Minigame/WristStrap"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gloves" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
+position = Vector2(266, 260)
+script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("9_sbrlv")
+item_name = "Gloves"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/Gloves"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/Gloves"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("9_aw4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/Gloves"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ohcgd")
+
+[node name="NameLabel" type="Label" parent="Minigame/Gloves"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeadLamp" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
+position = Vector2(-538, 249)
+script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("10_aiksf")
+item_name = "Head Lamp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/HeadLamp"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/HeadLamp"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("9_aw4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/HeadLamp"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ohcgd")
+
+[node name="NameLabel" type="Label" parent="Minigame/HeadLamp"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SafetyGlasses" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
+position = Vector2(-289, 327)
+script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("11_rntup")
+item_name = "Safety Glasses"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/SafetyGlasses"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/SafetyGlasses"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("9_aw4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/SafetyGlasses"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ohcgd")
+
+[node name="NameLabel" type="Label" parent="Minigame/SafetyGlasses"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrewDriver" type="Area2D" parent="Minigame" node_paths=PackedStringArray("activity_popup")]
+position = Vector2(-3, 330)
+script = ExtResource("7_o8xkp")
+activity_popup = NodePath("../../CanvasLayer/ActivityPopup")
+texture = ExtResource("12_cjwlo")
+item_name = "Screwdriver"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/ScrewDriver"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/ScrewDriver"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("9_aw4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/ScrewDriver"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ohcgd")
+
+[node name="NameLabel" type="Label" parent="Minigame/ScrewDriver"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot" parent="Minigame" instance=ExtResource("13_m7cie")]
+position = Vector2(0, -83)
+scale = Vector2(3.7999992, 3.7999992)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MinigameLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -775.0
+offset_right = 775.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme = ExtResource("15_kalvl")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+text = "TASK : Drag the essentials into the toolbox"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("16_enqxt")]
+options_menu = NodePath("../OptionsMenu")
+
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("17_4oh3e")]
+visible = false
+
+[node name="ActivityPopup" parent="CanvasLayer" node_paths=PackedStringArray("dragged_parent") instance=ExtResource("12_jacfw")]
+visible = false
+dragged_parent = NodePath("../..")

@@ -1,9 +1,12 @@
 extends MarginContainer
 
+@onready var next_button : Button = $NextButton
+@onready var next_label : Label = $MarginContainer/VBoxContainer/Label2
+
 # This allows you to add lines of text in the Inspector
 @export var character_name : String = "Teacher"
 @export_multiline var dialog_lines: Array[String] = []
-@export var text_speed: float = 0.05
+@export var text_speed: float = 0.01
 
 @onready var character_name_label : Label = $MarginContainer/VBoxContainer/Label
 @onready var description_label = $MarginContainer/VBoxContainer/RichTextLabel
@@ -72,10 +75,10 @@ func show_line():
 		timer.start(text_speed)
 
 func _on_timer_timeout():
-		if description_label.visible_characters < description_label.text.length():
-				description_label.visible_characters += 1
-		else:
-				timer.stop()
+	if description_label.visible_characters < description_label.text.length():
+		description_label.visible_characters += 1
+	else:
+		timer.stop()
 
 func finish_dialog():
 	hide()
