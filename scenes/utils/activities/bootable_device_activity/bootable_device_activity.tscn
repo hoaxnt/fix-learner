@@ -35,7 +35,15 @@ offset_top = 380.0
 offset_right = 1044.0
 offset_bottom = 480.0
 focus_mode = 0
-flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 0
+offset_left = 244.0
+offset_top = 380.0
+offset_right = 1044.0
+offset_bottom = 480.0
+focus_mode = 0
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("30_yysl3")]
 visible = false
