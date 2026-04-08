@@ -1,11 +1,10 @@
 extends Panel
 
+@onready var display = $VBoxContainer/Display
+@onready var close_button = $VBoxContainer/CloseButton
+@onready var protocol_master = preload("res://assets/ui/achievement/protocol-master.jpg")
+@onready var hazard_handler = preload("res://assets/ui/achievement/hazard.PNG")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	display.texture = hazard_handler
+		

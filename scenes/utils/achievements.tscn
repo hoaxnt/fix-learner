@@ -259,8 +259,8 @@ theme = ExtResource("1_3awrg")
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/AchivementPreview/VBoxContainer"]
-custom_minimum_size = Vector2(1200, 700)
+[node name="Display" type="TextureRect" parent="CanvasLayer/AchivementPreview/VBoxContainer"]
+custom_minimum_size = Vector2(1200, 800)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
