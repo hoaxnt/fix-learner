@@ -1,23 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://t6sfpmqmgxdu"]
+[gd_scene load_steps=4 format=3 uid="uid://t6sfpmqmgxdu"]
 
-[ext_resource type="Texture2D" uid="uid://b1vhoeb7dfrnb" path="res://assets/items/bootable_device/1.jpg" id="1_4d8m2"]
 [ext_resource type="Script" uid="uid://bjnnm8dsynohg" path="res://scripts/utils/activities/bootable_device_activity/bootable_device_activity.gd" id="1_cdjmb"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="30_yysl3"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="31_ir3vw"]
 
-[node name="BootableDeviceActivity" type="Node2D"]
+[node name="BootableDeviceActivity" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_cdjmb")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(0, -18)
-scale = Vector2(0.16, 0.154)
-texture = ExtResource("1_4d8m2")
-
-[node name="Minigame" type="Node2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button1" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 0
+offset_left = 225.0
+offset_top = 345.0
+offset_right = 1025.0
+offset_bottom = 445.0
+text = ">>"
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("30_yysl3")]
 visible = false
