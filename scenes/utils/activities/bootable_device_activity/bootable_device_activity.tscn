@@ -35,20 +35,10 @@ offset_top = 380.0
 offset_right = 1044.0
 offset_bottom = 480.0
 focus_mode = 0
-
-[node name="Button2" type="Button" parent="CanvasLayer/Control"]
-custom_minimum_size = Vector2(800, 100)
-layout_mode = 0
-offset_left = 244.0
-offset_top = 380.0
-offset_right = 1044.0
-offset_bottom = 480.0
-focus_mode = 0
+flat = true
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("30_yysl3")]
 visible = false
 
 [node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("31_ir3vw")]
 options_menu = NodePath("../OptionsMenu")
-
-[connection signal="pressed" from="CanvasLayer/Control/Button1" to="." method="_on_button_1_pressed"]
