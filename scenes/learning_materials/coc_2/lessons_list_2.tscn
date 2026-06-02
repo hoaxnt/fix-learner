@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://csk7wyb442hb5"]
+[gd_scene load_steps=18 format=3 uid="uid://csk7wyb442hb5"]
 
 [ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/learning_materials/coc_1/coc_1.gd" id="1_gpgaf"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_t6t6k"]
@@ -10,9 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_k1ubx"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_km2np"]
 [ext_resource type="Texture2D" uid="uid://cbbai5dd70dqt" path="res://assets/images/icons/danger.png" id="8_rakcy"]
-[ext_resource type="Texture2D" uid="uid://douetn15n4nca" path="res://assets/images/icons/laptop.png" id="9_idat2"]
-[ext_resource type="Texture2D" uid="uid://bw4trhv0rso2x" path="res://assets/images/icons/usb-flash-drive.png" id="10_n5wul"]
-[ext_resource type="Texture2D" uid="uid://btbw2cp2cd08j" path="res://assets/images/icons/software.png" id="11_m1eyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
@@ -86,7 +83,7 @@ layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="OhsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+[node name="WiredConnectionButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
 custom_minimum_size = Vector2(700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -99,7 +96,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -107,29 +104,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("6_lt53u")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_km2np")
-text = "OHS
-Procedures
-
-RENAME INTO WIRED AND WIRELESS CONNECTION"
+text = "Wired Connection"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HazardsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+[node name="WirelessConnectionButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
 custom_minimum_size = Vector2(700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -142,7 +136,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,145 +144,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("8_rakcy")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_km2np")
-text = "Electrical
-Hazards"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AssembleButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
-custom_minimum_size = Vector2(700, 600)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_mode = 0
-theme_override_fonts/font = ExtResource("5_sax1w")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
-metadata/_edit_use_anchors_ = true
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer"]
-layout_mode = 2
-theme_override_constants/separation = 30
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("9_idat2")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_km2np")
-text = "Assemble &
-Disassemble"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BootableButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
-custom_minimum_size = Vector2(700, 600)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_mode = 0
-theme_override_fonts/font = ExtResource("5_sax1w")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
-metadata/_edit_use_anchors_ = true
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer"]
-layout_mode = 2
-theme_override_constants/separation = 30
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("10_n5wul")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_km2np")
-text = "Creating Bootable 
-Device"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SoftwareButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
-custom_minimum_size = Vector2(700, 600)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_mode = 0
-theme_override_fonts/font = ExtResource("5_sax1w")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
-metadata/_edit_use_anchors_ = true
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer"]
-layout_mode = 2
-theme_override_constants/separation = 30
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("11_m1eyu")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_km2np")
-text = "Installing Softwares"
+text = "Wireless Connection"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -306,9 +177,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
 text = "Back"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/OhsButton" to="." method="_on_ohs_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton" to="." method="_on_hazards_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton" to="." method="_on_assemble_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/BootableButton" to="." method="_on_bootable_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton" to="." method="_on_software_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton" to="." method="_on_ohs_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton" to="." method="_on_hazards_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
