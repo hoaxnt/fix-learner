@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dhygbqj61a304" path="res://assets/items/lan/lan_tools/background.png" id="2_4fei7"]
 [ext_resource type="Texture2D" uid="uid://bxjec7g04yed" path="res://assets/items/lan/lan_tools/table.png" id="4_5bio5"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="4_82pr0"]
-[ext_resource type="Texture2D" uid="uid://bpt268skkhv7k" path="res://assets/items/lan/lan_tools/crimping-tool.png" id="6_gi44t"]
+[ext_resource type="Texture2D" uid="uid://b8lujjkvfoys8" path="res://assets/items/ohs_procedures/shadow.png" id="5_5bio5"]
+[ext_resource type="Texture2D" uid="uid://c6xw4n3qlynl5" path="res://assets/images/lesson1/lo1/tool3.png" id="6_echll"]
 [ext_resource type="Texture2D" uid="uid://drgbo6ox4u81n" path="res://assets/items/lan/lan_tools/lan-cable.png" id="7_4fei7"]
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/utils/activities/ohs_procedure_activity/items/item.tscn" id="7_5cmuk"]
 [ext_resource type="Texture2D" uid="uid://bkp0qrr8ghfat" path="res://assets/items/lan/lan_tools/wire-stripper.png" id="8_4fei7"]
@@ -14,20 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="16_1jlsr"]
 [ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="17_34245"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
-atlas = ExtResource("4_82pr0")
-region = Rect2(0, 0, 408, 612)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7jnuq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tlavw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh66b"]
+radius = 112.1606
 
 [node name="LAN" type="Node2D"]
 script = ExtResource("1_gsbty")
@@ -50,14 +39,41 @@ position = Vector2(84, 383.00006)
 scale = Vector2(2.6519601, 2.6519613)
 texture = ExtResource("4_5bio5")
 
-[node name="CrimpingTool" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
+[node name="CrimpingTool" type="Area2D" parent="Minigame"]
 position = Vector2(614, 178)
-dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Teacher"
-final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
-item_info = Array[String](["Anti-Static Wrist Strap - This is your primary defense against Electrostatic Discharge (ESD).", "It clips onto a grounded metal object (like your PC case) and ensures that you and the computer stay at the same electrical potential. ", "It prevents you from accidentally \"frying\" a $500 CPU with a tiny spark from your fingertip."])
-texture = ExtResource("6_gi44t")
-item_name = "Anti-Static Strap"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame/CrimpingTool"]
+shape = SubResource("CircleShape2D_dh66b")
+
+[node name="Shadow" type="Sprite2D" parent="Minigame/CrimpingTool"]
+position = Vector2(3, 81)
+scale = Vector2(0.22551021, 0.22551021)
+texture = ExtResource("5_5bio5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame/CrimpingTool"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_echll")
+
+[node name="NameLabel" type="Label" parent="Minigame/CrimpingTool"]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -167.0
+offset_right = 52.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("15_rse03")
+theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
+theme_override_constants/outline_size = 15
+text = "Null"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LANCable" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(281, 102)
@@ -86,12 +102,6 @@ item_info = Array[String](["Safety Glasses - It might seem like overkill for a d
 texture = ExtResource("9_5bio5")
 item_name = "Safety Glasses"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-23.000002, 121)
-scale = Vector2(1.8333334, 1.8333334)
-sprite_frames = SubResource("SpriteFrames_7jnuq")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -100,6 +110,7 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 dialog_lines = Array[String](["zzHello, student. Our first laboratory will focus on Occupational Health and Safety procedures"])
 
 [node name="MinigameLabel" type="Label" parent="CanvasLayer"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
