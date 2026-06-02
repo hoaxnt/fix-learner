@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://csk7wyb442hb5"]
+[gd_scene load_steps=19 format=3 uid="uid://csk7wyb442hb5"]
 
 [ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/learning_materials/coc_1/coc_1.gd" id="1_gpgaf"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_t6t6k"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_k1ubx"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_km2np"]
 [ext_resource type="Texture2D" uid="uid://bmjmqv0l7mxbc" path="res://assets/images/icons/wireless-router.png" id="8_6e7gu"]
+[ext_resource type="Texture2D" uid="uid://cly22xwsp2qf" path="res://assets/images/icons/socket.png" id="9_6e7gu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
@@ -31,7 +32,7 @@ texture = ExtResource("4_wndo0")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c24rk"]
 texture = ExtResource("3_427ss")
 
-[node name="Coc1" type="Control"]
+[node name="Coc2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -163,7 +164,7 @@ text = "Wireless Connection"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WirelessConnectionButton2" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+[node name="LANButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
 custom_minimum_size = Vector2(700, 600)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -176,7 +177,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/LANButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -184,22 +185,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/LANButton/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/LANButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("8_6e7gu")
+texture = ExtResource("9_6e7gu")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/LANButton/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_km2np")
-text = "Wireless Connection"
+text = "LAN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -217,7 +218,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
 text = "Back"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton" to="." method="_on_ohs_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton" to="." method="_on_hazards_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2" to="." method="_on_hazards_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton" to="." method="_on_wired_connection_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton" to="." method="_on_wireless_connection_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/LANButton" to="." method="_on_lan_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
