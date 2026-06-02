@@ -1,25 +1,25 @@
-[gd_scene load_steps=20 format=3 uid="uid://cb8ifl0ku4240"]
+[gd_scene load_steps=20 format=3 uid="uid://dofh266xjhj7x"]
 
-[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="1_25a41"]
-[ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_tlavw"]
-[ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_dkd3x"]
-[ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs_procedures/toolbox.png" id="3_7ew3f"]
-[ext_resource type="Texture2D" uid="uid://b6sy44uoykd42" path="res://assets/characters/technician.png" id="3_ilwiu"]
-[ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/utils/activities/ohs_procedure_activity/items/item.tscn" id="3_k3u2l"]
-[ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="4_ot512"]
-[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="5_k3u2l"]
-[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="5_q75wh"]
-[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="6_g5lw6"]
-[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="6_hwvad"]
-[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="6_v3s6i"]
-[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="8_aolge"]
-[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="10_ilwiu"]
-[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="11_iylnk"]
-[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="16_5ct4s"]
-[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="17_f68pd"]
+[ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_gsbty"]
+[ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_gb5sw"]
+[ext_resource type="Texture2D" uid="uid://b6sy44uoykd42" path="res://assets/characters/technician.png" id="3_2n4yq"]
+[ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="4_82pr0"]
+[ext_resource type="Texture2D" uid="uid://cj211fuprim2n" path="res://assets/items/ohs_procedures/toolbox.png" id="5_j5awe"]
+[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="6_kxw1e"]
+[ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/utils/activities/ohs_procedure_activity/items/item.tscn" id="7_5cmuk"]
+[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="8_48d3o"]
+[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="9_26ru0"]
+[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="10_ofctc"]
+[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="11_l8wwc"]
+[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="12_wsub3"]
+[ext_resource type="PackedScene" uid="uid://crcv2k5ca4a4y" path="res://scenes/ui/slot.tscn" id="13_souhb"]
+[ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="14_gk6l0"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="15_rse03"]
+[ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="16_1jlsr"]
+[ext_resource type="PackedScene" uid="uid://dthqfuut8d7j" path="res://scenes/ui/options_menu.tscn" id="17_34245"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlavw"]
-atlas = ExtResource("1_25a41")
+atlas = ExtResource("4_82pr0")
 region = Rect2(0, 0, 408, 612)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7jnuq"]
@@ -34,80 +34,80 @@ animations = [{
 }]
 
 [node name="OhsProcedures" type="Node2D"]
-script = ExtResource("1_tlavw")
+script = ExtResource("1_gsbty")
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("2_dkd3x")
+texture = ExtResource("2_gb5sw")
 
 [node name="Minigame" type="Node2D" parent="."]
 
 [node name="Technician" type="Sprite2D" parent="Minigame"]
 position = Vector2(-629, 66)
 scale = Vector2(2.242, 2.242)
-texture = ExtResource("3_ilwiu")
+texture = ExtResource("3_2n4yq")
 
 [node name="Teacher" type="Sprite2D" parent="Minigame"]
 position = Vector2(644, 56)
 scale = Vector2(1.7193627, 1.7193627)
-texture = ExtResource("1_25a41")
+texture = ExtResource("4_82pr0")
 
 [node name="ToolBox" type="Sprite2D" parent="Minigame"]
 position = Vector2(0, -72)
 scale = Vector2(1.54, 1.5799998)
-texture = ExtResource("3_7ew3f")
+texture = ExtResource("5_j5awe")
 
 [node name="Table" type="Sprite2D" parent="Minigame"]
 position = Vector2(0, 535)
 scale = Vector2(2.3371427, 2.337143)
-texture = ExtResource("5_q75wh")
+texture = ExtResource("6_kxw1e")
 
-[node name="WristStrap" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
+[node name="WristStrap" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(538, 331)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Anti-Static Wrist Strap - This is your primary defense against Electrostatic Discharge (ESD).", "It clips onto a grounded metal object (like your PC case) and ensures that you and the computer stay at the same electrical potential. ", "It prevents you from accidentally \"frying\" a $500 CPU with a tiny spark from your fingertip."])
-texture = ExtResource("6_hwvad")
+texture = ExtResource("8_48d3o")
 item_name = "Anti-Static Strap"
 
-[node name="Gloves" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
+[node name="Gloves" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(266, 260)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Anti-Static Gloves - Many modern PC cases are made of stamped steel with unfinished internal edges. ", "Thin, snug-fitting gloves protect your hands from \"case bites\" (nasty slices from sharp metal). ", "Additionally, they prevent skin oils from getting onto the gold contact points of your RAM and GPU, which can cause corrosion over time."])
-texture = ExtResource("6_g5lw6")
+texture = ExtResource("9_26ru0")
 item_name = "Anti-Static Gloves"
 
-[node name="HeadLamp" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
+[node name="HeadLamp" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(-538, 249)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["LED Headlamp - Shadows are the enemy of a safe build. ", "Trying to plug in a tiny Front Panel connector in the dark leads to bent pins and frustration. ", "A headlamp keeps both your hands free to handle components while ensuring you can see exactly where every delicate pin is supposed to go."])
-texture = ExtResource("8_aolge")
+texture = ExtResource("10_ofctc")
 item_name = "LED Headlamp"
 
-[node name="SafetyGlasses" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
+[node name="SafetyGlasses" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(-289, 327)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Safety Glasses - It might seem like overkill for a desk job, but PC building involves tension and small parts. ", "When you are clipping plastic zip ties for cable management or using compressed air to blow out a dusty component, small shards or debris can fly directly toward your eyes at high speeds."])
-texture = ExtResource("10_ilwiu")
+texture = ExtResource("11_l8wwc")
 item_name = "Safety Glasses"
 
-[node name="ScrewDriver" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("3_k3u2l")]
+[node name="ScrewDriver" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
 position = Vector2(-3, 330)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Screwdriver - While not \"wearable\" armor, this is an essential safety tool for the hardware. ", "A magnetized tip prevents tiny screws from falling into the \"void\" behind the motherboard or inside the power supply, where they could cause a catastrophic short circuit when you turn the power on."])
-texture = ExtResource("11_iylnk")
+texture = ExtResource("12_wsub3")
 item_name = "Screwdriver"
 
-[node name="Slot" parent="Minigame" instance=ExtResource("4_ot512")]
+[node name="Slot" parent="Minigame" instance=ExtResource("13_souhb")]
 position = Vector2(0, -83)
 scale = Vector2(3.7999992, 3.7999992)
 
@@ -121,8 +121,9 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("5_k3u2l")]
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("14_gk6l0")]
 dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your toolbox."])
+text_speed = 0.01
 
 [node name="MinigameLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -132,7 +133,7 @@ offset_left = -775.0
 offset_right = 775.0
 offset_bottom = 180.0
 grow_horizontal = 2
-theme = ExtResource("6_v3s6i")
+theme = ExtResource("15_rse03")
 theme_override_colors/font_outline_color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
@@ -141,8 +142,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("17_f68pd")]
+[node name="MenuButton" parent="CanvasLayer" node_paths=PackedStringArray("options_menu") instance=ExtResource("16_1jlsr")]
 options_menu = NodePath("../OptionsMenu")
 
-[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("16_5ct4s")]
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("17_34245")]
 visible = false
