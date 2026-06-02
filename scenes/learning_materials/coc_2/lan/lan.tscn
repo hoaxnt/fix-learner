@@ -123,7 +123,6 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("14_gk6l0")]
 dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your toolbox."])
-text_speed = 0.01
 
 [node name="MinigameLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
