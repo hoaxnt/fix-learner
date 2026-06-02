@@ -6,61 +6,96 @@ extends Node2D
 @export var scenes_texture : Array[Texture2D]
 
 var current_tex_index : int = 0
+
 var texture_map : Dictionary = {
 	0: 0,
-	1: 1,
-	2: 2,
-	3: 3,
-	4: 4,
-	5: 5,
-	6: 6,
-	7: 7,
-	8: 8,
-	9: 9,
-	10: 10
+	3: 0,
+	4: 1,
+	5: 2,
+	6: 3,
+	7: 3,
+	8: 4,
+	9: 4,
+	10: 5,
+	11: 7,
+	12: 8,
+	13: 9,
+	14: 10,
+	15: 11,
+	16: 12,
+	17: 13,
+	18: 14,
+	19: 15,
+	20: 16,
+	21: 16,
+	22: 17,
+	23: 18,
+	24: 19,
+	25: 20,
+	26: 21,
+	27: 22,
+	28: 23
 }
 
 func _ready() -> void:
+	# Connect the signal from your DialogBox script
 	dialog_box.line_changed.connect(_on_line_changed)
 	
+	# Start the tutorial right away
 	_start_tutorial()
 
 func _start_tutorial():
 	teacher_sprite.show()
 
 	var data : Array[String] = [
-		"In the first steps, search for Control Panel in the search bar.",
-		"In the second step, go to Category and click on Small icons.",
-		"In the third step, find the Network and Sharing Center and click on it.",
-		"In the fourth step, after we click on Network and Sharing Center, go to Set up a new connection or network.",
-		"In the fifth step, click on Manually connect to a wireless network.",
-		"In the sixth step, set up the Wi-Fi name, security type, and Wi-Fi password for your Wi-Fi.",
-		"In the seventh step, the wifi name, wifi security, and wifi password of your wifi are shown, and once finished, click the next button.",
-		"In the eighth step, you will find Change Connection Settings. Click on it.",
-		"In the ninth step, you will see your registered Wi-Fi address here; nothing needs to be changed.",
-		"In the tenth step, click the wifi logo at the bottom right side of your PC's taskbar. After clicking, you will see your wifi signal.",
-		"In the eleventh step, after clicking on the Wi-Fi, you will see the connect button. Just click it to connect our PC to the Wi-Fi we registered."
+		"Now that you've mastered the basics, let’s move on to a critical technical skill.",
+		"In this lab, you will learn how to transform a standard USB drive into a bootable Windows 11 installation tool.",
+		"Precision is key here follow every step carefully to ensure the boot media works correctly.",
+		"Search Rufus and click the link below that says Rufus...",
+		"Now click the rufus-4.12.exe with the standard type.",
+		"You can now see the downloaded setup on the top right corner, but don't click it yet.",
+		"Search Windows 11 ISO on Google Chrome.",
+		"Click Download Windows 11 below.",
+		"After that, you may select the type of OS you want to download; this time we are using Windows 11.",
+		"Click the select download drop down section.",
+		"Now select the Windows 11 Multi-edition ISO for x64 devices.",
+		"Wait for a few seconds...",
+		"Now in this section, we will select the language we will use.",
+		"Choose English (United States).",
+		"And wait a few seconds...",
+		"Click 64-bit Download.",
+		"And you will see on the right top that the download is in progress.",
+		"While the Win11 is downloading, click the Rufus button to be directed to the folder.",
+		"Click the Rufus file...",
+		"And click Open!",
+		"The device name needs to be correct; the USB input listed here must be correct for the files to be extracted there.",
+		"After securing the USB device, now click 'Select' to find the location of the Windows ISO file.",
+		"Once the Windows ISO file is found, click on the entire ISO file and then click the Open button at the bottom.",
+		"The next step is to click the Start button below to proceed to the next procedure.",
+		"If the Windows User Experience window appears, just click OK.",
+		"Click the OK button again to start extracting our ISO file.",
+		"Just wait until our ISO file is extracted and don't touch it.",
+		"Once our extracted ISO file is finished, just click the Close button at the bottom.",
+		"Now let's go to our PC's file manager and check if the inserted USB files have been extracted correctly.",
+		"Once all the files are confirmed, your bootable drive is officially ready to reformat a computer!",
+		"You’ve successfully navigated the bootable drive creation process.",
+		"Prepare yourself it's time to head to the next challenge!"
 		]
 
 	if scenes_texture.size() > 0:
 		background.texture = scenes_texture[0]
-	
+		
 	dialog_box.update_dialog("Teacher", data)
 	
 func _end():
-	SceneTransition.change_scene("res://scenes/learning_materials/coc_2/lessons_list_2.tscn")
+	SceneTransition.change_scene("res://scenes/learning_materials/coc_1/lessons_list_1.tscn")
 	
 func _on_line_changed(index: int):
-	if index == 10:
-		teacher_sprite.visible = true
-	elif index >= 1:
-		teacher_sprite.visible = false
-	else:
-		teacher_sprite.visible = true # Keeps teacher visible at index 0
-		
+	teacher_sprite.visible = (index <= 3)
+	if index >= 3:
+		teacher_sprite.visible = (index >= 29)
 	print(index)
-	
-	if index >= 10:
+	if index >= 31:
 		dialog_box.dialog_finished.connect(_end)
 	if texture_map.has(index):
 		current_tex_index = texture_map[index]

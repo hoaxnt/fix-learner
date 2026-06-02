@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dofh266xjhj7x"]
 
-[ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_gsbty"]
+[ext_resource type="Script" uid="uid://b3su1lho3jicm" path="res://scripts/learning_materials/coc_2/lan/lan_tools.gd" id="1_5bio5"]
 [ext_resource type="Texture2D" uid="uid://dhygbqj61a304" path="res://assets/items/lan/lan_tools/background.png" id="2_4fei7"]
 [ext_resource type="Texture2D" uid="uid://bxjec7g04yed" path="res://assets/items/lan/lan_tools/table.png" id="4_5bio5"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="4_82pr0"]
@@ -19,7 +19,7 @@
 radius = 112.1606
 
 [node name="LAN" type="Node2D"]
-script = ExtResource("1_gsbty")
+script = ExtResource("1_5bio5")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.48178947, 0.48178947, 0.48178947, 1)
