@@ -107,7 +107,7 @@ item_name = "Safety Glasses"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("14_gk6l0")]
-dialog_lines = Array[String](["zzHello, student. Our first laboratory will focus on Occupational Health and Safety procedures"])
+dialog_lines = Array[String](["In today's lesson, we will be exploring the fundamentals of computer networking and the different types of cables used in network connections."])
 
 [node name="MinigameLabel" type="Label" parent="CanvasLayer"]
 visible = false
