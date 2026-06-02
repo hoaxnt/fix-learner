@@ -1,15 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dofh266xjhj7x"]
+[gd_scene load_steps=16 format=3 uid="uid://dofh266xjhj7x"]
 
 [ext_resource type="Script" uid="uid://bwynyovlg0dnj" path="res://scripts/learning_materials/coc_1/ohs_procedures/ohs_procedures.gd" id="1_gsbty"]
-[ext_resource type="Texture2D" uid="uid://cnmf76crnf1sg" path="res://assets/environment/room.jpg" id="2_gb5sw"]
+[ext_resource type="Texture2D" uid="uid://dhygbqj61a304" path="res://assets/items/lan/lan_tools/background.png" id="2_4fei7"]
+[ext_resource type="Texture2D" uid="uid://bxjec7g04yed" path="res://assets/items/lan/lan_tools/table.png" id="4_5bio5"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="4_82pr0"]
-[ext_resource type="Texture2D" uid="uid://c7hm5hp6ohkrm" path="res://assets/items/ohs_procedures/table.png" id="6_kxw1e"]
+[ext_resource type="Texture2D" uid="uid://bpt268skkhv7k" path="res://assets/items/lan/lan_tools/crimping-tool.png" id="6_gi44t"]
+[ext_resource type="Texture2D" uid="uid://drgbo6ox4u81n" path="res://assets/items/lan/lan_tools/lan-cable.png" id="7_4fei7"]
 [ext_resource type="PackedScene" uid="uid://kirfk2g7ia05" path="res://scenes/utils/activities/ohs_procedure_activity/items/item.tscn" id="7_5cmuk"]
-[ext_resource type="Texture2D" uid="uid://dtax221e3gg0a" path="res://assets/items/ohs_procedures/anti-static-wrist-strap.png" id="8_48d3o"]
-[ext_resource type="Texture2D" uid="uid://di0xo4q2oyrri" path="res://assets/items/ohs_procedures/gloves.png" id="9_26ru0"]
-[ext_resource type="Texture2D" uid="uid://drdk1wvc3pxkk" path="res://assets/items/ohs_procedures/head-lamp.png" id="10_ofctc"]
-[ext_resource type="Texture2D" uid="uid://bjbhqcixqm8i" path="res://assets/items/ohs_procedures/safety-glasses.png" id="11_l8wwc"]
-[ext_resource type="Texture2D" uid="uid://cby2v5ryjmjjb" path="res://assets/items/ohs_procedures/screw-driver.png" id="12_wsub3"]
+[ext_resource type="Texture2D" uid="uid://bkp0qrr8ghfat" path="res://assets/items/lan/lan_tools/wire-stripper.png" id="8_4fei7"]
+[ext_resource type="Texture2D" uid="uid://b5gjweiw4yxae" path="res://assets/items/lan/lan_tools/rj45.png" id="9_5bio5"]
 [ext_resource type="PackedScene" uid="uid://bjpb00q27yspe" path="res://scenes/ui/dialog_box.tscn" id="14_gk6l0"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="15_rse03"]
 [ext_resource type="PackedScene" uid="uid://cqqqu247lwjh8" path="res://scenes/utils/menu.tscn" id="16_1jlsr"]
@@ -34,8 +33,10 @@ animations = [{
 script = ExtResource("1_gsbty")
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("2_gb5sw")
+modulate = Color(0.48178947, 0.48178947, 0.48178947, 1)
+position = Vector2(68, 8)
+scale = Vector2(1.5508155, 1.5508155)
+texture = ExtResource("2_4fei7")
 
 [node name="Minigame" type="Node2D" parent="."]
 
@@ -45,54 +46,45 @@ scale = Vector2(1.7193627, 1.7193627)
 texture = ExtResource("4_82pr0")
 
 [node name="Table" type="Sprite2D" parent="Minigame"]
-position = Vector2(0, 535)
-scale = Vector2(2.3371427, 2.337143)
-texture = ExtResource("6_kxw1e")
+position = Vector2(84, 383.00006)
+scale = Vector2(2.6519601, 2.6519613)
+texture = ExtResource("4_5bio5")
 
-[node name="WristStrap" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
-position = Vector2(538, 331)
+[node name="CrimpingTool" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
+position = Vector2(614, 178)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Anti-Static Wrist Strap - This is your primary defense against Electrostatic Discharge (ESD).", "It clips onto a grounded metal object (like your PC case) and ensures that you and the computer stay at the same electrical potential. ", "It prevents you from accidentally \"frying\" a $500 CPU with a tiny spark from your fingertip."])
-texture = ExtResource("8_48d3o")
+texture = ExtResource("6_gi44t")
 item_name = "Anti-Static Strap"
 
-[node name="Gloves" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
-position = Vector2(266, 260)
+[node name="LANCable" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
+position = Vector2(281, 102)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Anti-Static Gloves - Many modern PC cases are made of stamped steel with unfinished internal edges. ", "Thin, snug-fitting gloves protect your hands from \"case bites\" (nasty slices from sharp metal). ", "Additionally, they prevent skin oils from getting onto the gold contact points of your RAM and GPU, which can cause corrosion over time."])
-texture = ExtResource("9_26ru0")
+texture = ExtResource("7_4fei7")
 item_name = "Anti-Static Gloves"
 
-[node name="HeadLamp" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
-position = Vector2(-538, 249)
+[node name="WireStripper" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
+position = Vector2(-392, 83)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["LED Headlamp - Shadows are the enemy of a safe build. ", "Trying to plug in a tiny Front Panel connector in the dark leads to bent pins and frustration. ", "A headlamp keeps both your hands free to handle components while ensuring you can see exactly where every delicate pin is supposed to go."])
-texture = ExtResource("10_ofctc")
+texture = ExtResource("8_4fei7")
 item_name = "LED Headlamp"
 
-[node name="SafetyGlasses" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
-position = Vector2(-289, 327)
+[node name="RJ45" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
+position = Vector2(-90, 177)
 dialog_box = NodePath("../../CanvasLayer/DialogBox")
 item_display_name = "Teacher"
 final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
 item_info = Array[String](["Safety Glasses - It might seem like overkill for a desk job, but PC building involves tension and small parts. ", "When you are clipping plastic zip ties for cable management or using compressed air to blow out a dusty component, small shards or debris can fly directly toward your eyes at high speeds."])
-texture = ExtResource("11_l8wwc")
+texture = ExtResource("9_5bio5")
 item_name = "Safety Glasses"
-
-[node name="ScrewDriver" parent="Minigame" node_paths=PackedStringArray("dialog_box") instance=ExtResource("7_5cmuk")]
-position = Vector2(-3, 330)
-dialog_box = NodePath("../../CanvasLayer/DialogBox")
-item_display_name = "Teacher"
-final_message = "Great job! You’ve got all your gear on. Let’s get to building!"
-item_info = Array[String](["Screwdriver - While not \"wearable\" armor, this is an essential safety tool for the hardware. ", "A magnetized tip prevents tiny screws from falling into the \"void\" behind the motherboard or inside the power supply, where they could cause a catastrophic short circuit when you turn the power on."])
-texture = ExtResource("12_wsub3")
-item_name = "Screwdriver"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -105,7 +97,7 @@ sprite_frames = SubResource("SpriteFrames_7jnuq")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("14_gk6l0")]
-dialog_lines = Array[String](["Hello, student. Our first laboratory will focus on Occupational Health and Safety procedures", "To ensure a safe and proper learning environment before performing any computer-related tasks.", "I know you’re ready to jump into the task, but before you start, I need you to prepare the things that you need", "Check the equipment rack. Check the right essentials and put it in your toolbox."])
+dialog_lines = Array[String](["zzHello, student. Our first laboratory will focus on Occupational Health and Safety procedures"])
 
 [node name="MinigameLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
