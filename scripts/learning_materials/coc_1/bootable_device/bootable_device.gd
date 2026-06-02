@@ -6,7 +6,6 @@ extends Node2D
 @export var scenes_texture : Array[Texture2D]
 
 var current_tex_index : int = 0
-
 var texture_map : Dictionary = {
 	0: 0,
 	1: 1,
@@ -22,10 +21,8 @@ var texture_map : Dictionary = {
 }
 
 func _ready() -> void:
-	# Connect the signal from your DialogBox script
 	dialog_box.line_changed.connect(_on_line_changed)
 	
-	# Start the tutorial right away
 	_start_tutorial()
 
 func _start_tutorial():
@@ -54,9 +51,6 @@ func _end():
 	SceneTransition.change_scene("res://scenes/learning_materials/coc_2/lessons_list_2.tscn")
 	
 func _on_line_changed(index: int):
-	# The teacher starts visible at index 0.
-	# After the first index (index >= 1), the teacher is hidden.
-	# At the eleventh index (index >= 10, since arrays start at 0), the teacher shows again.
 	if index == 10:
 		teacher_sprite.visible = true
 	elif index >= 1:
