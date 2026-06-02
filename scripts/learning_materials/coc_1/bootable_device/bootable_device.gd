@@ -47,7 +47,7 @@ func _start_tutorial():
 
 	if scenes_texture.size() > 0:
 		background.texture = scenes_texture[0]
-		
+	
 	dialog_box.update_dialog("Teacher", data)
 	
 func _end():
