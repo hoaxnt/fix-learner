@@ -163,6 +163,46 @@ text = "Wireless Connection"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="WirelessConnectionButton2" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_sax1w")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_6e7gu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "Wireless Connection"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(100, 130)
 layout_mode = 2
@@ -179,4 +219,5 @@ flat = true
 
 [connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton" to="." method="_on_ohs_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton" to="." method="_on_hazards_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton2" to="." method="_on_hazards_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
