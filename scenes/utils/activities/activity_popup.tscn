@@ -48,7 +48,7 @@ alignment = 1
 [node name="Label" type="Label" parent="Background/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 130
-text = "WELL DONE!"
+text = "GREAT JOB!"
 
 [node name="CloseButton" type="Button" parent="Background/VBoxContainer"]
 layout_mode = 2
@@ -56,6 +56,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 theme_override_font_sizes/font_size = 60
-text = "  >>  "
+text = "  Return to Activities  "
 
 [connection signal="pressed" from="Background/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

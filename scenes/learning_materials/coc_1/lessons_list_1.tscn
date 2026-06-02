@@ -295,6 +295,7 @@ custom_minimum_size = Vector2(100, 130)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("2_2o1ih")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_72g8v")
