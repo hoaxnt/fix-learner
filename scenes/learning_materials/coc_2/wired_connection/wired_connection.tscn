@@ -1,6 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1dqpkv51r1ff"]
+[gd_scene load_steps=18 format=3 uid="uid://b1dqpkv51r1ff"]
 
 [ext_resource type="Script" uid="uid://cskv6h4tele2h" path="res://scripts/learning_materials/coc_1/bootable_device/bootable_device.gd" id="1_akgio"]
+[ext_resource type="Texture2D" uid="uid://dq670uokudysa" path="res://assets/items/wired_connection/1.png" id="2_jgpdh"]
+[ext_resource type="Texture2D" uid="uid://dfkmr1yqdr4d2" path="res://assets/items/wired_connection/2.png" id="3_wnhcl"]
+[ext_resource type="Texture2D" uid="uid://ykbem1obyxve" path="res://assets/items/wired_connection/3.png" id="4_x24d5"]
+[ext_resource type="Texture2D" uid="uid://db6r45kdxjkls" path="res://assets/items/wired_connection/4.png" id="5_i27aa"]
+[ext_resource type="Texture2D" uid="uid://b5rja2prbb1pm" path="res://assets/items/wired_connection/5.png" id="6_hlrr0"]
+[ext_resource type="Texture2D" uid="uid://cun5k8xr800gv" path="res://assets/items/wired_connection/6.png" id="7_pbd4j"]
+[ext_resource type="Texture2D" uid="uid://bd81h5ht1omjj" path="res://assets/items/wired_connection/7.png" id="8_7lplb"]
+[ext_resource type="Texture2D" uid="uid://dee5hiaxg16x2" path="res://assets/items/wired_connection/8.png" id="9_v3v6p"]
+[ext_resource type="Texture2D" uid="uid://dg3bj7x5la1hq" path="res://assets/items/wired_connection/9.png" id="10_xjqct"]
+[ext_resource type="Texture2D" uid="uid://4oamqwqx2dhq" path="res://assets/items/wired_connection/10.png" id="11_uq1sy"]
+[ext_resource type="Texture2D" uid="uid://cvbaqafl5e20n" path="res://assets/items/wired_connection/11.png" id="12_ccitw"]
 [ext_resource type="Texture2D" uid="uid://ccrnogpsydq8f" path="res://assets/characters/teacher.png" id="27_m5wq4"]
 [ext_resource type="Script" uid="uid://dxkog2u6ayhn2" path="res://scripts/ui/dialog_box.gd" id="28_e5pex"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="29_mvhnx"]
@@ -9,10 +20,12 @@
 
 [node name="WiredConnection" type="Node2D"]
 script = ExtResource("1_akgio")
+scenes_texture = Array[Texture2D]([ExtResource("2_jgpdh"), ExtResource("3_wnhcl"), ExtResource("4_x24d5"), ExtResource("5_i27aa"), ExtResource("6_hlrr0"), ExtResource("7_pbd4j"), ExtResource("8_7lplb"), ExtResource("9_v3v6p"), ExtResource("10_xjqct"), ExtResource("11_uq1sy"), ExtResource("12_ccitw")])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-3, -15)
 scale = Vector2(1.2090085, 1.1636708)
+texture = ExtResource("2_jgpdh")
 
 [node name="Teacher" type="Sprite2D" parent="."]
 position = Vector2(472, 252)
