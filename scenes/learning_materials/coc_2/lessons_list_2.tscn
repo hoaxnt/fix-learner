@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://spdi5nkxnfbh"]
+[gd_scene load_steps=21 format=3 uid="uid://csk7wyb442hb5"]
 
 [ext_resource type="Script" uid="uid://k1nixvp8q2vi" path="res://scripts/learning_materials/coc_1/coc_1.gd" id="1_gpgaf"]
 [ext_resource type="FontFile" uid="uid://md3bneuh3f8p" path="res://assets/fonts/Rubik-Bold.ttf" id="2_t6t6k"]
@@ -6,27 +6,35 @@
 [ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="4_wndo0"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_sax1w"]
 [ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="6_4fjqd"]
+[ext_resource type="Texture2D" uid="uid://b0fudypob1dp0" path="res://assets/images/icons/hard-hat.png" id="6_lt53u"]
 [ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_k1ubx"]
+[ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_km2np"]
+[ext_resource type="Texture2D" uid="uid://cbbai5dd70dqt" path="res://assets/images/icons/danger.png" id="8_rakcy"]
+[ext_resource type="Texture2D" uid="uid://douetn15n4nca" path="res://assets/images/icons/laptop.png" id="9_idat2"]
+[ext_resource type="Texture2D" uid="uid://bw4trhv0rso2x" path="res://assets/images/icons/usb-flash-drive.png" id="10_n5wul"]
+[ext_resource type="Texture2D" uid="uid://btbw2cp2cd08j" path="res://assets/images/icons/software.png" id="11_m1eyu"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c24rk"]
-texture = ExtResource("3_427ss")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12pgh"]
-texture = ExtResource("4_wndo0")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72g8v"]
-texture = ExtResource("4_wndo0")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5hl7"]
-texture = ExtResource("6_4fjqd")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmh07"]
-texture = ExtResource("7_k1ubx")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oood6"]
 texture = ExtResource("7_k1ubx")
 
-[node name="Lesson1" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmh07"]
+texture = ExtResource("7_k1ubx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5hl7"]
+texture = ExtResource("6_4fjqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72g8v"]
+texture = ExtResource("4_wndo0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12pgh"]
+texture = ExtResource("4_wndo0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c24rk"]
+texture = ExtResource("3_427ss")
+
+[node name="Coc1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,69 +51,264 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0235294, 0.678431, 0.980392, 0.909804)
+color = Color(0.101960786, 0.10980392, 0.13725491, 1)
 metadata/_edit_lock_ = true
-
-[node name="Back" type="Button" parent="."]
-custom_minimum_size = Vector2(100, 130)
-layout_mode = 0
-offset_right = 226.0
-offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("2_t6t6k")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_12pgh")
-theme_override_styles/normal = SubResource("StyleBoxTexture_72g8v")
-text = "BACK"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 60
-theme_override_constants/margin_bottom = 60
-
-[node name="Title" type="Label" parent="VBoxContainer/MarginContainer"]
+[node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_t6t6k")
 theme_override_font_sizes/font_size = 90
-text = "LEARNING OUTCOMES"
+text = "What to learn?"
 horizontal_alignment = 1
 
-[node name="L0" type="GridContainer" parent="VBoxContainer"]
+[node name="HScrollBar" type="ScrollContainer" parent="VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(1700, 600)
 layout_mode = 2
-theme_override_constants/h_separation = 100
-theme_override_constants/v_separation = 40
-columns = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxFlat_4y0e3")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+scroll_deadzone = 5
 
-[node name="1" type="Button" parent="VBoxContainer/L0"]
-custom_minimum_size = Vector2(200, 200)
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HScrollBar"]
 layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="OhsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("5_sax1w")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-text = "1"
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="Button" parent="VBoxContainer/L0"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_lt53u")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/OhsButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "OHS
+Procedures
+
+RENAME INTO WIRED AND WIRELESS CONNECTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HazardsButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("5_sax1w")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
-text = "2"
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_rakcy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "Electrical
+Hazards"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AssembleButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_sax1w")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_idat2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "Assemble &
+Disassemble"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BootableButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_sax1w")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_n5wul")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/BootableButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "Creating Bootable 
+Device"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoftwareButton" type="Button" parent="VBoxContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_sax1w")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_oood6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmh07")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m5hl7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_m1eyu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_km2np")
+text = "Installing Softwares"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_t6t6k")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_72g8v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_12pgh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c24rk")
+text = "Back"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/OhsButton" to="." method="_on_ohs_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/HazardsButton" to="." method="_on_hazards_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/AssembleButton" to="." method="_on_assemble_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/BootableButton" to="." method="_on_bootable_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HScrollBar/HBoxContainer/SoftwareButton" to="." method="_on_software_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]

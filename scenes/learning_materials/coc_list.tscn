@@ -99,8 +99,6 @@ focus_mode = 0
 theme = ExtResource("2_htqx8")
 theme_override_fonts/font = ExtResource("4_ngx2m")
 theme_override_font_sizes/font_size = 80
-disabled = true
-text = "LOCKED"
 metadata/_edit_use_anchors_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/Coc2Button"]
@@ -117,7 +115,6 @@ theme_override_constants/separation = 55
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Coc2Button/CenterContainer/VBoxContainer"]
-modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 2
 texture = ExtResource("5_htqx8")
 expand_mode = 5
@@ -125,7 +122,6 @@ expand_mode = 5
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Coc2Button/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_htqx8")
-theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 0.19607843)
 text = "COC 2"
 horizontal_alignment = 1
 vertical_alignment = 1

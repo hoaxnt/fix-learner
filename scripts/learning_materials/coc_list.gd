@@ -15,7 +15,3 @@ func _on_pressed(button_name):
 func _on_back_pressed() -> void:
 	SceneTransition.change_scene("res://scenes/main_menu.tscn")
 	print("back")
-
-
-func _on__pressed() -> void:
-	pass # Replace with function body.
