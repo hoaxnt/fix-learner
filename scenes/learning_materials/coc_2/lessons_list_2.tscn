@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://dq38ve1u1074y" path="res://assets/ui/button/rect_medium/rect_hover.png" id="3_427ss"]
 [ext_resource type="Texture2D" uid="uid://cye7bm7hbrw04" path="res://assets/ui/button/rect_medium/rect.png" id="4_wndo0"]
 [ext_resource type="FontFile" uid="uid://dcm4fgr7c84q4" path="res://assets/fonts/Rubik-Black.ttf" id="5_sax1w"]
+[ext_resource type="Texture2D" uid="uid://cjcysf16ncp5y" path="res://assets/images/icons/electricity.png" id="6_1dlgv"]
 [ext_resource type="Texture2D" uid="uid://56fdm7becv1v" path="res://assets/ui/button/unlocked_hover.png" id="6_4fjqd"]
-[ext_resource type="Texture2D" uid="uid://b0fudypob1dp0" path="res://assets/images/icons/hard-hat.png" id="6_lt53u"]
 [ext_resource type="Texture2D" uid="uid://cxdyacqa2kfeq" path="res://assets/ui/button/unlocked.png" id="7_k1ubx"]
 [ext_resource type="Theme" uid="uid://caa1j87royuml" path="res://resources/main_theme.tres" id="7_km2np"]
-[ext_resource type="Texture2D" uid="uid://cbbai5dd70dqt" path="res://assets/images/icons/danger.png" id="8_rakcy"]
+[ext_resource type="Texture2D" uid="uid://bmjmqv0l7mxbc" path="res://assets/images/icons/wireless-router.png" id="8_6e7gu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y0e3"]
 
@@ -113,7 +113,7 @@ alignment = 1
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_lt53u")
+texture = ExtResource("6_1dlgv")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WiredConnectionButton/CenterContainer/VBoxContainer"]
@@ -153,7 +153,7 @@ alignment = 1
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("8_rakcy")
+texture = ExtResource("8_6e7gu")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HScrollBar/HBoxContainer/WirelessConnectionButton/CenterContainer/VBoxContainer"]
