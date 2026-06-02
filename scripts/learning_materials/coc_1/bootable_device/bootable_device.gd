@@ -32,17 +32,17 @@ func _start_tutorial():
 	teacher_sprite.show()
 
 	var data : Array[String] = [
-		"The first step is to search for the control panel in the search bar at the bottom.",
-		"The second step is after we click on the control panel, we look for Network and Internet.",
-		"The third step is to find and click on Connect to a network.",
-		"In the fourth step, after we click on Connect to a network, we will go to Ethernet and as you can see, we are still not connected to the internet.",
-		"In the fifth step, we will right-click using the mouse to enable our Ethernet LAN.",
-		"In our sixth step, after we enable the Ethernet LAN, we still need to configure it to get the internet working.",
-		"In the seventh step, right-click on the Ethernet again using the mouse and go to Properties.",
-		"In our eighth step, when the Ethernet Properties show up, just look for Internet Protocol Version 4 (TCP/IPv4).",
-		"In our ninth step, after seeing Internet Protocol Version 4 (TCP/IPv4), we need to enable it. Just click the box on the side to check it and make it similar to the other enabled ones.",
-		"In our tenth step, we can see that our LAN internet is now on and has connected to our Wi-Fi router.",
-		"In our eleventh step, after checking that there is internet, open any browser to be more certain and check more thoroughly if there is internet."
+		"In the first steps, search for Control Panel in the search bar.",
+		"In the second step, go to Category and click on Small icons.",
+		"In the third step, find the Network and Sharing Center and click on it.",
+		"In the fourth step, after we click on Network and Sharing Center, go to Set up a new connection or network.",
+		"In the fifth step, click on Manually connect to a wireless network.",
+		"In the sixth step, set up the Wi-Fi name, security type, and Wi-Fi password for your Wi-Fi.",
+		"In the seventh step, the wifi name, wifi security, and wifi password of your wifi are shown, and once finished, click the next button.",
+		"In the eighth step, you will find Change Connection Settings. Click on it.",
+		"In the ninth step, you will see your registered Wi-Fi address here; nothing needs to be changed.",
+		"In the tenth step, click the wifi logo at the bottom right side of your PC's taskbar. After clicking, you will see your wifi signal.",
+		"In the eleventh step, after clicking on the Wi-Fi, you will see the connect button. Just click it to connect our PC to the Wi-Fi we registered."
 		]
 
 	if scenes_texture.size() > 0:
