@@ -140,6 +140,7 @@ theme = ExtResource("5_8ln24")
 theme_override_colors/font_color = Color(0.8784314, 0.9019608, 0.92941177, 1)
 theme_override_fonts/font = ExtResource("2_8ln24")
 theme_override_font_sizes/font_size = 70
+disabled = true
 text = "Options"
 
 [node name="ExitButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer"]
